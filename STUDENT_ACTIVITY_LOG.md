@@ -27,7 +27,7 @@ July 1, 2016
 1:27 AM
 - **Starting up**
 - Created folders in repository:
-  - `CourseCode` for nefarious coding activities files.
+  - `CourseWork` for nefarious coding activities files.
   - `DocImages` for nefarious graphic files.
 - Skipped ahead to the Project Review Rubric to get a perspective on the targeted outcomes of the project.
 - Read some intro material on [knockout.js](http://knockoutjs.com/documentation/introduction.html) (**KO**).
