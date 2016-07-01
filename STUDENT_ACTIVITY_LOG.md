@@ -1,5 +1,5 @@
 #STUDENT ACTIVITY LOG
-Author - George Fischer
+Author - George Fischer, Udacity Front-End Web Developer Student
 
 #Introduction
 July 1, 2016
