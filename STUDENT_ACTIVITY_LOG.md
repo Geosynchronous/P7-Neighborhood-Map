@@ -43,9 +43,14 @@ July 1, 2016
 - APIs Intro -[What are APIs???](http://www.programmableweb.com/api-university/what-are-apis-and-how-do-they-work)
 
 9:29 PM
-- **Finishing INTRO to AJAX & Starting Mini API Project**
+- **Finishing Requests & API's Section Starting Mini API Project**
 - Downloaded [Zip File for Project](https://www.udacity.com/api/nodes/3180658597/supplemental_media/udacity-ajax-initzip/download?_ga=1.83064086.1099881078.1443828986)
 - Opened in Local Repo for P7... CourseWork Folder
+
+9:41 PM
+- **Started BUILDING THE MOVE PLANNER**
+- Sync Github Repo with local
+
 
 
 
