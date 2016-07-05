@@ -51,7 +51,11 @@ July 1, 2016
 - **Started BUILDING THE MOVE PLANNER**
 - Sync Github Repo with local
 
+July 5, 2016
 
+4:16 PM
+- **jQuery Requests Section**
+- 
 
 
 
