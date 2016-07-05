@@ -33,6 +33,19 @@ July 1, 2016
 - Read some intro material on [knockout.js](http://knockoutjs.com/documentation/introduction.html) (**KO**).
   - KO is a general way to make UIs for editing JSON data.
 
+**July 4TH 2016**
+
+8:05 PM
+
+- **Started INTRO TO AJAX course**
+- Nice 4th of July Weekend... getting back to the grindstone...
+- Dev Tools Network Analysis
+- APIs Intro -[What are APIs???](http://www.programmableweb.com/api-university/what-are-apis-and-how-do-they-work)
+
+
+
+
+
 
 
 ```
