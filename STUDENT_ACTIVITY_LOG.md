@@ -105,6 +105,13 @@ July 6, 2016
 - changed font color to yellow
 - added a space in the returned greeting
 
+11:01 AM
+
+- **minicourse-ajax-project 2**
+- Applied for [NYT API key](http://developer.nytimes.com/) & waiting...
+- Downloaded [Sample Code for this miniproject](https://www.udacity.com/api/nodes/3131738547/supplemental_media/udacity-ajax-nytzip/download?_ga=1.83049494.1099881078.1443828986)
+- Purpose to create New York TImes API search related to user location
+
 
 
 
