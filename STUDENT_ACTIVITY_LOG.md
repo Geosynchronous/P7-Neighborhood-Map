@@ -97,6 +97,13 @@ $('#form-container').submit(loadData);
 ```
 
 
+July 6, 2016
+
+10:12 AM
+- **Style Change**
+- Improved #greeting
+- changed font color to yellow
+- added a space in the returned greeting
 
 
 
@@ -106,15 +113,6 @@ $('#form-container').submit(loadData);
 
 
 ```
-
-July 6, 2016
-
-10:12 AM
-- **Style Change**
-- Improved #greeting
-
-
-
 
 **--------END OF FILE-----------**
 
