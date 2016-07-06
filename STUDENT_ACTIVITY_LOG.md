@@ -118,6 +118,18 @@ July 6, 2016
 - Created gh-pages to use as the web link requested on the online page:
   - https://geosynchronous.github.io/P7-Neighborhood-Map/CourseWork/minicourse-ajax-project%202/index.html
 
+1:00 PM
+- **KEY Arrived**
+- Scott @ support helped
+```
+Thanks for registering for a New York Times API Key. 
+
+Here's your API Key for the Article Search API: 4e6e2405a9e14cfc9121ccdcad44a03f
+
+If you have any questions, email us at code@nytimes.com
+
+Happy Coding!
+```
 
 
 
