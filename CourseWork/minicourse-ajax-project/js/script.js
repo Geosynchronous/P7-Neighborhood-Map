@@ -18,7 +18,7 @@ function loadData() {
     // Gets values from form inputs and creates a var address string
     var streetStr = $('#street').val();
     var cityStr = $('#city').val();
-    var address = streetStr + ',' + cityStr;
+    var address = streetStr + ', ' + cityStr;
 
     // Replace original greeting "Where do you want to live at?"
     $greeting.text('So you want to live at ' + address + '?');
