@@ -164,7 +164,8 @@ July 6, 2016
 
 12:25 PM
 - **NYT jQUery AJAX Error Handling**
-- added jQuery .fail() instead of depreceated .rror()
+- added jQuery .fail() instead of depreceated .error()
+- this keeps the page from breaking, displays error and the rest of the code can complete
 ```
     $.getJSON(nytimesUrl, function(data) {
 
@@ -195,6 +196,8 @@ July 6, 2016
     });
 ```
 
+12:33 Pm
+- ** Starting Cross-Origin Resource Sharing (CORS)**
 
 
 ```
