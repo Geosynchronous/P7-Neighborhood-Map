@@ -36,7 +36,7 @@ function loadData() {
         $nytHeaderElem.text('New York Times Articles About ' + cityStr);
 
         // Load the NYT RESPONSE data for docs data into articles array elements
-        articles = data.response.docs
+        var articles = data.response.docs
         // Make a list of every article and corresponding snippet
         for (var i=0; i < articles.length; i++) {
             var article = articles[i];
