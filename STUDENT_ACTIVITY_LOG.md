@@ -196,8 +196,8 @@ July 6, 2016
     });
 ```
 
-12:33 Pm
-- ** Starting Cross-Origin Resource Sharing (CORS)**
+12:33 PM
+- ** Starting Cross-Origin Resource Sharing (CORS) and/or JSON-P**
 
 
 ```
