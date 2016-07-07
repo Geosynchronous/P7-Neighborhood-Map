@@ -160,7 +160,40 @@ Happy Coding!
 
     });
 ```
+July 6, 2016
 
+12:25 PM
+- **NYT jQUery AJAX Error Handling**
+- added jQuery .fail() instead of depreceated .rror()
+```
+    $.getJSON(nytimesUrl, function(data) {
+
+        // Write out Header for List of Articles from Searched City
+        $nytHeaderElem.text('New York Times Articles About ' + cityStr);
+
+        // Load the NYT RESPONSE data for docs data into articles array elements
+        var articles = data.response.docs;
+        // Make a list of every article and corresponding snippet
+        for (var i=0; i < articles.length; i++) {
+            var article = articles[i];
+            $nytElem.append('<li class ="article">' +
+                '<a href="'+article.web_url+'">'+article.headline.main+
+                    '</a>' +
+                    '<p>' + article.snippet + '</p>' +
+            '</li>');
+        };
+
+    })
+
+    // Error Handling for failed request
+    // Note: .error() has been depreceated
+    // Use .fail()
+    .fail(function(e){
+
+        $nytHeaderElem.text('NYT Articles Coud Not Be Loaded');
+
+    });
+```
 
 
 
