@@ -36,7 +36,7 @@ function loadData() {
         $nytHeaderElem.text('New York Times Articles About ' + cityStr);
 
         // Load the NYT RESPONSE data for docs data into articles array elements
-        var articles = data.response.docs
+        var articles = data.response.docs;
         // Make a list of every article and corresponding snippet
         for (var i=0; i < articles.length; i++) {
             var article = articles[i];
@@ -46,6 +46,15 @@ function loadData() {
                     '<p>' + article.snippet + '</p>' +
             '</li>');
         };
+
+    })
+
+    // Error Handling for failed request
+    // Note: .error() has been depreceated
+    // Use .fail()
+    .fail(function(e){
+
+        $nytHeaderElem.text('NYT Articles Coud Not Be Loaded');
 
     });
 
