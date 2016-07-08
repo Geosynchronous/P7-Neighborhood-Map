@@ -223,3 +223,34 @@ July , 2016
 
 **--------END OF FILE-----------**
 ```
+4:50 PM
+-  ** NO AJAX Response from Wiki API JSON-P**
+-  console.log is not being evoked, as no response is being returned
+```
+    // load wikipedia data
+
+    // YOUR CODE GOES HERE!
+
+    // Wikipedia API URL for server request
+    var wikiUrl =  'http://en.wikipedia.org/w/api.php?action=opensearch&search=' + cityStr + '&format=json&callback=wikiCallback';
+
+    // jQuery AJAX using JSON-P script
+    $.ajax({
+        // Settings Object for using JSON-P
+        url: wikiUrl,
+        dataType: "jsonp",
+        // jsonp: "callback",
+        sucess: function( response ) {
+            var articleList = response[1];
+            // TEMP CHECK TO SEE IF response  is working
+            console.log(articleList);
+
+            for (var i = 0; i < articleList.length; i++) {
+                articleStr = articleList[i];
+                var url = 'http://en.wikipedia.org/wiki' + articleStr;
+                $wikiElem.append('<li><a href="' + url + '">' + articleStr +  '</a></li>');
+            };
+        }
+    });
+    ```
+    
