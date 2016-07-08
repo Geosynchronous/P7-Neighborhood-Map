@@ -56,11 +56,14 @@ function loadData() {
 
     // jQuery AJAX using JSON-P script
     $.ajax({
+        // Settings Object for using JSON-P
         url: wikiUrl,
         dataType: "jsonp",
         // jsonp: "callback",
         sucess: function( response ) {
             var articleList = response[1];
+            // TEMP CHECK TO SEE IF response  is working
+            console.log(articleList);
 
             for (var i = 0; i < articleList.length; i++) {
                 articleStr = articleList[i];
