@@ -160,7 +160,7 @@ Happy Coding!
 
     });
 ```
-July 6, 2016
+July 7, 2016
 
 12:25 PM
 - **NYT jQUery AJAX Error Handling**
@@ -198,6 +198,16 @@ July 6, 2016
 
 12:33 PM
 - ** Starting Cross-Origin Resource Sharing (CORS) and/or JSON-P**
+
+July 8, 2016
+
+12:33 PM
+- **minicourse-ajax-project 3 for Wikipedia API**
+- Donloaded zip file and installed on Github and local Github
+
+
+
+
 
 
 ```
