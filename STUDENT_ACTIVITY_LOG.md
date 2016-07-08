@@ -205,9 +205,11 @@ July 8, 2016
 - **minicourse-ajax-project 3 for Wikipedia API**
 - Donloaded zip file and installed on Github and local Github
 
-
-
-
+1:52 PM
+- **CODE NOT WORKING**
+- Typing the Wiki API URL in a web window works:
+  - https://en.wikipedia.org/w/api.php?action=opensearch&search=denver&format=json&callback=wikiCallback
+  - However, the DEV TOOLS NETWORK is only showing a response from NYT and none for Wikimedia
 
 
 ```
