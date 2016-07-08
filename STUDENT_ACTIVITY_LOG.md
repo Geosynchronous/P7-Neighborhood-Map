@@ -226,6 +226,7 @@ July , 2016
 4:50 PM
 -  ** NO AJAX Response from Wiki API JSON-P**
 -  console.log is not being evoked, as no response is being returned
+
 ```
     // load wikipedia data
 
@@ -252,5 +253,23 @@ July , 2016
             };
         }
     });
-    ```
+```
+    
+5:35 PM
+- **Found possible solution in Forums**
+-  Another example of outdated courseware that frustrates students and wastes their valubable time
+-  Also looked at coaching times, nothing open till week after next!!!
+- Found [forums solution](https://discussions.udacity.com/t/wikipedia-exercise-error/43300/2)
+- `.success` had been depreciated, use `.done`
+- this info is in later course pages, would be better to show up sooner, added [suggestion to forum](https://discussions.udacity.com/t/wikipedia-exercise-error/43300/14)
+- basically I need to implement this:
+
+```
+    $.ajax({
+      //stuff
+    }).done(function(){
+      //do math
+    });
+```
+
     
