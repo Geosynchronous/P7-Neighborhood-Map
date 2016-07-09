@@ -51,6 +51,13 @@ function loadData() {
 
     // YOUR CODE GOES HERE!
 
+    // Turn on Timeout for 8 sec
+    // Will throw error message if WIKI API does not respond in time
+    var wikiRequestTimeout = setTimeout(function(){
+        $wikiElem.text("Failed to Get Wiki Resources")
+    }, 8000);
+
+
     // Wikipedia API URL for server request
     var wikiUrl =  'http://en.wikipedia.org/w/api.php?action=opensearch&search=' + cityStr + '&format=json&callback=wikiCallback';
 
@@ -69,6 +76,9 @@ function loadData() {
                 var url = 'http://en.wikipedia.org/wiki/' + articleStr;
                 $wikiElem.append('<li><a href="' + url + '">' + articleStr +  '</a></li>');
             };
+
+            // Inactivate the Timeout
+            clearTimeout(wikiRequestTimeout);
         });
 
 
