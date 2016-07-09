@@ -326,3 +326,7 @@ Saturday July 9, 2016
 - Tried out the suggestions, worked fine
 - I wonder if the error messages could be captured and add to the timeout message or a generic error message.
 
+9:20 AM
+- ** Finished INTRO TO AJAX, Starting JAVASCRIPT DESIGN PATTERNS Course**
+- CRP Generic & Unique HTML noted, and understood form end of AJAX Course
+
