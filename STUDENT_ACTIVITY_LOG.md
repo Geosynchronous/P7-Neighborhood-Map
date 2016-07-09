@@ -260,7 +260,7 @@ July , 2016
 -  Another example of outdated courseware that frustrates students and wastes their valubable time
   -  **I could scream right now... why doesn't Udacity take care to put this info in the right place in a timely manner???**
   -  The [forums solution](https://discussions.udacity.com/t/wikipedia-exercise-error/43300/2) was known 6 months ago, got updated in TEACHER NOTES about 3 Months ago, but needed to appear at an even earlier point in the course [suggestion to forum](https://discussions.udacity.com/t/wikipedia-exercise-error/43300/14)
-  -  Also looked at coaching times, nothing open till week after next!!!
+  -  **This kind of bs sends me off down the wrong path, burning up valuable learning time that could be used to learn a heck of a lot of other things about FEND and my career that I need to spend time on.  THIS HAS HAPPENED A LOT IN THE COURSE, BECAUSEOF OUTDATED INFO.**
 - `.success` had been depreciated, use `.done`
 - basically I need to implement this:
 
