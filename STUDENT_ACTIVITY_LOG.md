@@ -258,10 +258,10 @@ July , 2016
 5:35 PM
 - **Found possible solution in Forums**
 -  Another example of outdated courseware that frustrates students and wastes their valubable time
--  Also looked at coaching times, nothing open till week after next!!!
-- Found [forums solution](https://discussions.udacity.com/t/wikipedia-exercise-error/43300/2)
+  -  **I could scream right now... why doesn't Udacity take care to put this info in the right place in a timely manner???**
+  -  The [forums solution](https://discussions.udacity.com/t/wikipedia-exercise-error/43300/2) was known 6 months ago, got updated in TEACHER NOTES about 3 Months ago, but needed to appear at an even earlier point in the course [suggestion to forum](https://discussions.udacity.com/t/wikipedia-exercise-error/43300/14)
+  -  Also looked at coaching times, nothing open till week after next!!!
 - `.success` had been depreciated, use `.done`
-- this info is in later course pages, would be better to show up sooner, added [suggestion to forum](https://discussions.udacity.com/t/wikipedia-exercise-error/43300/14)
 - basically I need to implement this:
 
 ```
@@ -272,4 +272,28 @@ July , 2016
     });
 ```
 
-    
+6:44 PM
+-**Working WIKI API**
+
+---
+    // Wikipedia API URL for server request
+    var wikiUrl =  'http://en.wikipedia.org/w/api.php?action=opensearch&search=' + cityStr + '&format=json&callback=wikiCallback';
+
+    // jQuery AJAX using JSON-P script
+    $.ajax({
+        // Settings Object for using JSON-P
+        url: wikiUrl,
+        dataType: "jsonp",
+        // jsonp: "callback",
+    // NOTE: .success has been depreeciated in jQuery
+    // .done is being chained instead
+    }).done(function( response ) {
+            var articleList = response[1];
+            for (var i = 0; i < articleList.length; i++) {
+                articleStr = articleList[i];
+                var url = 'http://en.wikipedia.org/wiki/' + articleStr;
+                $wikiElem.append('<li><a href="' + url + '">' + articleStr +  '</a></li>');
+            };
+        });
+---
+
