@@ -60,18 +60,16 @@ function loadData() {
         url: wikiUrl,
         dataType: "jsonp",
         // jsonp: "callback",
-        sucess: function( response ) {
+    // NOTE: .success has been depreeciated in jQuery
+    // .done is being chained instead
+    }).done(function( response ) {
             var articleList = response[1];
-            // TEMP CHECK TO SEE IF response  is working
-            console.log(articleList);
-
             for (var i = 0; i < articleList.length; i++) {
                 articleStr = articleList[i];
-                var url = 'http://en.wikipedia.org/wiki' + articleStr;
+                var url = 'http://en.wikipedia.org/wiki/' + articleStr;
                 $wikiElem.append('<li><a href="' + url + '">' + articleStr +  '</a></li>');
             };
-        }
-    });
+        });
 
 
     return false;
