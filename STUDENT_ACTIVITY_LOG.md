@@ -320,3 +320,9 @@ Saturday July 9, 2016
         clearTimeout(wikiRequestTimeout);
     });
 ---
+
+9:08 AM
+- ** DEBUG with DEV TOOLS**
+- Tried out the suggestions, worked fine
+- I wonder if the error messages could be captured and add to the timeout message or a generic error message.
+
