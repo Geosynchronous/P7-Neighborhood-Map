@@ -297,3 +297,27 @@ July , 2016
         });
 ---
 
+Saturday July 9, 2016
+
+8:49 PM
+- **WIKI TIMEOUT ERROR MESSAGE ADDED**
+- Works fine, tested with Turning WIFI both on and off
+- ---
+-   // Turn on Timeout for 8 sec
+    // Will throw error message if WIKI API does not respond in time
+    var wikiRequestTimeout = setTimeout(function(){
+        $wikiElem.text("Failed to Get Wiki Resources")
+    }, 8000);
+
+
+    // Wikipedia API URL for server request
+    var wikiUrl =  'http://en.wikipedia.org/w/api.php?action=opensearch&search=' + cityStr + '&format=json&callback=wikiCallback';
+
+    // jQuery AJAX using JSON-P script
+    $.ajax({
+            // STUFF HERE
+      
+            // Inactivate the Timeout
+            clearTimeout(wikiRequestTimeout);
+        });
+---
