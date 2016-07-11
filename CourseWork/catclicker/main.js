@@ -1,4 +1,4 @@
-// Initialize Click Counter value
+// Initialize Click Counter default value
 var count = 0;
 
 // Get DOM NODES for HTML Elements
@@ -12,7 +12,7 @@ var para = document.createElement("p");
 // Create a text node
 var t = document.createTextNode(count);
 
-// Append Nodes
+// Append Nodes and write Default Count
 // Append the text to <p>
 para.appendChild(t);
 // Append <p> to <div>
