@@ -330,3 +330,13 @@ Saturday July 9, 2016
 - **Finished INTRO TO AJAX, Starting JAVASCRIPT DESIGN PATTERNS Course**
 - CRP Generic & Unique HTML noted, and understood form end of AJAX Course
 
+july 10, 2016
+
+7:49 PM
+- **Mini-Project: Cat Clicker Coded**
+- Used Vanilla JS for this, needed to refine my understanding of fundamentals
+- Could have used jQuery and it would have been easier, Vanilla requires more lines of code
+- Using Vanilla JS help me understand the NODE aspects relations between HTML & JS
+
+![Image of Tiger](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/catclicker.png)
+
