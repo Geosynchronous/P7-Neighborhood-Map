@@ -330,7 +330,7 @@ Saturday July 9, 2016
 - **Finished INTRO TO AJAX, Starting JAVASCRIPT DESIGN PATTERNS Course**
 - CRP Generic & Unique HTML noted, and understood form end of AJAX Course
 
-july 10, 2016
+July 10, 2016
 
 7:49 PM
 - **Mini-Project: Cat Clicker Coded**
@@ -339,4 +339,45 @@ july 10, 2016
 - Using Vanilla JS help me understand the NODE aspects relations between HTML & JS
 
 ![Image of Tiger](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/catclicker.png)
+
+July 11, 2016
+
+9:08 AM
+- ** Refactor: Cat Clicker**
+- Made code and design more efficient
+- Improved comments
+- main.js now looks like this:
+
+```
+// Initialize Click Counter value
+var count = 0;
+
+// Get DOM NODES for HTML Elements
+var elemCat = document.getElementById('tiger');
+var elemCounter = document.getElementById('counter');
+
+
+// Create DOM HTML Element Nodes
+// Create a generic <p> node
+var para = document.createElement("p");
+// Create a text node
+var t = document.createTextNode(count);
+
+// Append Nodes
+// Append the text to <p>
+para.appendChild(t);
+// Append <p> to <div>
+elemCounter.appendChild(para);
+
+// Updates Click Count View
+elemCat.addEventListener('click', function(){
+	// the element has been clicked...
+	count++;
+	// Overwrites previous Count
+	para.innerHTML = count;
+
+
+}, false);
+```
+
 
