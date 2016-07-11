@@ -1,0 +1,9 @@
+body {
+	background-color: #000;
+	color: white;
+    text-align: center;
+}
+
+#counter {
+	font-size: 33px;
+}
