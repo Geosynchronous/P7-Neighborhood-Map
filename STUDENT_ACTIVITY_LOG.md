@@ -378,4 +378,16 @@ elemCat.addEventListener('click', function(){
 }, false);
 ```
 
+7:13 PM
+- **Cat Clicker DUal.. First Pass**
+- Worked on it all day
+- Quite a learning experience
+- Still a few kinks to work out
+- Should of made a bunch of commits. playing around too much
+- First Commit!!! Duh!
+- Stuck with Vanilla JS
+- More later...
+
+
+
 
