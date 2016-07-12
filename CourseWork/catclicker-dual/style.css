@@ -3,3 +3,14 @@ body {
 	color: white;
     text-align: center;
 }
+
+.img-responsive {
+	width:100%;
+}
+
+.catItemContainer {
+  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
