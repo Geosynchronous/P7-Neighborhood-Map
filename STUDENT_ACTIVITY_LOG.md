@@ -389,6 +389,9 @@ elemCat.addEventListener('click', function(){
 - Stuck with Vanilla JS
 - More later...
 
+7:58 PM
+- **Style Enhancements**
+- Here's a screenshot: ![Image of Dual Cat Clicker](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/DualCatClicker.jpg)
 
 
 
