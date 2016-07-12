@@ -1,21 +1,11 @@
 // Initialize Click Counter default value
+// Write to screen
 var count = 0;
-
-// Get DOM NODES for HTML Elements
 var elemCounter = document.getElementById('cats');
-
-// Create DOM HTML Element Nodes
-// Create a generic <p> node
 var countText = document.createElement("p");
-// Create a text node
 var t = document.createTextNode(count);
-
-// Append Nodes and write Default Count
-// Append the text to <p>
 countText.appendChild(t);
-// Append <p> to <div>
 elemCounter.appendChild(countText);
-
 
 // returns a DOM element for each cat
 var catElementGenerator = function(i) {
@@ -36,12 +26,15 @@ var catElementGenerator = function(i) {
 
 	// Thanks to Shaggydactyl for image created at University of Chicago
 	//  http://thecore.uchicago.edu/Winter2011/editors-note.shtml
+
+	// Cat Image Nodes created
     catImage.src = "images/cat-" + i + ".jpg";
     catImage.style.width = "100%";
     catImageContainer.style.width = "100%";
     catImageContainer.appendChild(catImage);
     catContainer.appendChild(catImageContainer);
 
+    // Cat Image Name Nodes created
    	catName = document.createElement("h4");
     catName.innerHTML = "Cat " + i;
     catImageContainer.appendChild(catName);
@@ -49,30 +42,26 @@ var catElementGenerator = function(i) {
     return catContainer;
 };
 
+// Create Cat Elements in HTML
 var catDiv = document.getElementById("cats");
 for (var i = 1; i < 3; i++) {
     catDiv.appendChild(catElementGenerator(i));
 }
 
-
+// This triggers the Click Score to increment
+// Updates value to screen
+// Is there a more concise way of writing this?
 var cat1Div = document.getElementById("cat1");
-// Updates Click Count View
 cat1Div.addEventListener('click', function(){
-	// the element has been clicked...
 	count++;
 	// Overwrites previous Count
 	countText.innerHTML = count;
-
 }, false);
 
-
 var cat2Div = document.getElementById("cat2");
-// Updates Click Count View
 cat2Div.addEventListener('click', function(){
-	// the element has been clicked...
 	count++;
 	// Overwrites previous Count
 	countText.innerHTML = count;
-
 
 }, false);
