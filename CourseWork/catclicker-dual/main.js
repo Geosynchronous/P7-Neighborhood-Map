@@ -1,11 +1,5 @@
 // Initialize Click Counter default value
-// Write to screen
 var count = 0;
-var elemCounter = document.getElementById('cats');
-var countText = document.createElement("p");
-var t = document.createTextNode(count);
-countText.appendChild(t);
-elemCounter.appendChild(countText);
 
 // returns a DOM element for each cat
 var catElementGenerator = function(i) {
@@ -36,7 +30,8 @@ var catElementGenerator = function(i) {
 
     // Cat Image Name Nodes created
    	catName = document.createElement("h4");
-    catName.innerHTML = "Cat " + i;
+   	catName.id = "catCount" + i;
+    catName.innerHTML = "TIGER" + i + " " + count;
     catImageContainer.appendChild(catName);
 
     return catContainer;
@@ -52,16 +47,18 @@ for (var i = 1; i < 3; i++) {
 // Updates value to screen
 // Is there a more concise way of writing this?
 var cat1Div = document.getElementById("cat1");
+var catCount1Div = document.getElementById("catCount1");
 cat1Div.addEventListener('click', function(){
 	count++;
 	// Overwrites previous Count
-	countText.innerHTML = count;
+	// countText.innerHTML = count;
+	catCount1Div.innerHTML = "TIGER1"+ " " + count;
 }, false);
 
 var cat2Div = document.getElementById("cat2");
+var catCount2Div = document.getElementById("catCount2");
 cat2Div.addEventListener('click', function(){
 	count++;
 	// Overwrites previous Count
-	countText.innerHTML = count;
-
+	catCount2Div.innerHTML = "TIGER2"+ " " + count;
 }, false);
