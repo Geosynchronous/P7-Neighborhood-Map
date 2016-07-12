@@ -467,7 +467,7 @@ cat2Div.addEventListener('click', function(){
 ```
 
 Tuesday July 12, 2016
-10:38 PM
+10:38 AM
 - **Refactor Click Count to Individual Cats**
 
 ```
@@ -539,6 +539,15 @@ cat2Div.addEventListener('click', function(){
 
 - This is all works fine, but I need to drill down into DIVS and keeping them alinged when inside a specific container, I forgot how to do that
 
+10:55 AM
+- **fix: removed flexbox**
+- from .catItemContainer
+- It was probably causing some of the problems I mentioned above
+- float: left; seems to be all that was needed
 
-
+```
+/*  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;*/
+```
 
