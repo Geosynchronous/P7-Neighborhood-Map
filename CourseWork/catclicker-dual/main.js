@@ -2,19 +2,19 @@
 var count = 0;
 
 // Get DOM NODES for HTML Elements
-var elemCounter = document.getElementById('counter');
+var elemCounter = document.getElementById('cats');
 
 // Create DOM HTML Element Nodes
 // Create a generic <p> node
-var para = document.createElement("p");
+var countText = document.createElement("p");
 // Create a text node
 var t = document.createTextNode(count);
 
 // Append Nodes and write Default Count
 // Append the text to <p>
-para.appendChild(t);
+countText.appendChild(t);
 // Append <p> to <div>
-elemCounter.appendChild(para);
+elemCounter.appendChild(countText);
 
 
 // returns a DOM element for each cat
@@ -61,7 +61,7 @@ cat1Div.addEventListener('click', function(){
 	// the element has been clicked...
 	count++;
 	// Overwrites previous Count
-	para.innerHTML = count;
+	countText.innerHTML = count;
 
 }, false);
 
@@ -72,7 +72,7 @@ cat2Div.addEventListener('click', function(){
 	// the element has been clicked...
 	count++;
 	// Overwrites previous Count
-	para.innerHTML = count;
+	countText.innerHTML = count;
 
 
 }, false);

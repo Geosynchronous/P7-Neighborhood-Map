@@ -4,8 +4,13 @@ body {
     text-align: center;
 }
 
-.img-responsive {
-	width:100%;
+h1 {
+	margin-bottom: 5px;
+}
+
+p {
+	margin: 5px;
+	font: 14px;
 }
 
 .catItemContainer {
