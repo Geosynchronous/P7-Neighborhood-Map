@@ -348,6 +348,7 @@ July 11, 2016
 - Improved comments
 - main.js now looks like this:
 
+```
 // Initialize Click Counter default value
 var count = 0;
 
