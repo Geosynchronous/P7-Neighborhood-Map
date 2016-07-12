@@ -551,3 +551,13 @@ cat2Div.addEventListener('click', function(){
   display: flex;*/
 ```
 
+11:15 AM
+-- **box-sizing: border-box & Flexbox & Grid**
+- Reviewed these two topics, and have a little better perspective on how this works
+- Useful links to hone skills:
+	- http://www.w3schools.com/cssref/tryit.asp?filename=trycss3_box-sizing2
+	- https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+	- https://css-tricks.com/snippets/css/complete-guide-grid/
+
+
+
