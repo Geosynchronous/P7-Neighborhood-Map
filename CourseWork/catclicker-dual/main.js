@@ -37,6 +37,7 @@ var catElementGenerator = function(i) {
 	// Thanks to Shaggydactyl for image created at University of Chicago
 	//  http://thecore.uchicago.edu/Winter2011/editors-note.shtml
     catImage.src = "images/cat-" + i + ".jpg";
+    catImage.style.width = "100%";
     catImageContainer.style.width = "100%";
     catImageContainer.appendChild(catImage);
     catContainer.appendChild(catImageContainer);
