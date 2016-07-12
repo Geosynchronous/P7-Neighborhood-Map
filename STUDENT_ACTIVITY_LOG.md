@@ -559,5 +559,9 @@ cat2Div.addEventListener('click', function(){
 	- https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 	- https://css-tricks.com/snippets/css/complete-guide-grid/
 
+11:38 AM
+- **SCALABLE**
+- The above code for the Dual Cat Clicker is SCALABLE
+- Closure issues are next in the course, so maybe I will understand a bit more about scaling code
 
 
