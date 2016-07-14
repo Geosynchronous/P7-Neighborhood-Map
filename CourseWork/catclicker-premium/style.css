@@ -1,0 +1,18 @@
+body {
+	background-color: #000;
+	color: white;
+    text-align: center;
+}
+
+h1 {
+	margin-bottom: 5px;
+}
+
+p {
+	margin: 5px;
+	font: 14px;
+}
+
+.catItemContainer {
+  float: left;
+}
