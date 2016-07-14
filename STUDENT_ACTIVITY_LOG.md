@@ -612,3 +612,20 @@ document.body.innerHTML = '';
 - [List of Mini-Project Requirements](https://classroom.udacity.com/nanodegrees/nd001/parts/00113454014/modules/271165859175461/lessons/3417188540/concepts/34338690500923)
 - I will refactor my Cat Clicker Dual Code in a big way to meet these requirements.  Using more function structures will be a priority.
 - Will make a new folder in Repo called CAT CLICKER PREMIUM, and start with the CAT CLICKER DUAL files
+
+Thursday July 14, 2016
+12:14 AM
+- **Basic Container Wireframe**
+- Installed Gliffy Diagramer Extension on Chrome
+- Created this basic wireframe:
+
+![Wireframe Image](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/CatClickerPremiumWireframe.jpg)
+
+
+
+
+
+
+
+
+
