@@ -606,3 +606,9 @@ for (var i = 0; i < nums.length; i++) {
 // clear the screen for testing
 document.body.innerHTML = '';
 ```
+
+9:56 PM
+- **CAT CLICKER PREMIUM Setup**
+- [List of Mini-Project Requirements](https://classroom.udacity.com/nanodegrees/nd001/parts/00113454014/modules/271165859175461/lessons/3417188540/concepts/34338690500923)
+- I will refactor my Cat Clicker Dual Code in a big way to meet these requirements.  Using more function structures will be a priority.
+- Will make a new folder in Repo called CAT CLICKER PREMIUM, and start with the CAT CLICKER DUAL files
