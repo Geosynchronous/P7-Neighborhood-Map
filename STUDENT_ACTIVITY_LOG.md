@@ -564,4 +564,45 @@ cat2Div.addEventListener('click', function(){
 - The above code for the Dual Cat Clicker is SCALABLE
 - Closure issues are next in the course, so maybe I will understand a bit more about scaling code
 
+Wednesday July 13, 2015
 
+9:39 PM
+- **Closure & IIFE**
+- This generalizable code is slicker than the specific I wrote for the cat clicker
+- I hope to apply it in the next round of Cat Clicker Coding
+- It uses an Immediately Invoke Function Execution, to capture the specific num for each div generated
+- And when the event is triggered it passes the specific value (numCopy) for the div clicked on
+
+```
+// clear the screen for testing
+document.body.innerHTML = '';
+
+var nums = [1,2,3];
+
+// Let's loop over the numbers in our array
+for (var i = 0; i < nums.length; i++) {
+
+    // This is the number we're on...
+    var num = nums[i];
+
+    // We're creating a DOM element for the number
+    var elem = document.createElement('div');
+    elem.textContent = num;
+
+    // ... and when we click, alert the value of `num`
+    elem.addEventListener('click', (function(numCopy) {
+        return function() {
+            alert(numCopy);
+        };
+    })(num));
+
+    document.body.appendChild(elem);
+};
+```
+- **COOL TRICK**- It is also cool to note that I just pasted this code in to the console for any open web page, and it cleared out the html body and then ran the rest of the js code, and it could be viewed in the webpage display area, and the div events could be triggered and the alert num value was shown
+- This is the code to use to clear previous webpage:
+
+```
+// clear the screen for testing
+document.body.innerHTML = '';
+```
