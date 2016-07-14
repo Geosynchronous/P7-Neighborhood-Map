@@ -654,6 +654,8 @@ Thursday July 14, 2016
 					- Click Count
 					- Image
 ```	
+- Seperate DATA & Operational FUNCTIONS into two seperate JS files for more clarity and better organization
+- Try to stick with Vanilla JS for now
 
 
 
