@@ -657,6 +657,20 @@ Thursday July 14, 2016
 - Seperate DATA & Operational FUNCTIONS into two seperate JS files for more clarity and better organization
 - Try to stick with Vanilla JS for now
 
+July 14, 2016
+2:21 PM
+- ** Setup FEND Feedback Repo**
+- For collecting notes to Cameron about FEND course improvements
+- https://github.com/Geosynchronous/FEND-Feedback/blob/master/Notes_to_Pittman.md
+
+2:22 PM
+- **Udacity Coaching Changeover Today**
+- Looks like they are improving things big time
+- Have a 4 PM meeting with Heidi today (with old system?)
+	- Initially got cancel message, Chelsea responded with a working link 
+- Have a 5 PM meeting wtih Ryan tomorrow (new Zoom.us system)
+- Have on on Tuesday  with Ty (not sure what system they will use)
+- Zoom.us looks to be way cool
 
 
 
