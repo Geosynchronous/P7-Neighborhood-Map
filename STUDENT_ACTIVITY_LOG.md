@@ -712,5 +712,9 @@ Friday July 15, 2016
 - main.js new with Outlined Plan in Comments
 - main_old.js has old code to take from and reference while developing
 
+2:50 PM
+
+- **ZOOM WEBINAR**
+- 2 HOURS OF USEFUL INFOR
 
 
