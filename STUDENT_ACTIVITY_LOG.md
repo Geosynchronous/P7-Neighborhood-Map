@@ -672,8 +672,38 @@ July 14, 2016
 - Have on on Tuesday  with Ty (not sure what system they will use)
 - Zoom.us looks to be way cool
 
+Friday July 15, 2016
 
+8:21 PM
 
+- **Notes from Udacity Coaching**
+-  Only second time I was able to talk a coach
+-  Heidi anwered a lot of questions for me, that put things in perspective
+-  Forums
+	- Udacity Discussion - Official Support, Forum Mentors respond within 24 hrs, long continious threads
+	- SLACK Udacity FEND Channel - Very active, shorter retention, more of single thread
+	- Google+ Not working out so well, phasing out
+- 2,500 FEND Students
+- Just complete 2 last required project and can graduate
+	- Resume, LinkedIn, Grunt, Gulp can be done after graduation
+- Sent a [Web Tooling & Automation link](https://www.udacity.com/course/web-tooling-automation--ud892) from Senior Web Dev Course that has GULP in it
+- Career Most Important
+	- Github Account
+	- Linked IN Account
+	- 1 page Resume & Cover Letter
+- Changeover for Coaching
+	-  Using ZOOM for video chats, really like it, easy to use, has whiteboard feature too
+	-  Mentors instead of coaches
+- Contact Support if any problem occurs that can't be resolved
+- Lots of changes being made to improve FEND course
+
+8:40 PM
+- **Web Site & Domain Name Created**
+- NameCheap.com $10.56 for 1 year
+- geosynchronous.us
+- bummer.... .us can't privatize domain WHO IS info
+- created site to have a presence on the web
+- "Hello World" is all that it does at moment
 
 
 
