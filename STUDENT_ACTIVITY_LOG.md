@@ -705,5 +705,12 @@ Friday July 15, 2016
 - created site to have a presence on the web
 - "Hello World" is all that it does at moment
 
+11:48 PM
+- **Setup Working Dir and Files**
+- Cloned previous project
+- Added a data.js
+- main.js new with Outlined Plan in Comments
+- main_old.js has old code to take from and reference while developing
+
 
 
