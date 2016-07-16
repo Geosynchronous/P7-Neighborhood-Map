@@ -705,7 +705,7 @@ Friday July 15, 2016
 - created site to have a presence on the web
 - "Hello World" is all that it does at moment
 
-11:48 PM
+11:48 PMc
 - **Setup Working Dir and Files**
 - Cloned previous project
 - Added a data.js
@@ -717,4 +717,15 @@ Friday July 15, 2016
 - **ZOOM WEBINAR**
 - 2 HOURS OF USEFUL INFOR
 
+6:15 PM
+
+- **Great Udacity Online Mentor Meeting with Ryan**
+- Scheduled another for next Thursday @ 10 AM
+- Hints for cat clicker code:
+	- Put DIV Scaffold structure in place in HTML
+		- Easier to read structure
+		- Less JS to do
+	- Use Constructor function for data
+		- data. prefix will make it easy to distinguish data vaiiables... awesome 
+- Open all files at once in SUBLIME by clicking on parent folder... very cool
 
