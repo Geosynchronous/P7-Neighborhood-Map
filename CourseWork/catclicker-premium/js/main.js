@@ -4,16 +4,17 @@
 // TEMP
 // Work on creating menu list
 
-var catListItemizer = function(string) {
-    return "<li>" + string + "</li>";
-};
+
 
 // Returns a string with cat names nested inside <li> tags
 var makeCatList = function() {
-    var cats = "";
+    var cats = "",
+        catListItem = "";
 
     for (var i = 0; i < data.cat.length; i++) {
-        cats = cats + catListItemizer(data.cat[i].name);
+
+        catListItem = "<li id=" + "cat" + i + ">" + data.cat[i].name + "</li>";
+        cats = cats + catListItem;
     }
 
     return cats;
@@ -21,13 +22,13 @@ var makeCatList = function() {
 
 // returns a DOM list element for each cat name
 var catListElementGenerator = function() {
-    var ul;
+    var ol;
 
-    ul = document.createElement("ul");
-    ul.innerHTML = makeCatList();
-    console.log(ul);
+    ol = document.createElement("ol");
+    ol.innerHTML = makeCatList();
+    console.log(ol);
 
-    return ul;
+    return ol;
 };
 
 // Creates Cat list Elements and loads to page
