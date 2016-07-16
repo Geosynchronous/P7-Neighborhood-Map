@@ -1,14 +1,10 @@
 // Cat Clicker Premium by George Fischer
 // Udacity Mini-Project
 
-// TEMP
-// Work on creating menu list
-
-// 9 Lives 9 Cats 9 Lives
-
+// IIFE for creating and appending list in "Choose Cat" menu
 var makeCatMenu = function() {
 
-    // Returns a string with cat names nested inside <li> tags
+    // Returns a string with cat names nested inside <li> numbered id tags
     var makeCatList = function() {
         var cats = "",
             catListItem = "";
@@ -22,11 +18,11 @@ var makeCatMenu = function() {
 
     // returns a DOM list element for each cat name
     var catListElementGenerator = function() {
-        var ol;
+        var ul;
 
-        ol = document.createElement("ol");
-        ol.innerHTML = makeCatList();
-        return ol;
+        ul = document.createElement("ul");
+        ul.innerHTML = makeCatList();
+        return ul;
     };
 
     // Creates Cat list Elements and loads to page
