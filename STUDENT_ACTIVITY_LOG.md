@@ -729,3 +729,13 @@ Friday July 15, 2016
 		- data. prefix will make it easy to distinguish data vaiiables... awesome 
 - Open all files at once in SUBLIME by clicking on parent folder... very cool
 
+7:39 PM
+- **Setup basic HTML Sturcture**
+- After taliking with mentor Ryan I decide to put more structure in the HTML and leass from JS
+- Also decided to use his suggestions on creating a better data structure
+
+
+
+
+
+
