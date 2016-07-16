@@ -1,32 +1,36 @@
 // Cat Clicker Premium by George Fischer
 // Udacity Mini-Project
 
+// LIST OF CATS
 // IIFE for creating and appending list in "Choose Cat" menu
-var makeCatMenu = function() {
+
 
     // Returns a string with cat names nested inside <li> numbered id tags
     var makeCatList = function() {
-        var cats = "",
-            catListItem = "";
+        var catListItem = "",
+            catListElement;
+
+        var ul = document.getElementById("catList");
 
         for (var i = 0; i < data.cat.length; i++) {
-            catListItem = "<li id=" + "cat" + i + ">" + data.cat[i].name + "</li>";
-            cats = cats + catListItem;
+            catListItem = "<li>" + data.cat[i].name + "</li>";
+            catListElement = document.createElement("li");
+            catListElement.innerHTML = catListItem;
+            ul.appendChild(catListElement);
         }
-        return cats;
-    };
+        // return cats;
+    }();
 
-    // returns a DOM list element for each cat name
-    var catListElementGenerator = function() {
-        var ul;
+    // var li =
 
-        ul = document.createElement("ul");
-        ul.innerHTML = makeCatList();
-        return ul;
-    };
+    //     // ... and when we click, alert the value of `num`
+    // elem.addEventListener('click', (function(numCopy) {
+    //     return function() {
+    //         alert(numCopy);
+    //     };
+    // })(num));
 
-    // Creates Cat list Elements and loads to page
-    var catListDiv = document.getElementById("catList");
-    catListDiv.appendChild(catListElementGenerator());
-}();
+
+
+
 
