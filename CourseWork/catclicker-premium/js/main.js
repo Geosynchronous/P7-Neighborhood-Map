@@ -36,21 +36,21 @@
 
 
 // TITLE DIV
-var titleElementGenerator = function() {
+// var titleElementGenerator = function() {
 
-    var titleContainer,
-        titleName,
-        h;
+//     var titleContainer,
+//         titleName,
+//         h;
 
-    titleContainer = document.createElement("div");
-    titleContainer.classList.add("title");
-    h = document.createElement("h1");
-    titleName = document.createTextNode(title);
-    h.appendChild(titleName);
-    titleContainer.appendChild(h);
+//     titleContainer = document.createElement("div");
+//     titleContainer.classList.add("title");
+//     h = document.createElement("h1");
+//     titleName = document.createTextNode(title);
+//     h.appendChild(titleName);
+//     titleContainer.appendChild(h);
 
-    return titleContainer;
-};
+//     return titleContainer;
+// };
 
 // // MENU CONTAINER DIVs
 // var menuElementGenerator = function(i) {
@@ -92,6 +92,6 @@ var titleElementGenerator = function() {
 
 // INVOKE
 
-document.body.appendChild(titleElementGenerator());
+// document.body.appendChild(titleElementGenerator());
 
 // INVOKE
