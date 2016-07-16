@@ -58,5 +58,5 @@ var data = new dataConstructor();  
 
 //TEMP
 //Example chained encapsulated variable array element that is created
-console.log(data.cat[0].name);
+// console.log(data.cat[0].name);
 

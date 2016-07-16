@@ -4,33 +4,33 @@
 // TEMP
 // Work on creating menu list
 
+// 9 Lives 9 Cats 9 Lives
 
+var makeCatMenu = function() {
 
-// Returns a string with cat names nested inside <li> tags
-var makeCatList = function() {
-    var cats = "",
-        catListItem = "";
+    // Returns a string with cat names nested inside <li> tags
+    var makeCatList = function() {
+        var cats = "",
+            catListItem = "";
 
-    for (var i = 0; i < data.cat.length; i++) {
+        for (var i = 0; i < data.cat.length; i++) {
+            catListItem = "<li id=" + "cat" + i + ">" + data.cat[i].name + "</li>";
+            cats = cats + catListItem;
+        }
+        return cats;
+    };
 
-        catListItem = "<li id=" + "cat" + i + ">" + data.cat[i].name + "</li>";
-        cats = cats + catListItem;
-    }
+    // returns a DOM list element for each cat name
+    var catListElementGenerator = function() {
+        var ol;
 
-    return cats;
-};
+        ol = document.createElement("ol");
+        ol.innerHTML = makeCatList();
+        return ol;
+    };
 
-// returns a DOM list element for each cat name
-var catListElementGenerator = function() {
-    var ol;
+    // Creates Cat list Elements and loads to page
+    var catListDiv = document.getElementById("catList");
+    catListDiv.appendChild(catListElementGenerator());
+}();
 
-    ol = document.createElement("ol");
-    ol.innerHTML = makeCatList();
-    console.log(ol);
-
-    return ol;
-};
-
-// Creates Cat list Elements and loads to page
-var catListDiv = document.getElementById("catList");
-catListDiv.appendChild(catListElementGenerator());
