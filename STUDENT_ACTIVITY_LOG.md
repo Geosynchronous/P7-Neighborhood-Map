@@ -734,6 +734,11 @@ Friday July 15, 2016
 - After taliking with mentor Ryan I decide to put more structure in the HTML and leass from JS
 - Also decided to use his suggestions on creating a better data structure
 
+9:42 PM
+
+- **Made Cat List**
+- made in js and loads to page
+- not yet selectable
 
 
 
