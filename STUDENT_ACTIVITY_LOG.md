@@ -751,6 +751,9 @@ Saturday July 16,2016
 
 ![screenshot image](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/zcreenshotz-ccz-%20premium.jpg)
 
+1:30 PM
+- **Refactored js and html**
+- Reduced fluff, made more concise
 
 
 
