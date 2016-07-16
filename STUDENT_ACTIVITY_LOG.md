@@ -743,7 +743,13 @@ Friday July 15, 2016
 - **id added to each list item**
 - now each list element item will be unique when selected and identifiable
 
+Saturday July 16,2016
+2:10 AM
 
+- **Messed around with Style**
+- Looks like this:
+
+![screenshot image](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/zcreenshotz-ccz-%20premium.jpg)
 
 
 
