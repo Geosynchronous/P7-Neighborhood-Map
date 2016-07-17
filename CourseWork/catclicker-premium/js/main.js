@@ -1,27 +1,31 @@
 // Cat Clicker Premium by George Fischer
 // Yet another very cool Udacity Mini-Project
 
-// IIFE: Setup, UI and Updates
-// Generates needed DOM Elements
-// Loads DOM Elements to Page
-// Event Listener Triggered Content Updates
-var CatClickerPremium = function() {
+// GLOBAL VARIABLES needed for the two Event Listener IIFE's to work together
+// (Question: Is there a better way to do this?  Eliminate Global Variables?)
+var numNow,
+    clickCount = [];
 
-    // Get DOM Elements
-    var ul = document.getElementById("catList");
-    var catNameElement = document.getElementById("catName");
-    var catCountElement = document.getElementById("catClickCount");
-    var catImageElement = document.getElementById("catImage");
+// GET DOM ELEMENTS
+// Needed for MENU & CLICK COUNTS
+var ul = document.getElementById("catList");
+var catNameElement = document.getElementById("catName");
+var catCountElement = document.getElementById("catClickCount");
+var catImageElement = document.getElementById("catImage");
+
+// CHOOSE CAT MENU
+// Setup, UI and Updates
+var CatClickerPremium = function() {
 
     var catListItem = "",
         catListElement,
-        clickCount = 0,
         num;
 
     // GENERATE & UPDATE ELEMENT CONTENT
     // Menu & Image Container Element Content as needed
     for (var i = 0; i < data.cat.length; i++) {
         num = i;
+        clickCount[num] = 0;
         catListItem = "<li>" + data.cat[i].name + "</li>";
         catListElement = document.createElement("li");
         catListElement.innerHTML = catListItem;
@@ -29,30 +33,36 @@ var CatClickerPremium = function() {
         // MENU LIST ITEM Appended
         ul.appendChild(catListElement);
 
-        // UPDATES IMAGE CONTAINER CONTENTS
-        // IIFE for each list element with eventListener and with unique num value
-        // ... and when we click the cat list item we the cat image and text update
-        // Slick Trick
-        catListElement.addEventListener('click', (function(numCopy, clickCountCopy) {
+        // UPDATES IMAGE CONTAINER CONTENTS to web page
+        // IIFE for each list element with eventListener and with unique numCopy value
+        // ... and when we click the cat list item, the cat image and text update
+        // Slick Trick:
+        //      - catListElement.addEventListener invoked immediately
+        //      - pass in "num" (iterates through all cats) to .addEventListener
+        //      - "numCopy" passes unique value of "num" to "return function()" (for each cat)
+        //      - "return function()" executed each time "catListElement" is clicked (specific cat)
+        //      - current "numCopy" value passed to global "numNow"
+        //              - allows current cat displayed to have it's specific click counter updated
+        //              - (see "catImageElement.addEventListener()" below)
+        catListElement.addEventListener('click', (function(numCopy) {
             return function() {
-            catNameElement.innerHTML = data.cat[numCopy].name;
-            catImageElement.innerHTML = "<img src=" + data.cat[numCopy].images + ">";
-            catCountElement.innerHTML = clickCountCopy;
-
-            catImageElement.addEventListener('click', (function(clickCountCopyPassed) {
-                return function() {
-                clickCountCopyPassed++;
-                catCountElement.innerHTML = clickCountCopyPassed;
-                };
-            })(clickCountCopy));
+                catNameElement.innerHTML = data.cat[numCopy].name;
+                catImageElement.innerHTML = "<img src=" + data.cat[numCopy].images + ">";
+                catCountElement.innerHTML = clickCount[numCopy];
+                numNow = numCopy;
             };
-        })(num, clickCount));
+        })(num));
     }
 }();
 
-
-
-
-
-
-
+// UPDATES CAT CLICK COUNTS to web page
+// For each cat when clicked
+// "clickCount[numNow]++"
+//      - updates specific click counter for displayed cat
+//      - since global, it remembers value to be used in both MENU and CLICK COUNTS
+catImageElement.addEventListener('click', (function() {
+    return function() {
+        clickCount[numNow]++;
+        catCountElement.innerHTML = clickCount[numNow];
+    };
+})());
