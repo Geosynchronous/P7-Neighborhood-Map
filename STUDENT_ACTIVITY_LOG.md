@@ -826,7 +826,7 @@ var catCountElement = document.getElementById("catClickCount");
 var catImageElement = document.getElementById("catImage");
 
 // CHOOSE CAT MENU
-// Setup, UI and Updates
+// IIFE Setup, UI and Updates
 var CatClickerPremium = function() {
 
     var catListItem = "",
@@ -845,8 +845,8 @@ var CatClickerPremium = function() {
         // MENU LIST ITEM Appended
         ul.appendChild(catListElement);
 
-        // UPDATES IMAGE CONTAINER CONTENTS to web page
-        // IIFE for each list element with eventListener and with unique numCopy value
+        // IIFE UPDATES IMAGE CONTAINER CONTENTS to web page
+        // Each cat list element with eventListener and with unique numCopy value
         // ... and when we click the cat list item, the cat image and text update
         // Slick Trick:
         //      - catListElement.addEventListener invoked immediately
@@ -867,7 +867,7 @@ var CatClickerPremium = function() {
     }
 }();
 
-// UPDATES CAT CLICK COUNTS to web page
+// IIFE UPDATES CAT CLICK COUNTS to web page
 // For each cat when clicked
 // "clickCount[numNow]++"
 //      - updates specific click counter for displayed cat
