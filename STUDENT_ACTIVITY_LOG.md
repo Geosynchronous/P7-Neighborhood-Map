@@ -883,6 +883,9 @@ catImageElement.addEventListener('click', (function() {
 - I really like how it turned out
 - Do wonder about a good way to eliminate global variables, or if that really matters...
 
+4:58 PM
+- **Reload gh-Pages to run Cat Clicker Premium on Web**
+- https://geosynchronous.github.io/P7-Neighborhood-Map//CourseWork/catclicker-premium/index.html
 
 
 
