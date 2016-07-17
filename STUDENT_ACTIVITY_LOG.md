@@ -806,8 +806,8 @@ var makeCatList = function() {
 Sunday July 17,2016
 10:49 AM
 - **Completed: Cat Clicker Premium**
-- Did a lot of refactors to get here:
-![Screenshot Cat Clicker Premium](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-07-17%20at%2010.08.21%20AM.jpg)
+- Did a lot of refactors to get here: ![Screenshot Cat Clicker Premium](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-07-17%20at%2010.08.21%20AM.jpg)
+
 ```
 // Cat Clicker Premium by George Fischer
 // Yet another very cool Udacity Mini-Project
