@@ -9,6 +9,10 @@ body {
 	margin: 20px;
 }
 
+img {
+	width: 300px;
+}
+
 h1,
 h2 {
 	margin-bottom: 1px;
