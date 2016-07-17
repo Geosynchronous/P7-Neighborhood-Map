@@ -798,5 +798,8 @@ var makeCatList = function() {
 - Clicking on any list item will load that cat data into the image container
 - Still need to make counter work
 
-
+7:49 PM
+- **Cat Click Count Updates**
+- But goes back to 0 everytime a cat is reselected from the menu
+- Need to hold and pass the accumulated counts somehow...
 
