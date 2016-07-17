@@ -803,3 +803,85 @@ var makeCatList = function() {
 - But goes back to 0 everytime a cat is reselected from the menu
 - Need to hold and pass the accumulated counts somehow...
 
+Sunday July 17,2016
+10:49 AM
+- **Completed: Cat Clicker Premium**
+- Did a lot of refactors to get here:
+![Screenshot Cat Clicker Premium](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-07-17%20at%2010.08.21%20AM.jpg)
+```
+// Cat Clicker Premium by George Fischer
+// Yet another very cool Udacity Mini-Project
+
+// GLOBAL VARIABLES needed for the two Event Listener IIFE's to work together
+// (Question: Is there a better way to do this?  Eliminate Global Variables?)
+var numNow,
+    clickCount = [];
+
+// GET DOM ELEMENTS
+// Needed for MENU & CLICK COUNTS
+var ul = document.getElementById("catList");
+var catNameElement = document.getElementById("catName");
+var catCountElement = document.getElementById("catClickCount");
+var catImageElement = document.getElementById("catImage");
+
+// CHOOSE CAT MENU
+// Setup, UI and Updates
+var CatClickerPremium = function() {
+
+    var catListItem = "",
+        catListElement,
+        num;
+
+    // GENERATE & UPDATE ELEMENT CONTENT
+    // Menu & Image Container Element Content as needed
+    for (var i = 0; i < data.cat.length; i++) {
+        num = i;
+        clickCount[num] = 0;
+        catListItem = "<li>" + data.cat[i].name + "</li>";
+        catListElement = document.createElement("li");
+        catListElement.innerHTML = catListItem;
+
+        // MENU LIST ITEM Appended
+        ul.appendChild(catListElement);
+
+        // UPDATES IMAGE CONTAINER CONTENTS to web page
+        // IIFE for each list element with eventListener and with unique numCopy value
+        // ... and when we click the cat list item, the cat image and text update
+        // Slick Trick:
+        //      - catListElement.addEventListener invoked immediately
+        //      - pass in "num" (iterates through all cats) to .addEventListener
+        //      - "numCopy" passes unique value of "num" to "return function()" (for each cat)
+        //      - "return function()" executed each time "catListElement" is clicked (specific cat)
+        //      - current "numCopy" value passed to global "numNow"
+        //              - allows current cat displayed to have it's specific click counter updated
+        //              - (see "catImageElement.addEventListener()" below)
+        catListElement.addEventListener('click', (function(numCopy) {
+            return function() {
+                catNameElement.innerHTML = data.cat[numCopy].name;
+                catImageElement.innerHTML = "<img src=" + data.cat[numCopy].images + ">";
+                catCountElement.innerHTML = clickCount[numCopy];
+                numNow = numCopy;
+            };
+        })(num));
+    }
+}();
+
+// UPDATES CAT CLICK COUNTS to web page
+// For each cat when clicked
+// "clickCount[numNow]++"
+//      - updates specific click counter for displayed cat
+//      - since global, it remembers value to be used in both MENU and CLICK COUNTS
+catImageElement.addEventListener('click', (function() {
+    return function() {
+        clickCount[numNow]++;
+        catCountElement.innerHTML = clickCount[numNow];
+    };
+})());
+```
+- The code seems to work fine in all required functions
+- I really like how it turned out
+- Do wonder about a good way to eliminate global variables, or if that really matters...
+
+
+
+
