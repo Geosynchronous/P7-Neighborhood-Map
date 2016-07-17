@@ -793,5 +793,10 @@ var makeCatList = function() {
 ```
 - Next I need to construct all the DOM Elements for each of the individual cats that can be loaded into the catContainer DIV
 
+6:31 PM
+- **Refactor Image Selection @ Image Container Element Updates**
+- Clicking on any list item will load that cat data into the image container
+- Still need to make counter work
+
 
 
