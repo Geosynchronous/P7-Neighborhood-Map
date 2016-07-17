@@ -9,6 +9,11 @@ body {
 	margin: 20px;
 }
 
+.catContainer {
+	text-align: center;
+	width: 300px;
+}
+
 img {
 	width: 300px;
 }
@@ -29,6 +34,3 @@ p {
 	font: 14px;
 }
 
-.catItemContainer {
-  float: left;
-}

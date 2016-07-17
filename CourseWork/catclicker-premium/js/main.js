@@ -15,6 +15,7 @@ var CatClickerPremium = function() {
 
     var catListItem = "",
         catListElement,
+        clickCount = 0,
         num;
 
     // GENERATE & UPDATE ELEMENT CONTENT
@@ -30,15 +31,22 @@ var CatClickerPremium = function() {
 
         // UPDATES IMAGE CONTAINER CONTENTS
         // IIFE for each list element with eventListener and with unique num value
-        // ... and when we click, alert the value of `num`
+        // ... and when we click the cat list item we the cat image and text update
         // Slick Trick
-        catListElement.addEventListener('click', (function(numCopy) {
+        catListElement.addEventListener('click', (function(numCopy, clickCountCopy) {
             return function() {
             catNameElement.innerHTML = data.cat[numCopy].name;
             catImageElement.innerHTML = "<img src=" + data.cat[numCopy].images + ">";
-            catCountElement.innerHTML = data.cat[numCopy].count;
+            catCountElement.innerHTML = clickCountCopy;
+
+            catImageElement.addEventListener('click', (function(clickCountCopyPassed) {
+                return function() {
+                clickCountCopyPassed++;
+                catCountElement.innerHTML = clickCountCopyPassed;
+                };
+            })(clickCountCopy));
             };
-        })(num));
+        })(num, clickCount));
     }
 }();
 
