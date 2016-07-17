@@ -1,3 +1,6 @@
+/* Cat Clicker Premium by George Fischer
+   Yet another very cool Udacity Mini-Project */
+
 body {
 	background-color: black;
 	color: white;
@@ -23,11 +26,11 @@ h2 {
 	margin-bottom: 1px;
     color: red;
 }
+
 ul {
 	list-style-type: circle;
 	margin-top: 5px;
 }
-
 
 p {
 	margin: 5px;
