@@ -9,12 +9,24 @@ body {
 
 .container {
 	width: 320px;
-	margin: 20px;
+}
+
+.title {
+	text-align: center;
+	width:320px;
 }
 
 .catContainer {
 	text-align: center;
-	width: 300px;
+	width: 320px;
+}
+.menuContainer {
+	text-align: center;
+	height: 150px;
+}
+
+.catList {
+	margin-bottom: 10px;
 }
 
 img {
@@ -28,9 +40,16 @@ h2 {
 }
 
 ul {
-	list-style-type: circle;
+	list-style-type: none;
 	margin-top: 5px;
+	width:300px;
 }
+
+li{
+	font-size: 20px;
+  	width:50%;
+  	float:left;
+}​
 
 p {
 	margin: 5px;
