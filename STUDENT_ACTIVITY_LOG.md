@@ -893,5 +893,8 @@ catImageElement.addEventListener('click', (function() {
 
 ![Cat Clicker Premium more Mobile Friendly](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-07-17%20at%205.51.01%20PM.png)
 
-
+7:11 PM
+- **Mobile Test**
+- The clicks worked on both the list of cats, and the images for each cat
+- Not perfect layout for mobile, though it is interesting to know that the everntListener clicking works on IOS
 
