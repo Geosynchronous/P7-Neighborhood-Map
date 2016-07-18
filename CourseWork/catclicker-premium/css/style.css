@@ -25,6 +25,11 @@ body {
 	height: 150px;
 }
 
+#catClickCount {
+	color: #ffff00;
+	font-style: italic;
+}
+
 .catList {
 	margin-bottom: 10px;
 }
@@ -54,5 +59,7 @@ li{
 p {
 	margin: 5px;
 	font: 14px;
+	color: #ffff00;
+	font-style: italic;
 }
 

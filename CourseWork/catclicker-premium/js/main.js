@@ -62,7 +62,20 @@ var CatClickerPremium = function() {
 //      - since global, it remembers value to be used in both MENU and CLICK COUNTS
 catImageElement.addEventListener('click', (function() {
     return function() {
+
+// HACK CHECK
+// See if it is a countable cat from list of choices
+//      - if countable cat then update count
+//      - if not countable cat (placeholder image)
+//              - message to choose another cat
+//              - NaN condition
+if(numNow >= 0 & numNow <= data.cat.length) {
         clickCount[numNow]++;
         catCountElement.innerHTML = clickCount[numNow];
+}
+else {
+        catCountElement.innerHTML = "Please choose another cat from above list.";
+}
+
     };
 })());
