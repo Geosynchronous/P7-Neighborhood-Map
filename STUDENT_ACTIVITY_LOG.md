@@ -887,5 +887,11 @@ catImageElement.addEventListener('click', (function() {
 - **Reload gh-Pages to run Cat Clicker Premium on Web**
 - https://geosynchronous.github.io/P7-Neighborhood-Map//CourseWork/catclicker-premium/index.html
 
+5:58 PM
+- **More Mobile Friendly**
+- CSS Tweaks
+
+![Cat Clicker Premium more Mobile Friendly](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-07-17%20at%205.51.01%20PM.png)
+
 
 
