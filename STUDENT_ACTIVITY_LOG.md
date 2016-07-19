@@ -954,6 +954,7 @@ var octopus = {
 - **refactor: Add" init:" to MVO objects**
 - Seems like a common thread to each MVO object, and seems like something I am doing already in my spaghetti code
 - Left functions empty, till i can figure out how to make this work
+- Didn't break the code
 - Will try first to init my cat `data` from data.js
 
 ```
