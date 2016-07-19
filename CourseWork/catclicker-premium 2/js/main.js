@@ -8,7 +8,9 @@
 //  - Refactor Work in Progress...
 
 // ALL MODEL OBJECTS HERE
+$(function(){
 var model = {
+
 
 };
 
@@ -22,7 +24,7 @@ var octopus = {
 
 };
 
-
+//});
 
 // GLOBAL VARIABLES needed for the two Event Listener IIFE's to work together
 // (Question: Is there a better way to do this?  Eliminate Global Variables?)
@@ -102,3 +104,5 @@ else {
 
     };
 })());
+
+});
