@@ -981,6 +981,6 @@ Tuesday July 19, 2016
 8:21 AM
 - **TOO HARD - REBOOT**
 - bit off more than I can chew with refactoring my Cat Clicker Premium code into similar MVO model of Udacity Retain
-- Will Pickup **Andrew's Cat Clicker** less complicated Code for refactor into MVO using **Udacity Retain** as a model
+- Will Pickup [**Andrew's Cat Clicker**](https://github.com/Geosynchronous/P7-Neighborhood-Map/tree/master/CourseWork/ud989-cat-clicker-andy-refactor-mvo) less complicated Code for refactor into MVO using **Udacity Retain** as a model
 
 
