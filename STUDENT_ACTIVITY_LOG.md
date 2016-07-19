@@ -983,4 +983,79 @@ Tuesday July 19, 2016
 - bit off more than I can chew with refactoring my Cat Clicker Premium code into similar MVO model of Udacity Retain
 - Will Pickup [**Andrew's Cat Clicker**](https://github.com/Geosynchronous/P7-Neighborhood-Map/tree/master/CourseWork/ud989-cat-clicker-andy-refactor-mvo) less complicated Code for refactor into MVO using [**Udacity Retain**](https://github.com/Geosynchronous/P7-Neighborhood-Map/tree/master/CourseWork/ud989-retain) as a model
 
+8:43 AM
+- **Setup MVO Refactor in app.js**
+- First to move everything into MVO var structure
+```
+// REFACTOR ANDY's CODE for MVO
+
+// MVO ORGANIZATION:
+//  - MODEL, VIEW, OBJECT
+//  - Move existing code into correct place
+//  - Refactor Work in Progress...
+
+// ALL MODEL OBJECTS HERE
+// LOL.... HOW???
+
+$(document).ready(function(){
+
+    // ALL MODEL OBJECTS HERE
+    var model = {
+
+    };
+
+    // ALL VIEW OBJECTS HERE
+    var view = {
+
+    };
+
+    // ALL OCTOPUS OBJECTS HERE
+    var octopus = {
+
+    };
+});
+
+
+// REFACTOR EVERYTHING BELOW
+// And move into MVO vars above
+
+var cats = $(".cat");
+var buttons = $("button");
+
+function hideAllCats(){
+	for (var i=0; i<cats.length; i++){
+		$(cats[i]).hide();
+	}
+}
+
+function bindButtonToCat(idNumber){
+	$("#button"+idNumber).click(function(){
+		hideAllCats();
+		$("#cat"+idNumber).show();
+	})
+}
+
+function bindCounterToCat(idNumber){
+	var cat = "#cat"+idNumber
+	$(cat).click(function(){
+		var count = $(cat+" > .counter").text();
+		count = parseInt(count) + 1;
+		$(cat+" > .counter").text(count);
+	})
+}
+
+for (var i=1; i<=buttons.length; i++){
+	bindButtonToCat(i);
+}
+
+for (var i=1; i<=cats.length; i++){
+	bindCounterToCat(i);
+}
+
+hideAllCats();
+$("#cat1").show();
+```
+
+
+
 
