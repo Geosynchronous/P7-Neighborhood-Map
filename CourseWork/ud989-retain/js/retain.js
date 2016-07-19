@@ -1,4 +1,4 @@
-$(function(){
+$(document).ready(function(){
 
     var model = {
         init: function() {
@@ -62,3 +62,4 @@ $(function(){
 
     octopus.init();
 });
+
