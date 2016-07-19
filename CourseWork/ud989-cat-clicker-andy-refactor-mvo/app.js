@@ -27,21 +27,6 @@ $(document).ready(function(){
 
     };
 
-    // ALL VIEW OBJECTS HERE
-    var view = {
-        init: function() {
-
-            view.render();
-        },
-
-        render: function() {
-			octopus.hideAllCats();
-			$("#cat1").show();
-			octopus.getButtons();
-			octopus.getCat();
-        }
-    };
-
     // ALL OCTOPUS OBJECTS HERE
     var octopus = {
         init: function() {
@@ -84,6 +69,21 @@ $(document).ready(function(){
 			}
 		}
 
+    };
+
+    // ALL VIEW OBJECTS HERE
+    var view = {
+        init: function() {
+
+            view.render();
+        },
+
+        render: function() {
+			octopus.hideAllCats();
+			$("#cat1").show();
+			octopus.getButtons();
+			octopus.getCat();
+        }
     };
 
 
