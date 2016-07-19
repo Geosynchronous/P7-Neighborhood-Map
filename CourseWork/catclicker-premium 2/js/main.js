@@ -1,6 +1,29 @@
 // Cat Clicker Premium by George Fischer
 // Yet another very cool Udacity Mini-Project
 
+
+// MVO ORGANIZATION:
+//  - MODEL, VIEW, OBJECT
+//  - Move existing code into correct place
+//  - Refactor Work in Progress...
+
+// ALL MODEL OBJECTS HERE
+var model = {
+
+};
+
+// ALL VIEW OBJECTS HERE
+var view = {
+
+};
+
+// ALL OCTOPUS OBJECTS HERE
+var octopus = {
+
+};
+
+
+
 // GLOBAL VARIABLES needed for the two Event Listener IIFE's to work together
 // (Question: Is there a better way to do this?  Eliminate Global Variables?)
 var numNow,
