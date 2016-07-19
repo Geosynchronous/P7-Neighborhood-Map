@@ -938,3 +938,15 @@ var octopus = {
 - I will stick with Vanilla JS
 - I will keep the initial HTML the same, possibly refactor later, so that none of the data or text is shown.
  
+8:40 PM
+- **IN OVER MY HEAD and into jQuery**
+- Did the above and tried refactor code, and OMG what a mess
+- Kept the above addition, and also added jQuery as I am using the [UDACITY RETAIN CODE](https://github.com/Geosynchronous/P7-Neighborhood-Map/CourseWork/ud989-retain) as a model for MVO
+- Put all my code in `$(function());`
+	- **WHAT IS THIS DOING??** Anything special?
+- Added script in html to load jQuery
+- The Cat Clicker Premium2 works fine
+- **Seriously Glad that I have a 1 on 1 Mentor with TY tommorow at 6 PM**
+- Going to need help with jQuery
+- In the meantime, I will see what progress i can make & break...
+
