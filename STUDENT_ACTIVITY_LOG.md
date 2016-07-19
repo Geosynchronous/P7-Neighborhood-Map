@@ -1247,4 +1247,41 @@ $(document).ready(function(){
 });
 ```
 
+5:47 PM
+- **Refactor: Button Render**
+- Got this working:
+```
+$(document).ready(function(){
+
+    // ALL MODEL OBJECTS HERE
+    var model = {
+
+    };
+
+    // ALL OCTOPUS OBJECTS HERE
+    var octopus = {
+
+    };
+
+    // ALL VIEW OBJECTS HERE
+    var view = {
+
+        init: function() {
+			this.catList = $('<div></div>').attr('id', 'catlist');
+            view.render();
+        },
+        render: function(){
+            var htmlStr = '';
+    		for (var i = 1; i < 6; i++) {
+                 htmlStr += ('<button id="button' + i + '">Cat ' + i +'</button>');
+             }
+			$('body').prepend(this.catList);
+			$('#catlist').html(htmlStr);
+        }
+    };
+
+view.init();
+
+});
+```
 
