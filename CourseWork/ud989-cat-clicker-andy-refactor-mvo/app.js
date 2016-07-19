@@ -1,3 +1,34 @@
+// REFACTOR ANDY's CODE for MVO
+
+// MVO ORGANIZATION:
+//  - MODEL, VIEW, OBJECT
+//  - Move existing code into correct place
+//  - Refactor Work in Progress...
+
+// ALL MODEL OBJECTS HERE
+// LOL.... HOW???
+
+$(document).ready(function(){
+
+    // ALL MODEL OBJECTS HERE
+    var model = {
+
+    };
+
+    // ALL VIEW OBJECTS HERE
+    var view = {
+
+    };
+
+    // ALL OCTOPUS OBJECTS HERE
+    var octopus = {
+
+    };
+});
+
+
+// REFACTOR EVERYTHING BELOW
+// And move into MVO vars above
 
 var cats = $(".cat");
 var buttons = $("button");
