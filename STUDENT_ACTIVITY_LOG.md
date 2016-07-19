@@ -915,7 +915,28 @@ Monday July 18, 2016
 	- model
 	- view
 	- object
+```
+// MVO ORGANIZATION:
+//  - MODEL, VIEW, OBJECT
+//  - Move existing code into correct place
+//  - Refactor Work in Progress...
+
+// ALL MODEL OBJECTS HERE
+var model = {
+
+};
+
+// ALL VIEW OBJECTS HERE
+var view = {
+
+};
+
+// ALL OCTOPUS OBJECTS HERE
+var octopus = {
+
+};	
+```
 - I will refactor code till all of this is acheived
 - I will stick with Vanilla JS
 - I will keep the initial HTML the same, possibly refactor later, so that none of the data or text is shown.
-
+ 
