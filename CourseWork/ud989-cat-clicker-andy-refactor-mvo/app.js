@@ -33,9 +33,12 @@ $(document).ready(function(){
 
             view.render();
         },
+
         render: function() {
 			octopus.hideAllCats();
 			$("#cat1").show();
+			octopus.getButtons();
+			octopus.getCat();
         }
     };
 
@@ -48,7 +51,7 @@ $(document).ready(function(){
 
 		bindButtonToCat: function(idNumber){
 			$("#button"+idNumber).click(function(){
-				hideAllCats();
+				octopus.hideAllCats();
 				$("#cat"+idNumber).show();
 			})
 		},
@@ -75,6 +78,7 @@ $(document).ready(function(){
         },
 
     	hideAllCats: function(){
+    		model.getAllCats();
 			for (var i=0; i<cats.length; i++){
 			$(cats[i]).hide();
 			}
