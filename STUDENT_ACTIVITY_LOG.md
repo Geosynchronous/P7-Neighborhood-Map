@@ -1196,5 +1196,11 @@ $(document).ready(function(){
 
 ```
 
+12:33 PM
+- **refactor: Starting OVer Again!!!**
+- Model and View are mixed in html.  Basically need to start from scratch,  Build one piece at a time.  Get Data our of HTML first.
+- Arrggh!!!
+- [ud989-cat-clicker-andy MVO2](https://github.com/Geosynchronous/P7-Neighborhood-Map/tree/master/CourseWork/ud989-cat-clicker-andy%20MVO2)
+
 
 
