@@ -1267,20 +1267,25 @@ $(document).ready(function(){
     var view = {
 
         init: function() {
+            // Creates DIV Element Tag for Buttons
 			this.catList = $('<div></div>').attr('id', 'catlist');
             view.render();
         },
         render: function(){
+            // Creates the Buttons Element Tags
             var htmlStr = '';
     		for (var i = 1; i < 6; i++) {
                  htmlStr += ('<button id="button' + i + '">Cat ' + i +'</button>');
-             }
+            }
+            // Renders page with DIV and BUTTONS
 			$('body').prepend(this.catList);
 			$('#catlist').html(htmlStr);
         }
     };
 
 view.init();
+
+
 
 });
 ```
