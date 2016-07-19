@@ -977,5 +977,10 @@ var octopus = {
 	- A jQuery action() to be performed on the element(s)
 - [This is a GOOD W3 INTRO to jQUERY](http://www.w3schools.com/jquery/jquery_intro.asp)
 
+Tuesday July 19, 2016
+8:21 AM
+- **TOO HARD - REBOOT**
+- bit off more than I can chew with refactoring my Cat Clicker Premium code into similar MVO model of Udacity Retain
+- Will Pickup **Andrew's Cat Clicker** less complicated Code for refactor into MVO using **Udacity Retain** as a model
 
 
