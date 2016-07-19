@@ -898,3 +898,14 @@ catImageElement.addEventListener('click', (function() {
 - The clicks worked on both the list of cats, and the images for each cat
 - Not perfect layout for mobile, though it is interesting to know that the everntListener clicking works on IOS
 
+Monday July 18, 2016
+5:45 PM
+- **Finished "Changing Expectations" Course Section**
+- Edited "Udacity Retain" code to add formatted date to each note
+
+6:10 PM
+- **Started "Refactoring with Separation of Concerns" Section**
+- Cloned Andy's Cat Clicker Repo
+- Looking at Code
+
+
