@@ -964,3 +964,18 @@ var octopus = {
         }
     };
 ```
+
+9:58 PM
+- **Document Ready**
+- This is  `$(function());`is short hand for `$(document).ready(function(){};`
+	- Which means that the jQUery functions will not execute until all of the document has finished loading.
+- I changed it to the long hand form to remind me of what is happening in my code.
+- `$(selector).action() shows basic structure and terninmology
+- jQuery uses CSS syntax to select elements
+	- A $ sign to define/access jQuery
+	= A (selector) to "query (or find)" HTML elements
+	- A jQuery action() to be performed on the element(s)
+- [This is a GOOD W3 INTRO to jQUERY](http://www.w3schools.com/jquery/jquery_intro.asp)
+
+
+
