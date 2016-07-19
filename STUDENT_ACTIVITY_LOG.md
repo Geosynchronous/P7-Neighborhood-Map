@@ -912,9 +912,7 @@ Monday July 18, 2016
 - ** Cat Clicker Premium MVO refactor set-up**
 - Cloned Premium to Premium 2 folder
 - Will first try and institure MVO organization into organizing vars:
-	- model
-	- view
-	- object
+
 ```
 // MVO ORGANIZATION:
 //  - MODEL, VIEW, OBJECT
