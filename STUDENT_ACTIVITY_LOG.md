@@ -908,4 +908,14 @@ Monday July 18, 2016
 - Cloned Andy's Cat Clicker Repo
 - Looking at Code
 
+7:07 PM
+- ** Cat Clicker Premium MVO refactor set-up**
+- Cloned Premium to Premium 2 folder
+- Will first try and institure MVO organization into organizing vars:
+	- model
+	- view
+	- object
+- I will refactor code till all of this is acheived
+- I will stick with Vanilla JS
+- I will keep the initial HTML the same, possibly refactor later, so that none of the data or text is shown.
 
