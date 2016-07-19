@@ -1202,5 +1202,49 @@ $(document).ready(function(){
 - Arrggh!!!
 - [ud989-cat-clicker-andy MVO2](https://github.com/Geosynchronous/P7-Neighborhood-Map/tree/master/CourseWork/ud989-cat-clicker-andy%20MVO2)
 
+12:43 PM
+- ** Setup Barebones HTML and JS Files**
+- I will build one thing at a time into these files:
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cat Clicker</title>
+</head>
+<body>
+
+</body>
+</html>
+<script src="jquery.js"></script>
+<script src="app.js"></script>
+```
+
+```
+// Everything needs to fit in here
+// MODEL & VIEW WILL NOT TALK DIRECTLY WITH EACH OTHER
+
+$(document).ready(function(){
+
+    // ALL MODEL OBJECTS HERE
+    var model = {
+
+    };
+
+    // ALL OCTOPUS OBJECTS HERE
+    var octopus = {
+
+    };
+
+    // ALL VIEW OBJECTS HERE
+    var view = {
+
+    };
+
+    octopus.init();
+
+});
+```
 
 
