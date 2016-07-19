@@ -14,9 +14,12 @@ $(function(){
 
     // ALL MODEL OBJECTS HERE
     var model = {
-        init: function(){
-
-        }
+        // Works
+        // init: function(){
+        //     var data = new dataConstructor();  
+        //     console.log(data.cat);
+        //     return data;
+        // }
 
     };
 
@@ -31,10 +34,13 @@ $(function(){
     // ALL OCTOPUS OBJECTS HERE
     var octopus = {
         init: function(){
-
+            model.init();
         }
 
     };
+
+    // octopus.init();
+
 
     // NOTE: ALL PRE-EXISTING CODE BELOW
     // Somehow it has to refactored above
