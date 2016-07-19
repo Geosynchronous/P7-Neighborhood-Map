@@ -1,36 +1,51 @@
+// Starting again... ud989-cat-clicker-andy MVO2
 
-var cats = $(".cat");
-var buttons = $("button");
 
-function hideAllCats(){
-	for (var i=0; i<cats.length; i++){
-		$(cats[i]).hide();
-	}
-}
+// Everything needs to fit in here
+// MODEL & VIEW WILL NOT TALK DIRECTLY WITH EACH OTHER
 
-function bindButtonToCat(idNumber){
-	$("#button"+idNumber).click(function(){
-		hideAllCats();
-		$("#cat"+idNumber).show();
-	})
-}
+$(document).ready(function(){
 
-function bindCounterToCat(idNumber){
-	var cat = "#cat"+idNumber
-	$(cat).click(function(){
-		var count = $(cat+" > .counter").text();
-		count = parseInt(count) + 1;
-		$(cat+" > .counter").text(count);
-	})
-}
+    // ALL MODEL OBJECTS HERE
+    var model = {
 
-for (var i=1; i<=buttons.length; i++){
-	bindButtonToCat(i);
-}
+    };
 
-for (var i=1; i<=cats.length; i++){
-	bindCounterToCat(i);
-}
+    // ALL OCTOPUS OBJECTS HERE
+    var octopus = {
 
-hideAllCats();
-$("#cat1").show();
+    };
+
+    // ALL VIEW OBJECTS HERE
+    var view = {
+
+        init: function() {
+			this.catList = $('<div></div>').attr('id', 'catlist');
+			// this.button = $('<button></button>').attr('id', 'button1');
+            view.render();
+        },
+        render: function(){
+
+            var htmlStr = '';
+    		for (var i = 1; i < 6; i++) {
+                 htmlStr += ('<button id="button' + i + '">Cat ' + i +'</button>');
+             }
+
+			$('body').prepend(this.catList);
+			$('#catlist').html(htmlStr);
+        }
+    };
+
+// '<button id="button1">Cat 1</button>'
+// += ('<button id="button"' + i + '>Cat ' + i '</button>')
+
+view.init();
+
+
+
+});
+
+			// var element1 = $("<div></div>").attr('id', 'catlist');
+
+			// $("body").prepend(element1);
+
