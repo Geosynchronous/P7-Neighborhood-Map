@@ -973,7 +973,7 @@ var octopus = {
 - `$(selector).action() shows basic structure and terninmology
 - jQuery uses CSS syntax to select elements
 	- A $ sign to define/access jQuery
-	= A (selector) to "query (or find)" HTML elements
+	- A (selector) to "query (or find)" HTML elements
 	- A jQuery action() to be performed on the element(s)
 - [This is a GOOD W3 INTRO to jQUERY](http://www.w3schools.com/jquery/jquery_intro.asp)
 
