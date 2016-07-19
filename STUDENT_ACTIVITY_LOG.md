@@ -950,3 +950,16 @@ var octopus = {
 - Going to need help with jQuery
 - In the meantime, I will see what progress i can make & break...
 
+9:12 PM
+- **refactor: Add" init:" to MVO objects**
+- Seems like a common thread to each MVO object, and seems like something I am doing already in my spaghetti code
+- Left functions empty, till i can figure out how to make this work
+- Will try first to init my cat `data` from data.js
+
+```
+    var model = {
+        init: function(){
+
+        }
+    };
+```
