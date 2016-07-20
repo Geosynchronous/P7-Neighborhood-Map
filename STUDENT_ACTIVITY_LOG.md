@@ -1417,5 +1417,21 @@ octopus.init();
 });
 ```
 
-
+11:28 PM
+- **Separated Model View Connection**
+- Created an Octopus intermediary
+---
+    // ALL OCTOPUS OBJECTS HERE
+    var octopus = {
+        init: function() {
+            model.init();
+            view.init();
+        },
+        getCatName: function(catIndex) {
+            return model.cats[catIndex].name;
+        }
+    };
+    ---
+    
+    
 
