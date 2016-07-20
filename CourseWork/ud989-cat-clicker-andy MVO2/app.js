@@ -47,19 +47,23 @@ $(document).ready(function(){
                     images: "images/woods.jpg", 
                 } ];
 
-                model.test();
         },
-        test: function() {
-            console.log(this.cats[1].name);
-        }
-
-
     };
+
+
 
     // ALL OCTOPUS OBJECTS HERE
     var octopus = {
-
+        init: function() {
+            model.init();
+            view.init();
+        },
+        getCatName: function(catIndex) {
+            return model.cats[catIndex].name;
+        }
     };
+
+
 
     // ALL VIEW OBJECTS HERE
     var view = {
@@ -70,20 +74,23 @@ $(document).ready(function(){
             view.render();
         },
         render: function(){
-            // Creates the Buttons Element Tags
-            var htmlStr = '';
-    		for (var i = 1; i < 10; i++) {
-                 htmlStr += ('<button id="button' + i + '">Cat ' + i +'</button>');
+            // Creates the Labled Buttons Element Tags
+            var htmlStr = '',
+                catName;
+
+    		for (var i = 0; i < 9; i++) {
+                 catName = octopus.getCatName(i);
+                 htmlStr += ('<button id="button' + i + '">' + catName +'</button>');
             }
             // Renders page with DIV and BUTTONS
 			$('body').prepend(this.catList);
 			$('#catlist').html(htmlStr);
+
         }
     };
 
-model.init();
-view.init();
 
+octopus.init();
 
 
 });
