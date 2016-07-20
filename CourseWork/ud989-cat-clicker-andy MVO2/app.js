@@ -8,6 +8,51 @@ $(document).ready(function(){
 
     // ALL MODEL OBJECTS HERE
     var model = {
+         init: function() {
+            this.cats = [
+                {  
+                    name: "Chicago", 
+                    images: "images/chicago.jpg", 
+                }, 
+                {  
+                    name: "Chill", 
+                    images: "images/chill.jpg", 
+                }, 
+                {  
+                    name: "Chops", 
+                    images: "images/chops.jpg", 
+                }, 
+                {  
+                    name: "Mamasita", 
+                    images: "images/mamasita.jpg", 
+                }, 
+                    {  
+                    name: "Predator", 
+                    images: "images/predator.jpg", 
+                }, 
+                {  
+                    name: "Siberian", 
+                    images: "images/siberian.jpg", 
+                }, 
+                {  
+                    name: "Watch", 
+                    images: "images/watch.jpg", 
+                }, 
+                {  
+                    name: "Wet", 
+                    images: "images/wet.jpg", 
+                }, 
+                { 
+                    name: "Woods", 
+                    images: "images/woods.jpg", 
+                } ];
+
+                model.test();
+        },
+        test: function() {
+            console.log(this.cats[1].name);
+        }
+
 
     };
 
@@ -27,7 +72,7 @@ $(document).ready(function(){
         render: function(){
             // Creates the Buttons Element Tags
             var htmlStr = '';
-    		for (var i = 1; i < 6; i++) {
+    		for (var i = 1; i < 10; i++) {
                  htmlStr += ('<button id="button' + i + '">Cat ' + i +'</button>');
             }
             // Renders page with DIV and BUTTONS
@@ -36,6 +81,7 @@ $(document).ready(function(){
         }
     };
 
+model.init();
 view.init();
 
 
