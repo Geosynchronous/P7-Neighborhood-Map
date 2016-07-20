@@ -1325,3 +1325,97 @@ var view = {
 
 https://gist.github.com/JohnUdacity/8be6d17202b6ac535234d33a79930ba5
 
+11:11 PM
+- **REfactor: Labled Buttons with Indiv Cat Names"
+- Added data to `var Model`
+- Model and View are talking with each other however, no Octopus middle man, not sure I see the point of writing un-needed code
+```
+$(document).ready(function(){
+
+    // ALL MODEL OBJECTS HERE
+    var model = {
+         init: function() {
+            this.cats = [
+                {  
+                    name: "Chicago", 
+                    images: "images/chicago.jpg", 
+                }, 
+                {  
+                    name: "Chill", 
+                    images: "images/chill.jpg", 
+                }, 
+                {  
+                    name: "Chops", 
+                    images: "images/chops.jpg", 
+                }, 
+                {  
+                    name: "Mamasita", 
+                    images: "images/mamasita.jpg", 
+                }, 
+                    {  
+                    name: "Predator", 
+                    images: "images/predator.jpg", 
+                }, 
+                {  
+                    name: "Siberian", 
+                    images: "images/siberian.jpg", 
+                }, 
+                {  
+                    name: "Watch", 
+                    images: "images/watch.jpg", 
+                }, 
+                {  
+                    name: "Wet", 
+                    images: "images/wet.jpg", 
+                }, 
+                { 
+                    name: "Woods", 
+                    images: "images/woods.jpg", 
+                } ];
+
+        },
+    };
+
+
+
+    // ALL OCTOPUS OBJECTS HERE
+    var octopus = {
+        init: function() {
+            model.init();
+            view.init();
+        }
+    };
+
+
+
+    // ALL VIEW OBJECTS HERE
+    var view = {
+
+        init: function() {
+            // Creates DIV Element Tag for Buttons
+			this.catList = $('<div></div>').attr('id', 'catlist');
+            view.render();
+        },
+        render: function(){
+            // Creates the Labled Buttons Element Tags
+            var htmlStr = '';
+
+    		for (var i = 0; i < 9; i++) {
+                 htmlStr += ('<button id="button' + i + '">' + model.cats[i].name +'</button>');
+            }
+            // Renders page with DIV and BUTTONS
+			$('body').prepend(this.catList);
+			$('#catlist').html(htmlStr);
+
+        }
+    };
+
+
+octopus.init();
+
+
+});
+```
+
+
+
