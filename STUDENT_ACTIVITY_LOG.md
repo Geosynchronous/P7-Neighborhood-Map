@@ -1290,3 +1290,38 @@ view.init();
 });
 ```
 
+8:48 PM
+- ** One-on-One with Udacity Coach - John Mav**
+- Used Google Hangout, had to reboot... I like ZOOM much better for video meetings, better UI layout, and more responsive
+- Discussed Cat Clicker MVO, nomenclature, closure, passing vars
+- Discussed some generalities of how I might continue:
+```
+
+var model = {
+  init: function() {
+    this.cats = [
+      {},
+      {}
+    ]
+  }
+
+  getCat: function(catIndex) {
+    return this.cats[catIndex]
+  }
+}
+
+var octopus = {
+  init: function() {
+    this.catModel = model.init();
+    view.init()
+    // May need some additional setup
+  }
+
+  //Event listeners should go in here.
+}
+
+var view = {
+---
+
+https://gist.github.com/JohnUdacity/8be6d17202b6ac535234d33a79930ba5
+
