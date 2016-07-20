@@ -20,24 +20,21 @@ $(document).ready(function(){
     var view = {
 
         init: function() {
+            // Creates DIV Element Tag for Buttons
 			this.catList = $('<div></div>').attr('id', 'catlist');
-			// this.button = $('<button></button>').attr('id', 'button1');
             view.render();
         },
         render: function(){
-
+            // Creates the Buttons Element Tags
             var htmlStr = '';
     		for (var i = 1; i < 6; i++) {
                  htmlStr += ('<button id="button' + i + '">Cat ' + i +'</button>');
-             }
-
+            }
+            // Renders page with DIV and BUTTONS
 			$('body').prepend(this.catList);
 			$('#catlist').html(htmlStr);
         }
     };
-
-// '<button id="button1">Cat 1</button>'
-// += ('<button id="button"' + i + '>Cat ' + i '</button>')
 
 view.init();
 
@@ -45,7 +42,4 @@ view.init();
 
 });
 
-			// var element1 = $("<div></div>").attr('id', 'catlist');
-
-			// $("body").prepend(element1);
 
