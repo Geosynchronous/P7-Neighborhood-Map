@@ -66,6 +66,7 @@ $(document).ready(function(){
     var octopus = {
         init: function() {
             view.init();
+            this.initBind();
         },
 
         updateCurrentCat: function(catIndex) {
@@ -81,49 +82,33 @@ $(document).ready(function(){
             $('#catImage').html("<img src=" + model.currentcat.images + ">");
             $('#catNameTitle').html(model.currentcat.name);
             $('#catClickCount').html("<p>" + model.currentcat.count + "</p>");
+        },
+
+        initBind: function() {
+            for (var i = 0; i < 9; i++) {
+               octopus.bindButtonToCat(i);
+            }
+            octopus.bindCounterToCat();
+        },
+
+        bindButtonToCat: function(idNumber){
+            $("#button"+idNumber).click(function(){
+                octopus.updateCurrentCat(idNumber);
+                octopus.renderCurrentCat();
+                model.currentcat = idNumber;
+                console.log(model.currentcat);
+            })
+        },
+
+        bindCounterToCat: function(){
+            $('#catImage').click(function(){
+                // model.currentcat.count;
+            console.log(model.currentcat);
+            model.allCats[model.currentcat].count++;
+            console.log(model.allCats[model.currentcat].count);
+            $('#catClickCount').html("<p>" + model.allCats[model.currentcat].count + "</p>");
+            })
         }
-
-// Probably not needed
-        // getCatName: function(catIndex) {
-        //     return model.cats[catIndex].name;
-
-        // },
-        // getCatImage: function(catIndex) {
-        //     return model.cats[catIndex].images;
-        // },
-
-        // getCatIdNumberNow: function(catIndex) {
-        //     return model.cats[catIndex].images;
-        // }
-
-// Probably refactor
-        // initBind: function() {
-        //     this.clickCount = [];
-        //     for (var i = 0; i < 9; i++) {
-        //         this.clickCount[i] = 0;
-        //         console.log(this.clickCount[i]);
-        //         this.bindButtonToCat(i);
-
-        //     }
-        //                     this.bindCounterToCat(i);
-        // },
-
-        // bindButtonToCat: function(idNumber){
-        //     $("#button"+idNumber).click(function(){
-        //         $('#catNameTitle').html(octopus.getCatName(idNumber));
-        //         $('#catImage').html("<img src=" + octopus.getCatImage(idNumber) + ">");
-        //         $('#catClickCount').html("<p>Start Clicking on Cat</p>");
-        //         idNumberNow = idnumber;
-        //     })
-        // },
-
-        // bindCounterToCat: function(idNumber){
-        //     $('#catImage').click(function(){
-        //         // this.clickCount[idNumber]++;
-        //                         console.log(idNumber);
-        //         $('#catClickCount').html("this.clickCount[idNumber]");
-        //     })
-        // }
     };
 
 
@@ -151,7 +136,7 @@ $(document).ready(function(){
                  this.htmlStr += ('<button id="button' + i + '">' + model.currentcat.name +'</button>');
             }
 
-            // Inits first Cat as Default Cat View
+            // Initialize first Cat as Default Cat View
             octopus.updateCurrentCat(0);
 
             view.render();
