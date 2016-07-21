@@ -8,46 +8,56 @@ $(document).ready(function(){
 
     // ALL MODEL OBJECTS HERE
     var model = {
-         init: function() {
-            this.cats = [
+
+        currentcat: null,
+
+        allCats: [
                 {  
                     name: "Chicago", 
                     images: "images/chicago.jpg", 
+                    count: 0
                 }, 
                 {  
                     name: "Chill", 
                     images: "images/chill.jpg", 
+                    count: 0
                 }, 
                 {  
                     name: "Chops", 
                     images: "images/chops.jpg", 
+                    count: 0
                 }, 
                 {  
                     name: "Mamasita", 
                     images: "images/mamasita.jpg", 
+                    count: 0
                 }, 
                     {  
                     name: "Predator", 
                     images: "images/predator.jpg", 
+                    count: 0
                 }, 
                 {  
                     name: "Siberian", 
                     images: "images/siberian.jpg", 
+                    count: 0
                 }, 
                 {  
                     name: "Watch", 
                     images: "images/watch.jpg", 
+                    count: 0
                 }, 
                 {  
                     name: "Wet", 
                     images: "images/wet.jpg", 
+                    count: 0
                 }, 
                 { 
                     name: "Woods", 
                     images: "images/woods.jpg", 
-                } ];
-
-        },
+                    count: 0
+                } 
+            ]
     };
 
 
@@ -55,43 +65,60 @@ $(document).ready(function(){
     // ALL OCTOPUS OBJECTS HERE
     var octopus = {
         init: function() {
-            model.init();
+            this.updateCurrentCat(0);
+            console.log(model.currentcat);
             view.init();
         },
 
-        getCatName: function(catIndex) {
-            return model.cats[catIndex].name;
-
-        },
-        getCatImage: function(catIndex) {
-            return model.cats[catIndex].images;
+        updateCurrentCat: function(catIndex) {
+            model.currentcat = model.allCats[catIndex];
         },
 
-        initBind: function() {
-            this.clickCount = [];
-            for (var i = 0; i < 9; i++) {
-                this.clickCount[i] = 0;
-                console.log(this.clickCount[i]);
-                this.bindButtonToCat(i);
-                this.bindCounterToCat(i);
-            }
+        getCurrentCat: function() {
+            return model.currentcat;
         },
 
-        bindButtonToCat: function(idNumber){
-            $("#button"+idNumber).click(function(){
-                $('#catNameTitle').html(octopus.getCatName(idNumber));
-                $('#catImage').html("<img src=" + octopus.getCatImage(idNumber) + ">");
-                $('#catClickCount').html("<p>Start Clicking on Cat</p>");
-            })
-        },
+// Probably not needed
+        // getCatName: function(catIndex) {
+        //     return model.cats[catIndex].name;
 
-        bindCounterToCat: function(idNumber){
-            $('#catImage').click(function(){
-                this.clickCount[idNumber]++;
-                                console.log(42);
-                $('#catClickCount').html(this.clickCount[idNumber]);
-            })
-        }
+        // },
+        // getCatImage: function(catIndex) {
+        //     return model.cats[catIndex].images;
+        // },
+
+        // getCatIdNumberNow: function(catIndex) {
+        //     return model.cats[catIndex].images;
+        // }
+
+// Probably refactor
+        // initBind: function() {
+        //     this.clickCount = [];
+        //     for (var i = 0; i < 9; i++) {
+        //         this.clickCount[i] = 0;
+        //         console.log(this.clickCount[i]);
+        //         this.bindButtonToCat(i);
+
+        //     }
+        //                     this.bindCounterToCat(i);
+        // },
+
+        // bindButtonToCat: function(idNumber){
+        //     $("#button"+idNumber).click(function(){
+        //         $('#catNameTitle').html(octopus.getCatName(idNumber));
+        //         $('#catImage').html("<img src=" + octopus.getCatImage(idNumber) + ">");
+        //         $('#catClickCount').html("<p>Start Clicking on Cat</p>");
+        //         idNumberNow = idnumber;
+        //     })
+        // },
+
+        // bindCounterToCat: function(idNumber){
+        //     $('#catImage').click(function(){
+        //         // this.clickCount[idNumber]++;
+        //                         console.log(idNumber);
+        //         $('#catClickCount').html("this.clickCount[idNumber]");
+        //     })
+        // }
     };
 
 
@@ -112,24 +139,27 @@ $(document).ready(function(){
             this.catCountElement = $('<div></div>').attr('id', 'catClickCount');
             this.catImageElement = $('<div></div>').attr('id', 'catImage');
 
-            // Creates the Labled Buttons Element Tags
-            this.htmlStr = '',
-            this.catName;
-            for (var i = 0; i < 9; i++) {
-                 var catName = octopus.getCatName(i);
-                 this.htmlStr += ('<button id="button' + i + '">' + catName +'</button>');
-            }
+// First place to refactor
+            // // Creates the Labled Buttons Element Tags
+            // this.htmlStr = '',
+            // this.catName;
+            // for (var i = 0; i < 9; i++) {
+            //      var catName = octopus.getCatName(i);
+            //      this.htmlStr += ('<button id="button' + i + '">' + catName +'</button>');
+            // }
 
             // This is where the magic happens
             // octopus.updateCat();
 
             // Creates parameters for Default Cat Image & Text Load
-            this.catImageInit = "<img src=" + octopus.getCatImage(0) + ">";
-            this.catNameTitleInit = octopus.getCatName(0);
-            this.catClickCountInit = "<p>Start Clicking on Cat</p>";
+            // octopus.updateCurrentCat(0);
+
+            // this.catImageInit = "<img src=" + octopus.getCatImage(0) + ">";
+            // this.catNameTitleInit = octopus.getCatName(0);
+            // this.catClickCountInit = "<p>Start Clicking on Cat</p>";
 
             view.render();
-            octopus.initBind();
+            // octopus.initBind();
         },
 
         render: function(){
@@ -148,9 +178,12 @@ $(document).ready(function(){
 
             //Renders first cat Image, Name, and a Generic Message
             //This view will update when a new cat is selected (from Buttons)
-            $('#catImage').html(this.catImageInit);
-            $('#catNameTitle').html(this.catNameTitleInit);
-            $('#catClickCount').html(this.catClickCountInit);
+
+
+
+            // $('#catImage').html(this.catImageInit);
+            // $('#catNameTitle').html(this.catNameTitleInit);
+            // $('#catClickCount').html(this.catClickCountInit);
         }
 
     };
