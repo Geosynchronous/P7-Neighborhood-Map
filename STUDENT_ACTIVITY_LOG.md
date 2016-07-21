@@ -1632,4 +1632,8 @@ Thurday July 21, 2016
 - No problem with Ryan's above suggestions
 - All Labeled Buttons now viewed
 
-
+12:52 PM
+- **refactor: Default Cat View Rendered**
+- first cat rendered
+- code is a lot cleaner
+- sure helps to start with proper implementation of the `allCats` data structure
