@@ -1458,3 +1458,10 @@ Wednesday July 20, 2016
 
 6:19 PM
 - **This Document has format Issues**
+
+6:56 PM
+- **Added simple CSS Stylesheet**
+- black background and white text
+- larger button fonts
+
+
