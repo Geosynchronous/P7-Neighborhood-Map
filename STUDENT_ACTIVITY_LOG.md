@@ -1605,5 +1605,19 @@ octopus.init();
 - The View looks like this: ![Initialize View](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-07-20%20at%2010.33.28%20PM.jpg)
 - Still need to make buttons active and update selected cat info to page
 
+Thurday July 21, 2016
+
+2:05 AM
+- **Cat Images Update when Cat button selected**
+- Works, but will need more refactoring to fit in better,
+
+```
+            view.render();
+            for (var i = 0; i < 9; i++) {
+                octopus.bindButtonToCat(i);
+            }
+```
+
+
 
 
