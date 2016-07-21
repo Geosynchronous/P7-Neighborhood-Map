@@ -70,11 +70,18 @@ $(document).ready(function(){
 
         updateCurrentCat: function(catIndex) {
             model.currentcat = model.allCats[catIndex];
+            console.log(model.currentcat);
         },
 
         getCurrentCat: function() {
             return model.currentcat;
         },
+
+        renderCurrentCat: function() {
+            $('#catImage').html("<img src=" + model.currentcat.images + ">");
+            $('#catNameTitle').html(model.currentcat.name);
+            $('#catClickCount').html("<p>" + model.currentcat.count + "</p>");
+        }
 
 // Probably not needed
         // getCatName: function(catIndex) {
@@ -141,19 +148,11 @@ $(document).ready(function(){
             this.htmlStr = '';
             for (var i = 0; i < 9; i++) {
                 octopus.updateCurrentCat(i);
-                console.log(model.currentcat);
                  this.htmlStr += ('<button id="button' + i + '">' + model.currentcat.name +'</button>');
             }
 
-            // This is where the magic happens
-            // octopus.updateCat();
-
-            // Creates parameters for Default Cat Image & Text Load
-            // octopus.updateCurrentCat(0);
-
-            // this.catImageInit = "<img src=" + octopus.getCatImage(0) + ">";
-            // this.catNameTitleInit = octopus.getCatName(0);
-            // this.catClickCountInit = "<p>Start Clicking on Cat</p>";
+            // Inits first Cat as Default Cat View
+            octopus.updateCurrentCat(0);
 
             view.render();
             // octopus.initBind();
@@ -173,16 +172,8 @@ $(document).ready(function(){
             $('#catpic').append(this.catNameElement);
             $('#catpic').append(this.catCountElement);
 
-
-
-            //Renders first cat Image, Name, and a Generic Message
-            //This view will update when a new cat is selected (from Buttons)
-
-
-
-            // $('#catImage').html(this.catImageInit);
-            // $('#catNameTitle').html(this.catNameTitleInit);
-            // $('#catClickCount').html(this.catClickCountInit);
+            // Renders Default Cat to page
+            octopus.renderCurrentCat();
         }
 
     };
