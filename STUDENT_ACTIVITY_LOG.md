@@ -1610,7 +1610,6 @@ Thurday July 21, 2016
 2:05 AM
 - **Cat Images Update when Cat button selected**
 - Works, but will need more refactoring to fit in better,
-
 ```
             view.render();
             for (var i = 0; i < 9; i++) {
@@ -1618,6 +1617,14 @@ Thurday July 21, 2016
             }
 ```
 
-
+11:41 AM
+- **One-on-ONe with Ryan**
+- Upshot is, if I had looked at the course sollution, I probably could have moved forward quicker and not wasted Ryyan's time
+- Ryan however, was most gracious and helpful as usual, and gave me a few suggestions
+- Basically making my allCats array a functions, made it too hard to get to the data, just declaring it with a mamed array makes things a lot simpler, I did that
+- Also I added count back in as one of the allCats attributes, this also will make things a lot more simple and direct
+- Took my code implemented the above with octopus updateCurrentCat and getCurrentCat, and commented out most of my existing code, and plan on implementing this stucture in the rest of the needed functionality, step by step
+- Have not looked at the course solution yet, will work first with what Ryan gave me
+- It is OK to reschedule weekly meetings with Ryan
 
 
