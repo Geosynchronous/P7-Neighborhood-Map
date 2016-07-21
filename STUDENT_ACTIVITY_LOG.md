@@ -1625,6 +1625,7 @@ Thurday July 21, 2016
 - Also I added count back in as one of the allCats attributes, this also will make things a lot more simple and direct
 - Took my code implemented the above with octopus updateCurrentCat and getCurrentCat, and commented out most of my existing code, and plan on implementing this stucture in the rest of the needed functionality, step by step
 - Have not looked at the course solution yet, will work first with what Ryan gave me
-- It is OK to reschedule weekly meetings with Ryan
+- It is OK to reschedule weekly meetings with Ryan, I did for next Thurs @ 11 AM and will send an email before updating my status to him
+
 
 
