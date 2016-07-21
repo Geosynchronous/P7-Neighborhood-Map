@@ -65,8 +65,6 @@ $(document).ready(function(){
     // ALL OCTOPUS OBJECTS HERE
     var octopus = {
         init: function() {
-            this.updateCurrentCat(0);
-            console.log(model.currentcat);
             view.init();
         },
 
@@ -139,14 +137,13 @@ $(document).ready(function(){
             this.catCountElement = $('<div></div>').attr('id', 'catClickCount');
             this.catImageElement = $('<div></div>').attr('id', 'catImage');
 
-// First place to refactor
-            // // Creates the Labled Buttons Element Tags
-            // this.htmlStr = '',
-            // this.catName;
-            // for (var i = 0; i < 9; i++) {
-            //      var catName = octopus.getCatName(i);
-            //      this.htmlStr += ('<button id="button' + i + '">' + catName +'</button>');
-            // }
+            // Creates the Labled Buttons Element Tags
+            this.htmlStr = '';
+            for (var i = 0; i < 9; i++) {
+                octopus.updateCurrentCat(i);
+                console.log(model.currentcat);
+                 this.htmlStr += ('<button id="button' + i + '">' + model.currentcat.name +'</button>');
+            }
 
             // This is where the magic happens
             // octopus.updateCat();
@@ -175,6 +172,8 @@ $(document).ready(function(){
             $('#catpic').append(this.catImageElement);
             $('#catpic').append(this.catNameElement);
             $('#catpic').append(this.catCountElement);
+
+
 
             //Renders first cat Image, Name, and a Generic Message
             //This view will update when a new cat is selected (from Buttons)
