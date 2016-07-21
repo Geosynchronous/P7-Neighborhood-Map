@@ -1294,9 +1294,10 @@ view.init();
 - ** One-on-One with Udacity Coach - John Mav**
 - Used Google Hangout, had to reboot... I like ZOOM much better for video meetings, better UI layout, and more responsive
 - Discussed Cat Clicker MVO, nomenclature, closure, passing vars
+- https://gist.github.com/JohnUdacity/8be6d17202b6ac535234d33a79930ba5
 - Discussed some generalities of how I might continue:
-```
 
+```
 var model = {
   init: function() {
     this.cats = [
@@ -1321,15 +1322,16 @@ var octopus = {
 }
 
 var view = {
----
 
-https://gist.github.com/JohnUdacity/8be6d17202b6ac535234d33a79930ba5
+
+
 
 11:11 PM
 - **REfactor: Labled Buttons with Indiv Cat Names"
 - Added data to `var Model`
 - Model and View are talking with each other however, no Octopus middle man, not sure I see the point of writing un-needed code
-```
+
+
 $(document).ready(function(){
 
     // ALL MODEL OBJECTS HERE
@@ -1415,12 +1417,12 @@ octopus.init();
 
 
 });
-```
+
 
 11:28 PM
 - **Separated Model View Connection**
 - Created an Octopus intermediary
----
+
     // ALL OCTOPUS OBJECTS HERE
     var octopus = {
         init: function() {
@@ -1431,7 +1433,7 @@ octopus.init();
             return model.cats[catIndex].name;
         }
     };
----
+
     
 Wednesday July 20, 2016
     
@@ -1440,16 +1442,17 @@ Wednesday July 20, 2016
 - Couldn't get an indexed variable to work in a for loop
 - Realized that it was an inherited property, and that using a reference that was ennummerable would solve the problem
 - `model.cats[i].name;`was not defined, but the added code below fix the for loop so it could label all buttons properly
-```
+
+
         getCatName: function(catIndex) {
             return model.cats[catIndex].name;
         }
----
----
+
+
+
     		for (var i = 0; i < 9; i++) {
                  catName = octopus.getCatName(i);
                  htmlStr += ('<button id="button' + i + '">' + catName +'</button>');
-            }
-```
+
 
 
