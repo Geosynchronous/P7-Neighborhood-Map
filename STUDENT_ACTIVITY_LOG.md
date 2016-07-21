@@ -1643,3 +1643,8 @@ Thurday July 21, 2016
 - Need to refactor a bit to clean up the code
 - Also first loaded cat does not work if it is the first thing clicked on... init problem
 - Need a BIG BREAK first
+
+4:07 PM
+- **fixed: Improperly Assigned Varible**
+- Everything works now
+- Will clean up code after break....
