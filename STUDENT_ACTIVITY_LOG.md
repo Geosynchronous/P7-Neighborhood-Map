@@ -1637,3 +1637,8 @@ Thurday July 21, 2016
 - first cat rendered
 - code is a lot cleaner
 - sure helps to start with proper implementation of the `allCats` data structure
+
+3:49 PM
+- **refactor: Cat Clicker Working**
+- Need to refactor a bit to clean up the code
+- Need a BIG BREAK first
