@@ -1431,7 +1431,25 @@ octopus.init();
             return model.cats[catIndex].name;
         }
     };
-    ---
+---
     
+Wednesday July 20, 2016
     
+4:30 PM
+- **Enummeration and Inhertied Object Properties**
+- Couldn't get an indexed variable to work in a for loop
+- Realized that it was an inherited property, and that using a reference that was ennummerable would solve the problem
+- `model.cats[i].name;`was not defined, but the added code below fix the for loop so it could label all buttons properly
+```
+        getCatName: function(catIndex) {
+            return model.cats[catIndex].name;
+        }
+---
+---
+    		for (var i = 0; i < 9; i++) {
+                 catName = octopus.getCatName(i);
+                 htmlStr += ('<button id="button' + i + '">' + catName +'</button>');
+            }
+```
+
 
