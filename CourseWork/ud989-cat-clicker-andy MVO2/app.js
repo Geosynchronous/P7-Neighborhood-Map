@@ -95,18 +95,15 @@ $(document).ready(function(){
             $("#button"+idNumber).click(function(){
                 octopus.updateCurrentCat(idNumber);
                 octopus.renderCurrentCat();
-                model.currentcat = idNumber;
                 console.log(model.currentcat);
             })
         },
 
         bindCounterToCat: function(){
             $('#catImage').click(function(){
-                // model.currentcat.count;
-            console.log(model.currentcat);
-            model.allCats[model.currentcat].count++;
-            console.log(model.allCats[model.currentcat].count);
-            $('#catClickCount').html("<p>" + model.allCats[model.currentcat].count + "</p>");
+            octopus.getCurrentCat();
+            model.currentcat.count++;
+            $('#catClickCount').html("<p>" + model.currentcat.count + "</p>");
             })
         }
     };
