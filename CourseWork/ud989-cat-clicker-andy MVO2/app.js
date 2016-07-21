@@ -71,6 +71,8 @@ $(document).ready(function(){
         init: function() {
             // Creates DIV Element Tag for Buttons
 			this.catList = $('<div></div>').attr('id', 'catlist');
+            // Creates DIV Element Tag for Cat Pictures
+            this.catPic = $('<div></div>').attr('id', 'catpic');
             view.render();
         },
         render: function(){
@@ -82,10 +84,12 @@ $(document).ready(function(){
                  catName = octopus.getCatName(i);
                  htmlStr += ('<button id="button' + i + '">' + catName +'</button>');
             }
-            // Renders page with DIV and BUTTONS
+            // Renders page with Cat Picture DIV
+            $('body').prepend(this.catPic);
+
+            // Renders page with Cat List DIV and BUTTONS
 			$('body').prepend(this.catList);
 			$('#catlist').html(htmlStr);
-
         }
     };
 
