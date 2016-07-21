@@ -60,7 +60,13 @@ $(document).ready(function(){
         },
         getCatName: function(catIndex) {
             return model.cats[catIndex].name;
+        },
+        getCatImage: function(catIndex) {
+            return model.cats[catIndex].images;
         }
+        // getCatClickCount: function(catIndex) {
+        //     return model.cats[catIndex].clickcount;
+        // }
     };
 
 
@@ -69,34 +75,59 @@ $(document).ready(function(){
     var view = {
 
         init: function() {
+
             // Creates DIV Element Tag for Buttons
 			this.catList = $('<div></div>').attr('id', 'catlist');
+
             // Creates DIV Element Tag for Cat Pictures
             this.catPic = $('<div></div>').attr('id', 'catpic');
+
+            // Creates DIV Elements for inside catpic DIV
+            this.catNameElement = $('<div></div>').attr('id', 'catNameTitle');
+            this.catCountElement = $('<div></div>').attr('id', 'catClickCount');
+            this.catImageElement = $('<div></div>').attr('id', 'catImage');
+
+            // Creates the Labled Buttons Element Tags
+            this.htmlStr = '',
+            this.catName;
+            for (var i = 0; i < 9; i++) {
+                 var catName = octopus.getCatName(i);
+                 this.htmlStr += ('<button id="button' + i + '">' + catName +'</button>');
+            }
+
+            // Creates parameters for Default Cat Image & Text Load
+            this.catImageInit = "<img src=" + octopus.getCatImage(0) + ">";
+            this.catNameTitleInit = octopus.getCatName(0);
+            this.catClickCountInit = "<p>Start Clicking on Cat</p>";
+
             view.render();
         },
-        render: function(){
-            // Creates the Labled Buttons Element Tags
-            var htmlStr = '',
-                catName;
 
-    		for (var i = 0; i < 9; i++) {
-                 catName = octopus.getCatName(i);
-                 htmlStr += ('<button id="button' + i + '">' + catName +'</button>');
-            }
-            // Renders page with Cat Picture DIV
+        render: function(){
+
+            // Renders page with catPic DIV
             $('body').prepend(this.catPic);
 
-            // Renders page with Cat List DIV and BUTTONS
+            // Renders page with catList DIV and All BUTTONS
 			$('body').prepend(this.catList);
-			$('#catlist').html(htmlStr);
+			$('#catlist').html(this.htmlStr);
+
+            // Renders DIVs needed inside of catPic
+            $('#catpic').append(this.catImageElement);
+            $('#catpic').append(this.catNameElement);
+            $('#catpic').append(this.catCountElement);
+
+            //Renders first cat Image, Name, and a Generic Message
+            //This view will update when a new cat is selected (from Buttons)
+            $('#catImage').html(this.catImageInit);
+            $('#catNameTitle').html(this.catNameTitleInit);
+            $('#catClickCount').html(this.catClickCountInit);
         }
+
     };
 
-
+// Runs all the code
 octopus.init();
-
-
 });
 
 

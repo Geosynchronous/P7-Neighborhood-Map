@@ -5,12 +5,29 @@ body {
 	background-color: black;
 	color: white;
 	margin: 0px;
+	text-align: center;
 }
 
 button {
-	font-size: 24px;
+	font-size: 18px;
+	background-color: black;
+	color: red;
+	padding: 5px 10px;
+	margin: 5px;
 }
 
+#catlist {
+		margin: 30px 10px;
+}
+
+#catNameTitle {
+	font-size: 48px;
+	color: red;
+}
+
+#catClickCount {
+	color: yellow;
+}
 /*
 .container {
 	width: 320px;
