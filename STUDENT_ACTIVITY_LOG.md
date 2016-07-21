@@ -1627,5 +1627,9 @@ Thurday July 21, 2016
 - Have not looked at the course solution yet, will work first with what Ryan gave me
 - It is OK to reschedule weekly meetings with Ryan, I did for next Thurs @ 11 AM and will send an email before updating my status to him
 
+12:17 PM
+- **refactor: Create & Render Buttons**
+- No problem with Ryan's above suggestions
+- All Labeled Buttons now viewed
 
 
