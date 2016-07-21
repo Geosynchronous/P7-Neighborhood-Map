@@ -1641,4 +1641,5 @@ Thurday July 21, 2016
 3:49 PM
 - **refactor: Cat Clicker Working**
 - Need to refactor a bit to clean up the code
+- Also first loaded cat does not work if it is the first thing clicked on... init problem
 - Need a BIG BREAK first
