@@ -1846,4 +1846,11 @@ $(document).ready(function(){
 - Don't like that the whole cat image and text is re-rendered when only the click count needs render update
 - Do like how he created several view categories, I had though about doing that to
 - I will leave my code as it stands for now, as it seems to meet the requirements for MVO
-- One Caveat is that the initBind function does both binding and update rendering, I have located in the OCTOPUS and also moved it to the VIEW where it is now.  I think both locations are acceptable, however, I lean towards keeping it in the view, as it makes it easier to find how the VIEW gets updated (otherwise it would be hiding in the Octopus spaghetti, and thus not as evident)
+- Made one little refactor and moved it from VIEW to OCTOPUS:
+
+```
+            // Initialize first Cat as Default Cat View
+            model.currentCat = model.cats[0];
+```
+            
+- One other Caveat is that the `initBind()` does both binding and update rendering, I have located in the OCTOPUS and also moved it to the VIEW where it is now.  I think both locations are acceptable, however, I lean towards keeping it in the view, as it makes it easier to find how the VIEW gets updated (otherwise it would be hiding in the Octopus spaghetti, and thus not as evident)
