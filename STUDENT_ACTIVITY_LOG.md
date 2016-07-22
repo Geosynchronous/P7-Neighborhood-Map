@@ -1906,6 +1906,9 @@ Friday July 22, 2016
 - If I wanted the changes to be premanent, it would have dependencies on where the app is being served from, I don't think this is a trivial undertaking at this point, and actually sounds like job best suited for an API.
 - Right now I will keep it simple, and only have the changes remain while the app is loaded in the browser, which is the simplest case.
 
+10:59 AM
+- **Added more "view" obj props"
+- code works
 
 
 
