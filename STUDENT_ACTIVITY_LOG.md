@@ -1874,7 +1874,7 @@ Friday July 22, 2016
 	- initAdmin:
 	- renderAdmin:
 - Add Properties as needed to var octopus object:
-	- *****Editor:
+	- *****Admin:
 - No Properties need to be added to var model Object:
 	- Property allCats: will be edited on demand, where only existing values will be changed, the total number of cats will remain the same
 
