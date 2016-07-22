@@ -1915,6 +1915,38 @@ Friday July 22, 2016
 - **refactor: Added id Containers for App & Admin to index.html**
 - also added id adminArea from js to adminContainer in html
 - now I can just populate the rest of the divs
+y
+12:04 PM
+- **Used HTML for DIV sturcture**
+- It was made for this, and is much faster and easier to create and edit as needed
 
+```
+<body>
+
+	<dir id="catsContainer">
+	</dir>
+
+	<dir id="adminContainer">
+		<div id="adminButtonArea">
+			<button id="adminButton"></button>
+		</div>
+		<div id="adminEditArea">
+			<div id="editForms">
+				<form id="catNameForm"></form>
+				<form id="catImageURLForm"></form>
+				<form id="catClickCountForm"></form>
+			</div>
+			<div id="editButtons">
+				<button id="editSave"></button>
+				<button id="editCancel"></button>
+			</div>
+		</div>
+	</dir>
+
+	<script src="jquery.js"></script>
+	<script src="app.js"></script>
+
+</body>
+```
 
 
