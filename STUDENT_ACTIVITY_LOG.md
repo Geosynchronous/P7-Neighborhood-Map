@@ -1838,3 +1838,12 @@ $(document).ready(function(){
 - Will make further modifications to this code if the course solution reveals something better
 - [The latest version can be viewed here.](https://geosynchronous.github.io/P7-Neighborhood-Map/CourseWork/ud989-cat-clicker-andy%20MVO2/index.html)
 
+9:32 PM
+- **Cat Clicker Premium Vanilla Master**
+- [Code for course solution](https://github.com/udacity/ud989-cat-clicker-premium-vanilla)
+- Installed it in my COURSEWORK FOLDER for local reference
+- Watched the video, and see some similarities and differences
+- Don't like that the whole cat image and text is re-rendered when only the click count needs render update
+- Do like how he created several view categories, I had though about doing that to
+- I will leave my code as it stands for now, as it seems to meet the requirements for MVO
+- One Caveat is that the initBind function does both binding and update rendering, I have located in the OCTOPUS and also moved it to the VIEW where it is now.  I think both locations are acceptable, however, I lean towards keeping it in the view, as it makes it easier to find how the VIEW gets updated (otherwise it would be hiding in the Octopus spaghetti, and thus not as evident)
