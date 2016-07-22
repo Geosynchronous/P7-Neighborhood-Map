@@ -16,6 +16,10 @@ button {
 	margin: 5px;
 }
 
+#adminContainer {
+	background-color: lightblue;
+}
+
 #catlist {
 		margin: 30px 10px;
 }
