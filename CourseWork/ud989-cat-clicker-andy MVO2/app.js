@@ -74,9 +74,6 @@ $(document).ready(function(){
     var octopus = {
         init: function() {
 
-            // // Initialize first Cat as Default Cat View
-            // model.currentCat = model.cats[0];
-
             // Sets up intial View and Renders it to webpage
             view.init();
         },
@@ -167,6 +164,8 @@ $(document).ready(function(){
             $('#catpic').append(this.catCountElement);
 
             // Renders Default Cat to page
+            // Initialize first Cat as Default Cat View
+            octopus.updateCurrentCat(0);
             octopus.renderCurrentCat();
 
             // Binds Menu Items & Cat Image to Click Event Handler
