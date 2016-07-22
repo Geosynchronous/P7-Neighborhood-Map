@@ -74,8 +74,8 @@ $(document).ready(function(){
     var octopus = {
         init: function() {
 
-            // Initialize first Cat as Default Cat View
-            model.currentCat = model.cats[0];
+            // // Initialize first Cat as Default Cat View
+            // model.currentCat = model.cats[0];
 
             // Sets up intial View and Renders it to webpage
             view.init();
@@ -136,6 +136,10 @@ $(document).ready(function(){
             this.catNameElement = $('<div></div>').attr('id', 'catNameTitle');
             this.catCountElement = $('<div></div>').attr('id', 'catClickCount');
             this.catImageElement = $('<div></div>').attr('id', 'catImage');
+
+
+            // Renders page with catList DIV and All BUTTONS
+            $('body').prepend(this.catList);
 
             // Creates the Labled Buttons Element Tags
             this.htmlStr = '';
