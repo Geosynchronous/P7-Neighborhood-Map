@@ -1,16 +1,21 @@
-// Starting again... ud989-cat-clicker-andy MVO2
+// Cat Clicker Premium, MVO STYLE
+// by George Fischer
 
-
-// Everything needs to fit in here
+// MODEL---VIEW---OCTOPUS Style Code Organization
 // MODEL & VIEW WILL NOT TALK DIRECTLY WITH EACH OTHER
 
 $(document).ready(function(){
 
     // ALL MODEL OBJECTS HERE
+    // This is where the data lives
     var model = {
 
+        // This property will be loaded with one cat at a time
+        // - i.e. the current cat that is diplayed on the page
+        // - slick way to keep track of property values inside different functions
         currentcat: null,
 
+        // This is all the data for each of the cats
         allCats: [
                 {  
                     name: "Chicago", 
@@ -63,15 +68,17 @@ $(document).ready(function(){
 
 
     // ALL OCTOPUS OBJECTS HERE
+    // This is the brains of the application
+    // The Octopus communicates between Model & View
+    // This keeps the Model & View from communicating with each other
     var octopus = {
         init: function() {
+            // Sets up intial View and Renders it to webpage
             view.init();
-            this.initBind();
         },
 
         updateCurrentCat: function(catIndex) {
             model.currentcat = model.allCats[catIndex];
-            console.log(model.currentcat);
         },
 
         getCurrentCat: function() {
@@ -85,7 +92,7 @@ $(document).ready(function(){
         },
 
         initBind: function() {
-            for (var i = 0; i < 9; i++) {
+            for (var i = 0; i < model.allCats.length; i++) {
                octopus.bindButtonToCat(i);
             }
             octopus.bindCounterToCat();
@@ -95,7 +102,6 @@ $(document).ready(function(){
             $("#button"+idNumber).click(function(){
                 octopus.updateCurrentCat(idNumber);
                 octopus.renderCurrentCat();
-                console.log(model.currentcat);
             })
         },
 
@@ -111,6 +117,7 @@ $(document).ready(function(){
 
 
     // ALL VIEW OBJECTS HERE
+    // This makes it possible to see the web page content
     var view = {
 
         init: function() {
@@ -128,7 +135,7 @@ $(document).ready(function(){
 
             // Creates the Labled Buttons Element Tags
             this.htmlStr = '';
-            for (var i = 0; i < 9; i++) {
+            for (var i = 0; i < model.allCats.length; i++) {
                 octopus.updateCurrentCat(i);
                  this.htmlStr += ('<button id="button' + i + '">' + model.currentcat.name +'</button>');
             }
@@ -136,8 +143,8 @@ $(document).ready(function(){
             // Initialize first Cat as Default Cat View
             octopus.updateCurrentCat(0);
 
+            // Takes care of initial and updated renders to web page
             view.render();
-            // octopus.initBind();
         },
 
         render: function(){
@@ -156,15 +163,16 @@ $(document).ready(function(){
 
             // Renders Default Cat to page
             octopus.renderCurrentCat();
-        }
 
+            // Binds Menu Items & Cat Image to Click Event Handler
+            // Renders Updates of Cat Image and Click Count as needed
+            octopus.initBind();
+        }
     };
 
-// Runs all the code
-octopus.init();
-
-
+    // START HERE
+    // Runs all the code inside the containing function:
+    //      $(document).ready(function()
+    octopus.init();
 
 });
-
-
