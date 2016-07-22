@@ -1882,7 +1882,8 @@ Friday July 22, 2016
 - Checklist Order of adding NEW FEATURES:
 	-  Add Container DIV for ADMIN, Append to existing with the following tags:
 		- Add Admin Button DIv
-		- Add SAVE and CANCEL DIV (Hide/Show)
+		- Add AdminControlButtons Div
+			- Add SAVE and CANCEL DIV (Hide/Show)
 		- Add TEXT INPUT AREA DIV
 			- Add Name FORM Tag
 			- Add Mage FORM Tag
