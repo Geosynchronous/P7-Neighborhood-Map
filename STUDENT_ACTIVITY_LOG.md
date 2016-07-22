@@ -1836,5 +1836,5 @@ $(document).ready(function(){
 
 - Need to now look at the solution given in the course
 - Will make further modifications to this code if the course solution reveals something better
-- ![The latest version can be viewed here.](https://geosynchronous.github.io/P7-Neighborhood-Map/CourseWork/ud989-cat-clicker-andy%20MVO2/index.html)
+- [The latest version can be viewed here.](https://geosynchronous.github.io/P7-Neighborhood-Map/CourseWork/ud989-cat-clicker-andy%20MVO2/index.html)
 
