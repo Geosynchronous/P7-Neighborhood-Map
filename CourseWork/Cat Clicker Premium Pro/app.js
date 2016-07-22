@@ -1,16 +1,6 @@
 // Cat Clicker Premium, MVO STYLE
 // by George Fischer
 
-
-    // When I look over my shoulder
-    // What do you think I see?
-    // Some other cat looking over
-    // His shoulder at me
-    // And he's strange, very very very strange
-    // You've got to pick up every stitch... Donovan
-
-
-
 // MODEL---VIEW---OCTOPUS Style Code Organization
 // MODEL & VIEW WILL NOT TALK DIRECTLY WITH EACH OTHER
 
@@ -84,20 +74,8 @@ $(document).ready(function(){
     var octopus = {
         init: function() {
 
-            // Initialize first Cat as Default Cat View
-            model.currentCat = model.cats[0];
-
-            // Sets up intial Cat App View and Renders it to webpage
-            view.initCats();
-
-            // Sets up initial Admin Area
-            view.initAdminArea();
-
-            // Takes care of initial and updated renders to web page
-            view.renderCats();
-
-            // Takes care of Admin Area render to web page
-            view.renderAdminArea();
+            // Sets up intial View and Renders it to webpage
+            view.init();
         },
 
         updateCurrentCat: function(catIndex) {
@@ -143,8 +121,7 @@ $(document).ready(function(){
     // This makes it possible to see the web page content
     var view = {
 
-        // Sets up DOM Elements for List of Cats and Cat Area
-        initCats: function() {
+        init: function() {
 
             // Creates DIV Element Tag for Buttons
 			this.catList = $('<div></div>').attr('id', 'catlist');
@@ -157,20 +134,21 @@ $(document).ready(function(){
             this.catCountElement = $('<div></div>').attr('id', 'catClickCount');
             this.catImageElement = $('<div></div>').attr('id', 'catImage');
 
+            // Renders page with catList DIV and All BUTTONS
+            $('body').prepend(this.catList);
+
             // Creates the Labled Buttons Element Tags
             this.htmlStr = '';
             for (var i = 0; i < model.allCats.length; i++) {
                 octopus.updateCurrentCat(i);
                  this.htmlStr += ('<button id="button' + i + '">' + model.currentcat.name +'</button>');
             }
+
+            // Takes care of initial and updated renders to web page
+            view.render();
         },
 
-        // Sets up DOM Elements for Admin Area
-        initAdminArea: function() {
-
-            },
-
-        renderCats: function(){
+        render: function(){
 
             // Renders page with catPic DIV
             $('body').prepend(this.catPic);
@@ -190,12 +168,7 @@ $(document).ready(function(){
             // Binds Menu Items & Cat Image to Click Event Handler
             // Renders Updates of Cat Image and Click Count as needed
             octopus.initBind();
-        },
-
-        // Sets up DOM Elements for Admin Area
-        renderAdminArea: function() {
-
-        },
+        }
     };
 
     // START HERE
