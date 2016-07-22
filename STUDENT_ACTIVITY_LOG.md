@@ -1854,3 +1854,8 @@ $(document).ready(function(){
 ```
             
 - One other Caveat is that the `initBind()` does both binding and update rendering, I have located in the OCTOPUS and also moved it to the VIEW where it is now.  I think both locations are acceptable, however, I lean towards keeping it in the view, as it makes it easier to find how the VIEW gets updated (otherwise it would be hiding in the Octopus spaghetti, and thus not as evident)
+	- Sent Mentor Ryan an email asking him about this
+
+	
+
+
