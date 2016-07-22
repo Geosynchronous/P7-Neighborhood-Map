@@ -115,6 +115,10 @@ $(document).ready(function(){
             model.currentcat.count++;
             $('#catClickCount').html("<p>" + model.currentcat.count + "</p>");
             })
+        },
+
+        somethingAdmin: function(){
+
         }
     };
 
@@ -137,10 +141,6 @@ $(document).ready(function(){
             this.catCountElement = $('<div></div>').attr('id', 'catClickCount');
             this.catImageElement = $('<div></div>').attr('id', 'catImage');
 
-
-            // Renders page with catList DIV and All BUTTONS
-            $('body').prepend(this.catList);
-
             // Creates the Labled Buttons Element Tags
             this.htmlStr = '';
             for (var i = 0; i < model.allCats.length; i++) {
@@ -151,15 +151,17 @@ $(document).ready(function(){
 
         initAdmin: function(){
 
+            // Creates DIV Element Tag for Buttons
+            this.adminArea = $('<div></div>').attr('id', 'adminArea');
         },
 
         renderCats: function(){
 
             // Renders page with catPic DIV
-            $('body').prepend(this.catPic);
+            $('#catsContainer').prepend(this.catPic);
 
             // Renders page with catList DIV and All BUTTONS
-			$('body').prepend(this.catList);
+			$('#catsContainer').prepend(this.catList);
 			$('#catlist').html(this.htmlStr);
 
             // Renders DIVs needed inside of catPic
@@ -179,6 +181,8 @@ $(document).ready(function(){
 
         renderAdmin: function(){
 
+            // Renders page with adminArea DIV
+            $('#adminContainer').append(this.adminArea);
         }
     };
 
