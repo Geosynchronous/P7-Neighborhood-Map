@@ -1898,5 +1898,14 @@ Friday July 22, 2016
 - Console.log everything you can to make sure things are happening like you think
 ```
 
+10:18 AM
+- **Saving Changes Thought**
+- WHen SAVE is invoke, any new edits get written directly to existing and cat populated allCats array
+- THe [Udacity Retain Mini Project](https://github.com/Geosynchronous/P7-Neighborhood-Map/tree/master/CourseWork/ud989-retain) in my repo has code I can use as inspiration that does just that
+- In this case, minimally I would write the changes to app.js, as that is where allCats[] live.
+- If I wanted the changes to be premanent, it would have dependencies on where the app is being served from, I don't think this is a trivial undertaking at this point, and actually sounds like job best suited for an API.
+- Right now I will keep it simple, and only have the changes remain while the app is loaded in the browser, which is the simplest case.
+
+
 
 
