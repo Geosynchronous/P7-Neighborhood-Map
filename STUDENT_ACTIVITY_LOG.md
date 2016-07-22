@@ -1910,5 +1910,10 @@ Friday July 22, 2016
 - **Added more "view" obj props"
 - code works
 
+11:32 AM
+- **refactor: Added id Containers for App & Admin to index.html**
+- also added id adminArea from js to adminContainer in html
+- now I can just populate the rest of the divs
+
 
 
