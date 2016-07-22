@@ -1871,8 +1871,8 @@ Friday July 22, 2016
 		- "Cancel" does same as above but does not change cat data
 - Try to keep existing code and functionality intact.
 - Add a new Proerties to var view object:
-	- initEditor:
-	- renderEditor:
+	- initAdmin:
+	- renderAdmin:
 - Add Properties as needed to var octopus object:
 	- *****Editor:
 - No Properties need to be added to var model Object:
