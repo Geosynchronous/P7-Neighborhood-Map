@@ -73,6 +73,10 @@ $(document).ready(function(){
     // This keeps the Model & View from communicating with each other
     var octopus = {
         init: function() {
+
+            // Initialize first Cat as Default Cat View
+            model.currentCat = model.cats[0];
+
             // Sets up intial View and Renders it to webpage
             view.init();
         },
@@ -139,9 +143,6 @@ $(document).ready(function(){
                 octopus.updateCurrentCat(i);
                  this.htmlStr += ('<button id="button' + i + '">' + model.currentcat.name +'</button>');
             }
-
-            // Initialize first Cat as Default Cat View
-            octopus.updateCurrentCat(0);
 
             // Takes care of initial and updated renders to web page
             view.render();
