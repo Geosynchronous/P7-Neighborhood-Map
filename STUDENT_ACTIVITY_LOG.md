@@ -1856,6 +1856,47 @@ $(document).ready(function(){
 - One other Caveat is that the `initBind()` does both binding and update rendering, I have located in the OCTOPUS and also moved it to the VIEW where it is now.  I think both locations are acceptable, however, I lean towards keeping it in the view, as it makes it easier to find how the VIEW gets updated (otherwise it would be hiding in the Octopus spaghetti, and thus not as evident)
 	- Sent Mentor Ryan an email asking him about this
 
-	
+Friday July 22, 2016
+1:24 AM
+- **Set Up Cat Clicker Premium Pro**
+- Duplicated previous Cat Clicker Premium MVO (that was just finished in the notes above)
+- Pro version basically needs ADMIN EDITOR functionality:
+	- Everything works as before
+	- Now a "Admin" button appears on the screen
+	- When "Admin" is selected, all data for the cat appears inside input boxes
+		- Name, Image, and Count
+		- the above data can be editied by the user
+		- A "Save" amd "Cancel' button also appear with input boxes
+		- "Save" will overwrite the cat data for the selected cat and the Admin area disappears, leaving the admin button
+		- "Cancel" does same as above but does not change cat data
+- Try to keep existing code and functionality intact.
+- Add a new Proerties to var view object:
+	- initEditor:
+	- renderEditor:
+- Add Properties as needed to var octopus object:
+	- *****Editor:
+- No Properties need to be added to var model Object:
+	- Property allCats: will be edited on demand, where only existing values will be changed, the total number of cats will remain the same
+
+```	
+- Checklist Order of adding NEW FEATURES:
+	-  Add Container DIV for ADMIN, Append to existing with the following tags:
+		- Add Admin Button DIv
+		- Add SAVE and CANCEL DIV (Hide/Show)
+		- Add TEXT INPUT AREA DIV
+			- Add Name FORM Tag
+			- Add Mage FORM Tag
+			- Add Count FORM Tag
+	-  Add Button for ADMIN
+	-  Add Button for SAVE
+	-  Add Button for Cancel
+	-  Add Forms for each Cat Property with Cat Data text inside for selected cat
+	-  Bind ADMIN BUTTON to show render ADMIN Div contents
+	-  Bind SAVE BUTTON to overwrite allCats array for the selected cat value, and then hide the ADMIN AREA
+	-  Bind CANCEL BUTTON to hide ADMIN AREA
+- Continue refactor with MVO organizing
+- Console.log everything you can to make sure things are happening like you think
+```
+
 
 
