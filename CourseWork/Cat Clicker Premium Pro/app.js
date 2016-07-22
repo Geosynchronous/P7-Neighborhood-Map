@@ -75,7 +75,10 @@ $(document).ready(function(){
         init: function() {
 
             // Sets up intial View and Renders it to webpage
-            view.init();
+            view.initCats();
+            view.renderCats();
+            view.initAdmin();
+            view.renderAdmin();
         },
 
         updateCurrentCat: function(catIndex) {
@@ -121,7 +124,7 @@ $(document).ready(function(){
     // This makes it possible to see the web page content
     var view = {
 
-        init: function() {
+        initCats: function() {
 
             // Creates DIV Element Tag for Buttons
 			this.catList = $('<div></div>').attr('id', 'catlist');
@@ -144,12 +147,13 @@ $(document).ready(function(){
                 octopus.updateCurrentCat(i);
                  this.htmlStr += ('<button id="button' + i + '">' + model.currentcat.name +'</button>');
             }
-
-            // Takes care of initial and updated renders to web page
-            view.render();
         },
 
-        render: function(){
+        initAdmin: function(){
+
+        },
+
+        renderCats: function(){
 
             // Renders page with catPic DIV
             $('body').prepend(this.catPic);
@@ -171,6 +175,10 @@ $(document).ready(function(){
             // Binds Menu Items & Cat Image to Click Event Handler
             // Renders Updates of Cat Image and Click Count as needed
             octopus.initBind();
+        },
+
+        renderAdmin: function(){
+
         }
     };
 
