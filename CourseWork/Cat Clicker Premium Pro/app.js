@@ -146,7 +146,7 @@ $(document).ready(function(){
             $("#editSave").click(function(){
                 $("#adminEditArea").hide();
                 $("#adminButtonArea").show();
-                octopus.saveCurrentCatEditData();
+                octopusAdmin.saveCurrentCatData();
                 octopus.renderCurrentCat();
                 octopusUpdate.CurrentCatButtonLabel();
             })
@@ -163,12 +163,6 @@ $(document).ready(function(){
             $("#newcatNameInput").val(model.currentcat.name);
             $("#newcatImageInput").val(model.currentcat.images);
             $("#newcatCountInput").val(model.currentcat.count);
-        },
-
-         saveCurrentCatEditData: function(){
-            model.currentcat.name = $("#newcatNameInput").val();
-            model.currentcat.images = $("#newcatImageInput").val();
-            model.currentcat.count = $("#newcatCountInput").val();
         }
     };
 
@@ -177,6 +171,11 @@ $(document).ready(function(){
 
     var octopusAdmin = {
 
+         saveCurrentCatData: function(){
+            model.currentcat.name = $("#newcatNameInput").val();
+            model.currentcat.images = $("#newcatImageInput").val();
+            model.currentcat.count = $("#newcatCountInput").val();
+        }
     };
 
 
@@ -187,7 +186,7 @@ $(document).ready(function(){
             model.currentcat = model.allCats[catIndex];
         },
 
-        CatListButtons: function(){
+        catListButtons: function(){
             // Creates the Labled Buttons Element Tags
             this.htmlStr = '';
             for (var i = 0; i < model.allCats.length; i++) {
@@ -237,7 +236,7 @@ $(document).ready(function(){
 			$('#catsContainer').prepend(this.catList);
 
             // Renders Cat List Button DIVS
-            octopusUpdate.CatListButtons();
+            octopusUpdate.catListButtons();
 
             // Renders DIVs needed inside of catPic
             $('#catpic').append(this.catImageElement);
