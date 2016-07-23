@@ -117,8 +117,29 @@ $(document).ready(function(){
             })
         },
 
-        somethingAdmin: function(){
+        hideAdminEditor: function(){
+            $("#adminEditArea").hide();
+        },
 
+        bindAdminButtonToEditor: function(){
+            $("#adminButton").click(function(){
+                $("#adminButtonArea").hide();
+                $("#adminEditArea").show();
+            })
+        },
+
+        bindSaveButtonToEditor: function(){
+            $("#editSave").click(function(){
+                $("#adminEditArea").hide();
+                $("#adminButtonArea").show();
+            })
+        },
+
+        bindCancelButtonToEditor: function(){
+            $("#editCancel").click(function(){
+                $("#adminEditArea").hide();
+                $("#adminButtonArea").show();
+            })
         }
     };
 
@@ -151,8 +172,9 @@ $(document).ready(function(){
 
         initAdmin: function(){
 
-            // Creates DIV Element Tag for Buttons
-            this.adminArea = $('<div></div>').attr('id', 'adminArea');
+            octopus.bindAdminButtonToEditor();
+            octopus.bindSaveButtonToEditor();
+            octopus.bindCancelButtonToEditor();
         },
 
         renderCats: function(){
@@ -181,8 +203,8 @@ $(document).ready(function(){
 
         renderAdmin: function(){
 
-            // Renders page with adminArea DIV
-            $('#adminContainer').append(this.adminArea);
+            // Initially hide  Admin Editor
+            octopus.hideAdminEditor();
         }
     };
 
