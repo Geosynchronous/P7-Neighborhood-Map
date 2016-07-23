@@ -127,10 +127,6 @@ $(document).ready(function(){
             // Updates editor count for cat clicks
             $("#newcatCountInput").val(model.currentcat.count);
             })
-        },
-
-        hideAdminEditor: function(){
-            $("#adminEditArea").hide();
         }
     };
 
@@ -138,6 +134,10 @@ $(document).ready(function(){
 
 
     var octopusAdmin = {
+
+        hideAdminEditor: function(){
+            $("#adminEditArea").hide();
+        },
 
         bindAdminButton: function(){
             $("#adminButton").click(function(){
@@ -256,7 +256,7 @@ $(document).ready(function(){
         renderAdmin: function(){
 
             // Initially hide  Admin Editor
-            octopus.hideAdminEditor();
+            octopusAdmin.hideAdminEditor();
         }
     };
 
