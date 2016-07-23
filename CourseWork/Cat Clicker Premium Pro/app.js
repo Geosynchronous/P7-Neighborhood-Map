@@ -90,6 +90,10 @@ $(document).ready(function(){
             view.renderAdmin();
         },
 
+        // updateCurrentCat: function(catIndex) {
+        //     model.currentcat = model.allCats[catIndex];
+        // },
+
         getCurrentCat: function() {
             return model.currentcat;
         },
@@ -123,54 +127,56 @@ $(document).ready(function(){
             // Updates editor count for cat clicks
             $("#newcatCountInput").val(model.currentcat.count);
             })
-        }
-    };
+        },
 
-
-
-    var octopusAdmin = {
-
-        hideAdminArea: function(){
+        hideAdminEditor: function(){
             $("#adminEditArea").hide();
-        }
+        },
 
-        bindAdminButton: function(){
+        bindAdminButtonToEditor: function(){
             $("#adminButton").click(function(){
                 $("#adminButtonArea").hide();
                 $("#adminEditArea").show();
                 octopus.getCurrentCat();
-                octopusAdmin.loadCurrentCatData();
+                octopus.loadCurrentCatDataToEditor();
             })
-        }
+        },
 
-        bindSaveButton: function(){
+        bindSaveButtonToEditor: function(){
             $("#editSave").click(function(){
                 $("#adminEditArea").hide();
                 $("#adminButtonArea").show();
-                octopusAdmin.saveCurrentCatData();
+                octopus.saveCurrentCatEditData();
                 octopus.renderCurrentCat();
-                octopusUpdate.currentCatButtonLabel();
+                octopusUpdate.CurrentCatButtonLabel();
             })
-        }
+        },
 
-        bindCancelButton: function(){
+        bindCancelButtonToEditor: function(){
             $("#editCancel").click(function(){
                 $("#adminEditArea").hide();
                 $("#adminButtonArea").show();
             })
         },
 
-        loadCurrentCatData: function(){
+        loadCurrentCatDataToEditor: function(){
             $("#newcatNameInput").val(model.currentcat.name);
             $("#newcatImageInput").val(model.currentcat.images);
             $("#newcatCountInput").val(model.currentcat.count);
         },
 
-         saveCurrentCatData: function(){
+         saveCurrentCatEditData: function(){
             model.currentcat.name = $("#newcatNameInput").val();
             model.currentcat.images = $("#newcatImageInput").val();
             model.currentcat.count = $("#newcatCountInput").val();
         }
+    };
+
+
+
+
+    var octopusAdmin = {
+
     };
 
 
@@ -181,7 +187,7 @@ $(document).ready(function(){
             model.currentcat = model.allCats[catIndex];
         },
 
-        catListButtons: function(){
+        CatListButtons: function(){
             // Creates the Labled Buttons Element Tags
             this.htmlStr = '';
             for (var i = 0; i < model.allCats.length; i++) {
@@ -191,7 +197,7 @@ $(document).ready(function(){
             $('#catlist').html(this.htmlStr);
         },
 
-        currentCatButtonLabel: function(){
+        CurrentCatButtonLabel: function(){
             // Creates the lable on the Button for edited Cat Name
             $('#button' + model.currentcat.index).html(model.currentcat.name);
         }
@@ -217,9 +223,9 @@ $(document).ready(function(){
 
         initAdmin: function(){
 
-            octopusAdmin.bindAdminButton();
-            octopusAdmin.bindSaveButton();
-            octopusAdmin.bindCancelButton();
+            octopus.bindAdminButtonToEditor();
+            octopus.bindSaveButtonToEditor();
+            octopus.bindCancelButtonToEditor();
         },
 
         renderCats: function(){
@@ -231,7 +237,7 @@ $(document).ready(function(){
 			$('#catsContainer').prepend(this.catList);
 
             // Renders Cat List Button DIVS
-            octopusUpdate.catListButtons();
+            octopusUpdate.CatListButtons();
 
             // Renders DIVs needed inside of catPic
             $('#catpic').append(this.catImageElement);
@@ -251,7 +257,7 @@ $(document).ready(function(){
         renderAdmin: function(){
 
             // Initially hide  Admin Editor
-            octopus.hideAdminArea();
+            octopus.hideAdminEditor();
         }
     };
 
