@@ -1954,3 +1954,7 @@ y
 - Static Admin Editor in Place
 - Need to bind buttons, and add needed functionality to app.js next
 
+11:13 PM
+- **Bind Buttons**
+- for Admin, Save and Cancel Buttons
+- Hide & Show functionality enabled as needed
