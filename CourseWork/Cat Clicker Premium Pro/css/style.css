@@ -17,11 +17,47 @@ button {
 }
 
 #adminContainer {
+	padding: 0px;
+}
+
+.adminbuttons {
+	font-size: 14px;
+	background-color: grey;
+	color: lightgrey;
+	padding: 3px 10px;
+	border-radius: 12px;
+
+}
+
+#adminEditArea {
 	background-color: lightblue;
+    border-style: solid;
+    border-color: lightgrey;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#editForms {
+	text-align: left;
+	margin: 3px;
+	color: grey;
+}
+
+.newcatInput {
+	margin: 3px;
+}
+
+#editButtons {
+	text-align: left;
+}
+
+#catsContainer {
+	padding: 0px;
 }
 
 #catlist {
-		margin: 30px 10px;
+	margin: 30px 10px;
 }
 
 #catNameTitle {

@@ -12,17 +12,20 @@
 
 	<dir id="adminContainer">
 		<div id="adminButtonArea">
-			<button id="adminButton"></button>
+			<button id="adminButton" class="adminbuttons">Admin</button>
 		</div>
 		<div id="adminEditArea">
 			<div id="editForms">
-				<form id="catNameForm"></form>
+				<form id="catNameForm">
+		        	<input id="newcatNameInput" class="newcatInput"> Cat Name</form>
 				<form id="catImageURLForm"></form>
-				<form id="catClickCountForm"></form>
+			        <input id="newcatImageInput" class="newcatInput"> Image URL</form>
+				<form id="catCountForm"></form>
+			        <input id="newcatCountInput" class="newcatInput"> Click Count</form>
 			</div>
 			<div id="editButtons">
-				<button id="editSave"></button>
-				<button id="editCancel"></button>
+				<button id="editSave" class="adminbuttons">Save</button>
+				<button id="editCancel" class="adminbuttons">Cancel</button>
 			</div>
 		</div>
 	</dir>
