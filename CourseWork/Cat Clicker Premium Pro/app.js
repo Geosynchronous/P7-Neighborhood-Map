@@ -18,46 +18,55 @@ $(document).ready(function(){
         // This is all the data for each of the cats
         allCats: [
                 {  
+                    index: 0,
                     name: "Chicago", 
                     images: "images/chicago.jpg", 
                     count: 0
                 }, 
                 {  
+                    index: 1,
                     name: "Chill", 
                     images: "images/chill.jpg", 
                     count: 0
                 }, 
                 {  
+                    index: 2,
                     name: "Chops", 
                     images: "images/chops.jpg", 
                     count: 0
                 }, 
                 {  
+                    index: 3,
                     name: "Mamasita", 
                     images: "images/mamasita.jpg", 
                     count: 0
                 }, 
-                    {  
+                {  
+                    index: 4,
                     name: "Predator", 
                     images: "images/predator.jpg", 
                     count: 0
                 }, 
                 {  
+                    index: 5,
                     name: "Siberian", 
                     images: "images/siberian.jpg", 
                     count: 0
                 }, 
                 {  
+                    index: 6,
                     name: "Watch", 
                     images: "images/watch.jpg", 
                     count: 0
                 }, 
                 {  
+                    index: 7,
                     name: "Wet", 
                     images: "images/wet.jpg", 
                     count: 0
                 }, 
                 { 
+                    index: 8,
                     name: "Woods", 
                     images: "images/woods.jpg", 
                     count: 0
@@ -106,6 +115,7 @@ $(document).ready(function(){
             $("#button"+idNumber).click(function(){
                 octopus.updateCurrentCat(idNumber);
                 octopus.renderCurrentCat();
+                octopus.loadCurrentCatDataToEditor();
             })
         },
 
@@ -114,6 +124,8 @@ $(document).ready(function(){
             octopus.getCurrentCat();
             model.currentcat.count++;
             $('#catClickCount').html("<p>" + model.currentcat.count + "</p>");
+            // Updates editor count for cat clicks
+            $("#newcatCountInput").val(model.currentcat.count);
             })
         },
 
@@ -125,6 +137,8 @@ $(document).ready(function(){
             $("#adminButton").click(function(){
                 $("#adminButtonArea").hide();
                 $("#adminEditArea").show();
+                octopus.getCurrentCat();
+                octopus.loadCurrentCatDataToEditor();
             })
         },
 
@@ -132,6 +146,9 @@ $(document).ready(function(){
             $("#editSave").click(function(){
                 $("#adminEditArea").hide();
                 $("#adminButtonArea").show();
+                octopus.saveCurrentCatEditData();
+                octopus.renderCurrentCat();
+                octopus.updateCurrentCatButtonLabel();
             })
         },
 
@@ -140,6 +157,33 @@ $(document).ready(function(){
                 $("#adminEditArea").hide();
                 $("#adminButtonArea").show();
             })
+        },
+
+        loadCurrentCatDataToEditor: function(){
+            $("#newcatNameInput").val(model.currentcat.name);
+            $("#newcatImageInput").val(model.currentcat.images);
+            $("#newcatCountInput").val(model.currentcat.count);
+        },
+
+         saveCurrentCatEditData: function(){
+            model.currentcat.name = $("#newcatNameInput").val();
+            model.currentcat.images = $("#newcatImageInput").val();
+            model.currentcat.count = $("#newcatCountInput").val();
+        },
+
+        updateCatListButtons: function(){
+            // Creates the Labled Buttons Element Tags
+            this.htmlStr = '';
+            for (var i = 0; i < model.allCats.length; i++) {
+                octopus.updateCurrentCat(i);
+                 this.htmlStr += ('<button id="button' + i + '">' + model.currentcat.name +'</button>');
+            }
+            $('#catlist').html(this.htmlStr);
+        },
+
+        updateCurrentCatButtonLabel: function(){
+            // Creates the lable on the Button for edited Cat Name
+            $('#button' + model.currentcat.index).html(model.currentcat.name);
         }
     };
 
@@ -161,13 +205,6 @@ $(document).ready(function(){
             this.catNameElement = $('<div></div>').attr('id', 'catNameTitle');
             this.catCountElement = $('<div></div>').attr('id', 'catClickCount');
             this.catImageElement = $('<div></div>').attr('id', 'catImage');
-
-            // Creates the Labled Buttons Element Tags
-            this.htmlStr = '';
-            for (var i = 0; i < model.allCats.length; i++) {
-                octopus.updateCurrentCat(i);
-                 this.htmlStr += ('<button id="button' + i + '">' + model.currentcat.name +'</button>');
-            }
         },
 
         initAdmin: function(){
@@ -184,7 +221,9 @@ $(document).ready(function(){
 
             // Renders page with catList DIV and All BUTTONS
 			$('#catsContainer').prepend(this.catList);
-			$('#catlist').html(this.htmlStr);
+
+            // Renders Cat List Button DIVS
+            octopus.updateCatListButtons();
 
             // Renders DIVs needed inside of catPic
             $('#catpic').append(this.catImageElement);
