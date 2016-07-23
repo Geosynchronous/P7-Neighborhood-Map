@@ -131,15 +131,6 @@ $(document).ready(function(){
 
         hideAdminEditor: function(){
             $("#adminEditArea").hide();
-        },
-
-        bindAdminButtonToEditor: function(){
-            $("#adminButton").click(function(){
-                $("#adminButtonArea").hide();
-                $("#adminEditArea").show();
-                octopus.getCurrentCat();
-                octopusAdmin.loadCurrentCatData();
-            })
         }
     };
 
@@ -147,6 +138,15 @@ $(document).ready(function(){
 
 
     var octopusAdmin = {
+
+        bindAdminButton: function(){
+            $("#adminButton").click(function(){
+                $("#adminButtonArea").hide();
+                $("#adminEditArea").show();
+                octopus.getCurrentCat();
+                octopusAdmin.loadCurrentCatData();
+            })
+        },
 
         bindSaveButton: function(){
             $("#editSave").click(function(){
@@ -222,7 +222,7 @@ $(document).ready(function(){
 
         initAdmin: function(){
 
-            octopus.bindAdminButtonToEditor();
+            octopusAdmin.bindAdminButton();
             octopusAdmin.bindSaveButton();
             octopusAdmin.bindCancelButton();
         },
