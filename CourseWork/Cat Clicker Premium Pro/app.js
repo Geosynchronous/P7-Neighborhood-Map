@@ -150,13 +150,6 @@ $(document).ready(function(){
                 octopus.renderCurrentCat();
                 octopusUpdate.CurrentCatButtonLabel();
             })
-        },
-
-        bindCancelButtonToEditor: function(){
-            $("#editCancel").click(function(){
-                $("#adminEditArea").hide();
-                $("#adminButtonArea").show();
-            })
         }
     };
 
@@ -165,6 +158,13 @@ $(document).ready(function(){
 
     var octopusAdmin = {
 
+
+        bindCancelButton: function(){
+            $("#editCancel").click(function(){
+                $("#adminEditArea").hide();
+                $("#adminButtonArea").show();
+            })
+        },
 
         loadCurrentCatData: function(){
             $("#newcatNameInput").val(model.currentcat.name);
@@ -225,7 +225,7 @@ $(document).ready(function(){
 
             octopus.bindAdminButtonToEditor();
             octopus.bindSaveButtonToEditor();
-            octopus.bindCancelButtonToEditor();
+            octopusAdmin.bindCancelButton();
         },
 
         renderCats: function(){
