@@ -1967,6 +1967,9 @@ Saturday 23 July 2016
 - The editor count value updates if the cat is clicked on
 - THe button label and cat data is updated when SAVE is clicked
 
+![Admin Button Image](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-07-23%20at%203.21.51%20AM.jpg)
+1[Editor Image]{https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-07-23%20at%203.21.55%20AM.jpg}
+
 ```
 // Cat Clicker Premium, MVO STYLE
 // by George Fischer
