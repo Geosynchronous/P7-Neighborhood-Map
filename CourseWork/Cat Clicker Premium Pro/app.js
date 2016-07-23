@@ -90,10 +90,6 @@ $(document).ready(function(){
             view.renderAdmin();
         },
 
-        updateCurrentCat: function(catIndex) {
-            model.currentcat = model.allCats[catIndex];
-        },
-
         getCurrentCat: function() {
             return model.currentcat;
         },
@@ -113,7 +109,7 @@ $(document).ready(function(){
 
         bindButtonToCat: function(idNumber){
             $("#button"+idNumber).click(function(){
-                octopus.updateCurrentCat(idNumber);
+                octopusUpdate.currentCat(idNumber);
                 octopus.renderCurrentCat();
                 octopus.loadCurrentCatDataToEditor();
             })
@@ -127,67 +123,79 @@ $(document).ready(function(){
             // Updates editor count for cat clicks
             $("#newcatCountInput").val(model.currentcat.count);
             })
-        },
+        }
+    };
 
-        hideAdminEditor: function(){
+
+
+    var octopusAdmin = {
+
+        hideAdminArea: function(){
             $("#adminEditArea").hide();
-        },
+        }
 
-        bindAdminButtonToEditor: function(){
+        bindAdminButton: function(){
             $("#adminButton").click(function(){
                 $("#adminButtonArea").hide();
                 $("#adminEditArea").show();
                 octopus.getCurrentCat();
-                octopus.loadCurrentCatDataToEditor();
+                octopusAdmin.loadCurrentCatData();
             })
-        },
+        }
 
-        bindSaveButtonToEditor: function(){
+        bindSaveButton: function(){
             $("#editSave").click(function(){
                 $("#adminEditArea").hide();
                 $("#adminButtonArea").show();
-                octopus.saveCurrentCatEditData();
+                octopusAdmin.saveCurrentCatData();
                 octopus.renderCurrentCat();
-                octopus.updateCurrentCatButtonLabel();
+                octopusUpdate.currentCatButtonLabel();
             })
-        },
+        }
 
-        bindCancelButtonToEditor: function(){
+        bindCancelButton: function(){
             $("#editCancel").click(function(){
                 $("#adminEditArea").hide();
                 $("#adminButtonArea").show();
             })
         },
 
-        loadCurrentCatDataToEditor: function(){
+        loadCurrentCatData: function(){
             $("#newcatNameInput").val(model.currentcat.name);
             $("#newcatImageInput").val(model.currentcat.images);
             $("#newcatCountInput").val(model.currentcat.count);
         },
 
-         saveCurrentCatEditData: function(){
+         saveCurrentCatData: function(){
             model.currentcat.name = $("#newcatNameInput").val();
             model.currentcat.images = $("#newcatImageInput").val();
             model.currentcat.count = $("#newcatCountInput").val();
+        }
+    };
+
+
+
+    var octopusUpdate = {
+
+        currentCat: function(catIndex) {
+            model.currentcat = model.allCats[catIndex];
         },
 
-        updateCatListButtons: function(){
+        catListButtons: function(){
             // Creates the Labled Buttons Element Tags
             this.htmlStr = '';
             for (var i = 0; i < model.allCats.length; i++) {
-                octopus.updateCurrentCat(i);
+                octopusUpdate.currentCat(i);
                  this.htmlStr += ('<button id="button' + i + '">' + model.currentcat.name +'</button>');
             }
             $('#catlist').html(this.htmlStr);
         },
 
-        updateCurrentCatButtonLabel: function(){
+        currentCatButtonLabel: function(){
             // Creates the lable on the Button for edited Cat Name
             $('#button' + model.currentcat.index).html(model.currentcat.name);
         }
     };
-
-
 
     // ALL VIEW OBJECTS HERE
     // This makes it possible to see the web page content
@@ -209,9 +217,9 @@ $(document).ready(function(){
 
         initAdmin: function(){
 
-            octopus.bindAdminButtonToEditor();
-            octopus.bindSaveButtonToEditor();
-            octopus.bindCancelButtonToEditor();
+            octopusAdmin.bindAdminButton();
+            octopusAdmin.bindSaveButton();
+            octopusAdmin.bindCancelButton();
         },
 
         renderCats: function(){
@@ -223,7 +231,7 @@ $(document).ready(function(){
 			$('#catsContainer').prepend(this.catList);
 
             // Renders Cat List Button DIVS
-            octopus.updateCatListButtons();
+            octopusUpdate.catListButtons();
 
             // Renders DIVs needed inside of catPic
             $('#catpic').append(this.catImageElement);
@@ -232,7 +240,7 @@ $(document).ready(function(){
 
             // Renders Default Cat to page
             // Initialize first Cat as Default Cat View
-            octopus.updateCurrentCat(0);
+            octopusUpdate.currentCat(0);
             octopus.renderCurrentCat();
 
             // Binds Menu Items & Cat Image to Click Event Handler
@@ -243,7 +251,7 @@ $(document).ready(function(){
         renderAdmin: function(){
 
             // Initially hide  Admin Editor
-            octopus.hideAdminEditor();
+            octopus.hideAdminArea();
         }
     };
 
