@@ -1949,4 +1949,8 @@ y
 </body>
 ```
 
+9:54 PM
+- **HTML Structure & CSS Style**
+- Static Admin Editor in Place
+- Need to bind buttons, and add needed functionality to app.js next
 
