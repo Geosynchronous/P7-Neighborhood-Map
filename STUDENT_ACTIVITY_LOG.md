@@ -2501,7 +2501,7 @@ $(document).ready(function(){
         renderAdmin: function(){
 
             // Initially hide  Admin Editor
-            octopus.hideAdminArea();
+            octopusAdmin.hideAdminArea();
         }
     };
 
