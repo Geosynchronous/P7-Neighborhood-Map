@@ -36,7 +36,14 @@ var ViewModel = function() {
         owner: this
     });
 
-
+    this.people = ko.observableArray([
+        { nickName: 'Frodo' },
+        { nickName: 'Little Twit' },
+        { nickName: 'kitty' },
+        { nickName: 'pussycat' },
+        { nickName: 'musche-kate' }
+    ]);
 }
+
 
 ko.applyBindings(new ViewModel());
