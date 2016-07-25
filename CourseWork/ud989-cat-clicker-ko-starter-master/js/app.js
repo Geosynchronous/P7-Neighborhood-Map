@@ -6,24 +6,23 @@ var cat = function() {
     this.catNickName = ko.observableArray(['Frodo', 'Little Twit', 'kitty', 'pussycat', 'musche-kate']);
 
 
-	this.catLevel = function() {
-
-		var level;
+	this.title = ko.computed(function() {
+		var title;
 		if (this.clickCount() < 3) {
-			level = 'infant';
+			title = 'infant';
 		} else if (this.clickCount() < 5) {
-			level = 'young whipper snapper';
+			title = 'young whipper snapper';
 		} else if (this.clickCount() < 7) {
-			level = 'know it all';
+			title = 'know it all';
 		} else if (this.clickCount() < 9) {
-			level = 'old fart';
+			title = 'old fart';
 		} else {
-			level = 'toast';
-		} return level;
-	}
+			title = 'toast';
+		} return title;
+	}, this);
 
     this.countStats = ko.computed(function () {
-            return this.clickCount() + " " + this.catLevel();
+            return this.clickCount() + " " + this.title();
         },this);
 }
 
