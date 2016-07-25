@@ -1,13 +1,10 @@
-var ViewModel = function() {
+var cat = function() {
 	this.clickCount = ko.observable(0);
 	this.name = ko.observable('Fritz');
 	this.imgSrc = ko.observable('img/434164568_fea0ad4013_z.jpg');
 	this.imgAttribution = ko.observable('https://www.flickr.com/photos/big');
     this.catNickName = ko.observableArray(['Frodo', 'Little Twit', 'kitty', 'pussycat', 'musche-kate']);
 
-	this.incrementCounter = function() {
-		this.clickCount(this.clickCount() + 1);
-	}
 
 	this.catLevel = function() {
 
@@ -28,7 +25,17 @@ var ViewModel = function() {
     this.countStats = ko.computed(function () {
             return this.clickCount() + " " + this.catLevel();
         },this);
+}
+
+
+var ViewModel = function() {
+
+	this.currentCat = ko.observable( new cat());
+
+	this.incrementCounter = function() {
+		this.currentCat().clickCount(this.currentCat().clickCount() + 1);
 	}
+}
 
 
 ko.applyBindings(new ViewModel());
