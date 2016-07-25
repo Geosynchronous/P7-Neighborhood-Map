@@ -17,8 +17,10 @@ var ViewModel = function() {
 			level = 'young whipper snapper';
 		} else if (this.clickCount() < 7) {
 			level = 'know it all';
-		} else {
+		} else if (this.clickCount() < 9) {
 			level = 'old fart';
+		} else {
+			level = 'toast';
 		} return level;
 	}
 
@@ -36,7 +38,7 @@ var ViewModel = function() {
         owner: this
     });
 
-    this.people = ko.observableArray([
+    this.catNickName = ko.observableArray([
         { nickName: 'Frodo' },
         { nickName: 'Little Twit' },
         { nickName: 'kitty' },

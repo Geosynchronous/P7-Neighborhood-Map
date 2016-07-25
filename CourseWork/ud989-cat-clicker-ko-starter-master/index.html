@@ -10,16 +10,22 @@
         <h2 data-bind="text: name" id="cat-name"></h2>
         <div data-bind="text: countStats" id="cat-count"></div>
         <img data-bind="click: incrementCounter, attr:{src: imgSrc}" id="cat-img">
+        <h4>Nicknames</h4>
+        <ul data-bind="foreach: catNickName">
+            <li data-bind="text: nickName"></li>
+        </ul>
+
+<!-- Can use a table as well as a list
         <table>
             <thead>
                 <tr><th>Nicknames:</th></tr>
             </thead>
-            <tbody data-bind="foreach: people">
+            <tbody data-bind="foreach: catNickName">
                 <tr>
                     <td data-bind="text: nickName"></td>
                 </tr>
             </tbody>
-        </table>
+        </table> -->
     </div>
     <script src="js/lib/knockout-3.2.0.js"></script>
     <script src="js/app.js"></script>
