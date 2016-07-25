@@ -20,10 +20,6 @@ var cat = function() {
 			title = 'toast';
 		} return title;
 	}, this);
-
-    this.countStats = ko.computed(function () {
-            return this.clickCount() + " " + this.title();
-        },this);
 }
 
 
