@@ -12,7 +12,9 @@
         <img data-bind="click: incrementCounter, attr:{src: imgSrc}" id="cat-img">
         <h4>Nicknames</h4>
         <ul data-bind="foreach: catNickName">
-            <li data-bind="text: nickName"></li>
+<!--        EITHER LIST ELEMENT WILL WORK
+            <li data-bind="text: nickName"></li> -->
+            <li data-bind="text: $data"></li>
         </ul>
 
 <!-- Can use a table as well as a list

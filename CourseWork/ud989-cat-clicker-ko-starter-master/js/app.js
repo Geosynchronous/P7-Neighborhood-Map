@@ -3,6 +3,7 @@ var ViewModel = function() {
 	this.name = ko.observable('Fritz');
 	this.imgSrc = ko.observable('img/434164568_fea0ad4013_z.jpg');
 	this.imgAttribution = ko.observable('https://www.flickr.com/photos/big');
+    this.catNickName = ko.observableArray(['Frodo', 'Little Twit', 'kitty', 'pussycat', 'musche-kate']);
 
 	this.incrementCounter = function() {
 		this.clickCount(this.clickCount() + 1);
@@ -37,14 +38,6 @@ var ViewModel = function() {
         // },
         owner: this
     });
-
-    this.catNickName = ko.observableArray([
-        { nickName: 'Frodo' },
-        { nickName: 'Little Twit' },
-        { nickName: 'kitty' },
-        { nickName: 'pussycat' },
-        { nickName: 'musche-kate' }
-    ]);
 }
 
 
