@@ -25,20 +25,10 @@ var ViewModel = function() {
 		} return level;
 	}
 
-    this.countStats = ko.pureComputed({
-        read: function () {
+    this.countStats = ko.computed(function () {
             return this.clickCount() + " " + this.catLevel();
-        },
-        // write: function (value) {
-        //     var lastSpacePos = value.lastIndexOf(" ");
-        //     if (lastSpacePos > 0) { // Ignore values with no space character
-        //         this.clickCount(value.substring(0, lastSpacePos));
-        //         this.catLevel(value.substring(lastSpacePos + 1));
-        //     }
-        // },
-        owner: this
-    });
-}
+        },this);
+	}
 
 
 ko.applyBindings(new ViewModel());
