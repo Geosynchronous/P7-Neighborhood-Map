@@ -1,10 +1,77 @@
-var cat = function() {
-	this.clickCount = ko.observable(0);
-	this.name = ko.observable('Fritz');
-	this.imgSrc = ko.observable('img/434164568_fea0ad4013_z.jpg');
-	this.imgAttribution = ko.observable('https://www.flickr.com/photos/big');
-    this.catNickName = ko.observableArray(['Frodo', 'Little Twit', 'kitty', 'pussycat', 'musche-kate']);
+var initialCats = [
+        {  
+            clickCount: 0,
+            name: "Chicago", 
+            imgSrc: "images/chicago.jpg", 
+            imgAttribution:'http://wikimedia.org',
+            nicknames: ['The Chalk Board Tiger']
+        }, 
+        {  
+            clickCount: 0,
+            name: "Chill", 
+            imgSrc: "images/chill.jpg", 
+            imgAttribution:'http://wikimedia.org',
+            nicknames: ['foo']
+        }, 
+        {  
+            clickCount: 0,
+            name: "Chops", 
+            imgSrc: "images/chops.jpg", 
+            imgAttribution:'http://wikimedia.org',
+            nicknames: ['foo']
+        }, 
+        {  
+            clickCount: 0,
+            name: "Mamasita", 
+            imgSrc: "images/mamasita.jpg", 
+            imgAttribution:'http://wikimedia.org',
+            nicknames: ['foo']
+        }, 
+        {  
+            clickCount: 0,
+            name: "Predator", 
+            imgSrc: "images/predator.jpg", 
+            imgAttribution:'http://wikimedia.org',
+            nicknames: ['foo']
+        }, 
+        {  
+            clickCount: 0,
+            name: "Siberian", 
+            imgSrc: "images/siberian.jpg", 
+            imgAttribution:'http://wikimedia.org',
+            nicknames: ['foo']
+        }, 
+        {  
+            clickCount: 0,
+            name: "Watch", 
+            imgSrc: "images/watch.jpg", 
+            imgAttribution:'http://wikimedia.org',
+            nicknames: ['foo']
+        }, 
+        {  
+            clickCount: 0,
+            name: "Wet", 
+            imgSrc: "images/wet.jpg", 
+            imgAttribution:'http://wikimedia.org',
+            nicknames: ['foo']
+        }, 
+        { 
+            clickCount: 0,
+            name: "Woods", 
+            imgSrc: "images/woods.jpg", 
+            imgAttribution:'http://wikimedia.org',
+            nicknames: ['foo']
+        } 
+    ]
 
+
+
+var Cat = function(data) {
+	this.clickCount = ko.observable(data.clickCount);
+	this.name = ko.observable(data.name);
+	this.imgSrc = ko.observable(data.imgSrc);
+	this.imgAttribution = ko.observable(data.imgAttribution);
+    this.catNickName = ko.observableArray(data.nicknames);
 
 	this.title = ko.computed(function() {
 		var title;
@@ -22,16 +89,28 @@ var cat = function() {
 	}, this);
 }
 
+// [  ] Make the cats show up in a list
+//
+// [  ] Make the currentCat change when you click on a cat in the list
+//
+// [  ] High 5
+
 
 var ViewModel = function() {
 	var self = this;
 
-	this.currentCat = ko.observable( new cat());
+	this.catList = ko.observableArray([]);
+
+	initialCats.forEach(function(catItem){
+		self.catList.push( new Cat(catItem) );
+	});
+
+	this.currentCat = ko.observable( this.catList()[0] );
 
 	this.incrementCounter = function() {
 		self.currentCat().clickCount(self.currentCat().clickCount() + 1);
 	}
-}
+};
 
 
 ko.applyBindings(new ViewModel());
