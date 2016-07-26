@@ -3,8 +3,8 @@ var initialCats = [
             clickCount: 0,
             name: "Chicago", 
             imgSrc: "images/chicago.jpg", 
-            imgAttribution:'http://wikimedia.org',
-            nicknames: ['The Chalk Board Tiger']
+            imgAttribution:'http://thecore.uchicago.edu/Winter2011/editors-note.shtml',
+            nicknames: ['The Chalk Board Tiger', 'Shaggy\'s Artwork', 'University of Chicago President\'s Lament', 'Decades of Student Admiration' ]
         }, 
         {  
             clickCount: 0,
