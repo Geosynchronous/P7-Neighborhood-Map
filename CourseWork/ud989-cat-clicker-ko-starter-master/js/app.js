@@ -71,7 +71,7 @@ var Cat = function(data) {
 	this.name = ko.observable(data.name);
 	this.imgSrc = ko.observable(data.imgSrc);
 	this.imgAttribution = ko.observable(data.imgAttribution);
-    this.catNickName = ko.observableArray(data.nicknames);
+    this.nicknames = ko.observableArray(data.nicknames);
 
 	this.title = ko.computed(function() {
 		var title;
