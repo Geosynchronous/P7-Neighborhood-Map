@@ -108,7 +108,7 @@ var ViewModel = function() {
 
 	this.setCat = function(clickedCat){
 		self.currentCat(clickedCat);
-	}
+	};
 };
 
 
