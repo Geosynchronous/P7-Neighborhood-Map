@@ -87,13 +87,8 @@ var Cat = function(data) {
 			title = 'toast';
 		} return title;
 	}, this);
-}
+};
 
-// [  ] Make the cats show up in a list
-//
-// [  ] Make the currentCat change when you click on a cat in the list
-//
-// [  ] High 5
 
 
 var ViewModel = function() {
@@ -109,6 +104,10 @@ var ViewModel = function() {
 
 	this.incrementCounter = function() {
 		self.currentCat().clickCount(self.currentCat().clickCount() + 1);
+	};
+
+	this.setCat = function(clickedCat){
+		self.currentCat(clickedCat);
 	}
 };
 
