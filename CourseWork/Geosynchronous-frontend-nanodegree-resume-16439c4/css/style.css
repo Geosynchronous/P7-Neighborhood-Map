@@ -1,0 +1,374 @@
+/* Main CSS file for Resume Project.  */
+
+
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*
+ * Boxsizing for elements & Pseudo-Classes
+ * Supports many older browsers
+ */
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+
+
+
+body,
+div,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding:0;
+  margin:0;
+  font-family: "Roboto", sans-serif;
+}
+
+.clear-fix {
+  overflow: auto;
+}
+
+.education-entry,
+.work-entry,
+.project-entry {
+  margin-top: 16px;
+  padding: 0 5%;
+}
+
+h1 {
+  font-size: 40px;
+  color: #f5a623;
+  line-height: 48px;
+  display: inline;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 16px;
+  color: #484848;
+  line-height: 29px;
+  padding: 10px;
+}
+
+h3 {
+  font-style: italic;
+  font-size: 18px;
+  color: #000;
+  line-height: 22px;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 14px;
+  color: #4a4a4a;
+  line-height: 17px;
+}
+
+h2,
+h4,
+h5 {
+  padding:10px 5%;
+}
+
+em {
+  font-size:14px;
+}
+
+hr {
+  margin-bottom: 5px;
+}
+
+.date-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
+  line-height: 16px;
+  float: left;
+}
+
+.location-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
+  line-height: 16px;
+  float: right;
+}
+
+.maps-text {
+  font-size: 14px;
+  text-align: center;
+  color: #000000;
+  line-height: 16px;
+}
+
+p {
+  font-size: 14px;
+  color: #333;
+  line-height: 21px;
+}
+
+a {
+  font-size: 16px;
+  color: #1199c3;
+  text-decoration: none;
+  margin-top: 12px;
+  display: block;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:focus {
+  text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #f5ae23;
+}
+
+.welcome-message {
+  font-style: italic;
+  font-size: 16px;
+  color: #ffffff;
+  padding: 20px 0;
+}
+
+#skills-h3 {
+  color: #f5ae23;
+  display: block;
+}
+
+#course-link {
+  margin: 0;
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
+}
+
+.orange {
+  background-color: #f5ae23;
+}
+
+.orange-text {
+  color: #f5ae23;
+}
+
+.white-text {
+  font-weight: bold;
+  color: #fff;
+}
+
+.gray-text {
+  font-weight: bold;
+  color: #c7c1c1;
+}
+
+.gray {
+  background-color: #f3f3f3;
+  padding-bottom: 10px;
+  clear: both;
+}
+
+.light-blue {
+  background-color: #c3dfec;
+  padding-bottom: 10px;
+  clear: both;
+}
+
+.light-yellow {
+  background-color: #ece9c3;
+  padding-bottom: 10px;
+  clear: both;
+}
+
+.light-green {
+  background-color: #dbe8ce;
+  padding-bottom: 20px;
+  border-bottom: 50px;
+  clear: both;
+}
+
+.pinksalmon {
+  background-color: #f1e4e4;
+  padding-bottom: 20px;
+  clear: both;
+}
+
+.dark-gray {
+  background-color: #4a4a4a;
+}
+
+#header {
+  background-color: #484848;
+}
+
+.flex-box {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+
+.flex-item {
+  padding: 0 5px;
+}
+
+.center-content {
+  padding: 2.5% 5%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.biopic {
+  float: left;
+  padding: 15px 20px 0 0;
+  width: 200px;
+  display: block;
+}
+
+.mapspic {
+  width: 150px;
+}
+
+img {
+  padding: 10px;
+}
+
+span {
+  padding: 0 5px;
+}
+
+.panel-group {
+  margin-bottom: 0px;
+  padding: 0 5% 3% 5%;
+}
+
+/*
+This works...  But what is going on here?
+Adding a duplicate class to a class???
+*/
+.panel-group
+.panel + .panel {
+  margin-top: 0;
+}
+
+.panel-heading {
+  padding: 0;
+}
+
+#lets-connect {
+  text-align: center;
+}
+
+#footerContacts {
+  padding: 2px 0;
+}
+
+#map {
+  display: block;
+  height: 100%;
+}
+
+#mapDiv {
+  height: 400px;
+  width: 100%;
+}
+
+
+
+/* Media queries to handle various device widths */
+
+@media only screen and (min-width: 1024px) {
+
+  body {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
+
+
+
+@media only screen and (max-width:960px) {
+
+  .biopic {
+    width: 150px;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  span {
+    padding: 0 5px;
+  }
+
+  #topContacts {
+    display: none;
+  }
+}
+
+
+
+@media only screen and (max-width: 530px) {
+
+  .biopic {
+    display: block;
+    padding: 15px 30px 10px 0;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    padding: 0 5%;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  h4 {
+    padding: 5px 5%;
+  }
+
+  a{
+    margin-top: 0px;
+  }
+
+  hr {
+    margin-top: 10px;
+  }
+
+  li {
+    display: block;
+  }
+
+  .welcome-message {
+    display: none;
+  }
+
+  #skills-h3 {
+    padding: 10px 0 5px 0;
+  }
+
+}
