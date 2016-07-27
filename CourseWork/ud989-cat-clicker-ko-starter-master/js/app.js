@@ -98,16 +98,22 @@ var ViewModel = function() {
 
 	initialCats.forEach(function(catItem){
 		self.catList.push( new Cat(catItem) );
+		// console.log(catItem);
 	});
 
 	this.currentCat = ko.observable( this.catList()[0] );
+			console.log(this.catList()[0].name());
+
 
 	this.incrementCounter = function() {
 		self.currentCat().clickCount(self.currentCat().clickCount() + 1);
+			// console.log(self.currentCat().clickCount());
 	};
 
 	this.setCat = function(clickedCat){
 		self.currentCat(clickedCat);
+		// console.log(clickedCat);
+					console.log(self.currentCat(clickedCat).name());
 	};
 };
 
