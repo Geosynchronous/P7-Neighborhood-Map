@@ -2535,3 +2535,10 @@ Wednesday July 27, 2016
 - **chore: add todo mini-project to my repo**
 - [TODO Project](https://github.com/Geosynchronous/P7-Neighborhood-Map/tree/master/CourseWork/ud989-todo-app-master)
 
+10:24 AM
+- **create new git repo example**
+- added this to show how straight forward it can be
+- I just use the the github browser and desktop right now, I need to learn command line git at some point
+- This is a screenshot of the example: ![Git repo example](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-07-27%20at%2010.21.01%20AM.jpg)
+
+
