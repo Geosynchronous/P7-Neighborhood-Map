@@ -2518,9 +2518,9 @@ $(document).ready(function(){
 Tuesday July 26, 2016
 
 7:41 PM
-- ** BUMMER**
+- **BUMMER**
 - Lost three days of this document STUDENT_ACTIVITY_LOG.md
-- I didn't notice that gh-pages was set instead of master repo **Duh!!!**
+- I didn't notice that gh-pages was set instead of master repo ........**Duh!!!**
 - my local repo backups have only the master copy from three days ago
 - I finished the knockout Cat Clicker, and had made quite a few notes about it
 - The upshot is I kind of get what is going on, and console.log helped understand the object structure a bit more
