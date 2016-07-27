@@ -2527,3 +2527,11 @@ Tuesday July 26, 2016
 - The overall gist of knockout is pretty cool and sleek and I like it, sure does make code binding and MVVM a lot easier
 - The code I made work [CAT CLICKER KNOCKOUT](https://geosynchronous.github.io/P7-Neighborhood-Map/CourseWork/ud989-cat-clicker-ko-starter-master/index.html)
 - Knockout is not entirely intuitive to me at this point, going over the whole lesson will probably be a good thing to do for sure, but right now I will move on
+
+
+Wednesday July 27, 2016
+
+10:10 AM
+- **chore: add todo mini-project to my repo**
+- [TODO Project](https://github.com/Geosynchronous/P7-Neighborhood-Map/tree/master/CourseWork/ud989-todo-app-master)
+
