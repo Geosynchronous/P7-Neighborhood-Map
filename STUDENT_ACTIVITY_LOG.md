@@ -2515,3 +2515,15 @@ $(document).ready(function(){
 
 - [CAT CLICKER PREMIUM PRO](https://geosynchronous.github.io/P7-Neighborhood-Map/CourseWork/Cat%20Clicker%20Premium%20Pro/index.html)
 
+Tuesday July 26, 2016
+
+7:41 PM
+- ** BUMMER**
+- Lost three days of this document STUDENT_ACTIVITY_LOG.md
+- I didn't notice that gh-pages was set instead of master repo **Duh!!!**
+- my local repo backups have only the master copy from three days ago
+- I finished the knockout Cat Clicker, and had made quite a few notes about it
+- The upshot is I kind of get what is going on, and console.log helped understand the object structure a bit more
+- The overall gist of knockout is pretty cool and sleek and I like it, sure does make code binding and MVVM a lot easier
+- The code I made work [CAT CLICKER KNOCKOUT](https://geosynchronous.github.io/P7-Neighborhood-Map/CourseWork/ud989-cat-clicker-ko-starter-master/index.html)
+- Knockout is not entirely intuitive to me at this point, going over the whole lesson will probably be a good thing to do for sure, but right now I will move on
