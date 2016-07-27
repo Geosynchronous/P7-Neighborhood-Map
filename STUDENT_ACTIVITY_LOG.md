@@ -2541,4 +2541,11 @@ Wednesday July 27, 2016
 - I just use the the github browser and desktop right now, I need to learn command line git at some point
 - This is a screenshot of the example: ![Git repo example](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-07-27%20at%2010.21.01%20AM.jpg)
 
+5:09 PM
+- **Finishd Codebase Section**
+- Did the quizzes, needed to refer to solution, but understand how to do the detective work
+- Also intro to a Codebase project is understood, the framework libraries and packaging
+- Also http://todomvc.com/ seems like a gem, as it is where the project code is sourced from, and more importantly, it has the same APP written in various different frameworks for comparison. **I HOPE I REMEMBER THIS, WHEN I AM LEARNING AND COMPARING VARIOUS FRAMEWORKS
+- In this section BACKBONE.JS was the framework of choice, and it used UNDERSCORE.JS to support it, both frameworks were created by the same author
+- After completing this section, I certainly don't really know too much about any framework, but I am comfortable with the codebase ecosystem they all inhabit and how to do detective work and BE LIKE TOFU (assimalate same patterns of code that is already written, trying to be ONE WITH THE CODE...)
 
