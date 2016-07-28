@@ -2573,9 +2573,8 @@ THursday July 28,2016
 - He did a good job answering all my questions about Hello Map Code, Google Maos Docs and Console, jsHint and semicolon usage
 - The code we looked at was the following:
 
----
-<!-- This is the corresponding "starter code" for 04_Hello Map in Udacity and Google's Maps
-API Course, Lesson 1 -->
+
+```
 <html>
  <head>
  <!-- styles put here, but you can include a CSS file and reference it instead! -->
@@ -2602,15 +2601,12 @@ API Course, Lesson 1 -->
         });
      }
 
-    </script>
-    <!--  Load the JS API ASYNCHRONOUSLY below.
-          (include defer for legacy browsers) -->
+
     <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaL-jhZDIeEBOjiVX31sDh6UjauQlfWk4&v=3&callback=initMap">
     </script>
- </body>
-</html>
----
+```
+
 
 - Basically as the DOM rolls, the initMap function expression gets read, then the google map script gets run:
 	-  `https://maps.googleapis.com/maps/api/js`
