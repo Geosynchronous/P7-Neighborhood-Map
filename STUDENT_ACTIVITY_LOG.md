@@ -2562,4 +2562,7 @@ Wednesday July 27, 2016
 - **Hello Map**
 - ![Student Hello Map Link](file:///Users/geo/version-control/P7-Neighborhood-Map/CourseWork/ud864-master-student/04_Hello_Map_Quiz.html)
 
+9:43 PM
+- **Hello Map Working**
+- Added my specific lat/lng
 
