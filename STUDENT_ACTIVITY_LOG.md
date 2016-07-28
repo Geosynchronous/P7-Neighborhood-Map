@@ -2622,7 +2622,7 @@ THursday July 28,2016
 		-  `.InfoWindow & Marker will be needed for the project
 		-  These are listed in the right hand column of this ref doc
 		-  The list is long so searching (⌘F) can be quite useful
-
+- [Setting Up registered Domains on Google Maps](https://console.developers.google.com/apis/credentials/domainverification?project=long-door-138623) will probably be needed in the project as well
 
 
 - 
