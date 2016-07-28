@@ -2554,3 +2554,8 @@ Wednesday July 27, 2016
 - Started API Map Section of Course
 - created github repo and local repo
 - Created API Browser and Server Keys for multiple Google API Map Services
+- Useful Links:
+	- https://developers.google.com/maps/documentation/javascript/reference
+	- https://console.developers.google.com/apis/
+
+
