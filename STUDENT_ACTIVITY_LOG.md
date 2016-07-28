@@ -2549,3 +2549,8 @@ Wednesday July 27, 2016
 - In this section BACKBONE.JS was the framework of choice, and it used UNDERSCORE.JS to support it, both frameworks were created by the same author
 - After completing this section, I certainly don't really know too much about any framework, but I am comfortable with the codebase ecosystem they all inhabit and how to do detective work and BE LIKE TOFU (assimalate same patterns of code that is already written, trying to be ONE WITH THE CODE...)
 
+8:26 PM
+- **ud864-master (MAP mini-project)**
+- Started API Map Section of Course
+- created github repo and local repo
+- Created API Browser and Server Keys for multiple Google API Map Services
