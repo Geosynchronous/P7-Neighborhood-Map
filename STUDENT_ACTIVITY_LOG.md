@@ -2561,7 +2561,9 @@ Wednesday July 27, 2016
 8:49 PM
 - **Hello Map**
 - ![Student Hello Map Link](file:///Users/geo/version-control/P7-Neighborhood-Map/CourseWork/ud864-master-student/04_Hello_Map_Quiz.html)
-- 
+
+
+
 THursday July 28,2016
 
 9:43 AM
