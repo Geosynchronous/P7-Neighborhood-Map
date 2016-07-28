@@ -2561,8 +2561,70 @@ Wednesday July 27, 2016
 8:49 PM
 - **Hello Map**
 - ![Student Hello Map Link](file:///Users/geo/version-control/P7-Neighborhood-Map/CourseWork/ud864-master-student/04_Hello_Map_Quiz.html)
+- 
+THursday July 28,2016
 
-9:43 PM
+9:43 AM
 - **Hello Map Working**
 - Added my specific lat/lng
 
+11:40 AM
+- **Coaching Mentor Meeting with Ryan**
+- He did a good job answering all my questions about Hello Map Code, Google Maos Docs and Console, jsHint and semicolon usage
+- The code we looked at was the following:
+
+---
+<!-- This is the corresponding "starter code" for 04_Hello Map in Udacity and Google's Maps
+API Course, Lesson 1 -->
+<html>
+ <head>
+ <!-- styles put here, but you can include a CSS file and reference it instead! -->
+   <style type="text/css">
+     html, body { height: 100%; margin: 0; padding: 0; }
+     #map { height: 100%; }
+   </style>
+ </head>
+ <body>
+    <!-- Create a place to put the map in the HTML-->
+    <div id="map"></div>
+    <script>
+
+      // Create a map variable
+      var map;
+
+      // Initialize the map
+      function initMap() {
+        // Constructor function to create a new map JS object.
+        // My home coordinates used
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 40.774796, lng: -111.853111},
+          zoom: 13
+        });
+     }
+
+    </script>
+    <!--  Load the JS API ASYNCHRONOUSLY below.
+          (include defer for legacy browsers) -->
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaL-jhZDIeEBOjiVX31sDh6UjauQlfWk4&v=3&callback=initMap">
+    </script>
+ </body>
+</html>
+---
+
+- Basically as the DOM rolls, the initMap function expression gets read, then the google map script gets run:
+	-  `https://maps.googleapis.com/maps/api/js`
+		- this part defines all the objects, (that are used in -`initMap()`)
+		- `.google, .maps, & .Maps`
+	- This part `?key=AIzaSyAaL-jhZDIeEBOjiVX31sDh6UjauQlfWk4&v=3&` is my user key that gives me access to this API, and a &string& that specifies the version of maps js to use (version 3)
+	- THe `callback=initMap` part invokes the `initMap` functions in the code
+- When the `initMap` is invoked it loads the google map into the div with class `map`
+	- [Google Maps JavaScript API V3 Reference](https://developers.google.com/maps/documentation/javascript/reference#InfoWindow) 
+		- Constructors like `.Map` can be found here, with atributes etc
+		-  `.InfoWindow & Marker will be needed for the project
+		-  These are listed in the right hand column of this ref doc
+		-  The list is long so searching (⌘F) can be quite useful
+
+
+
+- 
