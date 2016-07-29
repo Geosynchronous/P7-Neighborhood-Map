@@ -2615,7 +2615,7 @@ THursday July 28,2016
 		- this part defines all the objects, (that are used in -`initMap()`)
 		- `.google, .maps, & .Maps`
 	- This part `?key=AIzaSyAaL-jhZDIeEBOjiVX31sDh6UjauQlfWk4&v=3&` is my user key that gives me access to this API, and a &string& that specifies the version of maps js to use (version 3)
-	- THe `callback=initMap` part invokes the `initMap` functions in the code
+	- THe `callback=initMap` part invokes the `initMap` functions in the code, and it is a good thing too, because doing this keeps it from being invoked before google maps has been loaded
 - When the `initMap` is invoked it loads the google map into the div with class `map`
 	- [Google Maps JavaScript API V3 Reference](https://developers.google.com/maps/documentation/javascript/reference#InfoWindow) 
 		- Constructors like `.Map` can be found here, with atributes etc
