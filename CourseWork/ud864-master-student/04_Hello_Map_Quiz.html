@@ -30,6 +30,12 @@ API Course, Lesson 1 -->
           map: map,
           title: 'First Beer Marker'
         });
+        var infowindow = new google.maps.InfoWindow({
+          content: 'Salt Lake City has many great breweries, and this one is my favorite!  And they are open on late, on Sundays and Holidays!!!'
+        });
+        marker.addListener('click', function(){
+          infowindow.open(map, marker);
+        });
      }
 
     </script>
