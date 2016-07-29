@@ -2636,5 +2636,38 @@ THursday July 28,2016
 - The rest of the Map Code Examples in the list are already complete accept they need my API Key and/or Libraries to be able to run
 - Just added the API Key to the next 5 examples so I can use them as I go through this Section of the course
 
+Friday July 29, 2016
 
+11:40 AM
+- **Possible Concept for Map Project**
+- Sent this email:
+
+```
+George Fischer <georgefischer2@mac.com>, geoforgood-info@google.com, Dennis Sizemore <sizemore@roundriver.org>, kim@roundriver.org, Doug Milek <dougmilek@roundriver.org>
+
+ Google Earth Outreach & Round River Conservation Studies
+
+Hi,
+
+This isn’t a "Moon shot"… it is an "Earth shot" proposal...
+
+Currently I am a Udacity Front-End-Web Developer Student working on a Map Project. 
+
+I also have a long time volunteer affiliation with Round River Conservation http://www.roundriver.org/.  I will be creating a rudimentary Round River Map (for my own training  purposes) using Google Maps for my Udacity Nanodegree Program.
+
+Round River relies on GIS mapping to do their field work, and they have a GIS staff person and decades of maps for this purpose.  I am also aware that they not only wish to protect conservation areas  and inform folks with maps, but educate them in the classrooms world-wide, and actually use things like Open Data Kit https://opendatakit.org/ to collect field data.
+
+I just saw that I missed the application deadline for your  Summit 2016 http://geoforgood2016.earthoutreach.org/home.  In any event, I  am writing to you to see if you have any cancelations for this event, or a waiting list.  But more importantly, I am writing to establish a possible pathway for development with Google Earth Outreach & Round River Conservation Studies.  The fact that you offer Grants, also makes this all the more feasible.
+
+Any feedback about this matter would be appreciated as a way forward, as I am interested in the possibility of bringing Google Earth Outreach and Round River together to somehow create an even more robust conservation effort on this planet.
+
+Sincerely,
+
+George Fischer
+
+Salt Lake City, Utah
+801-318-0621
+geosynchronous@mac,com
+
+```
 
