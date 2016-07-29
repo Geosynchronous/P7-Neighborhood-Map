@@ -2624,5 +2624,10 @@ THursday July 28,2016
 		-  The list is long so searching (⌘F) can be quite useful
 - [Setting Up registered Domains on Google Maps](https://console.developers.google.com/apis/credentials/domainverification?project=long-door-138623) will probably be needed in the project as well
 
+6:04 PM
+- **JS Profile Timeline**
+- Wondered about the relation between loading google maps and invoking initMap, so I recorded this timeline, and you can see that google maps starts up first, and part way along initMap gets invoked, which you would expect from looking at the code in the html file:
 
-- 
+![JS Profile Timeline of Hello Maps](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-07-28%20at%205.57.18%20PM.jpg)
+
+
