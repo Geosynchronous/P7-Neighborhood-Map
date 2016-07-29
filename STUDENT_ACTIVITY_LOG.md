@@ -2630,4 +2630,11 @@ THursday July 28,2016
 
 ![JS Profile Timeline of Hello Maps](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-07-28%20at%205.57.18%20PM.jpg)
 
+8:20 PM
+- **Marker & InfoWindow**
+- added a single `Marker` and simple `InforWindow` to 04_Hello_Map_Quiz.html
+- The rest of the Map Code Examples in the list are already complete accept they need my API Key and/or Libraries to be able to run
+- Just added the API Key to the next 5 examples so I can use them as I go through this Section of the course
+
+
 
