@@ -2671,3 +2671,17 @@ geosynchronous@mac,com
 
 ```
 
+Saturday July 30, 2016
+
+12:39 PM
+- **Round River Map Marker**
+- Going through map feature examples in course
+- Changed code on Project_Code_5_BeingStylish.html to use the Round River Icon as a map marker
+- [Round River Icon Source](http://www.roundriver.org/wp-content/uploads/2015/06/RR-circle.png)
+- This looks good, and I plan on using this in my project: ![Round River Icon Example](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-07-30%20at%2012.34.17%20PM.jpg)
+
+- The marker does not highlight, and I used default size of icon, RR ICON is just fine as it is for right now...
+- I did not change the style of the map, it would be good practice to do so now, however, I want to move on, so I can get to the project itself, and I believe the documentation is excellent, coupled with the examples in this course, that when I need to change the map style I will be able to do so...
+
+
+
