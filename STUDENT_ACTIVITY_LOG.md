@@ -2683,5 +2683,10 @@ Saturday July 30, 2016
 - The marker does not highlight, and I used default size of icon, RR ICON is just fine as it is for right now...
 - I did not change the style of the map, it would be good practice to do so now, however, I want to move on, so I can get to the project itself, and I believe the documentation is excellent, coupled with the examples in this course, that when I need to change the map style I will be able to do so...
 
+8:08 PM
+- **Highlight Icon**
+- made a highlighted image icon
+- changed code so now icon highlights
+
 
 
