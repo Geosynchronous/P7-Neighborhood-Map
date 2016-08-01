@@ -2694,7 +2694,9 @@ Monday August 1, 2016
 - **Map Coordinates**
 - Still moving through map example code
 - Could see how something like this could be useful to Round River Map Project:
-- http://www.mapcoordinates.net/en
+	- http://www.mapcoordinates.net/en
+	- http://noc.to/geodecode
+	- https://google-developers.appspot.com/maps/documentation/utils/geocoder/#place_id%3DEi0xMjE2IEUgNXRoIEF2ZSwgU2FsdCBMYWtlIENpdHksIFVUIDg0MTAzLCBVU0E
 
 
 
