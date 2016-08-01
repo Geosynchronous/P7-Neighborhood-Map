@@ -2698,5 +2698,9 @@ Monday August 1, 2016
 	- http://noc.to/geodecode
 	- https://google-developers.appspot.com/maps/documentation/utils/geocoder/#place_id%3DEi0xMjE2IEUgNXRoIEF2ZSwgU2FsdCBMYWtlIENpdHksIFVUIDg0MTAzLCBVU0E
 
+2:26 PM
+- ** Finished Google Maps API Services Section of Course**
+- Time ZOne APi could be useful for Round River Map Project
+- Places API, Place ID, Searchbox are cool and might be useful for Project
 
 
