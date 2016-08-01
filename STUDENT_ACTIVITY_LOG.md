@@ -2688,5 +2688,13 @@ Saturday July 30, 2016
 - made a highlighted image icon
 - changed code so now icon highlights
 
+Monday August 1, 2016
+
+12:07 PM
+- **Map Coordinates**
+- Still moving through map example code
+- Could see how something like this could be useful to Round River Map Project:
+- http://www.mapcoordinates.net/en
+
 
 
