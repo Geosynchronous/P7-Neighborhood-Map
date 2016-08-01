@@ -2702,5 +2702,7 @@ Monday August 1, 2016
 - ** Finished Google Maps API Services Section of Course**
 - Time ZOne APi could be useful for Round River Map Project
 - Places API, Place ID, Searchbox are cool and might be useful for Project
+- Autocomplete might be useful too
+
 
 
