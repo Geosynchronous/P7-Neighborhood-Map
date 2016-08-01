@@ -2699,10 +2699,16 @@ Monday August 1, 2016
 	- https://google-developers.appspot.com/maps/documentation/utils/geocoder/#place_id%3DEi0xMjE2IEUgNXRoIEF2ZSwgU2FsdCBMYWtlIENpdHksIFVUIDg0MTAzLCBVU0E
 
 2:26 PM
-- ** Finished Google Maps API Services Section of Course**
+- **Finished Google Maps API Services Section of Course**
 - Time ZOne APi could be useful for Round River Map Project
 - Places API, Place ID, Searchbox are cool and might be useful for Project
 - Autocomplete might be useful too
+
+3:28 PM
+- **Finished using the APIs in Practice section**
+- The [teacher's notes on this course page](https://classroom.udacity.com/nanodegrees/nd001/parts/00113454014/modules/4fd8d440-9428-4de7-93c0-4dca17a36700/lessons/8307966915/concepts/84040312990923) give a great synopsis of what was developed in the maps, and what could be added still.  I am not doing this project, as I wish to start doing the Nanodegree Project next.
+-  Sent a review to google about how good I thought this course was 10/10 with lots of comments.
+
 
 
 
