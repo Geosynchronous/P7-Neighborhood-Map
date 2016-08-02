@@ -58,6 +58,10 @@ Tuesday August 2, 2016
 -**Turned on Terrain**
 - looks good
 
+1:36 PM
+- **on init showListings**
+- ready to put the code in MVVM framework with knockout.js
+
 
 
 
