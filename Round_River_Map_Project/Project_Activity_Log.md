@@ -42,6 +42,12 @@ Tuesday August 2, 2016
 - need to figure out how to center marker...
 - Maybe see if color change works, not sure of the code in makeMarkerIcon()...
 
+10:21 AM
+- **fix: imageIcon**
+- Image icons are 33 x 33 in both a default mode, and a highlight mode
+- Some of the lat/lng entries are off, but close enough for now
+- Here's what it looks like: ![Screenshot of Map Markers](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-08-02%20at%209.44.47%20AM.png)
+
 
 
 
