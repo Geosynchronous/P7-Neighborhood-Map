@@ -26,7 +26,13 @@ Monday August 1, 2016
 - Used [Project_Code_5_BeingStylish.html](ers/geo/version-control/P7-Neighborhood-Map/CourseWork/ud864-master-student/Project_Code_5_BeingStylish.html) and image folder from my previous Coursework
 - Will modify marker geocode list to use Round River Data
 
+10:28 PM
+- **14 Map Markers Added**
+- The whole world is shown
+- Markers are too big, and should be centered on lat/lng
+- NYC is the default position, change to admin office location in SLC, UT
 
+- 
 
 
 
