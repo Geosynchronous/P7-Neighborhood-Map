@@ -32,7 +32,17 @@ Monday August 1, 2016
 - Markers are too big, and should be centered on lat/lng
 - NYC is the default position, change to admin office location in SLC, UT
 
-- 
+Tuesday August 2, 2016
+
+12:18 AM
+- **Map Icons still need work**
+- Opening map centers on RR headquarters in SLC, UT but with no marker(yet)
+- Zoom = 2 now shows whole world on first map
+- Maybe large markers are better 75 x 75
+- need to figure out how to center marker...
+- Maybe see if color change works, not sure of the code in makeMarkerIcon()...
+
+
 
 
 
