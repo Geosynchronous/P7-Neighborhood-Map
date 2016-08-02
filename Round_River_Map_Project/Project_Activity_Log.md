@@ -55,7 +55,7 @@ Tuesday August 2, 2016
 - looks cleaner
 
 11:23 AM
--**Turned on Terrain**
+- **Turned on Terrain**
 - looks good
 
 1:36 PM
