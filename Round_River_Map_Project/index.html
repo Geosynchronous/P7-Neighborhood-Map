@@ -148,7 +148,7 @@
         // These are the real estate listings that will be shown to the user.
         // Normally we'd have these in a database instead.
         var locations = [
-          {title: 'Kunene Region, Namibia', location: {lat: -19.0599831,lng: 11.9724123}},
+          {title: 'Kunene Region, Namibia', location: {lat: -18.789779,lng: 13.370975}},
           {title: 'Okavango Delta, Botswana', location: {lat: -19.2798704, lng: 22.8201857}},
           {title: 'Chobe-Linyanti-Zambezi Wetland, Botswana', location: {lat: -18.589826, lng: 24.258918}},
           {title: 'Taku River, Tlingit First Nation, British Columbia', location: {lat: 58.6553055,lng: -133.8137736}},
@@ -167,11 +167,11 @@
         var largeInfowindow = new google.maps.InfoWindow();
 
         // Style the markers a bit. This will be our listing marker icon.
-        var defaultIcon = makeMarkerIcon();
+        var defaultIcon = makeMarkerIcon('images/RR-circle.png');
 
         // Create a "highlighted location" marker color for when the user
         // mouses over the marker.
-        var highlightedIcon = 'images/RR-circle-highlight.png';
+        var highlightedIcon = makeMarkerIcon('images/RR-circle-highlight.png');
 
         var largeInfowindow = new google.maps.InfoWindow();
         // The following group uses the location array to create an array of markers on initialize.
@@ -244,15 +244,13 @@
       // This function takes in a COLOR, and then creates a new marker
       // icon of that color. The icon will be 21 px wide by 34 high, have an origin
       // of 0, 0 and be anchored at 10, 34).
-      function makeMarkerIcon(markerColor) {
+      function makeMarkerIcon(iconImage) {
         var markerImage = new google.maps.MarkerImage(
-          'http://www.roundriver.org/wp-content/uploads/2015/06/RR-circle.png');
-          // 'http://chart.googleapis.com/chart?chst=d_map_spin&chld=1.15|0|'+ markerColor +
-          // '|40|_|%E2%80%A2',
-          // new google.maps.Size(21, 34),
-          // new google.maps.Point(0, 0),
-          // new google.maps.Point(10, 34),
-          // new google.maps.Size(21,34));
+          iconImage,
+          new google.maps.Size(33, 33),
+          new google.maps.Point(0, 0),
+          new google.maps.Point(17, 33),
+          new google.maps.Size(33,33));
         return markerImage;
       }
 
