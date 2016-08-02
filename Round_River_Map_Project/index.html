@@ -62,6 +62,9 @@
       </div>
       <div id="map"></div>
     </div>
+
+
+
     <script>
       var map;
 
@@ -223,6 +226,10 @@
 
         document.getElementById('show-listings').addEventListener('click', showListings);
         document.getElementById('hide-listings').addEventListener('click', hideListings);
+
+        // Show all place markers on init
+        showListings();
+
       }
 
       // This function populates the infowindow when the marker is clicked. We'll only allow
@@ -274,6 +281,8 @@
       }
 
     </script>
+
+
 
     <script async defer
         src=
