@@ -23,7 +23,7 @@ Monday August 1, 2016
 
 8:07 PM
 - **Cloned Project Files**
-- Used Project_Code_5_BeingStylish.html and image folder from my previous Coursework
+- Used [Project_Code_5_BeingStylish.html](ers/geo/version-control/P7-Neighborhood-Map/CourseWork/ud864-master-student/Project_Code_5_BeingStylish.html) and image folder from my previous Coursework
 - Will modify marker geocode list to use Round River Data
 
 
