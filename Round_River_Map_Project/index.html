@@ -72,6 +72,13 @@
         // Create a styles array to use with the map.
         var styles = [
           {
+            featureType: 'landscape',
+            elementType: 'natural.landcover',
+            stylers: [
+              { visibility: 'on' }
+            ]
+          },
+          {
             featureType: 'administrative',
             elementType: 'country',
             stylers: [
@@ -152,6 +159,7 @@
           center: {lat: 40.7501481, lng: -111.8665667},
           zoom: 2,
           styles: styles,
+          mapTypeId: 'terrain',
           mapTypeControl: true
         });
 
