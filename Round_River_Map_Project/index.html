@@ -140,9 +140,9 @@
         // Constructor creates a new map - only center and zoom are required.
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 40.7501481, lng: -111.8665667},
-          zoom: 13,
+          zoom: 2,
           styles: styles,
-          mapTypeControl: false
+          mapTypeControl: true
         });
 
         // These are the real estate listings that will be shown to the user.
@@ -167,7 +167,7 @@
         var largeInfowindow = new google.maps.InfoWindow();
 
         // Style the markers a bit. This will be our listing marker icon.
-        var defaultIcon = 'images/RR-circle.png';
+        var defaultIcon = makeMarkerIcon();
 
         // Create a "highlighted location" marker color for when the user
         // mouses over the marker.
