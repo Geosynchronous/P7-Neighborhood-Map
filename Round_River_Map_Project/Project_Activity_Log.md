@@ -62,6 +62,13 @@ Tuesday August 2, 2016
 - **on init showListings**
 - ready to put the code in MVVM framework with knockout.js
 
+3:03 PM
+- **chore: file seperation of html, js, and css**
+- code still works fine
+- created necessary folders and files, and moved code around
+- next: MVVM Framework with Knockout.js on this existing code
+- After working framework in place, add much more functionality
+
 
 
 
