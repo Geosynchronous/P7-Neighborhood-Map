@@ -54,6 +54,9 @@ Tuesday August 2, 2016
 - a natural world without borders
 - looks cleaner
 
+11:23 AM
+-**Turned on Terrain**
+- looks good
 
 
 
