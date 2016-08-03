@@ -84,7 +84,9 @@ Wednesday August 3, 2016
     </script>
 ```
 - at the moment, I am not sure there is a better way to do this.  Will ask Ryan tommorrow during the online mentor meeting. Right now the model and view model are all inside `function AppViewModel()` which itself gets called by `initMap()`
-- Also still need to put ko functionality in place for map markers, seperate model from view-model
+- Seperate model from view-model still needs to be done
+- And binding to the map DIV still needs attention with ko
+
 
 
 
