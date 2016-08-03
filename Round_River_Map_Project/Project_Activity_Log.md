@@ -69,8 +69,22 @@ Tuesday August 2, 2016
 - next: MVVM Framework with Knockout.js on this existing code
 - After working framework in place, add much more functionality
 
+Wednesday August 3, 2016
 
+10:32 PM
+- **feat: ko bindings hide and show listings**
+- Switched to ko bindings for `hideListings` and `showListings`
+- Nested `function AppViewModel()` and `  ko.applyBindings(new AppViewModel());` inside `function initMap()`.
+- In `index.html` the google map is still loaded as before, and invokes `initMap` after loading:
 
+```
+    <script async defer
+        src=
+        "https://maps.googleapis.com/maps/api/js?key=AIzaSyAaL-jhZDIeEBOjiVX31sDh6UjauQlfWk4&v=3&callback=initMap">
+    </script>
+```
+- at the moment, I am not sure there is a better way to do this.  Will ask Ryan tommorrow during the online mentor meeting. Right now the model and view model are all inside `function AppViewModel()` which itself gets called by `initMap()`
+- Also still need to put ko functionality in place for map markers, seperate model from view-model
 
 
 
