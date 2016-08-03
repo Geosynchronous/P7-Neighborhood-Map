@@ -3,21 +3,22 @@
 // Udacity FEND Nanodegree
 // Developer: George Fischer
 
-var map;
-
-// Create a new blank array for all the listing markers.
-var markers = [];
-
-
-
-
-// THE ***MODEL*** (PORTION TO SEPERATE)
-
 function initMap() {
 
   // Transfer working ***VIEW-MODEL*** Code HERE:
 // JavaScript that defines the data and behavior of your UI
   function AppViewModel() {
+
+
+    var self = this;
+
+    self.map;
+    // Create a new blank array for all the listing markers.
+    self.markers = [];
+
+
+
+    // THE ***MODEL*** (PORTION TO SEPERATE???)
 
     // Create a styles array to use with the map.
     var styles = [
@@ -104,8 +105,27 @@ function initMap() {
       }
     ];
 
-    // Constructor creates a new map - only center and zoom are required.
-    map = new google.maps.Map(document.getElementById('map'), {
+
+    // (function () {
+    //   ko.bindingHandlers.googlemap = {
+    //     init: function (element) {
+    //       map = new google.maps.Map(element, {
+    //         center: {lat: 40.7501481, lng: -111.8665667},
+    //         zoom: 2,
+    //         styles: styles,
+    //         mapTypeId: 'terrain',
+    //         mapTypeControl: true
+    //       });
+    //      console.log(map);
+    //     }
+    //   };
+    //   console.log(map);
+    // })();
+
+    // console.log(map);
+
+    //Constructor creates a new map - only center and zoom are required.
+    self.map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: 40.7501481, lng: -111.8665667},
       zoom: 2,
       styles: styles,
@@ -161,7 +181,7 @@ function initMap() {
         id: i
       });
       // Push the marker to our array of markers.
-      markers.push(marker);
+      self.markers.push(marker);
       // Create an onclick event to open the large infowindow at each marker.
       marker.addListener('click', function() {
         populateInfoWindow(this, largeInfowindow);
@@ -176,62 +196,58 @@ function initMap() {
       });
     }
 
-    document.getElementById('show-listings').addEventListener('click', showListings);
-    document.getElementById('hide-listings').addEventListener('click', hideListings);
+    // This function populates the infowindow when the marker is clicked. We'll only allow
+    // one infowindow which will open at the marker that is clicked, and populate based
+    // on that markers position.
+    function populateInfoWindow(marker, infowindow) {
+      // Check to make sure the infowindow is not already opened on this marker.
+      if (infowindow.marker != marker) {
+          infowindow.marker = marker;
+          infowindow.setContent('<div>' + marker.title + '</div>');
+          infowindow.open(self.map, marker);
+          // Make sure the marker property is cleared if the infowindow is closed.
+          infowindow.addListener('closeclick', function() {
+          infowindow.marker = null;
+        });
+      }
+    }
+
+    // This function will loop through the markers array and display them all.
+    self.showListings = function() {
+      var bounds = new google.maps.LatLngBounds();
+      // Extend the boundaries of the map for each marker and display the marker
+      for (var i = 0; i < self.markers.length; i++) {
+        self.markers[i].setMap(self.map);
+        bounds.extend(self.markers[i].position);
+      }
+      self.map.fitBounds(bounds);
+    }
+
+    // This function will loop through the listings and hide them all.
+    self.hideListings = function() {
+      for (var i = 0; i < self.markers.length; i++) {
+        self.markers[i].setMap(null);
+      }
+    }
+
+    // This function takes in an image, and then creates a new marker
+    // icon of that image. The icon will be 33 px wide by 33 high, have an origin
+    // of 0, 0 and be anchored at 17, 33).
+    // TODO - There is a better way to do this google maps v3.11 and beyond
+    function makeMarkerIcon(iconImage) {
+      var markerImage = new google.maps.MarkerImage(
+        iconImage,
+        new google.maps.Size(33, 33),
+        new google.maps.Point(0, 0),
+        new google.maps.Point(17, 33),
+        new google.maps.Size(33,33));
+      return markerImage;
+    }
 
     // Show all place markers on init
-    showListings();
+    self.showListings();
 
   }
-
-  // This function populates the infowindow when the marker is clicked. We'll only allow
-  // one infowindow which will open at the marker that is clicked, and populate based
-  // on that markers position.
-  function populateInfoWindow(marker, infowindow) {
-    // Check to make sure the infowindow is not already opened on this marker.
-    if (infowindow.marker != marker) {
-      infowindow.marker = marker;
-      infowindow.setContent('<div>' + marker.title + '</div>');
-      infowindow.open(map, marker);
-      // Make sure the marker property is cleared if the infowindow is closed.
-      infowindow.addListener('closeclick', function() {
-        infowindow.marker = null;
-      });
-    }
-  }
-
-  // This function will loop through the markers array and display them all.
-  this.showListings = function() {
-    var bounds = new google.maps.LatLngBounds();
-    // Extend the boundaries of the map for each marker and display the marker
-    for (var i = 0; i < markers.length; i++) {
-      markers[i].setMap(map);
-      bounds.extend(markers[i].position);
-    }
-    map.fitBounds(bounds);
-  }
-
-  // This function will loop through the listings and hide them all.
-  this.hideListings = function() {
-    for (var i = 0; i < markers.length; i++) {
-      markers[i].setMap(null);
-    }
-  }
-
-  // This function takes in an image, and then creates a new marker
-  // icon of that image. The icon will be 33 px wide by 33 high, have an origin
-  // of 0, 0 and be anchored at 17, 33).
-  // TODO - There is a better way to do this google maps v3.11 and beyond
-  function makeMarkerIcon(iconImage) {
-    var markerImage = new google.maps.MarkerImage(
-      iconImage,
-      new google.maps.Size(33, 33),
-      new google.maps.Point(0, 0),
-      new google.maps.Point(17, 33),
-      new google.maps.Size(33,33));
-    return markerImage;
-  }
-
 
 
 
