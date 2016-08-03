@@ -30,14 +30,13 @@ Map created for:
   <body>
     <div class="container">
       <div class="options-box">
-        <h1>Round River Conservation Studies</h1>
+        <h1 data-bind="text: title"></h1>
         <div>
           <button id="show-listings" data-bind="click: showListings">Show Listings</button>
           <button id="hide-listings" data-bind="click: hideListings">Hide Listings</button>
         </div>
       </div>
-<!--       <div id="map"></div> -->
-      <div id ="map" data-bind="googlemap:"></div>
+      <div id="map"></div>
     </div>
     <script async defer
         src=

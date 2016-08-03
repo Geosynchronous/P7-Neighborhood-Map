@@ -9,6 +9,7 @@ function initMap() {
 // JavaScript that defines the data and behavior of your UI
   function AppViewModel() {
 
+    this.title = ko.observable("Round River Conservation Studies");
 
     var self = this;
 
@@ -105,25 +106,6 @@ function initMap() {
       }
     ];
 
-
-    // (function () {
-    //   ko.bindingHandlers.googlemap = {
-    //     init: function (element) {
-    //       map = new google.maps.Map(element, {
-    //         center: {lat: 40.7501481, lng: -111.8665667},
-    //         zoom: 2,
-    //         styles: styles,
-    //         mapTypeId: 'terrain',
-    //         mapTypeControl: true
-    //       });
-    //      console.log(map);
-    //     }
-    //   };
-    //   console.log(map);
-    // })();
-
-    // console.log(map);
-
     //Constructor creates a new map - only center and zoom are required.
     self.map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: 40.7501481, lng: -111.8665667},
@@ -155,7 +137,7 @@ function initMap() {
 
 
 
-    // THE ***VIEW-MODEL*** (PORTION TO SEPERATE)
+    // THE ***VIEW-MODEL*** (PORTION TO SEPERATE???)
 
     var largeInfowindow = new google.maps.InfoWindow();
 
@@ -248,14 +230,6 @@ function initMap() {
     self.showListings();
 
   }
-
-
-
-// // Transfer working ***VIEW-MODEL*** Code HERE:
-// // JavaScript that defines the data and behavior of your UI
-// function AppViewModel() {
-
-// }
 
   // Activates knockout.js
   ko.applyBindings(new AppViewModel());
