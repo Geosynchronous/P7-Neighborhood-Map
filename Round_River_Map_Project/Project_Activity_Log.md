@@ -91,6 +91,12 @@ Wednesday August 3, 2016
 - **Added self/this designation & ko binds**
 - According to the Project Instructions, Knockout is not to be used with direct Google Map Functionalities, Knockout fine for Options Box Views and Functions
 
+5:42 PM
+- **feat: Better Options Box**
+- Looks like this: 1[Screenshot](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-08-03%20at%205.35.35%20PM.png)
+ 
+
+
 
 
 
