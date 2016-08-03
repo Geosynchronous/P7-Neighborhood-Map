@@ -6,7 +6,7 @@
 function initMap() {
 
   // Transfer working ***VIEW-MODEL*** Code HERE:
-// JavaScript that defines the data and behavior of your UI
+  // JavaScript that defines the data and behavior of your UI
   function AppViewModel() {
 
     this.title = ko.observable("Round River Conservation Studies");
