@@ -13,8 +13,6 @@ function initMap() {
 
     // THE ***MODEL*** PART of VIEW-MODEL
 
-    this.sidebarTitle = ko.observable("Round River Conservation Studies");
-
     var self = this;
 
     self.map;
