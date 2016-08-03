@@ -87,6 +87,8 @@ Wednesday August 3, 2016
 - Seperate model from view-model still needs to be done
 - And binding to the map DIV still needs attention with ko
 
+4:33 PM
+- **Added self/this designation & ko binds**
 
 
 
