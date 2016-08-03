@@ -8,6 +8,11 @@ var map;
 // Create a new blank array for all the listing markers.
 var markers = [];
 
+
+
+
+// THE ***MODEL*** (PORTION TO SEPERATE)
+
 function initMap() {
   // Create a styles array to use with the map.
   var styles = [
@@ -122,6 +127,11 @@ function initMap() {
     {title: 'Osa Peninsula, Costa Rica', location: {lat: 8.539003, lng:-83.6045026}}
   ];
 
+
+
+
+  // THE ***VIEW-MODEL*** (PORTION TO SEPERATE)
+
   var largeInfowindow = new google.maps.InfoWindow();
 
   // Style the markers a bit. This will be our listing marker icon.
@@ -217,4 +227,16 @@ function makeMarkerIcon(iconImage) {
   return markerImage;
 }
 
+
+
+
+// Transfer working ***VIEW-MODEL*** Code HERE:
+
+// This is a simple *viewmodel* - JavaScript that defines the data and behavior of your UI
+function AppViewModel() {
+
+}
+
+// Activates knockout.js
+ko.applyBindings(new AppViewModel());
 
