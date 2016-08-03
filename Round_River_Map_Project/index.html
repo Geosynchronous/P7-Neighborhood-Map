@@ -17,6 +17,7 @@ Map created for:
 
 <!--
   THE ***VIEW***
+  HTML markup that defines the appearance of your UI
  -->
   <head>
     <meta charset="UTF-8">
@@ -29,12 +30,13 @@ Map created for:
       <div class="options-box">
         <h1>Round River Conservation Studies</h1>
         <div>
-          <input id="show-listings" type="button" value="Show Listings">
-          <input id="hide-listings" type="button" value="Hide Listings">
+          <button id="show-listings" data-bind="click: showListings">Show Listings</button>
+          <button id="hide-listings" data-bind="click: hideListings">Hide Listings</button>
         </div>
       </div>
       <div id="map"></div>
     </div>
+    <script src= "js/knockout-3.4.0.js"></script>
     <script src= "js/app.js"></script>
     <script async defer
         src=
