@@ -5,21 +5,21 @@
 
 function initMap() {
 
-  // Transfer working ***VIEW-MODEL*** Code HERE:
+  // THE ***VIEW-MODEL***
   // JavaScript that defines the data and behavior of your UI
   function AppViewModel() {
 
-    this.title = ko.observable("Round River Conservation Studies");
+
+
+    // THE ***MODEL*** PART of VIEW-MODEL
+
+    this.sidebarTitle = ko.observable("Round River Conservation Studies");
 
     var self = this;
 
     self.map;
     // Create a new blank array for all the listing markers.
     self.markers = [];
-
-
-
-    // THE ***MODEL*** (PORTION TO SEPERATE???)
 
     // Create a styles array to use with the map.
     var styles = [
@@ -106,15 +106,6 @@ function initMap() {
       }
     ];
 
-    //Constructor creates a new map - only center and zoom are required.
-    self.map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: 40.7501481, lng: -111.8665667},
-      zoom: 2,
-      styles: styles,
-      mapTypeId: 'terrain',
-      mapTypeControl: true
-    });
-
     // These are the real estate listings that will be shown to the user.
     // Normally we'd have these in a database instead.
     var locations = [
@@ -136,8 +127,16 @@ function initMap() {
 
 
 
+    // THE ***VIEW-MODEL*** PART OF VIEW-MODEL
 
-    // THE ***VIEW-MODEL*** (PORTION TO SEPERATE???)
+    //Constructor creates a new map - only center and zoom are required.
+    self.map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 40.7501481, lng: -111.8665667},
+      zoom: 2,
+      styles: styles,
+      mapTypeId: 'terrain',
+      mapTypeControl: true
+    });
 
     var largeInfowindow = new google.maps.InfoWindow();
 
@@ -194,6 +193,20 @@ function initMap() {
       }
     }
 
+    // This function takes in an image, and then creates a new marker
+    // icon of that image. The icon will be 33 px wide by 33 high, have an origin
+    // of 0, 0 and be anchored at 17, 33).
+    // TODO - There is a better way to do this google maps v3.11 and beyond
+    function makeMarkerIcon(iconImage) {
+      var markerImage = new google.maps.MarkerImage(
+        iconImage,
+        new google.maps.Size(33, 33),
+        new google.maps.Point(0, 0),
+        new google.maps.Point(17, 33),
+        new google.maps.Size(33,33));
+      return markerImage;
+    }
+
     // This function will loop through the markers array and display them all.
     self.showListings = function() {
       var bounds = new google.maps.LatLngBounds();
@@ -210,20 +223,6 @@ function initMap() {
       for (var i = 0; i < self.markers.length; i++) {
         self.markers[i].setMap(null);
       }
-    }
-
-    // This function takes in an image, and then creates a new marker
-    // icon of that image. The icon will be 33 px wide by 33 high, have an origin
-    // of 0, 0 and be anchored at 17, 33).
-    // TODO - There is a better way to do this google maps v3.11 and beyond
-    function makeMarkerIcon(iconImage) {
-      var markerImage = new google.maps.MarkerImage(
-        iconImage,
-        new google.maps.Size(33, 33),
-        new google.maps.Point(0, 0),
-        new google.maps.Point(17, 33),
-        new google.maps.Size(33,33));
-      return markerImage;
     }
 
     // Show all place markers on init
