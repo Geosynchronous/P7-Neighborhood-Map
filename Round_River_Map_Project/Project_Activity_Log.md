@@ -126,6 +126,8 @@ Thursday August 4, 2016
 - My head is ready to explode
 - Will get back to this after a break and start refactoring my code...
 
+![screenshot](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-08-04%20at%2012.36.34%20PM.png)
+
 
 
 
