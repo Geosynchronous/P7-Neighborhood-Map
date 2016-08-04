@@ -31,7 +31,9 @@ h1 {
 
 #hide-listings,
 #show-listings {
+  background: #ffd9b3;
   width: 48%;
+  display: block;
 }
 
 #map {
@@ -43,12 +45,22 @@ h1 {
 }
 
 .options-box {
-  background: #ffd9b3;
+  background: #af9a6b;
   border: 1px solid #999;
   border-radius: 3px;
+  display: block;
   height: 100%;
   line-height: 35px;
   padding: 10px 10px 30px 10px;
   text-align: left;
   width: 340px;
+}
+
+.contact {
+  margin: 20px;
+}
+
+#about {
+text-align: right;
+text-decoration: none;
 }

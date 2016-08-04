@@ -114,7 +114,8 @@ function initMap() {
         title: 'Kunene Region, Namibia',
         location: {lat: -18.789779,lng: 13.370975},
         continent: 'Africa',
-        category: 'Field Research'
+        category: 'Field Research',
+        visible: false
       },
       {title: 'Okavango Delta, Botswana', location: {lat: -19.2798704, lng: 22.8201857}},
       {title: 'Chobe-Linyanti-Zambezi Wetland, Botswana', location: {lat: -18.589826, lng: 24.258918}},
