@@ -116,7 +116,7 @@ Wednesday August 3, 2016
 
 6:57 PM
 - **Idea for UI**
-- This will probably be more of a toggle situation, with only one item open at a time, and listings shown below, that are also clickable and will open the corresponding `infoWindow`: ![Screenshot of Option Box](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-08-03%20at%206.53.28%20PM.jpg)
+- This will probably be more of a toggle situation, with only one item open at a time, and itemized listings shown below, that are also clickable and will open the corresponding `infoWindow` functionality: ![Screenshot of Option Box](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-08-03%20at%206.53.28%20PM.jpg)
 
 
 
