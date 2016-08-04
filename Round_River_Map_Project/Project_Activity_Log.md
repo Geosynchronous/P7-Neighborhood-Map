@@ -128,6 +128,11 @@ Thursday August 4, 2016
 
 ![screenshot](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-08-04%20at%2012.36.34%20PM.png)
 
+2:22 PM
+- **STYLE CHANGES**
+- THis is getting close to the overall look I envision: ![Screenshot](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-08-04%20at%202.10.42%20PM.png)
+
+- Also want a large round river icon over Greenville, Missisippi as the intro view, with satellite view
 
 
 
