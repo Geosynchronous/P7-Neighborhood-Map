@@ -29,12 +29,30 @@ h1 {
   text-align: center;
 }
 
-#hide-listings,
-#show-listings {
-  background: #ffd9b3;
+h2 {
+  margin: 0 10px 5px 0;
+}
+
+a:link {color: #c80b32;}
+a:visited {color: #c80b32;}
+a:hover {color: #005496;}
+a:active {color: #c80b32;}
+
+.button {
+  background-color: #005496; /* Green */
+  color: white;
+  border-radius: 8px;
   width: 48%;
   display: block;
+  padding: 5px;
+  margin: 10px;
 }
+
+/*#hide-listings,
+#show-listings {
+  width: 48%;
+  display: block;
+}*/
 
 #map {
   bottom:0px;
@@ -57,10 +75,11 @@ h1 {
 }
 
 .contact {
-  margin: 20px;
+  margin: 20px 20px;
 }
 
 #about {
+
 text-align: right;
 text-decoration: none;
 }
