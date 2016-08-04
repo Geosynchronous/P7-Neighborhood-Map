@@ -95,6 +95,24 @@ Wednesday August 3, 2016
 - **feat: Better Options Box**
 - Looks like this: ![Screenshot](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-08-03%20at%205.35.35%20PM.png)
  
+6:01 PM
+- **Enhanced Data Structure**
+- Think this will help me display and filter markers
+- Need to add more markers to data
+- Need to add more properties and attributes:
+
+```
+    // TODO - add all sites, add all properties
+    //      (Categories: Field Research, Field Studies, Administrative, Special Events)
+    var locations = [
+      {
+        title: 'Kunene Region, Namibia',
+        location: {lat: -18.789779,lng: 13.370975},
+        continent: 'Africa',
+        category: 'Field Research'
+      },
+      {title: 'Okavango Delta, Botswana',
+```
 
 
 
