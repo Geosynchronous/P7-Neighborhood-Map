@@ -106,8 +106,16 @@ function initMap() {
 
     // These are the real estate listings that will be shown to the user.
     // Normally we'd have these in a database instead.
+
+    // TODO - add all sites, add all properties
+    //      (Categories: Field Research, Field Studies, Offices, Special Events)
     var locations = [
-      {title: 'Kunene Region, Namibia', location: {lat: -18.789779,lng: 13.370975}},
+      {
+        title: 'Kunene Region, Namibia',
+        location: {lat: -18.789779,lng: 13.370975},
+        continent: 'Africa',
+        category: 'Field Research'
+      },
       {title: 'Okavango Delta, Botswana', location: {lat: -19.2798704, lng: 22.8201857}},
       {title: 'Chobe-Linyanti-Zambezi Wetland, Botswana', location: {lat: -18.589826, lng: 24.258918}},
       {title: 'Taku River, Tlingit First Nation, British Columbia', location: {lat: 58.6553055,lng: -133.8137736}},
