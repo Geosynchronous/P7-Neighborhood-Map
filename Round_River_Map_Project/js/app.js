@@ -141,6 +141,7 @@ function initMap() {
       center: {lat: 40.7501481, lng: -111.8665667},
       zoom: 2,
       styles: styles,
+      backgroundColor: 'black',
       mapTypeId: 'terrain',
       mapTypeControl: true
     });
