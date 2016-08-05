@@ -7,20 +7,21 @@
 
 html,
 body {
-  font-family: Arial, sans-serif;
+  background-color: #000;
+/*  font-family: Arial, sans-serif;*/
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
 .container {
-  height: 100%;
+/*  height: 100%;*/
   position: relative;
 }
 
-input {
+/*input {
   font-size: 12px;
-}
+}*/
 
 h1 {
   color: #525454;
@@ -39,13 +40,13 @@ a:hover {color: #005496;}
 a:active {color: #c80b32;}
 
 .button {
-  background-color: #005496; /* Green */
+  background-color: #005496;
   color: white;
   border-radius: 8px;
   width: 48%;
   display: block;
   padding: 5px;
-  margin: 10px;
+  margin: 5px;
 }
 
 /*#hide-listings,
@@ -55,19 +56,22 @@ a:active {color: #c80b32;}
 }*/
 
 #map {
-  bottom:0px;
+  top: 0px;
   height: 100%;
-  left: 362px;
+  left: 365px;
+  border-radius: 14px;
   position: absolute;
   right: 0px;
+  margin: 3px;
 }
 
 .options-box {
+  margin: 3px;
   background: #af9a6b;
   border: 1px solid #999;
-  border-radius: 3px;
+  border-radius: 14px;
   display: block;
-  height: 100%;
+/*  height: 100%;*/
   line-height: 35px;
   padding: 10px 10px 30px 10px;
   text-align: left;
@@ -75,11 +79,20 @@ a:active {color: #c80b32;}
 }
 
 .contact {
-  margin: 0px 20px;
+/*  margin: 0px 20px;*/
 }
 
 #about {
+  text-align: right;
+  text-decoration: none;
+}
 
-text-align: right;
-text-decoration: none;
+#social {
+  margin: 0px 20px 10px 20px;
+}
+
+#hero {
+  border-radius: 14px;
+  border: 3px solid #005496;
+  margin-left: 7px;
 }
