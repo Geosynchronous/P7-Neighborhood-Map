@@ -145,5 +145,97 @@ Friday August 5, 2016
 - change above screenshot to reflect the update
 - these are the social links and icons that Round River is using
 
+5:10 PM
+- **HTML for Above Screenshot**
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<!--
+Neighborhood Map Project
+Udacity FEND Nanodegree
+Developer: George Fischer
+
+Prototype Google Map App
+MVVM Framework with Knockout.js
+Model-View-ViewModel (MVVM) pattern
+
+Map created for:
+  Round River Conservation Studies
+  http://www.roundriver.org
+  Non-Profit Organization
+-->
+
+<!--
+  THE ***VIEW***
+  HTML markup that defines the appearance of your UI
+ -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0"><link rel="stylesheet" id="vc_google_fonts_merriweather_sans300300italicregularitalic700700italic800800italic-css" href="//fonts.googleapis.com/css?family=Merriweather+Sans%3A300%2C300italic%2Cregular%2Citalic%2C700%2C700italic%2C800%2C800italic&amp;subset=latin&amp;ver=4.5.3" type="text/css" media="all">
+    <link rel="stylesheet" href="css/style.css">
+    <script src= "js/knockout-3.4.0.js"></script>
+    <script src= "js/app.js"></script>
+    <title>Round River Map</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="options-box">
+        <a href="http://www.roundriver.org" title="Go to roundriver.org">
+          <img alt="Round River" src="images/RR-Main-Logo.png">
+        </a>
+        <div>
+          <button class="button" id="show-listings" data-bind="click: showListings">FIELD RESEARCH</button>
+          <button class="button" id="show-listings" data-bind="click: showListings">FIELD STUDIES</button>
+          <button class="button" id="show-listings" data-bind="click: showListings">AFRICA</button>
+          <button class="button" id="show-listings" data-bind="click: showListings">NORTH AMERICA</button>
+          <button class="button" id="show-listings" data-bind="click: showListings">CENTRAL AMERICA</button>
+          <button class="button" id="show-listings" data-bind="click: showListings">SOUTH AMERICA</button>
+          <button class="button" id="show-listings" data-bind="click: showListings">SPECIAL EVENTS</button>
+          <button class="button" id="hide-listings" data-bind="click: hideListings">All Listings</button>
+        </div>
+        <div class="contact">
+
+            <a id="about" href="http://www.roundriver.org/about-us" title="About Us">
+              <h2>About Us</h2>
+            </a>
+
+            <img id="hero" src="images/great-bear-01.jpg">
+
+            <!--
+            ROUND RIVER Social Media Linked Icons
+            -->
+            <a href="http://roundriver.us3.list-manage1.com/track/click?u=8b5c8d1d4bd3f6d6e96472b97&id=3081df2487&e=26c9040171">
+              <img class="social" alt="Round River" src="images/social/color-facebook-48.png">
+            </a>
+            <a href="http://roundriver.us3.list-manage.com/track/click?u=8b5c8d1d4bd3f6d6e96472b97&id=81b66d90a8&e=26c9040171">
+              <img class="social" alt="Round River" src="images/social/color-instagram-48.png">
+            </a>
+            <a href="http://www.roundriver.org/wp-content/uploads/2015/07/great-bear-01.jpg">
+              <img class="social" alt="Round River" src="images/social/color-link-48.png">
+            </a>
+            <a href="http://roundriver.us3.list-manage.com/track/click?u=8b5c8d1d4bd3f6d6e96472b97&id=cb4f4cc46a&e=26c9040171">
+              <img class="social" alt="Round River" src="images/social/color-twitter-48.png">
+            </a>
+            <a href="http://roundriver.us3.list-manage2.com/track/click?u=8b5c8d1d4bd3f6d6e96472b97&id=19e75a7c08&e=26c9040171">
+              <img class="social" alt="Round River" src="images/social/color-vimeo-48.png">
+            </a>
+            <a href="http://roundriver.us3.list-manage1.com/track/click?u=8b5c8d1d4bd3f6d6e96472b97&id=8a763f7326&e=26c9040171">
+              <img class="social" alt="Round River" src="images/social/color-youtube-48.png">
+            </a>
+        </div>
+      </div>
+      <div id="map"></div>
+    </div>
+    <script async defer
+        src=
+        "https://maps.googleapis.com/maps/api/js?key=AIzaSyAaL-jhZDIeEBOjiVX31sDh6UjauQlfWk4&v=3&callback=initMap">
+    </script>
+  </body>
+</html>
+
+```
+
+- Basically the above html code creates the overall view the way I want it, except that I haven't added the kn list items when a button is toggled.  So there will be some changes to make the items appear in the view under the button.  Also the code has not been set up to be responsive for various viewport device widths.  I will deal with that after I get all the functionality built into my code base.
 
 
