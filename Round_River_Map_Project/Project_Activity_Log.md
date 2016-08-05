@@ -130,7 +130,7 @@ Thursday August 4, 2016
 
 2:22 PM
 - **STYLE CHANGES**
-- THis is getting close to the overall look I envision: ![Screenshot](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-08-05%20at%2012.06.19%20PM.jpg)
+- THis is getting close to the overall look I envision: ![Screenshot](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-08-05%20at%204.14.28%20PM.jpg)
 
 - Also want a large round river icon over Greenville, Missisippi as the intro view, with satellite view
 
@@ -140,6 +140,10 @@ Friday August 5, 2016
 - **Style**
 - Made more changes, reflected in the image above
 
+4:18 PM
+- **feat: active social icons**
+- change above screenshot to reflect the update
+- these are the social links and icons that Round River is using
 
 
 
