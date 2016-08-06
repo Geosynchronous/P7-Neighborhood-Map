@@ -107,6 +107,10 @@ var map,
 // JavaScript that defines the data and behavior of the UI
 function AppViewModel() {
   var self = this;
+
+  self.blabla = ko.observable(false);
+
+
   // These are the marker listings that will be shown to the user.
   // Normally we'd have these in a database.
   //      TODO - add all sites, add all properties

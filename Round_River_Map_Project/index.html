@@ -31,9 +31,12 @@ Map created for:
         <a href="http://www.roundriver.org" title="roundriver.org">
           <img alt="Round River" src="images/RR-Main-Logo.png">
         </a>
+
+        <div data-bind="visible: blabla">test</div>
+
         <div>
           <button class="button" id="show-listings" data-bind="click: showAllListings">FIELD RESEARCH</button>
-          <ul class = "button-list" data-bind="foreach: locations">
+          <ul class = "button-list" data-bind="foreach: locations, visible: blabla">
             <li data-bind="text: title, click: $parent.listClick, event: { mouseover: $parent.listMouseOver, mouseout: $parent.listMouseOut }"></li>
           </ul>
           <button class="button" id="show-listings" data-bind="click: showAllListings">FIELD STUDIES</button>
