@@ -864,6 +864,11 @@ Saturday August 6, 2016
 ```
 - Note how the infoWindow can be selected while different items are highlighted: ![screenshot](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-08-06%20at%2010.46.05%20AM.jpg)
 
+1:47 PM
+- **test: KO visible**
+- Makes list appear and disappear with chanfe of KO blabla boolean
+- Now I need to probably make an array for the buttons, since they will hold the filters and only one button can display a list at a time
+- Thinking....
 
 
 
