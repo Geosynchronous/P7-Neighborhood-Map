@@ -116,7 +116,7 @@ function AppViewModel() {
   self.buttons = ko.observableArray([
     {
       title: 'FIELD RESEARCH',
-      showList: false,
+      showList: true,
     },
       {
       title: 'FIELD STUDIES',
@@ -186,6 +186,7 @@ function AppViewModel() {
     // Since the marker object is stored inside the associated location object,
     // the marker can now be accessed using 'location.marker'
     populateInfoWindow(location.marker);
+    console.log("listClick");
   }
 
   // Mouse Over on a list title inside options-box
