@@ -499,9 +499,16 @@ function initMap() {
   - Todo the above:
     - refactor function locations 
     - refactor variables locations
-    - leverage global sharing will greatly simplify matters
+    - leverage global sharing will greatly simplify matters, for vars shared between `vm` and other functions, which minimizes the passing of vars:
+      - bounds
+      - map
+      - largeInfowindow
+      - styles[]
     - respecify prefixed objects as needed (this, self, vm, etc)
     - create `vm` var to simplify designation of `viewModel`
   - Rewrite some of the code to make things fit together better
+    - define `bounds` in `initMap` so it gets created as soon as the map loads
+    - store the markers in the ko locations array` to provide ubquitious access to markers, since they all have the same data structure:
+      - vm.locations()[i].marker = marker;` 
 
 
