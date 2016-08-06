@@ -31,10 +31,10 @@ Map created for:
         <a href="http://www.roundriver.org" title="Go to roundriver.org">
           <img alt="Round River" src="images/RR-Main-Logo.png">
         </a>
-        <ul data-bind="foreach: locations">
-          <li data-bind="text: title, click: $parent.listClick"></li>
-        </ul>
         <div>
+          <ul data-bind="foreach: locations">
+            <li data-bind="text: title, click: $parent.listClick"></li>
+          </ul>
           <button id="show-listings" data-bind="click: showListings">Show All Listings</button>
           <button id="hide-listings" data-bind="click: hideListings">Hide All Listings</button>
           <button id="show-listings" data-bind="click: showListings">Show Field Research</button>
