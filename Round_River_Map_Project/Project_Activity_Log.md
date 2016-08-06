@@ -838,7 +838,7 @@ Saturday August 6, 2016
 - Used CSS to highlight list title item
 - Made “highlightIcon” and “defaultIcon” global
 - Function created in “AppViewModel”
-- An infoWindow can be open on a marker and the above functionality does
+- An infoWindow can be open on a marker and the above functionality does not change, Which makes for a decent UI
 - Code:
 
 ```
@@ -867,4 +867,4 @@ Saturday August 6, 2016
 
 
 
-not change, Which makes for a decent UI
+
