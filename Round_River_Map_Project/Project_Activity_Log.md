@@ -794,3 +794,7 @@ var vm = new AppViewModel();
 ko.applyBindings(vm);
 
 ```
+
+11:46 PM
+- **Style Changes**
+
