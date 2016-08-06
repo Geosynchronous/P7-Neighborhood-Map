@@ -13,6 +13,8 @@
 var map,
     largeInfowindow,
     bounds,
+    highlightedIcon,
+    defaultIcon,
     styles = [
       {
         featureType: 'landscape',
@@ -131,13 +133,31 @@ function AppViewModel() {
     {title: 'Osa Peninsula, Costa Rica', location: {lat: 8.539003, lng:-83.6045026}}
   ]);
 
+
+
+  // IMPORTANT: Knockout will automatically populate the 'location' parameter
+  // with the clicked location object for the events functions that follow:
+
   // This function will be executed when a list item is clicked.
   // It is bound to each location in the list using the Knockout Click binding
-  // Knockout will automatically populate the 'location' parameter with the clicked location object
   self.listClick = function(location) {
     // Since the marker object is stored inside the associated location object,
     // the marker can now be accessed using 'location.marker'
     populateInfoWindow(location.marker);
+  }
+
+  // Mouse Over on a list title inside options-box
+  //    - Highlights associated map marker icon
+  //    - List title also highlighted with css hover
+  this.listMouseOver = function(location) {
+    location.marker.setIcon(highlightedIcon);
+  }
+
+  // Mouse Out on a list title inside options-box
+  //    - Default restored with associated map marker icon
+  //    - List title also default restored with css
+  this.listMouseOut = function(location) {
+    location.marker.setIcon(defaultIcon);
   }
 
   // This function will loop through the markers array and display them all.
@@ -219,11 +239,11 @@ function initMap() {
 
 function createMarkers() {
   // This will be our listing marker icon.
-  var defaultIcon = makeMarkerIcon('images/RR-circle.png');
+  defaultIcon = makeMarkerIcon('images/RR-circle.png');
 
   // Create a highlighted marker icon
   // Used when the user mouses over the marker
-  var highlightedIcon = makeMarkerIcon('images/RR-circle-highlight.png');
+  highlightedIcon = makeMarkerIcon('images/RR-circle-highlight.png');
 
   // The following group uses the location array to create an array of markers on initialize.
   for (var i = 0; i < vm.locations().length; i++) {

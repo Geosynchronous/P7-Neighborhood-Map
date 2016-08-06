@@ -57,6 +57,10 @@ a:active {color: #c80b32;}
   color: #005496;
 }
 
+li:hover {
+color: #fff;
+}
+
 /*#hide-listings,
 #show-listings {
   width: 48%;
