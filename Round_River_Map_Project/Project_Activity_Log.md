@@ -798,3 +798,31 @@ ko.applyBindings(vm);
 11:46 PM
 - **Style Changes**
 
+Saturday August 6, 2016
+
+12:28 AM
+- **feat: list the locations under buttons**
+- When a list item is clicked on it opens up the corresponding infoWindow thanks to ko
+
+```
+          <ul data-bind="foreach: locations">
+            <li data-bind="text: title, click: $parent.listClick"></li>
+          </ul>
+```
+
+---
+  // This function will be executed when a list item is clicked.
+  // It is bound to each location in the list using the Knockout Click binding
+  // Knockout will automatically populate the 'location' parameter with the clicked location object
+  self.listClick = function(location) {
+    // Since the marker object is stored inside the associated location object,
+    // the marker can now be accessed using 'location.marker'
+    populateInfoWindow(location.marker);
+  }
+---
+
+- There is still a lot of work to do with this, such as filtering for each of the different buttons
+  - have to update the data, adding properties, values and more listed places
+  - have to make the list clear, when a different button is selected
+
+
