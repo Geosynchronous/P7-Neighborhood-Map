@@ -108,7 +108,45 @@ var map,
 function AppViewModel() {
   var self = this;
 
-  self.blabla = ko.observable(false);
+  // TEST --- for KO visibiity
+  self.toggleList = ko.observable(true);
+
+  // TODO - Create KO Array to filter locations for button list display
+  //      - Only one list can display at a time, need a propert for that
+  self.buttons = ko.observableArray([
+    {
+      title: 'FIELD RESEARCH',
+      showList: false,
+    },
+      {
+      title: 'FIELD STUDIES',
+      showList: false,
+    },
+    {
+      title: 'AFRICA',
+      showList: false,
+    },
+    {
+      title: 'NORTH AMERICA',
+      showList: false,
+    },
+    {
+      title: 'CENTRAL AMERICA',
+      showList: false,
+    },
+    {
+      title: 'SOUTH AMERICA',
+      showList: false,
+    },
+    {
+      title: 'SPECIAL EVENTS',
+      showList: false,
+    },
+    {
+      title: 'ALL LISTINGS',
+      showList: false,
+    }
+  ]);
 
 
   // These are the marker listings that will be shown to the user.
@@ -170,6 +208,19 @@ function AppViewModel() {
       self.locations()[i].marker.setMap(map);
     }
   }
+
+
+
+
+  // TODO
+  // This function will loop through the markers array and filter them for display.
+  self.filterListings = function() {
+    for (var i = 0; i < self.locations().length; i++) {
+      self.locations()[i].marker.setMap(map);
+    }
+  }
+
+
 
   // This function will loop through the listings and hide them all.
   self.hideAllListings = function() {

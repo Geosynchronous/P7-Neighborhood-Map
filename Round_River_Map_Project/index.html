@@ -32,20 +32,23 @@ Map created for:
           <img alt="Round River" src="images/RR-Main-Logo.png">
         </a>
 
-        <div data-bind="visible: blabla">test</div>
+        <div data-bind="visible: toggleList">test</div>
 
         <div>
-          <button class="button" id="show-listings" data-bind="click: showAllListings">FIELD RESEARCH</button>
-          <ul class = "button-list" data-bind="foreach: locations, visible: blabla">
+
+
+          <div data-bind="foreach: buttons" >
+            <button class="button" id="show-listings" data-bind="text:title, click: $parent.showAllListings">
+            </button>
+          </div>
+
+
+
+          <button class="button" id="show-listings" data-bind="click: hideAllListings">HIDE ALL</button>
+          <button class="button" id="hide-listings" data-bind="click: showAllListings">All Listings</button>
+          <ul class = "button-list" data-bind="foreach: locations, visible: toggleList">
             <li data-bind="text: title, click: $parent.listClick, event: { mouseover: $parent.listMouseOver, mouseout: $parent.listMouseOut }"></li>
           </ul>
-          <button class="button" id="show-listings" data-bind="click: showAllListings">FIELD STUDIES</button>
-          <button class="button" id="show-listings" data-bind="click: showAllListings">AFRICA</button>
-          <button class="button" id="show-listings" data-bind="click: showAllListings">NORTH AMERICA</button>
-          <button class="button" id="show-listings" data-bind="click: showAllListings">CENTRAL AMERICA</button>
-          <button class="button" id="show-listings" data-bind="click: showAllListings">SOUTH AMERICA</button>
-          <button class="button" id="show-listings" data-bind="click: showAllListings">SPECIAL EVENTS</button>
-          <button class="button" id="hide-listings" data-bind="click: hideAllListings">All Listings</button>
         </div>
         <div class="contact">
 
