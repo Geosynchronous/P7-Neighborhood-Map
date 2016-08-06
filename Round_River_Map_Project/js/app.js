@@ -3,9 +3,12 @@
 // Udacity FEND Nanodegree
 // Developer: George Fischer
 
-  // Declaring global variables
+
+
+
+  // Declaring ***GLOBAL VARIABLES***
   //  - Helps organize and simplify code
-  //  - Vars that need to be shared
+  //  - Vars that need to be shared between GOOGLE MAPS and VIEW-MODEL
   //  - Eliminates need to pass them
 var map,
     largeInfowindow,
@@ -95,6 +98,9 @@ var map,
     ];
 
 
+
+
+
 // THE ***VIEW-MODEL***
 // JavaScript that defines the data and behavior of the UI
 function AppViewModel() {
@@ -149,6 +155,14 @@ function AppViewModel() {
   }
 
 }
+
+
+
+
+
+// ALL ***GOOGLE MAP FUNCTIONS*** FOLLOW
+// They are not directly compatible with KNOCKOUT
+
 
 // This function populates the infowindow when the marker is clicked. We'll only allow
 // one infowindow which will open at the marker that is clicked, and populate based
@@ -252,7 +266,12 @@ function createMarkers() {
   map.fitBounds(bounds);
 }
 
+
+
+
+
+// ***APPLY BINDINGS***
 // This will create the AppViewModel object
-// It will apply bindings immediately when this sntire js application loads
+// Apply bindings immediately after this entire js application loads
 var vm = new AppViewModel();
 ko.applyBindings(vm);
