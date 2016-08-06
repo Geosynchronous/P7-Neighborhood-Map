@@ -870,6 +870,12 @@ Saturday August 6, 2016
 - Now I need to probably make an array for the buttons, since they will hold the filters and only one button can display a list at a time
 - Thinking....
 
+3:33 PM
+- **refactor: Buttons**
+- Used `foreach` and created KO array
+- Now multiple lines of code for every button is not needed in the base html file
+- One single KO foreach works just fine
+- Now to add visibility of lists, and filtering for each button
 
 
 
