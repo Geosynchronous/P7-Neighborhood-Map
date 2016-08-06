@@ -523,7 +523,7 @@ function initMap() {
 
 
 
-  // Declaring global variables
+  // Declaring ***GLOBAL VARIABLES***
   //  - Helps organize and simplify code
   //  - Vars that need to be shared between GOOGLE MAPS and VIEW-MODEL
   //  - Eliminates need to pass them
