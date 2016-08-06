@@ -803,6 +803,7 @@ Saturday August 6, 2016
 12:28 AM
 - **feat: list the locations under buttons**
 - When a list item is clicked on it opens up the corresponding infoWindow thanks to ko
+- Added this html code:
 
 ```
           <ul data-bind="foreach: locations">
@@ -810,7 +811,10 @@ Saturday August 6, 2016
           </ul>
 ```
 
----
+- Added this js code:
+
+```
+
   // This function will be executed when a list item is clicked.
   // It is bound to each location in the list using the Knockout Click binding
   // Knockout will automatically populate the 'location' parameter with the clicked location object
@@ -819,7 +823,7 @@ Saturday August 6, 2016
     // the marker can now be accessed using 'location.marker'
     populateInfoWindow(location.marker);
   }
----
+```
 
 - There is still a lot of work to do with this, such as filtering for each of the different buttons
   - have to update the data, adding properties, values and more listed places
