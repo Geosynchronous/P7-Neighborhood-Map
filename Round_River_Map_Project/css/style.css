@@ -49,6 +49,13 @@ a:active {color: #c80b32;}
   margin: 5px;
 }
 
+.button-list {
+  list-style: none;
+  font-size: 14px;
+  line-height: 110%;
+  padding-left: 0;
+}
+
 /*#hide-listings,
 #show-listings {
   width: 48%;
@@ -97,3 +104,4 @@ a:active {color: #c80b32;}
   border: 3px solid #005496;
   margin-left: 7px;
 }
+
