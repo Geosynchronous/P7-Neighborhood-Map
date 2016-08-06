@@ -829,4 +829,6 @@ Saturday August 6, 2016
   - have to update the data, adding properties, values and more listed places
   - have to make the list clear, when a different button is selected
 
+1:13 AM
+- **Style and Data Location Updatea**
 
