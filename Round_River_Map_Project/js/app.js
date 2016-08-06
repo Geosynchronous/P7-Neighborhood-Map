@@ -217,7 +217,11 @@ function AppViewModel() {
   // This function will loop through the markers array and filter them for display.
   self.filterListings = function() {
     for (var i = 0; i < self.locations().length; i++) {
-      self.locations()[i].marker.setMap(map);
+      if (self.locations()[i].title = 'Kunene Region, Namibia') {
+        console.log(self.locations()[i].title);
+        self.locations()[i].marker.setMap(map);
+      }
+
     }
   }
 
