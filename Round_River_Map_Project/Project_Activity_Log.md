@@ -832,3 +832,39 @@ Saturday August 6, 2016
 1:13 AM
 - **Style and Data Location Updatea**
 
+10:59 AM
+- **feat: highlight list item & marker on mouse over**
+- Used KO to highlight marker
+- Used CSS to highlight list title item
+- Made “highlightIcon” and “defaultIcon” global
+- Function created in “AppViewModel”
+- An infoWindow can be open on a marker and the above functionality does
+- Code:
+
+```
+          <ul class = "button-list" data-bind="foreach: locations">
+            <li data-bind="text: title, click: $parent.listClick, event: { mouseover: $parent.listMouseOver, mouseout: $parent.listMouseOut }"></li>
+          </ul>
+```
+
+```
+  // Mouse Over on a list title inside options-box
+  //    - Highlights associated map marker icon
+  //    - List title also highlighted with css hover
+  this.listMouseOver = function(location) {
+    location.marker.setIcon(highlightedIcon);
+  }
+
+  // Mouse Out on a list title inside options-box
+  //    - Default restored with associated map marker icon
+  //    - List title also default restored with css
+  this.listMouseOut = function(location) {
+    location.marker.setIcon(defaultIcon);
+  }
+```
+- Note how the infoWindow can be selected while different items are highlighted: ![screenshot](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-08-06%20at%2010.46.05%20AM.jpg)
+
+
+
+
+not change, Which makes for a decent UI
