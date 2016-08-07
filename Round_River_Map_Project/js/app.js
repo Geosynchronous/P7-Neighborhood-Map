@@ -124,7 +124,7 @@ function AppViewModel() {
       showList: false,
     },
     {
-      label: 'AFRICA',
+      label: 'AFRICAN CONTINENT',
       showList: false,
     },
     {
