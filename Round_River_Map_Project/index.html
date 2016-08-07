@@ -32,17 +32,22 @@ Map created for:
           <img alt="Round River" src="images/RR-Main-Logo.png">
         </a>
 
+
+        <div data-bind="foreach: buttons">
+          <button class="button" id="show-listings" data-bind="text: label, click: vm.toggleVisibility"></button>
+        </div>
+
         <div>
-          <button class="button" id="show-listings" data-bind="text: buttons()[0].label, click: showAllListings"></button>
+<!--           <button class="button" id="show-listings" data-bind="text: buttons()[0].label, click: showAllListings"></button>
           <button class="button" id="show-listings" data-bind="text: buttons()[1].label, click: showAllListings"></button>
           <button class="button" id="show-listings" data-bind="text: buttons()[2].label, click: showAllListings"></button>
           <button class="button" id="show-listings" data-bind="text: buttons()[3].label, click: showAllListings"></button>
           <button class="button" id="show-listings" data-bind="text: buttons()[4].label, click: showAllListings"></button>
           <button class="button" id="show-listings" data-bind="text: buttons()[5].label, click: showAllListings"></button>
           <button class="button" id="show-listings" data-bind="text: buttons()[6].label, click: hideAllListings"></button>
+ -->
 
-
-          <button class="button" id="show-listings" data-bind="text: buttons()[7].label, click: toggleVisibility"></button>
+<!--           <button class="button" id="show-listings" data-bind="text: buttons()[7].label, click: toggleVisibility"></button> -->
 
 
           <ul class = "button-list" data-bind="foreach: locations">
