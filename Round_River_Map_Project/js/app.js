@@ -106,7 +106,28 @@ var map,
 // THE ***VIEW-MODEL***
 // JavaScript that defines the data and behavior of the UI
 function AppViewModel() {
-  var self = this;
+
+    var self = this;
+
+
+
+
+
+    self.showRow = ko.observable(false);
+    self.toggleVisibility = function() {
+
+        self.showRow(!self.showRow());
+        alert('showRow is now ' + self.showRow());
+    };
+
+
+
+
+
+
+
+
+
 
   // TEST --- for KO visibiity
   self.toggleList = ko.observable(true);
