@@ -878,4 +878,17 @@ Saturday August 6, 2016
 - Now to add visibility of lists, and filtering for each button
 
 
+5:00 PM
+- **STUCK & REVERTED**
+- tried to nest KO `foreach` for buttons and list, broke my code...
+- in over my head, revereted to previous, working situation
+- since the map markers are already set, and do not need to change on the fly, they only need to be filtered
+- All that needs to be done is make the map markers and option-box lists hide or show according to selected dependecies
+- The KO `buttons` array will be doing all the UI selecting, so this is where the hide/show state will reside for clicked buttons
+- The filtering for the different button categories will be done using the KO `locations` array
+
+9:00 PM
+- **feat: buttons array used to label buttons**
+- not as elegant as I would like, but it will have to do for now, until I am able to nest KO `foreach` statements
+- it works fine, though a bit bulkiy and repititious coding
 
