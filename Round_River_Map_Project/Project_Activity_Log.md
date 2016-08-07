@@ -892,3 +892,8 @@ Saturday August 6, 2016
 - not as elegant as I would like, but it will have to do for now, until I am able to nest KO `foreach` statements
 - it works fine, though a bit bulkiy and repititious coding
 
+Sunday August 7, 2016
+
+1:08 AM
+- **test: Toggle**
+- I'm being ko'd by knockout
