@@ -919,3 +919,19 @@ go, least complex
 ![SCREENSHOT](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-08-07%20at%2012.02.39%20PM.jpg)
 
 ![SCREENSHOT](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-08-07%20at%2012.02.53%20PM.jpg)
+
+
+12:31 PM
+- **better spec of showlist**
+
+```
+  // Toggles Visibility of specific list when specific button clicked
+  // button is bound to the specific element that was clicked
+  // passing button in makesit easy to generic spec the active button
+  // self.buttons.showList is the showlist boolean for the button clicked
+  self.toggleVisibility = function(button) {
+    self.buttons.showList= !self.buttons.showList;
+    self.toggleMeister(!self.buttons.showList);
+  }
+  ```
+  
