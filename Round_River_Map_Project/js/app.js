@@ -186,7 +186,6 @@ function AppViewModel() {
     // Since the marker object is stored inside the associated location object,
     // the marker can now be accessed using 'location.marker'
     populateInfoWindow(location.marker);
-    console.log("listClick");
   }
 
   // Mouse Over on a list title inside options-box
@@ -217,11 +216,7 @@ function AppViewModel() {
   // This function will loop through the markers array and filter them for display.
   self.filterListings = function() {
     for (var i = 0; i < self.locations().length; i++) {
-      if (self.locations()[i].title = 'Kunene Region, Namibia') {
-        console.log(self.locations()[i].title);
-        self.locations()[i].marker.setMap(map);
-      }
-
+      self.locations()[i].marker.setMap(map);
     }
   }
 
@@ -343,6 +338,8 @@ function createMarkers() {
     });
   }
 
+console.log(vm.locations()[0].marker);
+
   // After all markers are created, fit the map to these boundaries
   map.fitBounds(bounds);
 }
@@ -356,3 +353,5 @@ function createMarkers() {
 // Apply bindings immediately after this entire js application loads
 var vm = new AppViewModel();
 ko.applyBindings(vm);
+
+

@@ -35,14 +35,16 @@ Map created for:
         <div data-bind="visible: toggleList">test</div>
 
         <div>
-          <button class="button" id="show-listings" data-bind="click: showAllListings">FIELD RESEARCH</button>
-          <button class="button" id="show-listings" data-bind="click: showAllListings">FIELD STUDIES</button>
-          <button class="button" id="show-listings" data-bind="click: showAllListings">AFRICA</button>
-          <button class="button" id="show-listings" data-bind="click: showAllListings">NORTH AMERICA</button>
-          <button class="button" id="show-listings" data-bind="click: showAllListings">CENTRAL AMERICA</button>
-          <button class="button" id="show-listings" data-bind="click: showAllListings">SOUTH AMERICA</button>
-          <button class="button" id="show-listings" data-bind="click: showAllListings">SPECIAL EVENTS</button>
-          <button class="button" id="hide-listings" data-bind="click: hideAllListings">All Listings</button>
+          <button class="button" id="show-listings" data-bind="text: buttons()[0].title, click: showAllListings"></button>
+          <button class="button" id="show-listings" data-bind="text: buttons()[1].title, click: showAllListings"></button>
+          <button class="button" id="show-listings" data-bind="text: buttons()[2].title, click: showAllListings"></button>
+          <button class="button" id="show-listings" data-bind="text: buttons()[3].title, click: showAllListings"></button>
+          <button class="button" id="show-listings" data-bind="text: buttons()[4].title, click: showAllListings"></button>
+          <button class="button" id="show-listings" data-bind="text: buttons()[5].title, click: showAllListings"></button>
+          <button class="button" id="show-listings" data-bind="text: buttons()[6].title, click: hideAllListings"></button>
+
+
+          <button class="button" id="show-listings" data-bind="text: buttons()[7].title, click: showAllListings"></button>
           <ul class = "button-list" data-bind="foreach: locations, visible: toggleList">
             <li data-bind="text: title, click: $parent.listClick, event: { mouseover: $parent.listMouseOver, mouseout: $parent.listMouseOut }"></li>
           </ul>
