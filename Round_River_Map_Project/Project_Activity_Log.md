@@ -904,3 +904,10 @@ Sunday August 7, 2016
 completely on it’s own.  Needed to create  a ko.observable var to pass
 in ko buttons array value  so that it could be in the proper ko
 function form for the binding to work.
+
+10:59 AM
+- **feat: create all list buttons with foreach**
+- less repetitive code
+-more precise button bindings
+-use only one list at bottom of buttons, which is probably a good way to
+go, least complex
