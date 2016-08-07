@@ -217,10 +217,13 @@ function AppViewModel() {
     }
   }
 
-  self.toggleVisibility = function() {
-    self.buttons()[7].showList= !self.buttons()[7].showList;
-    self.toggleMeister(!self.buttons()[7].showList);
-    console.log(self.toggleMeister());
+  // Toggles Visibility of specific list when specific button clicked
+  // button is bound to the specific element that was clicked
+  // passing button in makesit easy to generic spec the active button
+  // self.buttons.showList is the showlist boolean for the button clicked
+  self.toggleVisibility = function(button) {
+    self.buttons.showList= !self.buttons.showList;
+    self.toggleMeister(!self.buttons.showList);
   }
 
 
