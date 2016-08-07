@@ -32,15 +32,13 @@ Map created for:
           <img alt="Round River" src="images/RR-Main-Logo.png">
         </a>
 
-        <div data-bind="visible: toggleList">test</div>
-
-                  <div class='eg'>
-    <a href="#" data-bind="click: toggleVisibility">Toggle</a>
-    <br />
-    <table>
-        <tr data-bind="visible: showRow"><td>Some Text</td></tr>
-    </table>
-</div>
+        <div class='eg'>
+<!--             <a href="#" data-bind="click: toggleVisibility">Toggle</a> -->
+            <br />
+            <table>
+                <tr data-bind="visible: showRow"><td>Some Text</td></tr>
+            </table>
+        </div>
 
 
 
@@ -54,12 +52,12 @@ Map created for:
           <button class="button" id="show-listings" data-bind="text: buttons()[6].title, click: hideAllListings"></button>
 
 
-          <button class="button" id="show-listings" data-bind="text: buttons()[7].title, click: showAllListings"></button>
+          <button class="button" id="show-listings" data-bind="text: buttons()[7].title, click: toggleVisibility"></button>
 
 
-          <ul class = "button-list" data-bind="foreach: locations, visible: toggleList">
+          <ul class = "button-list" data-bind="foreach: locations, visible: showAllTest">
 
-            <li data-bind="visible: vm.showRow, text: title, click: $parent.listClick, event: { mouseover: $parent.listMouseOver, mouseout: $parent.listMouseOut }"></li>
+            <li data-bind="visible: vm.toggleMeister, text: title, click: $parent.listClick, event: { mouseover: $parent.listMouseOver, mouseout: $parent.listMouseOut }"></li>
           </ul>
 
 

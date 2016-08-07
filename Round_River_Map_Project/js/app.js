@@ -110,14 +110,20 @@ function AppViewModel() {
     var self = this;
 
 
-
-
+    // Need this to make toggle list binding-updates work
+    self.toggleMeister = ko.observable(false);
 
     self.showRow = ko.observable(false);
     self.toggleVisibility = function() {
 
         self.showRow(!self.showRow());
         alert('showRow is now ' + self.showRow());
+
+        self.buttons()[7].showList= !self.buttons()[7].showList;
+        self.toggleMeister(!self.buttons()[7].showList);
+        alert('showRow is now ' + self.buttons()[7].showList);
+        console.log(self.toggleMeister());
+
     };
 
 
@@ -230,7 +236,16 @@ function AppViewModel() {
     }
   }
 
-
+  // This function will loop through the markers array and display them all.
+  self.showAllTest = function() {
+    for (var i = 0; i < self.locations().length; i++) {
+      self.locations()[i].marker.setMap(map);
+    }
+    self.buttons()[7].showList= !self.buttons()[7].showList;
+    self.toggleMeister(!self.buttons()[7].showList);
+    alert('showRow is now ' + self.buttons()[7].showList);
+    console.log(self.toggleMeister());
+  }
 
 
   // TODO
