@@ -911,3 +911,8 @@ function form for the binding to work.
 -more precise button bindings
 -use only one list at bottom of buttons, which is probably a good way to
 go, least complex
+
+
+12:00 PM
+- **style: Better UI buttons**
+
