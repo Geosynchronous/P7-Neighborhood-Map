@@ -112,9 +112,6 @@ function AppViewModel() {
   // Need this to make toggle list binding-updates work
   self.toggleMeister = ko.observable(false);
 
-  // TEST --- for KO visibiity
-  self.toggleList = ko.observable(true);
-
   // TODO - Create KO Array to filter locations for button list display
   //      - Only one list can display at a time, need a propert for that
   self.buttons = ko.observableArray([
@@ -220,22 +217,11 @@ function AppViewModel() {
     }
   }
 
-
-  // TODO
-  // This function will loop through the markers array and filter them for display.
-  self.filterListings = function() {
-    for (var i = 0; i < self.locations().length; i++) {
-      self.locations()[i].marker.setMap(map);
-    }
-  }
-
   self.toggleVisibility = function() {
     self.buttons()[7].showList= !self.buttons()[7].showList;
     self.toggleMeister(!self.buttons()[7].showList);
     console.log(self.toggleMeister());
   }
-
-
 
 
   // This function will loop through the listings and hide them all.
