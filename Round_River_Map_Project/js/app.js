@@ -116,35 +116,35 @@ function AppViewModel() {
   //      - Only one list can display at a time, need a propert for that
   self.buttons = ko.observableArray([
     {
-      title: 'FIELD RESEARCH',
+      label: 'FIELD RESEARCH',
       showList: true,
     },
       {
-      title: 'FIELD STUDIES',
+      label: 'FIELD STUDIES',
       showList: false,
     },
     {
-      title: 'AFRICA',
+      label: 'AFRICA',
       showList: false,
     },
     {
-      title: 'NORTH AMERICA',
+      label: 'NORTH AMERICA',
       showList: false,
     },
     {
-      title: 'CENTRAL AMERICA',
+      label: 'CENTRAL AMERICA',
       showList: false,
     },
     {
-      title: 'SOUTH AMERICA',
+      label: 'SOUTH AMERICA',
       showList: false,
     },
     {
-      title: 'SPECIAL EVENTS',
+      label: 'SPECIAL EVENTS',
       showList: false,
     },
     {
-      title: 'ALL LISTINGS',
+      label: 'ALL LISTINGS',
       showList: false,
     }
   ]);
@@ -355,5 +355,7 @@ console.log(vm.locations()[0].marker);
 // Apply bindings immediately after this entire js application loads
 var vm = new AppViewModel();
 ko.applyBindings(vm);
+
+console.log(location);
 
 
