@@ -897,3 +897,10 @@ Sunday August 7, 2016
 1:08 AM
 - **test: Toggle**
 - I'm being ko'd by knockout
+
+8:37 AM
+- **test: Incorporated a simple Fiddle Example**
+- Iterated working js fiddle example until I got my list toggle working
+completely on it’s own.  Needed to create  a ko.observable var to pass
+in ko buttons array value  so that it could be in the proper ko
+function form for the binding to work.
