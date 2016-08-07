@@ -916,3 +916,6 @@ go, least complex
 12:00 PM
 - **style: Better UI buttons**
 
+![SCREENSHOT](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-08-07%20at%2012.02.39%20PM.jpg)
+
+![SCREENSHOT](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-08-07%20at%2012.02.53%20PM.jpg)
