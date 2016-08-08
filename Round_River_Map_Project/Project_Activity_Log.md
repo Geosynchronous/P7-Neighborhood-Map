@@ -956,4 +956,20 @@ Monday August 8, 2016
 - Need to understand [**KO BINDING CONTEXT**](http://knockoutjs.com/documentation/binding-context.html) much better.
 
   
-  
+  12:52 PM
+  - **Another Fantastic Mentor Meeting with Ryan**
+  - His mentoring greatly accelerates my learning curve
+    - Meeting scheduled for 30 minutes, lasted well over an hour
+    - Greatly appreciate Ryan going the extra miles...
+  - Scheduled another meet for Friday
+  - General Direction to take:
+    - Filtering base on selected Button makes visible selected locations to options-box list and map marker, and hides all others
+      - mapbounds scaled to selected visible locations (ko css bind)
+    - Sync mouseover highlight between list items and markers
+    - Animate selected marker (single bounce)
+    - Add inforWindow API item (location based)
+    - Responsive to Device Media Viewport (Invoke: Hamburger Menu, Slide Menu in/out, etc)
+    - Change Bind Button to Checklist (can still look like buttons)
+      - change highlight of selected buttons
+      - allows filtering of more more than one checklist selection
+  - My head is spinning... time for a good break...
