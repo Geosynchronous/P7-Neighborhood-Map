@@ -110,7 +110,8 @@ function AppViewModel() {
   var self = this;
 
   // Need this to make toggle list binding-updates work
-  self.toggleList = ko.observable(false);
+  self.toggleListItem = ko.observable(false);
+    self.hideListItem = ko.observable(false);
 
   // TODO - Create KO Array to filter locations for button list display
   //      - Only one list can display at a time, need a propert for that
@@ -283,6 +284,16 @@ function AppViewModel() {
     }
   }
 
+  self.hideNonChosenListings = function(buttons) {
+    for (var i = 0; i < self.locations().length; i++) {
+      self.locations()[i].marker.setMap(null);
+
+      // self.hideListItem
+
+
+    }
+  }
+
   // Toggles Visibility of specific list when specific button clicked
   // button is bound to the specific element that was clicked
   // passing button in makesit easy to generic spec the active button
@@ -301,7 +312,7 @@ function AppViewModel() {
         self.hideAllListings();
     }
     self.buttons.showList = !self.buttons.showList;
-    self.toggleList(!self.buttons.showList);
+    self.toggleListItem(!self.buttons.showList);
   }
 
 }
