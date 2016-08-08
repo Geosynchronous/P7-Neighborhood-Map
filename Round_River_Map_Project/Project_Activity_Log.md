@@ -951,5 +951,8 @@ Monday August 8, 2016
 - **feat: hideListItem ko.observalbe**
 - will allow me to filter out unselected list item for each chosen button
 
+11:00 AM
+- **fix: $parent replacements**
+
 
 
