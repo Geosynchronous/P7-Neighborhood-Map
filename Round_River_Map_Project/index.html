@@ -33,15 +33,19 @@ Map created for:
         </a>
 
 
-        <div data-bind="foreach: buttons">
-          <button class="button" id="show-listings" data-bind="text: label, click: vm.toggleVisibility"></button>
-        </div>
 
+<!--         <div data-bind="with: buttons" > -->
 
+          <div data-bind="foreach: buttons">
+            <button class="button" id="show-listings" data-bind="text: label, click: $parent.toggleVisibility"></button>
+          </div>
 
-        <ul class = "button-list" data-bind="foreach: locations">
-          <li data-bind="visible: vm.toggleListItem, visible: vm.hideListItem, text: title, click: $parent.listClick, event: { mouseover: $parent.listMouseOver, mouseout: $parent.listMouseOut }"></li>
-        </ul>
+          <ul class = "button-list" data-bind="foreach: locations">
+            <li data-bind="visible: $parent.toggleListItem, text: title, click: $parent.listClick, event: { mouseover: $parent.listMouseOver, mouseout: $parent.listMouseOut }"></li>
+          </ul>
+
+<!--         </div> -->
+
 
 
         <div class="contact">
