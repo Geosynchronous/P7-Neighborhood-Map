@@ -937,3 +937,10 @@ go, least complex
   
 8:08 PM
 - **Tidey Up Code a Bit**
+
+8:46 PM
+- **refactor: add properties to locations array**
+
+
+
+
