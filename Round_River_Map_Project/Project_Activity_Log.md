@@ -979,6 +979,7 @@ Monday August 8, 2016
 - **Feedback Email from Mentor Ryan**
 - Another example of Ryan going the extra mile...
 
+***
 Ryan,
 
 Many thanks again.  If I need to reschedule just let me know. As you know i am trying to complete this course within a year of enrollment.  Udacity sort of left me hanging during this course by dropping the cohort/mentor groups last December and then not making adequate mentoring access available, until recently.  So I feel like things are coming into finally balance.  And of course, you are hitting it out of the park with your mentoring…
@@ -1010,4 +1011,4 @@ Moving forward, it might be best if we kept appointments down to 1 per week.
 
 Thanks George!  Let me know if you have any questions.
 Ryan
-
+***
