@@ -110,7 +110,7 @@ function AppViewModel() {
   var self = this;
 
   // Need this to make toggle list binding-updates work
-  self.toggleMeister = ko.observable(false);
+  self.toggleList = ko.observable(false);
 
   // TODO - Create KO Array to filter locations for button list display
   //      - Only one list can display at a time, need a propert for that
@@ -292,13 +292,16 @@ function AppViewModel() {
     if (self.buttons.showList === undefined) {
       self.buttons.showList = true;
     } else if (self.buttons.showList) {
+
+        // TODO - Put SWITCH HERE for "lable"
+        // invoke specific SHOW LISTINGS
+
         self.showAllListings();
     } else {
         self.hideAllListings();
     }
-
     self.buttons.showList = !self.buttons.showList;
-    self.toggleMeister(!self.buttons.showList);
+    self.toggleList(!self.buttons.showList);
   }
 
 }
