@@ -161,19 +161,59 @@ function AppViewModel() {
       continent: 'Africa',
       category: 'Field Research'
     },
-    {title: 'Okavango Delta, Botswana', location: {lat: -19.2798704, lng: 22.8201857}},
-    {title: 'Chobe-Linyanti-Zambezi Wetland, Botswana', location: {lat: -18.589826, lng: 24.258918}},
-    {title: 'Taku River, Tlingit First Nation, Canada', location: {lat: 58.6553055,lng: -133.8137736}},
-    {title: 'Idaho Wolverine Winter Recreation Project, USA', location: {lat: 45.0575711, lng: -116.1655369}},
-    {title: 'Navajo Dine Bikeyah Conservation Project, USA', location: {lat: 37.6299925, lng: -109.885184}},
-    {title: 'North Coast, Yukon Territory, Canada', location: {lat: 68.8369357, lng: -149.9462445}},
-    {title: 'Great Bear Rainforest, Canada', location: {lat: 52.9260101, lng: -128.935775}},
-    {title: 'North Coast Conservation Design, BC, Canada', location: {lat: 54.2684383, lng: -130.4447293}},
-    {title: 'Coastal Forest and Mountains, BC, Canada', location: {lat: 55.3639087, lng: -131.830578}},
-    {title: 'Muskwa-Kechika Conservation Design, BC, Canada', location: {lat: 58.9338124, lng: -130.8412957}},
-    {title: 'Mackenzie Delta, Northwest Territory, Canada', location: {lat: 66.999500, lng: -127.437408}},
-    {title: 'Patagonia, Chile', location: {lat: -43.0029846, lng: -71.6979215}},
-    {title: 'Osa Peninsula, Costa Rica', location: {lat: 8.539003, lng:-83.6045026}}
+    {
+      title: 'Okavango Delta, Botswana',
+      location: {lat: -19.2798704, lng: 22.8201857}
+    },
+    {
+      title: 'Chobe-Linyanti-Zambezi Wetland, Botswana',
+      location: {lat: -18.589826, lng: 24.258918}
+    },
+    {
+      title: 'Taku River, Tlingit First Nation, Canada',
+      location: {lat: 58.6553055,lng: -133.8137736}
+    },
+    {
+      title: 'Idaho Wolverine Winter Recreation Project, USA',
+      location: {lat: 45.0575711, lng: -116.1655369}
+    },
+    {
+      title: 'Navajo Dine Bikeyah Conservation Project, USA',
+      location: {lat: 37.6299925, lng: -109.885184}
+    },
+    {
+      title: 'North Coast, Yukon Territory, Canada',
+      location: {lat: 68.8369357, lng: -149.9462445}
+    },
+    {
+      title: 'Great Bear Rainforest, Canada',
+      location: {lat: 52.9260101, lng: -128.935775}
+    },
+    {
+      title: 'North Coast Conservation Design, BC, Canada',
+      location: {lat: 54.2684383, lng: -130.4447293}
+    },
+    {
+      title: 'Coastal Forest and Mountains, BC, Canada',
+      location: {lat: 55.3639087, lng: -131.830578}
+    },
+    {
+      title: 'Muskwa-Kechika Conservation Design, BC, Canada',
+      location: {lat: 58.9338124, lng: -130.8412957}
+    },
+    {
+      title: 'Mackenzie Delta, Northwest Territory, Canada',
+      location: {lat: 66.999500, lng: -127.437408}
+    },
+    {
+      title: 'Patagonia, Chile',
+      location: {lat: -43.0029846, lng: -71.6979215}
+    },
+    {
+      title: 'Osa Peninsula, Costa Rica',
+      location: {lat: 8.539003, lng:-83.6045026}
+    }
+
   ]);
 
 
@@ -320,6 +360,8 @@ function createMarkers() {
   // After all markers are created, fit the map to these boundaries
   map.fitBounds(bounds);
 }
+
+
 
 // The Google Callback function
 // This function is executed immediately after the Google API script finishes loading,
