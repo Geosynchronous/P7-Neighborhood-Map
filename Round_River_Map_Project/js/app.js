@@ -163,55 +163,81 @@ function AppViewModel() {
     },
     {
       title: 'Okavango Delta, Botswana',
-      location: {lat: -19.2798704, lng: 22.8201857}
+      location: {lat: -19.2798704, lng: 22.8201857},
+      continent: 'Africa',
+      category: 'Field Research'
     },
     {
       title: 'Chobe-Linyanti-Zambezi Wetland, Botswana',
-      location: {lat: -18.589826, lng: 24.258918}
+      location: {lat: -18.589826, lng: 24.258918},
+      continent: 'Africa',
+      category: 'Field Research'
     },
     {
       title: 'Taku River, Tlingit First Nation, Canada',
-      location: {lat: 58.6553055,lng: -133.8137736}
+      location: {lat: 58.6553055,lng: -133.8137736},
+      continent: 'North America',
+      category: 'Field Research'
     },
     {
       title: 'Idaho Wolverine Winter Recreation Project, USA',
-      location: {lat: 45.0575711, lng: -116.1655369}
+      location: {lat: 45.0575711, lng: -116.1655369},
+      continent: 'North America',
+      category: 'Field Research'
     },
     {
       title: 'Navajo Dine Bikeyah Conservation Project, USA',
-      location: {lat: 37.6299925, lng: -109.885184}
+      location: {lat: 37.6299925, lng: -109.885184},
+      continent: 'North America',
+      category: 'Field Research'
     },
     {
       title: 'North Coast, Yukon Territory, Canada',
-      location: {lat: 68.8369357, lng: -149.9462445}
+      location: {lat: 68.8369357, lng: -149.9462445},
+      continent: 'North America',
+      category: 'Field Research'
     },
     {
       title: 'Great Bear Rainforest, Canada',
-      location: {lat: 52.9260101, lng: -128.935775}
+      location: {lat: 52.9260101, lng: -128.935775},
+      continent: 'North America',
+      category: 'Field Research'
     },
     {
       title: 'North Coast Conservation Design, BC, Canada',
-      location: {lat: 54.2684383, lng: -130.4447293}
+      location: {lat: 54.2684383, lng: -130.4447293},
+      continent: 'North America',
+      category: 'Field Research'
     },
     {
       title: 'Coastal Forest and Mountains, BC, Canada',
-      location: {lat: 55.3639087, lng: -131.830578}
+      location: {lat: 55.3639087, lng: -131.830578},
+      continent: 'North America',
+      category: 'Field Research'
     },
     {
       title: 'Muskwa-Kechika Conservation Design, BC, Canada',
-      location: {lat: 58.9338124, lng: -130.8412957}
+      location: {lat: 58.9338124, lng: -130.8412957},
+      continent: 'North America',
+      category: 'Field Research'
     },
     {
       title: 'Mackenzie Delta, Northwest Territory, Canada',
-      location: {lat: 66.999500, lng: -127.437408}
+      location: {lat: 66.999500, lng: -127.437408},
+      continent: 'North America',
+      category: 'Field Research'
     },
     {
       title: 'Patagonia, Chile',
-      location: {lat: -43.0029846, lng: -71.6979215}
+      location: {lat: -43.0029846, lng: -71.6979215},
+      continent: 'South America',
+      category: 'Field Research'
     },
     {
       title: 'Osa Peninsula, Costa Rica',
-      location: {lat: 8.539003, lng:-83.6045026}
+      location: {lat: 8.539003, lng:-83.6045026},
+      continent: 'Central America',
+      category: 'Field Research'
     }
 
   ]);
