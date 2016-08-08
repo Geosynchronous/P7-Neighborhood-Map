@@ -977,8 +977,8 @@ Monday August 8, 2016
 
 5:22 PM
 - **Feedback Email from Mentor Ryan**
+- Another example of Ryan going the extra mile...
 
-```
 Ryan,
 
 Many thanks again.  If I need to reschedule just let me know. As you know i am trying to complete this course within a year of enrollment.  Udacity sort of left me hanging during this course by dropping the cohort/mentor groups last December and then not making adequate mentoring access available, until recently.  So I feel like things are coming into finally balance.  And of course, you are hitting it out of the park with your mentoring…
@@ -993,22 +993,16 @@ On Aug 8, 2016, at 4:23 PM, Ryan Vrba <ryan.vrba@gmail.com> wrote:
 
 Hey George, 
 
-Here is the code from the session today for your reference:
+[Here is the code from the session today for your reference:](https://drive.google.com/open?id=0B0wkS5CCAyh0TVpIRGpQZFJES280)
 
-https://drive.google.com/open?id=0B0wkS5CCAyh0TVpIRGpQZFJES28
-
-This is the StackOverflow article I read to figure out the loop / closure issue, in case you wanted to read it over: 
-
-http://stackoverflow.com/questions/256754/how-to-pass-arguments-to-addeventlistener-listener-function
+[This is the StackOverflow article I read to figure out the loop / closure issue, in case you wanted to read it over:](http://stackoverflow.com/questions/256754/how-to-pass-arguments-to-addeventlistener-listener-function)
 
 This is the Knockout documentation for the CSS binding and Checked binding:
 
-http://knockoutjs.com/documentation/css-binding.html
-http://knockoutjs.com/documentation/checked-binding.html
+[1](http://knockoutjs.com/documentation/css-binding.html)
+[2](http://knockoutjs.com/documentation/checked-binding.html)
 
-And here's the little fiddle of the checkbox that looks like a button:
-
-http://jsfiddle.net/zAFND/2/
+[And here's the little fiddle of the checkbox that looks like a button:](http://jsfiddle.net/zAFND/2/)
 
 Quick note, I noticed that you booked again for Friday.  I'm supposed to keep appointments down to 1 per week, but I doubt anyone will notice so we can keep that for now :)
 
@@ -1017,4 +1011,3 @@ Moving forward, it might be best if we kept appointments down to 1 per week.
 Thanks George!  Let me know if you have any questions.
 Ryan
 
-```
