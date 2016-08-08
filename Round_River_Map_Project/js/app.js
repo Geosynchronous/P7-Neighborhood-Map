@@ -117,7 +117,7 @@ function AppViewModel() {
   self.buttons = ko.observableArray([
     {
       label: 'FIELD RESEARCH',
-      showList: true,
+      showList: false,
     },
       {
       label: 'FIELD STUDIES',
@@ -210,10 +210,10 @@ function AppViewModel() {
     }
   }
 
-  // This function will loop through the markers array and display them all.
-  self.showAllTest = function() {
+  // This function will loop through the listings and hide them all.
+  self.hideAllListings = function() {
     for (var i = 0; i < self.locations().length; i++) {
-      self.locations()[i].marker.setMap(map);
+      self.locations()[i].marker.setMap(null);
     }
   }
 
@@ -222,16 +222,9 @@ function AppViewModel() {
   // passing button in makesit easy to generic spec the active button
   // self.buttons.showList is the showlist boolean for the button clicked
   self.toggleVisibility = function(button) {
+    console.log(self.buttons.showList);
     self.buttons.showList= !self.buttons.showList;
     self.toggleMeister(!self.buttons.showList);
-  }
-
-
-  // This function will loop through the listings and hide them all.
-  self.hideAllListings = function() {
-    for (var i = 0; i < self.locations().length; i++) {
-      self.locations()[i].marker.setMap(null);
-    }
   }
 
 }
