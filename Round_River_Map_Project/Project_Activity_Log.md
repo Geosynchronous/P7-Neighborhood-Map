@@ -941,6 +941,8 @@ go, least complex
 8:46 PM
 - **refactor: add properties to locations array**
 
-
+10:43 PM
+- **feat: toggleVisibility() more functionality
+- Added hideListings and showListings
 
 
