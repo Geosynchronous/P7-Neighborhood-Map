@@ -288,8 +288,16 @@ function AppViewModel() {
   // passing button in makesit easy to generic spec the active button
   // self.buttons.showList is the showlist boolean for the button clicked
   self.toggleVisibility = function(button) {
-    console.log(self.buttons.showList);
-    self.buttons.showList= !self.buttons.showList;
+    // TODO elimante reason for undefined???
+    if (self.buttons.showList === undefined) {
+      self.buttons.showList = true;
+    } else if (self.buttons.showList) {
+        self.showAllListings();
+    } else {
+        self.hideAllListings();
+    }
+
+    self.buttons.showList = !self.buttons.showList;
     self.toggleMeister(!self.buttons.showList);
   }
 
