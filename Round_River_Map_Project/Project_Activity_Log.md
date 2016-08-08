@@ -945,4 +945,11 @@ go, least complex
 - **feat: toggleVisibility() more functionality
 - Added hideListings and showListings
 
+Monday August 8, 2016
+
+9:44 AM
+- **feat: hideListItem ko.observalbe**
+- will allow me to filter out unselected list item for each chosen button
+
+
 
