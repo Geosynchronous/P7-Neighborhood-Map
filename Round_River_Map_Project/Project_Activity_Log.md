@@ -953,6 +953,8 @@ Monday August 8, 2016
 
 11:00 AM
 - **fix: $parent replacements**
+- Need to understand this much better:
+  - http://knockoutjs.com/documentation/binding-context.html
 
-
-
+  
+  
