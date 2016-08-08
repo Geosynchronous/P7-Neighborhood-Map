@@ -276,27 +276,6 @@ function makeMarkerIcon(iconImage) {
   return markerImage;
 }
 
-// The Google Callback function
-// This function is executed immediately after the Google API script finishes loading,
-// and it should be used to initialize the Google Map objects
-function initMap() {
-  // define map
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 40.7501481, lng: -111.8665667},
-    zoom: 2,
-    backgroundColor: '#af9a6b',
-    styles: styles,
-    mapTypeId: 'terrain',
-    mapTypeControl: true
-  });
-  // define bounds
-  bounds = new google.maps.LatLngBounds();
-  // define largeInfowindow
-  largeInfowindow = new google.maps.InfoWindow();
-  // create all map markers
-  createMarkers();
-}
-
 function createMarkers() {
   // This will be our listing marker icon.
   defaultIcon = makeMarkerIcon('images/RR-circle.png');
@@ -305,12 +284,14 @@ function createMarkers() {
   // Used when the user mouses over the marker
   highlightedIcon = makeMarkerIcon('images/RR-circle-highlight.png');
 
-  // The following group uses the location array to create an array of markers on initialize.
+  // The following group uses the location array
+  // to create an array of markers on initialize.
   for (var i = 0; i < vm.locations().length; i++) {
     // Get the position from the location array.
     var position = vm.locations()[i].location;
     var title = vm.locations()[i].title;
     // Create a marker per location, and put into markers array.
+    // I believe this renders the markers to the map as well.
     var marker = new google.maps.Marker({
       position: position,
       title: title,
@@ -343,12 +324,30 @@ function createMarkers() {
     });
   }
 
-console.log(vm.locations()[0].marker);
-
   // After all markers are created, fit the map to these boundaries
   map.fitBounds(bounds);
 }
 
+// The Google Callback function
+// This function is executed immediately after the Google API script finishes loading,
+// and it should be used to initialize the Google Map objects
+function initMap() {
+  // define map and render it into the map div
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 40.7501481, lng: -111.8665667},
+    zoom: 2,
+    backgroundColor: '#af9a6b',
+    styles: styles,
+    mapTypeId: 'terrain',
+    mapTypeControl: true
+  });
+  // define bounds
+  bounds = new google.maps.LatLngBounds();
+  // define largeInfowindow
+  largeInfowindow = new google.maps.InfoWindow();
+  // create all map markers
+  createMarkers();
+}
 
 
 
@@ -359,6 +358,5 @@ console.log(vm.locations()[0].marker);
 var vm = new AppViewModel();
 ko.applyBindings(vm);
 
-console.log(location);
 
 
