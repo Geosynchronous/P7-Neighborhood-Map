@@ -936,4 +936,4 @@ go, least complex
   ```
   
 8:08 PM
-- ** Tidey Up Code a Bit**
+- **Tidey Up Code a Bit**
