@@ -1021,3 +1021,9 @@ Tuesday August 9, 2016
   - “toggleListItem” added to track each location visibility
   - “highlight” changes styling of list items
 
+2:27 PM
+- **refactor: Remove unneeded code, add console,log**
+- Case Statement Structure will not be implemented, so it is deleted.
+- Add a console.log(location); to track upcoming changes with location
+usage
+
