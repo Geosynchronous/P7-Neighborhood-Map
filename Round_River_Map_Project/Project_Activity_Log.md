@@ -1027,3 +1027,42 @@ Tuesday August 9, 2016
 - Add a console.log(location); to track upcoming changes with location
 usage
 
+3:00 PM
+- **Function needs to have Filter features**
+
+```
+  // Toggles Visibility of specific list when specific button clicked
+  // button is bound to the specific element that was clicked
+  // passing button in makesit easy to generic spec the active button
+  // self.buttons.showList is the showlist boolean for the button clicked
+  self.toggleVisibility = function(button) {
+
+    // console.log(self.buttons());
+    if (self.buttons.showList === undefined) {
+      self.buttons.showList = true;
+    } else if (self.buttons.showList) {
+
+        // TODO - Put SWITCH HERE for "label"
+        // invoke specific SHOW LISTINGS
+
+        self.showAllListings();
+    } else {
+        self.hideAllListings();
+    }
+    self.buttons.showList = !self.buttons.showList;
+    self.toggleListItem(!self.buttons.showList);
+  }
+
+}
+```
+
+- Right now when any specific is button selected, all of the location listings will be listed
+- The listings actually need to be dependent on two `locations[]` properties:
+ - `categories`
+ -  `continent`
+- Those that meet this criteria need to be visible, those that don't need to be hidden
+- Both the **listings** in the `option-box` and the **markers** on the `map` need to be updated in the View
+  -  `toggleListItem` is a KO functions to be set true/false as needed for **listings**
+  -  `setVisible` is a google map function to be set true/false as needed for **markers**
+  
+
