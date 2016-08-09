@@ -1012,3 +1012,12 @@ Moving forward, it might be best if we kept appointments down to 1 per week.
 Thanks George!  Let me know if you have any questions.
 Ryan
 ***
+
+Tuesday August 9, 2016
+
+2:07 PM
+- **refactor: new properties added to locations[]**
+- Need to add two new properties to the refactor some new features
+  - “toggleListItem” added to track each location visibility
+  - “highlight” changes styling of list items
+
