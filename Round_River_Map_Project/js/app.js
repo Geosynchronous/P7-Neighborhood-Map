@@ -111,7 +111,6 @@ function AppViewModel() {
 
   // Need this to make toggle list binding-updates work
   self.toggleListItem = ko.observable(false);
-    self.hideListItem = ko.observable(true);
 
   // TODO - Create KO Array to filter locations for button list display
   //      - Only one list can display at a time, need a propert for that
@@ -302,36 +301,6 @@ function AppViewModel() {
   // This function will loop through the markers array and display them all.
   self.showAllListings = function(button) {
 
-    // switch (button.label) {
-    //   case "FIELD RESEARCH":
-    //     console.log("FIELD RESEARCH");
-    //     break;
-    //   case "FIELD STUDIES":
-    //     console.log("FIELD STUDIES");
-    //     break;
-    //   case "AFRICAN CONTINENT":
-    //     console.log("AFRICAN CONTINENT");
-    //     break;
-    //   case "NORTH AMERICA":
-    //     console.log("NORTH AMERICA");
-    //     break;
-    //   case "CENTRAL AMERICA":
-    //     console.log("CENTRAL AMERICA");
-    //     break;
-    //   case "SOUTH AMERICA":
-    //     console.log("SOUTH AMERICA");
-    //     break;
-    //   case "SPECIAL EVENTS":
-    //     console.log("SPECIAL EVENTS");
-    //     break;
-    //   case "ALL LISTINGS":
-    //     console.log("ALL LISTINGS");
-    //     break;
-    //   default:
-    //     console.log("Default of " + buttons.label + "button.");
-    // }
-
-
     for (var i = 0; i < self.locations().length; i++) {
       self.locations()[i].marker.setMap(map);
     }
@@ -341,16 +310,6 @@ function AppViewModel() {
   self.hideAllListings = function() {
     for (var i = 0; i < self.locations().length; i++) {
       self.locations()[i].marker.setMap(null);
-    }
-  }
-
-  self.hideNonChosenListings = function(button) {
-    for (var i = 0; i < self.locations().length; i++) {
-      self.locations()[i].marker.setMap(null);
-
-      // self.hideListItem
-
-
     }
   }
 
