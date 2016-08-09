@@ -272,6 +272,7 @@ function AppViewModel() {
   ]);
 
 
+
   // IMPORTANT: Knockout will automatically populate the 'location' parameter
   // with the clicked location object for the events functions that follow:
 
@@ -287,6 +288,7 @@ function AppViewModel() {
   //    - Highlights associated map marker icon
   //    - List title also highlighted with css hover
   this.listMouseOver = function(location) {
+    console.log(location);
     location.marker.setIcon(highlightedIcon);
   }
 
@@ -357,8 +359,8 @@ function AppViewModel() {
   // passing button in makesit easy to generic spec the active button
   // self.buttons.showList is the showlist boolean for the button clicked
   self.toggleVisibility = function(button) {
-    // TODO elimante reason for undefined???
-    console.log(self.buttons());
+
+    // console.log(self.buttons());
     if (self.buttons.showList === undefined) {
       self.buttons.showList = true;
     } else if (self.buttons.showList) {
