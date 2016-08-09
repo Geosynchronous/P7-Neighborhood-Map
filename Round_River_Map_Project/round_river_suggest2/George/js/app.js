@@ -125,7 +125,7 @@ function AppViewModel() {
       showList: false,
     },
     {
-      label: 'AFRICAN CONTINENT',
+      label: 'AFRICA',
       showList: false,
     },
     {
@@ -160,85 +160,113 @@ function AppViewModel() {
       title: 'Kunene Region, Namibia',
       location: {lat: -18.789779,lng: 13.370975},
       continent: 'Africa',
-      category: 'Field Research'
+      category: 'Field Research',
+      toggleListItem: ko.observable(true), // used to toggle visibility of inidividual list items
+      highlight: ko.observable(false) // used to change styling of list items with CSS binding
     },
     {
       title: 'Okavango Delta, Botswana',
       location: {lat: -19.2798704, lng: 22.8201857},
       continent: 'Africa',
-      category: 'Field Research'
+      category: 'Field Research',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
     },
     {
       title: 'Chobe-Linyanti-Zambezi Wetland, Botswana',
       location: {lat: -18.589826, lng: 24.258918},
       continent: 'Africa',
-      category: 'Field Research'
+      category: 'Field Research',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
     },
     {
       title: 'Taku River, Tlingit First Nation, Canada',
       location: {lat: 58.6553055,lng: -133.8137736},
       continent: 'North America',
-      category: 'Field Research'
+      category: 'Field Research',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
     },
     {
       title: 'Idaho Wolverine Winter Recreation Project, USA',
       location: {lat: 45.0575711, lng: -116.1655369},
       continent: 'North America',
-      category: 'Field Research'
+      category: 'Field Research',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
     },
     {
       title: 'Navajo Dine Bikeyah Conservation Project, USA',
       location: {lat: 37.6299925, lng: -109.885184},
       continent: 'North America',
-      category: 'Field Research'
+      category: 'Field Research',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
     },
     {
       title: 'North Coast, Yukon Territory, Canada',
       location: {lat: 68.8369357, lng: -149.9462445},
       continent: 'North America',
-      category: 'Field Research'
+      category: 'Field Research',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
     },
     {
       title: 'Great Bear Rainforest, Canada',
       location: {lat: 52.9260101, lng: -128.935775},
       continent: 'North America',
-      category: 'Field Research'
+      category: 'Field Research',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
     },
     {
       title: 'North Coast Conservation Design, BC, Canada',
       location: {lat: 54.2684383, lng: -130.4447293},
       continent: 'North America',
-      category: 'Field Research'
+      category: 'Field Research',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
     },
     {
       title: 'Coastal Forest and Mountains, BC, Canada',
       location: {lat: 55.3639087, lng: -131.830578},
       continent: 'North America',
-      category: 'Field Research'
+      category: 'Field Research',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
     },
     {
       title: 'Muskwa-Kechika Conservation Design, BC, Canada',
       location: {lat: 58.9338124, lng: -130.8412957},
       continent: 'North America',
-      category: 'Field Research'
+      category: 'Field Research',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
     },
     {
       title: 'Mackenzie Delta, Northwest Territory, Canada',
       location: {lat: 66.999500, lng: -127.437408},
       continent: 'North America',
-      category: 'Field Research'
+      category: 'Field Research',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
     },
     {
       title: 'Patagonia, Chile',
       location: {lat: -43.0029846, lng: -71.6979215},
       continent: 'South America',
-      category: 'Field Research'
+      category: 'Field Research',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
     },
     {
       title: 'Osa Peninsula, Costa Rica',
       location: {lat: 8.539003, lng:-83.6045026},
       continent: 'Central America',
-      category: 'Field Research'
+      category: 'Field Research',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
     }
 
   ]);
@@ -260,6 +288,7 @@ function AppViewModel() {
   //    - Highlights associated map marker icon
   //    - List title also highlighted with css hover
   this.listMouseOver = function(location) {
+    console.log(location);
     location.marker.setIcon(highlightedIcon);
   }
 
@@ -330,21 +359,42 @@ function AppViewModel() {
   // passing button in makesit easy to generic spec the active button
   // self.buttons.showList is the showlist boolean for the button clicked
   self.toggleVisibility = function(button) {
-    // TODO elimante reason for undefined???
-    console.log(self.buttons());
-    if (self.buttons.showList === undefined) {
-      self.buttons.showList = true;
-    } else if (self.buttons.showList) {
 
-        // TODO - Put SWITCH HERE for "lable"
-        // invoke specific SHOW LISTINGS
+    // This is the label of the button that the user clicked
+    var buttonLabel = button.label.toLowerCase();
 
-        self.showAllListings();
-    } else {
-        self.hideAllListings();
+    // Uncomment this line to see the button label
+    //console.log(buttonLabel);
+
+    // For each location in the observable self.locations() array
+    for (var i = 0; i < self.locations().length; i++) {
+
+      // The location category
+      var locCategory = self.locations()[i].category.toLowerCase();
+      // The location continent
+      var locContinent = self.locations()[i].continent.toLowerCase();
+
+      // If the location category or continent text contains the button label
+      if ((locCategory === buttonLabel) || (locContinent === buttonLabel)) {
+        self.locations()[i].toggleListItem(true); // show the list item
+        self.locations()[i].marker.setVisible(true); // show the map marker
+      } else {
+        self.locations()[i].toggleListItem(false); // hide the list item
+        self.locations()[i].marker.setVisible(false); // hide the map marker
+      }
     }
-    self.buttons.showList = !self.buttons.showList;
-    self.toggleListItem(!self.buttons.showList);
+
+    self.setNewBounds();
+  }
+
+  self.setNewBounds = function() {
+    bounds = new google.maps.LatLngBounds();
+    for (var i = 0; i < self.locations().length; i++) {
+      if (self.locations()[i].toggleListItem()) {
+        bounds.extend(self.locations()[i].marker.position);
+      }
+    }
+    map.fitBounds(bounds);
   }
 
 }
@@ -427,14 +477,23 @@ function createMarkers() {
       populateInfoWindow(this);
     });
 
+    console.log(i);
     // Two event listeners - one for mouseover, one for mouseout,
     // to change the colors back and forth.
-    marker.addListener('mouseover', function() {
-      this.setIcon(highlightedIcon);
-    });
-    marker.addListener('mouseout', function() {
-      this.setIcon(defaultIcon);
-    });
+    marker.addListener('mouseover', function(i,marker) {
+      // return an anonymous function
+      // this should store the current values of 'i' and 'marker'
+      return function() {
+        marker.setIcon(highlightedIcon); // Change marker image
+        vm.locations()[i].highlight(true); // Change styling of list item (used with CSS binding)
+      }
+    }(i,marker)); // pass 'i' and 'marker' as parameters to this event listener function
+    marker.addListener('mouseout', function(i,marker) {
+      return function() {
+        marker.setIcon(defaultIcon);
+        vm.locations()[i].highlight(false);
+      }
+    }(i,marker));
   }
 
   // After all markers are created, fit the map to these boundaries
