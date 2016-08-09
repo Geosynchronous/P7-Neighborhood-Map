@@ -155,94 +155,121 @@ function AppViewModel() {
   // Normally we'd have these in a database.
   //      TODO - add all sites, add all properties
   //      Categories: Field Research, Field Studies, Offices, Special Events
-  self.locations = ko.observableArray([
+ self.locations = ko.observableArray([
     {
       title: 'Kunene Region, Namibia',
       location: {lat: -18.789779,lng: 13.370975},
       continent: 'Africa',
-      category: 'Field Research'
+      category: 'Field Research',
+      toggleListItem: ko.observable(true), // used to toggle visibility of inidividual list items
+      highlight: ko.observable(false) // used to change styling of list items with CSS binding
     },
     {
       title: 'Okavango Delta, Botswana',
       location: {lat: -19.2798704, lng: 22.8201857},
       continent: 'Africa',
-      category: 'Field Research'
+      category: 'Field Research',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
     },
     {
       title: 'Chobe-Linyanti-Zambezi Wetland, Botswana',
       location: {lat: -18.589826, lng: 24.258918},
       continent: 'Africa',
-      category: 'Field Research'
+      category: 'Field Research',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
     },
     {
       title: 'Taku River, Tlingit First Nation, Canada',
       location: {lat: 58.6553055,lng: -133.8137736},
       continent: 'North America',
-      category: 'Field Research'
+      category: 'Field Research',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
     },
     {
       title: 'Idaho Wolverine Winter Recreation Project, USA',
       location: {lat: 45.0575711, lng: -116.1655369},
       continent: 'North America',
-      category: 'Field Research'
+      category: 'Field Research',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
     },
     {
       title: 'Navajo Dine Bikeyah Conservation Project, USA',
       location: {lat: 37.6299925, lng: -109.885184},
       continent: 'North America',
-      category: 'Field Research'
+      category: 'Field Research',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
     },
     {
       title: 'North Coast, Yukon Territory, Canada',
       location: {lat: 68.8369357, lng: -149.9462445},
       continent: 'North America',
-      category: 'Field Research'
+      category: 'Field Research',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
     },
     {
       title: 'Great Bear Rainforest, Canada',
       location: {lat: 52.9260101, lng: -128.935775},
       continent: 'North America',
-      category: 'Field Research'
+      category: 'Field Research',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
     },
     {
       title: 'North Coast Conservation Design, BC, Canada',
       location: {lat: 54.2684383, lng: -130.4447293},
       continent: 'North America',
-      category: 'Field Research'
+      category: 'Field Research',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
     },
     {
       title: 'Coastal Forest and Mountains, BC, Canada',
       location: {lat: 55.3639087, lng: -131.830578},
       continent: 'North America',
-      category: 'Field Research'
+      category: 'Field Research',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
     },
     {
       title: 'Muskwa-Kechika Conservation Design, BC, Canada',
       location: {lat: 58.9338124, lng: -130.8412957},
       continent: 'North America',
-      category: 'Field Research'
+      category: 'Field Research',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
     },
     {
       title: 'Mackenzie Delta, Northwest Territory, Canada',
       location: {lat: 66.999500, lng: -127.437408},
       continent: 'North America',
-      category: 'Field Research'
+      category: 'Field Research',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
     },
     {
       title: 'Patagonia, Chile',
       location: {lat: -43.0029846, lng: -71.6979215},
       continent: 'South America',
-      category: 'Field Research'
+      category: 'Field Research',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
     },
     {
       title: 'Osa Peninsula, Costa Rica',
       location: {lat: 8.539003, lng:-83.6045026},
       continent: 'Central America',
-      category: 'Field Research'
+      category: 'Field Research',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
     }
 
   ]);
-
 
 
   // IMPORTANT: Knockout will automatically populate the 'location' parameter
@@ -336,7 +363,7 @@ function AppViewModel() {
       self.buttons.showList = true;
     } else if (self.buttons.showList) {
 
-        // TODO - Put SWITCH HERE for "lable"
+        // TODO - Put SWITCH HERE for "label"
         // invoke specific SHOW LISTINGS
 
         self.showAllListings();
