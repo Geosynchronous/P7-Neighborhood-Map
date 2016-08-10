@@ -1065,4 +1065,9 @@ usage
   -  `toggleListItem` is a KO functions to be set true/false as needed for **listings**
   -  `setVisible` is a google map function to be set true/false as needed for **markers**
   
-
+11:59 PM
+- **Visibility functionality features added**
+-  Changes a lot of functions, added some too
+-  Still needs diferential button use updates to work right
+-  Tired... finish making work tomorrow, clean up code, and document
+-
