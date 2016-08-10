@@ -2789,5 +2789,8 @@ loads the list & marker views for the new button selected.
 - Still need to add more location data, none yet entered for Field Studies
 - Works as aspected in all combinations of button selection
 
+4:55 PM
+- **fix: Reset for showLocationsViews**
+- Needed for when switching toggling to another button
 
 
