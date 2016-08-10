@@ -117,35 +117,35 @@ function AppViewModel() {
   self.buttons = ko.observableArray([
     {
       label: 'FIELD RESEARCH',
-      showList: false,
+      showLocationsViews: false,
     },
       {
       label: 'FIELD STUDIES',
-      showList: false,
+      showLocationsViews: false,
     },
     {
-      label: 'AFRICAN CONTINENT',
-      showList: false,
+      label: 'AFRICA',
+      showLocationsViews: false,
     },
     {
       label: 'NORTH AMERICA',
-      showList: false,
+      showLocationsViews: false,
     },
     {
       label: 'CENTRAL AMERICA',
-      showList: false,
+      showLocationsViews: false,
     },
     {
       label: 'SOUTH AMERICA',
-      showList: false,
+      showLocationsViews: false,
     },
     {
       label: 'SPECIAL EVENTS',
-      showList: false,
+      showLocationsViews: false,
     },
     {
       label: 'ALL LISTINGS',
-      showList: false,
+      showLocationsViews: false,
     }
   ]);
 
@@ -316,24 +316,94 @@ function AppViewModel() {
   // Toggles Visibility of specific list when specific button clicked
   // button is bound to the specific element that was clicked
   // passing button in makesit easy to generic spec the active button
-  // self.buttons.showList is the showlist boolean for the button clicked
+  // self.buttons.showLocationsViews is the showLocationsViews boolean for the button clicked
   self.toggleVisibility = function(button) {
 
-    // console.log(self.buttons());
-    if (self.buttons.showList === undefined) {
-      self.buttons.showList = true;
-    } else if (self.buttons.showList) {
+    self.buttons.showLocationsViews = !self.buttons.showLocationsViews;
+    var showLocView = self.buttons.showLocationsViews;
 
-        // TODO - Put SWITCH HERE for "label"
-        // invoke specific SHOW LISTINGS
 
-        self.showAllListings();
+    if (showLocView) {
+      self.hideAllLocations(button);
+      self.showFilterLocations(button);
     } else {
-        self.hideAllListings();
+
+      // self.toggleListItem(showLocView);
+
+      self.hideAllLocations(button);
     }
-    self.buttons.showList = !self.buttons.showList;
-    self.toggleListItem(!self.buttons.showList);
+
+
+    // console.log(self.buttons());
+    // if (self.buttons.showLocationsViews === undefined) {
+    //   self.buttons.showLocationsViews = true;
+    // } else if (self.buttons.showLocationsViews) {
+
+    //     // TODO - Put SWITCH HERE for "label"
+    //     // invoke specific SHOW LISTINGS
+
+    //     self.showFilterLocations(button);
+    // } else {
+    //     self.hideAllListings();
+    // }
+    // self.buttons.showLocationsViews = !self.buttons.showLocationsViews;
+    // self.toggleListItem(!self.buttons.showLocationsViews);
   }
+
+  self.setNewBounds = function() {
+    bounds = new google.maps.LatLngBounds();
+    for (var i = 0; i < self.locations().length; i++) {
+      if (self.locations()[i].toggleListItem()) {
+        bounds.extend(self.locations()[i].marker.position);
+      }
+    }
+    map.fitBounds(bounds);
+  }
+
+
+  self.showFilterLocations = function(button) {
+    // This is the label of the button that the user clicked
+    var buttonLabel = button.label.toLowerCase();
+
+    // Uncomment this line to see the button label
+    console.log(buttonLabel);
+
+    // For each location in the observable self.locations() array
+    for (var i = 0; i < self.locations().length; i++) {
+
+      // The location category
+      var locCategory = self.locations()[i].category.toLowerCase();
+      // The location continent
+      var locContinent = self.locations()[i].continent.toLowerCase();
+
+      // If the location category or continent text contains the button label
+      if ((locCategory === buttonLabel) || (locContinent === buttonLabel)) {
+        self.locations()[i].toggleListItem(true); // show the list item
+        self.locations()[i].marker.setVisible(true); // show the map marker
+      } else {
+        self.locations()[i].toggleListItem(false); // hide the list item
+        self.locations()[i].marker.setVisible(false); // hide the map marker
+      }
+    }
+
+    self.setNewBounds();
+  }
+
+
+  self.hideAllLocations = function(button) {
+
+    // For each location in the observable self.locations() array
+    for (var i = 0; i < self.locations().length; i++) {
+        self.locations()[i].toggleListItem(false); // hide the list item
+        self.locations()[i].marker.setVisible(false); // hide the map marker
+      }
+
+    // self.setNewBounds();
+   }
+
+
+
+
 
 }
 

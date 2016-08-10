@@ -360,11 +360,26 @@ function AppViewModel() {
   // self.buttons.showList is the showlist boolean for the button clicked
   self.toggleVisibility = function(button) {
 
+    self.showFilterLocations(button);
+
+  }
+
+  self.setNewBounds = function() {
+    bounds = new google.maps.LatLngBounds();
+    for (var i = 0; i < self.locations().length; i++) {
+      if (self.locations()[i].toggleListItem()) {
+        bounds.extend(self.locations()[i].marker.position);
+      }
+    }
+    map.fitBounds(bounds);
+  }
+
+  self.showFilterLocations = function(button) {
     // This is the label of the button that the user clicked
     var buttonLabel = button.label.toLowerCase();
 
     // Uncomment this line to see the button label
-    //console.log(buttonLabel);
+    console.log(buttonLabel);
 
     // For each location in the observable self.locations() array
     for (var i = 0; i < self.locations().length; i++) {
@@ -385,16 +400,6 @@ function AppViewModel() {
     }
 
     self.setNewBounds();
-  }
-
-  self.setNewBounds = function() {
-    bounds = new google.maps.LatLngBounds();
-    for (var i = 0; i < self.locations().length; i++) {
-      if (self.locations()[i].toggleListItem()) {
-        bounds.extend(self.locations()[i].marker.position);
-      }
-    }
-    map.fitBounds(bounds);
   }
 
 }
