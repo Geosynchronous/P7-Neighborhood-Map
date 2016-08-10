@@ -2718,3 +2718,76 @@ specific button is toggled it will show/hide the list & marker views.
 When another is selected it properly clears out the previous state and
 loads the list & marker views for the new button selected.
 
+3:52 PM
+- **fix: Cleaned Up code**
+- wrong designation used for showLocationsVIews
+- removed unneeded code
+- cleaned up doc
+- The relevant filtering code looks like this now:
+
+```
+ // Toggles Visibility when specific button clicked of filtered list and markers
+  self.toggleVisibility = function(button) {
+
+    var buttonLabel = button.label.toLowerCase();
+
+    // Toggles
+    button.showLocationsViews = !button.showLocationsViews;
+
+    var showLocView = button.showLocationsViews;
+
+    // Shows/Hides lists and markers
+    //    - Shows/Hides when button toggled
+    //    - Shows when different button selected
+    if ((showLocView) || (buttonLabel != lastButtonLabel)) {
+      self.hideAllLocations(button);  // Clears previous locations
+      self.showFilteredLocations(button);
+    } else {
+      self.hideAllLocations(button);
+    }
+
+    // Store this current button that was clicked
+    lastButtonLabel = buttonLabel;
+  }
+
+  self.showFilteredLocations = function(button) {
+
+    // This is the label of the button that the user clicked
+    var buttonLabel = button.label.toLowerCase();
+
+    // For each location in the observable self.locations() array
+    for (var i = 0; i < self.locations().length; i++) {
+
+      // The location category
+      var locCategory = self.locations()[i].category.toLowerCase();
+      // The location continent
+      var locContinent = self.locations()[i].continent.toLowerCase();
+
+      // If the location category or continent text contains the button label
+      if ((locCategory === buttonLabel) || (locContinent === buttonLabel)) {
+        self.locations()[i].toggleListItem(true); // show list item
+        self.locations()[i].marker.setVisible(true); // show map marker
+      } else {
+        self.locations()[i].toggleListItem(false); // hide list item
+        self.locations()[i].marker.setVisible(false); // hide map marker
+      }
+    }
+      map.fitBounds(bounds);
+  }
+
+  self.hideAllLocations = function(button) {
+
+    // For each location in the observable self.locations() array
+    for (var i = 0; i < self.locations().length; i++) {
+        self.locations()[i].toggleListItem(false); // hide the list item
+        self.locations()[i].marker.setVisible(false); // hide the map marker
+      }
+   }
+```
+
+- Still need to make the buttons highlight when selected
+- Still need to add more location data, none yet entered for Field Studies
+- Works as aspected in all combinations of button selection
+
+
+
