@@ -109,6 +109,8 @@ function AppViewModel() {
 
   var self = this;
 
+  var lastButtonLabel = '';
+
   // Need this to make toggle list binding-updates work
   self.toggleListItem = ko.observable(false);
 
@@ -321,9 +323,11 @@ function AppViewModel() {
 
     self.buttons.showLocationsViews = !self.buttons.showLocationsViews;
     var showLocView = self.buttons.showLocationsViews;
+    var buttonLabel = button.label.toLowerCase();
+    console.log(buttonLabel);
+    console.log(lastButtonLabel);
 
-
-    if (showLocView) {
+    if ((showLocView) || (buttonLabel != lastButtonLabel)) {
       self.hideAllLocations(button);
       self.showFilterLocations(button);
     } else {
@@ -333,6 +337,7 @@ function AppViewModel() {
       self.hideAllLocations(button);
     }
 
+    lastButtonLabel = buttonLabel;
 
     // console.log(self.buttons());
     // if (self.buttons.showLocationsViews === undefined) {
