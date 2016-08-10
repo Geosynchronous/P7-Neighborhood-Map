@@ -305,6 +305,7 @@ function AppViewModel() {
     //    - Shows/Hides when button toggled
     //    - Shows when different button selected
     if ((showLocView) || (buttonLabel != lastButtonLabel)) {
+      button.showLocationsViews = true;  // resets when toggling different buttons
       self.hideAllLocations(button);  // Clears previous locations
       self.showFilteredLocations(button);
     } else {
