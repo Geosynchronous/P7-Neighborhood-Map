@@ -2709,6 +2709,12 @@ Monday August 1, 2016
 - The [teacher's notes on this course page](https://classroom.udacity.com/nanodegrees/nd001/parts/00113454014/modules/4fd8d440-9428-4de7-93c0-4dca17a36700/lessons/8307966915/concepts/84040312990923) give a great synopsis of what was developed in the maps, and what could be added still.  I am not doing this project, as I wish to start doing the Nanodegree Project next.
 -  Sent a review to google about how good I thought this course was 10/10 with lots of comments.
 
+Wednesday August 10, 2016
 
-
+10:27 AM
+- **feat: list and marker view toggles work**
+- Still need to clean up and comment this code.  Right now when a
+specific button is toggled it will show/hide the list & marker views.
+When another is selected it properly clears out the previous state and
+loads the list & marker views for the new button selected.
 
