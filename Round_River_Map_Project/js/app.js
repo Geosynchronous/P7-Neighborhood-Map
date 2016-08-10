@@ -107,9 +107,8 @@ var map,
 // JavaScript that defines the data and behavior of the UI
 function AppViewModel() {
 
-  var self = this;
-
-  var lastButtonLabel = '';
+  var self = this,
+      lastButtonLabel = '';
 
   // Need this to make toggle list binding-updates work
   self.toggleListItem = ko.observable(false);
@@ -139,14 +138,6 @@ function AppViewModel() {
     },
     {
       label: 'SOUTH AMERICA',
-      showLocationsViews: false,
-    },
-    {
-      label: 'SPECIAL EVENTS',
-      showLocationsViews: false,
-    },
-    {
-      label: 'ALL LISTINGS',
       showLocationsViews: false,
     }
   ]);
@@ -300,78 +291,34 @@ function AppViewModel() {
     location.marker.setIcon(defaultIcon);
   }
 
-  // This function will loop through the markers array and display them all.
-  self.showAllListings = function(button) {
-
-    for (var i = 0; i < self.locations().length; i++) {
-      self.locations()[i].marker.setMap(map);
-    }
-  }
-
-  // This function will loop through the listings and hide them all.
-  self.hideAllListings = function() {
-    for (var i = 0; i < self.locations().length; i++) {
-      self.locations()[i].marker.setMap(null);
-    }
-  }
-
-  // Toggles Visibility of specific list when specific button clicked
-  // button is bound to the specific element that was clicked
-  // passing button in makesit easy to generic spec the active button
-  // self.buttons.showLocationsViews is the showLocationsViews boolean for the button clicked
+  // Toggles Visibility when specific button clicked of filtered list and markers
   self.toggleVisibility = function(button) {
 
-    self.buttons.showLocationsViews = !self.buttons.showLocationsViews;
-    var showLocView = self.buttons.showLocationsViews;
     var buttonLabel = button.label.toLowerCase();
-    console.log(buttonLabel);
-    console.log(lastButtonLabel);
 
+    // Toggles
+    button.showLocationsViews = !button.showLocationsViews;
+
+    var showLocView = button.showLocationsViews;
+
+    // Shows/Hides lists and markers
+    //    - Shows/Hides when button toggled
+    //    - Shows when different button selected
     if ((showLocView) || (buttonLabel != lastButtonLabel)) {
-      self.hideAllLocations(button);
-      self.showFilterLocations(button);
+      self.hideAllLocations(button);  // Clears previous locations
+      self.showFilteredLocations(button);
     } else {
-
-      // self.toggleListItem(showLocView);
-
       self.hideAllLocations(button);
     }
 
+    // Store this current button that was clicked
     lastButtonLabel = buttonLabel;
-
-    // console.log(self.buttons());
-    // if (self.buttons.showLocationsViews === undefined) {
-    //   self.buttons.showLocationsViews = true;
-    // } else if (self.buttons.showLocationsViews) {
-
-    //     // TODO - Put SWITCH HERE for "label"
-    //     // invoke specific SHOW LISTINGS
-
-    //     self.showFilterLocations(button);
-    // } else {
-    //     self.hideAllListings();
-    // }
-    // self.buttons.showLocationsViews = !self.buttons.showLocationsViews;
-    // self.toggleListItem(!self.buttons.showLocationsViews);
   }
 
-  self.setNewBounds = function() {
-    bounds = new google.maps.LatLngBounds();
-    for (var i = 0; i < self.locations().length; i++) {
-      if (self.locations()[i].toggleListItem()) {
-        bounds.extend(self.locations()[i].marker.position);
-      }
-    }
-    map.fitBounds(bounds);
-  }
+  self.showFilteredLocations = function(button) {
 
-
-  self.showFilterLocations = function(button) {
     // This is the label of the button that the user clicked
     var buttonLabel = button.label.toLowerCase();
-
-    // Uncomment this line to see the button label
-    console.log(buttonLabel);
 
     // For each location in the observable self.locations() array
     for (var i = 0; i < self.locations().length; i++) {
@@ -383,17 +330,15 @@ function AppViewModel() {
 
       // If the location category or continent text contains the button label
       if ((locCategory === buttonLabel) || (locContinent === buttonLabel)) {
-        self.locations()[i].toggleListItem(true); // show the list item
-        self.locations()[i].marker.setVisible(true); // show the map marker
+        self.locations()[i].toggleListItem(true); // show list item
+        self.locations()[i].marker.setVisible(true); // show map marker
       } else {
-        self.locations()[i].toggleListItem(false); // hide the list item
-        self.locations()[i].marker.setVisible(false); // hide the map marker
+        self.locations()[i].toggleListItem(false); // hide list item
+        self.locations()[i].marker.setVisible(false); // hide map marker
       }
     }
-
-    self.setNewBounds();
+      map.fitBounds(bounds);
   }
-
 
   self.hideAllLocations = function(button) {
 
@@ -402,14 +347,20 @@ function AppViewModel() {
         self.locations()[i].toggleListItem(false); // hide the list item
         self.locations()[i].marker.setVisible(false); // hide the map marker
       }
-
-    // self.setNewBounds();
    }
 
-
-
-
-
+  // This function currently not in use
+  // Availble for reddisplaying map with optimal boundaries
+  // Selected set of locations will fit within map boundaries
+  self.setNewBounds = function() {
+    bounds = new google.maps.LatLngBounds();
+    for (var i = 0; i < self.locations().length; i++) {
+      if (self.locations()[i].toggleListItem()) {
+        bounds.extend(self.locations()[i].marker.position);
+      }
+    }
+    map.fitBounds(bounds);
+  }
 }
 
 
@@ -453,6 +404,7 @@ function makeMarkerIcon(iconImage) {
 }
 
 function createMarkers() {
+
   // This will be our listing marker icon.
   defaultIcon = makeMarkerIcon('images/RR-circle.png');
 
@@ -463,9 +415,11 @@ function createMarkers() {
   // The following group uses the location array
   // to create an array of markers on initialize.
   for (var i = 0; i < vm.locations().length; i++) {
+
     // Get the position from the location array.
     var position = vm.locations()[i].location;
     var title = vm.locations()[i].title;
+
     // Create a marker per location, and put into markers array.
     // I believe this renders the markers to the map as well.
     var marker = new google.maps.Marker({
