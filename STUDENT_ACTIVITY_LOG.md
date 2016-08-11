@@ -2793,4 +2793,8 @@ loads the list & marker views for the new button selected.
 - **fix: Reset for showLocationsViews**
 - Needed for when switching toggling to another button
 
-
+8:00 PM
+- **feat: button highlight**
+- made showLocationsViews into a ko.observable property in the
+ko.observable buttons array
+`Only the currently selected button remains highlighted
