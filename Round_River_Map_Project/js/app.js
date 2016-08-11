@@ -108,37 +108,43 @@ var map,
 function AppViewModel() {
 
   var self = this,
-      lastButtonLabel = '';
+      lastButtonId = 0;
 
-  // Need this to make toggle list binding-updates work
-  self.toggleListItem = ko.observable(false);
+  // // Need this to make toggle list binding-updates work
+  // self.toggleListItem = ko.observable(false);
 
   // TODO - Create KO Array to filter locations for button list display
   //      - Only one list can display at a time, need a propert for that
   self.buttons = ko.observableArray([
     {
       label: 'FIELD RESEARCH',
-      showLocationsViews: false,
+      showLocationsViews: ko.observable(false),
+      id: 0
     },
       {
       label: 'FIELD STUDIES',
-      showLocationsViews: false,
+      showLocationsViews: ko.observable(false),
+      id: 1
     },
     {
       label: 'AFRICA',
-      showLocationsViews: false,
+      showLocationsViews: ko.observable(false),
+      id: 2
     },
     {
       label: 'NORTH AMERICA',
-      showLocationsViews: false,
+      showLocationsViews: ko.observable(false),
+      id: 3
     },
     {
       label: 'CENTRAL AMERICA',
-      showLocationsViews: false,
+      showLocationsViews: ko.observable(false),
+      id: 4
     },
     {
       label: 'SOUTH AMERICA',
-      showLocationsViews: false,
+      showLocationsViews: ko.observable(false),
+      id: 5
     }
   ]);
 
@@ -294,18 +300,21 @@ function AppViewModel() {
   // Toggles Visibility when specific button clicked of filtered list and markers
   self.toggleVisibility = function(button) {
 
-    var buttonLabel = button.label.toLowerCase();
-
     // Toggles
-    button.showLocationsViews = !button.showLocationsViews;
+    var showLocView = !button.showLocationsViews
+    var buttonId = button.id;
 
-    var showLocView = button.showLocationsViews;
+    // self.buttons()[buttonId].showLocationsViews(showLocView);
+    button.showLocationsViews(showLocView);
+
+    // This turns off the highlight on the previous button
+    self.buttons()[lastButtonId].showLocationsViews(false);
 
     // Shows/Hides lists and markers
     //    - Shows/Hides when button toggled
     //    - Shows when different button selected
-    if ((showLocView) || (buttonLabel != lastButtonLabel)) {
-      button.showLocationsViews = true;  // resets when toggling different buttons
+    if ((button.showLocationsViews) || (button.id != lastButtonId)) {
+      button.showLocationsViews(true);  // resets when toggling different buttons
       self.hideAllLocations(button);  // Clears previous locations
       self.showFilteredLocations(button);
     } else {
@@ -313,7 +322,7 @@ function AppViewModel() {
     }
 
     // Store this current button that was clicked
-    lastButtonLabel = buttonLabel;
+    lastButtonId = button.id;
   }
 
   self.showFilteredLocations = function(button) {
