@@ -362,7 +362,7 @@ function AppViewModel() {
     for (var i = 0; i < self.locations().length; i++) {
         self.locations()[i].toggleListItem(false); // hide the list item
         self.locations()[i].marker.setVisible(false); // hide the map marker
-        populateInfoWindow();
+        largeInfowindow.close();  //close open infoWindow
       }
    }
 
