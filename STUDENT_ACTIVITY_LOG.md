@@ -2802,3 +2802,6 @@ ko.observable buttons array
 10:58 PM
 - **refactor: toggleVisibility()**
 - Some errors with scope
+
+11:08 PM
+- **fix: Close open infoWindow**
