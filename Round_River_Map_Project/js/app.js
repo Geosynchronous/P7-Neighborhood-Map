@@ -297,34 +297,40 @@ function AppViewModel() {
     location.marker.setIcon(defaultIcon);
   }
 
-  // Toggles Visibility when specific button clicked of filtered list and markers
+  // Toggles Visibility when specific button clicked
+  //  THen Filters list and markers
   self.toggleVisibility = function(button) {
 
-    // Toggles
-    var showLocView = !button.showLocationsViews
-    var buttonId = button.id;
+    // Toggles Show/Hide for appropriate lists and markers
+    var showLocView = !button.showLocationsViews(),
+        buttonChange = false;
 
-    // self.buttons()[buttonId].showLocationsViews(showLocView);
-    button.showLocationsViews(showLocView);
+    // Checks to see if a new button was clicked
+    if (button.id != lastButtonId) {
+        buttonChange = true;
+        // This turns off the highlight on the previous button
+        self.buttons()[lastButtonId].showLocationsViews(false);
+    }
 
-    // This turns off the highlight on the previous button
-    self.buttons()[lastButtonId].showLocationsViews(false);
+    // Store current button.id that was clicked
+    // Used next time function is called (see above)
+    lastButtonId = button.id;
 
     // Shows/Hides lists and markers
     //    - Shows/Hides when button toggled
     //    - Shows when different button selected
-    if ((button.showLocationsViews) || (button.id != lastButtonId)) {
-      button.showLocationsViews(true);  // resets when toggling different buttons
+    if ((showLocView) || (buttonChange)) {
+      self.buttons()[button.id].showLocationsViews(true);  // resets when toggling different buttons
       self.hideAllLocations(button);  // Clears previous locations
       self.showFilteredLocations(button);
     } else {
       self.hideAllLocations(button);
+      self.buttons()[button.id].showLocationsViews(false);
     }
-
-    // Store this current button that was clicked
-    lastButtonId = button.id;
   }
 
+  // Filtering based on specific button clicked
+  // Decides which locations are needed for list items and map markers
   self.showFilteredLocations = function(button) {
 
     // This is the label of the button that the user clicked
@@ -356,6 +362,7 @@ function AppViewModel() {
     for (var i = 0; i < self.locations().length; i++) {
         self.locations()[i].toggleListItem(false); // hide the list item
         self.locations()[i].marker.setVisible(false); // hide the map marker
+        populateInfoWindow();
       }
    }
 
@@ -397,6 +404,11 @@ function populateInfoWindow(marker) {
       infowindow.marker = null;
     });
   }
+}
+
+function hideInfoWindow(marker) {
+  var infowindow = largeInfowindow;
+      infowindow.marker = null;
 }
 
 // This function takes in an image, and then creates a new marker
