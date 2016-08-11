@@ -2798,3 +2798,7 @@ loads the list & marker views for the new button selected.
 - made showLocationsViews into a ko.observable property in the
 ko.observable buttons array
 `Only the currently selected button remains highlighted
+
+10:58 PM
+- **refactor: toggleVisibility()**
+- Some errors with scope
