@@ -286,7 +286,6 @@ function AppViewModel() {
   //    - Highlights associated map marker icon
   //    - List title also highlighted with css hover
   this.listMouseOver = function(location) {
-    console.log(location);
     location.marker.setIcon(highlightedIcon);
     location.highlight(true);
   }
