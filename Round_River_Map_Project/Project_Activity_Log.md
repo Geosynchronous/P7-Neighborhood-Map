@@ -1211,3 +1211,27 @@ Thursday August 11, 2016
     }(i,marker));
 ---
 
+Friday August 12, 2016
+
+12:43 PM
+- **Another Great Mentor Session with Ryan**
+-  Took a deep dive into some of my existing code
+	- Able to simpify list & markers highlight code (in sync)
+		- Still need two events, no way around it because of two seperate elements and the listener evenets work with single divs
+	- Looked at adding new feature for selected buttons
+		- multiple buttons can be delected or deselected, (presently only one button active at a time)
+		- add more UI functionality and simplifies code
+	- Looked at using KO checkbox instead of KO button
+		- attained basic understanding of how to implement it
+		- also realized that I don't need it to replace button code
+			- button serves just as well in my situ, and no simplification of code would occur
+- Talked about my need to suspend the course for 30 days
+	- [This Link to submit request](https://udacity.zendesk.com/hc/en-us/articles/208262413-How-can-I-pause-my-Nanodegree-program-);
+	- Will not change my anniversary date (i.e refund)
+	- also the next FEED READER project is not as involved as this one
+	- Have a divorce situ engaging right now, an out of state job interview, and may move out of state
+	- Need to figure out the best balance with the above dependecies
+- Ryan will send a follow up of some of the possible code changes we went over
+- Udacity has changed the way mentor sessions are scheduled, mentors are now randomly selected somehow
+- Under new schedule method, was able to secure another session with Ryan next Monday at 11:30 AM
+
