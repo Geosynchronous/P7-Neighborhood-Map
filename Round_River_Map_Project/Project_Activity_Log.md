@@ -1071,3 +1071,143 @@ usage
 -  Still needs diferential button use updates to work right
 -  Tired... finish making work tomorrow, clean up code, and document
 -
+
+Wednesday August 10, 2016
+
+10:27 AM
+- **feat: list and marker view toggles work**
+- Still need to clean up and comment this code.  Right now when a
+specific button is toggled it will show/hide the list & marker views.
+When another is selected it properly clears out the previous state and
+loads the list & marker views for the new button selected.
+
+3:52 PM
+- **fix: Cleaned Up code**
+- wrong designation used for showLocationsVIews
+- removed unneeded code
+- cleaned up doc
+- The relevant filtering code looks like this now:
+
+```
+ // Toggles Visibility when specific button clicked of filtered list and markers
+  self.toggleVisibility = function(button) {
+
+    var buttonLabel = button.label.toLowerCase();
+
+    // Toggles
+    button.showLocationsViews = !button.showLocationsViews;
+
+    var showLocView = button.showLocationsViews;
+
+    // Shows/Hides lists and markers
+    //    - Shows/Hides when button toggled
+    //    - Shows when different button selected
+    if ((showLocView) || (buttonLabel != lastButtonLabel)) {
+      self.hideAllLocations(button);  // Clears previous locations
+      self.showFilteredLocations(button);
+    } else {
+      self.hideAllLocations(button);
+    }
+
+    // Store this current button that was clicked
+    lastButtonLabel = buttonLabel;
+  }
+
+  self.showFilteredLocations = function(button) {
+
+    // This is the label of the button that the user clicked
+    var buttonLabel = button.label.toLowerCase();
+
+    // For each location in the observable self.locations() array
+    for (var i = 0; i < self.locations().length; i++) {
+
+      // The location category
+      var locCategory = self.locations()[i].category.toLowerCase();
+      // The location continent
+      var locContinent = self.locations()[i].continent.toLowerCase();
+
+      // If the location category or continent text contains the button label
+      if ((locCategory === buttonLabel) || (locContinent === buttonLabel)) {
+        self.locations()[i].toggleListItem(true); // show list item
+        self.locations()[i].marker.setVisible(true); // show map marker
+      } else {
+        self.locations()[i].toggleListItem(false); // hide list item
+        self.locations()[i].marker.setVisible(false); // hide map marker
+      }
+    }
+      map.fitBounds(bounds);
+  }
+
+  self.hideAllLocations = function(button) {
+
+    // For each location in the observable self.locations() array
+    for (var i = 0; i < self.locations().length; i++) {
+        self.locations()[i].toggleListItem(false); // hide the list item
+        self.locations()[i].marker.setVisible(false); // hide the map marker
+      }
+   }
+```
+
+- Still need to make the buttons highlight when selected
+- Still need to add more location data, none yet entered for Field Studies
+- Works as aspected in all combinations of button selection
+
+4:55 PM
+- **fix: Reset for showLocationsViews**
+- Needed for when switching toggling to another button
+
+8:00 PM
+- **feat: button highlight**
+- made showLocationsViews into a ko.observable property in the
+ko.observable buttons array
+`Only the currently selected button remains highlighted
+
+10:58 PM
+- **refactor: toggleVisibility()**
+- Some errors with scope
+
+11:08 PM
+- **fix: Close open infoWindow**
+
+Thursday August 11, 2016
+
+- **Location & Map Highlight need to be in sync**
+- Right now hovering the mouse over:
+	- the list item will hightlight the list item and the marker
+	- the marker item will only highlight the maker only, it should do the list as well
+- The existing need to be reworked and merged together in an IIFE that will bind event to both map marker and list item
+- As a result the KO bininding in index.html can be simplified
+
+10:54 PM
+- **feat: highlight syncs between map and list**
+
+---
+    // All markers get the following event bindings:
+    // Two event listeners - one for mouseover, one for mouseout,
+    //    - to change the markersIcons back and forth, which creates a highlight effect.
+    //    - to highlight effect any list item that is hovered over
+
+    //    NOTE: This is for mouseover and mouseout taker care of UI control on the map
+    //          Function via ko binding listMouseOver and listMouseOut take care of UI control on the list
+    //  Is there another way to write this code, so it can be all in one place?
+    //  Probably not, because ko does not work with maps in terms of binding.
+
+    marker.addListener('mouseover', function(i,marker) {
+      // return an anonymous function
+      // this should store the current values of 'i' and 'marker'
+      // basically an event listener with the return function gets created for each location
+      return function() {
+        marker.setIcon(highlightedIcon); // Change marker image
+        vm.locations()[i].highlight(true); // Change styling of list item (used with CSS binding)
+      }
+    }(i,marker)); // pass 'i' and 'marker' as parameters to this event listener function
+
+    // Same comment from above anonyous function applies here as well
+    marker.addListener('mouseout', function(i,marker) {
+      return function() {
+        marker.setIcon(defaultIcon);
+        vm.locations()[i].highlight(false);
+      }
+    }(i,marker));
+---
+
