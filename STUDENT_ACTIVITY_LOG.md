@@ -2805,3 +2805,14 @@ ko.observable buttons array
 
 11:08 PM
 - **fix: Close open infoWindow**
+
+Thursday August 11, 2016
+
+- **Location & Map Highlight need to be in sync**
+- Right now hovering the mouse over:
+	- the list item will hightlight the list item and the marker
+	- the marker item will only highlight the maker only, it should do the list as well
+- The existing need to be reworked and merged together in an IIFE that will bind event to both map marker and list item
+- As a result the KO bininding in index.html can be simplified
+
+
