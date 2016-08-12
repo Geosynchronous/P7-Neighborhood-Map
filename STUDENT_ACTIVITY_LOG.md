@@ -2815,4 +2815,37 @@ Thursday August 11, 2016
 - The existing need to be reworked and merged together in an IIFE that will bind event to both map marker and list item
 - As a result the KO bininding in index.html can be simplified
 
+10:54 PM
+- **feat: highlight syncs between map and list**
+
+---
+    // All markers get the following event bindings:
+    // Two event listeners - one for mouseover, one for mouseout,
+    //    - to change the markersIcons back and forth, which creates a highlight effect.
+    //    - to highlight effect any list item that is hovered over
+
+    //    NOTE: This is for mouseover and mouseout taker care of UI control on the map
+    //          Function via ko binding listMouseOver and listMouseOut take care of UI control on the list
+    //  Is there another way to write this code, so it can be all in one place?
+    //  Probably not, because ko does not work with maps in terms of binding.
+
+    marker.addListener('mouseover', function(i,marker) {
+      // return an anonymous function
+      // this should store the current values of 'i' and 'marker'
+      // basically an event listener with the return function gets created for each location
+      return function() {
+        marker.setIcon(highlightedIcon); // Change marker image
+        vm.locations()[i].highlight(true); // Change styling of list item (used with CSS binding)
+      }
+    }(i,marker)); // pass 'i' and 'marker' as parameters to this event listener function
+
+    // Same comment from above anonyous function applies here as well
+    marker.addListener('mouseout', function(i,marker) {
+      return function() {
+        marker.setIcon(defaultIcon);
+        vm.locations()[i].highlight(false);
+      }
+    }(i,marker));
+---
+
 
