@@ -153,7 +153,7 @@ function AppViewModel() {
   // Normally we'd have these in a database.
   //      TODO - add all sites, add all properties
   //      Categories: Field Research, Field Studies, Offices, Special Events
- self.locations = ko.observableArray([
+  self.locations = ko.observableArray([
     {
       title: 'Kunene Region, Namibia',
       location: {lat: -18.789779,lng: 13.370975},
@@ -288,6 +288,7 @@ function AppViewModel() {
   this.listMouseOver = function(location) {
     console.log(location);
     location.marker.setIcon(highlightedIcon);
+    location.highlight(true);
   }
 
   // Mouse Out on a list title inside options-box
@@ -295,6 +296,7 @@ function AppViewModel() {
   //    - List title also default restored with css
   this.listMouseOut = function(location) {
     location.marker.setIcon(defaultIcon);
+    location.highlight(false);
   }
 
   // Toggles Visibility when specific button clicked
@@ -466,14 +468,33 @@ function createMarkers() {
       populateInfoWindow(this);
     });
 
+    // All markers get the following event bindings:
     // Two event listeners - one for mouseover, one for mouseout,
-    // to change the colors back and forth.
-    marker.addListener('mouseover', function() {
-      this.setIcon(highlightedIcon);
-    });
-    marker.addListener('mouseout', function() {
-      this.setIcon(defaultIcon);
-    });
+    //    - to change the markersIcons back and forth, which creates a highlight effect.
+    //    - to highlight effect any list item that is hovered over
+
+    //    NOTE: This is for mouseover and mouseout taker care of UI control on the map
+    //          Function via ko binding listMouseOver and listMouseOut take care of UI control on the list
+    //  Is there another way to write this code, so it can be all in one place?
+    //  Probably not, because ko does not work with maps in terms of binding.
+
+    marker.addListener('mouseover', function(i,marker) {
+      // return an anonymous function
+      // this should store the current values of 'i' and 'marker'
+      // basically an event listener with the return function gets created for each location
+      return function() {
+        marker.setIcon(highlightedIcon); // Change marker image
+        vm.locations()[i].highlight(true); // Change styling of list item (used with CSS binding)
+      }
+    }(i,marker)); // pass 'i' and 'marker' as parameters to this event listener function
+
+    // Same comment from above anonyous function applies here as well
+    marker.addListener('mouseout', function(i,marker) {
+      return function() {
+        marker.setIcon(defaultIcon);
+        vm.locations()[i].highlight(false);
+      }
+    }(i,marker));
   }
 
   // After all markers are created, fit the map to these boundaries

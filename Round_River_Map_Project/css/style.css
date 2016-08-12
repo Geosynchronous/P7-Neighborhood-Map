@@ -68,6 +68,13 @@ li:hover {
 color: #fff;
 }
 
+/* This class is toggled on and off using the Knockout CSS binding */
+/*  When a marker is highlighted by a user mouse hover,
+    the corresponding list item will highlight*/
+.hoverEffect {
+  color: #fff;
+}
+
 #map {
   top: 0px;
   height: 100%;

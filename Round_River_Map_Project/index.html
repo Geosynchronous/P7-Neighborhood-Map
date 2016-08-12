@@ -41,7 +41,7 @@ Map created for:
           </div>
 
           <ul class = "button-list" data-bind="foreach: locations">
-            <li data-bind="visible: toggleListItem, text: title, click: $parent.listClick, event: { mouseover: $parent.listMouseOver, mouseout: $parent.listMouseOut }"></li>
+            <li data-bind="visible: toggleListItem, text: title, click: $parent.listClick, event: { mouseover: $parent.listMouseOver, mouseout: $parent.listMouseOut }, css: {hoverEffect: highlight}"></li>
           </ul>
 
         <div class="contact">
