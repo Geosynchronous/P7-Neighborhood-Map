@@ -1235,3 +1235,11 @@ Friday August 12, 2016
 - Udacity has changed the way mentor sessions are scheduled, mentors are now randomly selected somehow
 - Under new schedule method, was able to secure another session with Ryan next Monday at 11:30 AM
 
+Monday August 15, 2007
+
+10:42 PM
+
+- **refactor: map and listItem highlight events**
+- Removed redundancy, same underlying function used for functionality,
+when calling mouseover/mouseout events on map and options=box divs
+- Will ask Ryan a bit more about Scope in this context in our nect meeting in a few minutes
