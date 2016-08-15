@@ -302,37 +302,41 @@ function AppViewModel() {
   //  THen Filters list and markers
   self.toggleVisibility = function(button) {
 
-    // Toggles Show/Hide for appropriate lists and markers
-    var showLocView = !button.showLocationsViews(),
-        buttonChange = false;
+    // Toggle the value of 'button.showLocationsViews'
+    button.showLocationsViews(!button.showLocationsViews());
 
-    // Checks to see if a new button was clicked
-    if (button.id != lastButtonId) {
-        buttonChange = true;
-        // This turns off the highlight on the previous button
-        self.buttons()[lastButtonId].showLocationsViews(false);
+    // Create an empty array to store all visible button categories
+    var visibleArray = [];
+
+    // for each button
+    for (var i = 0; i < vm.buttons().length; i++) {
+      // if the button.showLocationsViews observable is 'true'
+      if (vm.buttons()[i].showLocationsViews() === true) {
+        // add this button label to the 'visibleArray' array
+        visibleArray.push(vm.buttons()[i].label);
+      }
     }
 
-    // Store current button.id that was clicked
-    // Used next time function is called (see above)
-    lastButtonId = button.id;
+    // Now, call 'showFilteredLocations' and pass this array of button labels
+    self.showFilteredLocations(visibleArray);
 
-    // Shows/Hides lists and markers
-    //    - Shows/Hides when button toggled
-    //    - Shows when different button selected
-    if ((showLocView) || (buttonChange)) {
-      self.buttons()[button.id].showLocationsViews(true);  // resets when toggling different buttons
-      self.hideAllLocations(button);  // Clears previous locations
-      self.showFilteredLocations(button);
-    } else {
-      self.hideAllLocations(button);
-      self.buttons()[button.id].showLocationsViews(false);
-    }
   }
 
   // Filtering based on specific button clicked
   // Decides which locations are needed for list items and map markers
-  self.showFilteredLocations = function(button) {
+
+  /* You'll need to refactor this location to show and hide locations based
+   * on the array of button labels.
+   *
+   * First, you should hide all locations.
+   *
+   * Then, you can show locations based on each button label in the 'visibleArray' parameter
+   *
+   * I'll let you try to work this function out, and you can email me if you have any questions
+   */
+  self.showFilteredLocations = function(visibleArray) {
+
+    /* Commenting out existing code
 
     // This is the label of the button that the user clicked
     var buttonLabel = button.label.toLowerCase();
@@ -354,7 +358,8 @@ function AppViewModel() {
         self.locations()[i].marker.setVisible(false); // hide map marker
       }
     }
-      // map.fitBounds(bounds);
+    */
+
   }
 
   self.hideAllLocations = function(button) {
@@ -471,19 +476,21 @@ function createMarkers() {
     // Two event listeners - one for mouseover, one for mouseout,
     //    - to change the markersIcons back and forth, which creates a highlight effect.
     //    - to highlight effect any list item that is hovered over
-    // NOTE --- For listMouseOver/listMouseOut funtion events:
-    //    - On map events are invoked below
-    //    - On list events are invoked by ko event calling these funcitons (see index.html)
+
+    //    NOTE: This is for mouseover and mouseout taker care of UI control on the map
+    //          Function via ko binding listMouseOver and listMouseOut take care of UI control on the list
+    //  Is there another way to write this code, so it can be all in one place?
+    //  Probably not, because ko does not work with maps in terms of binding.
 
     marker.addListener('mouseover', function(i) {
       // return an anonymous function
-      // this should store the current values of 'i' and map marker and list item
+      // this should store the current values of 'i' and 'marker'
       // basically an event listener with the return function gets created for each location
       return function() {
         vm.listMouseOver(vm.locations()[i]);
       }
-    }(i)); // pass 'i' as parameters to this event listener function
-
+    }(i)); // pass 'i' and 'marker' as parameters to this event listener function
+  }
     // Same comment from above anonyous function applies here as well
     marker.addListener('mouseout', function(i) {
       return function() {
