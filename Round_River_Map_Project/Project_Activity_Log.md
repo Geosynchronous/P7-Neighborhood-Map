@@ -1263,3 +1263,10 @@ Tuesday November 1, 2016
 - API KEY: db6d60dca9b88a47a0884b8ff753b7f6
 - must incluce WU Logo with weather data https://www.wunderground.com/weather/api/d/docs?d=resources/logo-usage-guide
 
+9:08 PM
+
+**Added Weather Underground Logo to InfoWindow**
+- Rudimentary Addtion to all windows, better formatting is needed
+- Need to create a DOM Element that nicely formats Data Elements in the INFOWINDOW
+- After that need to make API call and populate INFOWINDOW with weather date for lat/long
+- After that need to specify more detailed Round River Data for each INFOWINDOW, at the moment only TITLE is called
