@@ -1261,3 +1261,5 @@ Tuesday November 1, 2016
 - I think I will use OPEN WEATHERMAP API http://openweathermap.org/api
 - It is a free service that will provide basic weather data for 5 days with 3 hour forecast
 - API KEY: db6d60dca9b88a47a0884b8ff753b7f6
+- must incluce WU Logo with weather data https://www.wunderground.com/weather/api/d/docs?d=resources/logo-usage-guide
+
