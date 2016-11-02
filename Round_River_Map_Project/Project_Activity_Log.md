@@ -1249,7 +1249,7 @@ Tuesday November 1, 2016
 7:48 PM
 
 - **RESUMING COURSE**
-- After being away for 2 months, I am now returning to finish this project and courset.
+- After being away for almost 3 months, I am now returning to finish this project and courset.
 - Looking at the course rubric, I have decided to concentrate on adding a required API to put data in the Map INFOWINDOWS
 - I think I will use weather data for now
 - A review of some weather APIs: http://www.programmableweb.com/news/top-10-weather-apis/analysis/2014/11/13
