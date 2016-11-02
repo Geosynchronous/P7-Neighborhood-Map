@@ -1255,3 +1255,9 @@ Tuesday November 1, 2016
 - A review of some weather APIs: http://www.programmableweb.com/news/top-10-weather-apis/analysis/2014/11/13
 - I will use one of the free sevices listed, preferably on that works with location coordinates
 
+8:20 PM
+
+**WEATHER API**
+- I think I will use OPEN WEATHERMAP API http://openweathermap.org/api
+- It is a free service that will provide basic weather data for 5 days with 3 hour forecast
+
