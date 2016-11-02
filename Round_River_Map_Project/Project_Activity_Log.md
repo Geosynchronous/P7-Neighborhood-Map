@@ -1235,7 +1235,7 @@ Friday August 12, 2016
 - Udacity has changed the way mentor sessions are scheduled, mentors are now randomly selected somehow
 - Under new schedule method, was able to secure another session with Ryan next Monday at 11:30 AM
 
-Monday August 15, 2007
+Monday August 15, 2016
 
 10:42 PM
 
@@ -1243,3 +1243,15 @@ Monday August 15, 2007
 - Removed redundancy, same underlying function used for functionality,
 when calling mouseover/mouseout events on map and options=box divs
 - Will ask Ryan a bit more about Scope in this context in our nect meeting in a few minutes
+
+Tuesday November 1, 2016
+
+7:48 PM
+
+- **RESUMING COURSE**
+- After being away for 2 months, I am now returning to finish this project and courset.
+- Looking at the course rubric, I have decided to concentrate on adding a required API to put data in the Map INFOWINDOWS
+- I think I will use weather data for now
+- A review of some weather APIs: http://www.programmableweb.com/news/top-10-weather-apis/analysis/2014/11/13
+- I will use one of the free sevices listed, preferably on that works with location coordinates
+
