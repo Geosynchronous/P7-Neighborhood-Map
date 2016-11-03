@@ -1270,3 +1270,14 @@ Tuesday November 1, 2016
 - Need to create a DOM Element that nicely formats Data Elements in the INFOWINDOW
 - After that need to make API call and populate INFOWINDOW with weather date for lat/long
 - After that need to specify more detailed Round River Data for each INFOWINDOW, at the moment only TITLE is called
+
+Thursday November 3, 2016
+
+6:00 PM
+
+**Refactored Infowindow**
+- created a variable to contain conent string
+- started reformatting content
+- ready for API data and RR links
+
+
