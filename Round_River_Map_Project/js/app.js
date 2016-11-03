@@ -110,11 +110,11 @@ function AppViewModel() {
   var self = this,
       lastButtonId = 0;
 
-  // // Need this to make toggle list binding-updates work
+  // Need this to make toggle list binding-updates work
   // self.toggleListItem = ko.observable(false);
 
-  // TODO - Create KO Array to filter locations for button list display
-  //      - Only one list can display at a time, need a propert for that
+  // Create KO Array to filter locations for button list display
+  // Only one list can display at a time
   self.buttons = ko.observableArray([
     {
       label: 'FIELD RESEARCH',
@@ -395,10 +395,19 @@ function AppViewModel() {
 // TODO - markers should animate or change styling when clicked, or when the associated list item is clicked
 function populateInfoWindow(marker) {
   var infowindow = largeInfowindow;
+
+  // The following is the generic content for all infowindows
+  var contentString =
+    '<div id="content">' +
+      '<div>' + '<h3>' + marker.title + '</h3>' +
+      '</div>' +
+      '<img src="images/wundergroundLogo_4c_horz.png" alt="WU Logo" width="90">' +
+    '</div>';
+
   // Check to make sure the infowindow is not already opened on this marker.
   if (infowindow.marker != marker) {
       infowindow.marker = marker;
-      infowindow.setContent('<div>' + marker.title + '<img src="images/wundergroundLogo_4c_horz.png" alt="WU Logo" width="90">' + '</div>');
+      infowindow.setContent(contentString);
       infowindow.open(map, marker);
       // Make sure the marker property is cleared if the infowindow is closed.
       infowindow.addListener('closeclick', function() {
