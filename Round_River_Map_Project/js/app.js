@@ -159,6 +159,8 @@ function AppViewModel() {
       location: {lat: -18.789779,lng: 13.370975},
       continent: 'Africa',
       category: 'Field Research',
+      siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
       toggleListItem: ko.observable(true), // used to toggle visibility of inidividual list items
       highlight: ko.observable(false) // used to change styling of list items with CSS binding
     },
@@ -167,6 +169,8 @@ function AppViewModel() {
       location: {lat: -19.2798704, lng: 22.8201857},
       continent: 'Africa',
       category: 'Field Research',
+      siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
       toggleListItem: ko.observable(true),
       highlight: ko.observable(false)
     },
@@ -175,6 +179,8 @@ function AppViewModel() {
       location: {lat: -18.589826, lng: 24.258918},
       continent: 'Africa',
       category: 'Field Research',
+      siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
       toggleListItem: ko.observable(true),
       highlight: ko.observable(false)
     },
@@ -183,6 +189,8 @@ function AppViewModel() {
       location: {lat: 58.6553055,lng: -133.8137736},
       continent: 'North America',
       category: 'Field Research',
+      siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
       toggleListItem: ko.observable(true),
       highlight: ko.observable(false)
     },
@@ -191,6 +199,8 @@ function AppViewModel() {
       location: {lat: 45.0575711, lng: -116.1655369},
       continent: 'North America',
       category: 'Field Research',
+      siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
       toggleListItem: ko.observable(true),
       highlight: ko.observable(false)
     },
@@ -199,6 +209,8 @@ function AppViewModel() {
       location: {lat: 37.6299925, lng: -109.885184},
       continent: 'North America',
       category: 'Field Research',
+      siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
       toggleListItem: ko.observable(true),
       highlight: ko.observable(false)
     },
@@ -207,6 +219,8 @@ function AppViewModel() {
       location: {lat: 68.8369357, lng: -149.9462445},
       continent: 'North America',
       category: 'Field Research',
+      siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
       toggleListItem: ko.observable(true),
       highlight: ko.observable(false)
     },
@@ -215,6 +229,8 @@ function AppViewModel() {
       location: {lat: 52.9260101, lng: -128.935775},
       continent: 'North America',
       category: 'Field Research',
+      siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
       toggleListItem: ko.observable(true),
       highlight: ko.observable(false)
     },
@@ -223,6 +239,8 @@ function AppViewModel() {
       location: {lat: 54.2684383, lng: -130.4447293},
       continent: 'North America',
       category: 'Field Research',
+      siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
       toggleListItem: ko.observable(true),
       highlight: ko.observable(false)
     },
@@ -230,7 +248,8 @@ function AppViewModel() {
       title: 'Coastal Forest and Mountains, BC, Canada',
       location: {lat: 55.3639087, lng: -131.830578},
       continent: 'North America',
-      category: 'Field Research',
+      cateUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
       toggleListItem: ko.observable(true),
       highlight: ko.observable(false)
     },
@@ -239,6 +258,8 @@ function AppViewModel() {
       location: {lat: 58.9338124, lng: -130.8412957},
       continent: 'North America',
       category: 'Field Research',
+      siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
       toggleListItem: ko.observable(true),
       highlight: ko.observable(false)
     },
@@ -247,6 +268,8 @@ function AppViewModel() {
       location: {lat: 66.999500, lng: -127.437408},
       continent: 'North America',
       category: 'Field Research',
+      siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
       toggleListItem: ko.observable(true),
       highlight: ko.observable(false)
     },
@@ -255,6 +278,8 @@ function AppViewModel() {
       location: {lat: -43.0029846, lng: -71.6979215},
       continent: 'South America',
       category: 'Field Research',
+      siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
       toggleListItem: ko.observable(true),
       highlight: ko.observable(false)
     },
@@ -263,6 +288,8 @@ function AppViewModel() {
       location: {lat: 8.539003, lng:-83.6045026},
       continent: 'Central America',
       category: 'Field Research',
+      siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
       toggleListItem: ko.observable(true),
       highlight: ko.observable(false)
     }
@@ -398,10 +425,16 @@ function populateInfoWindow(marker) {
 
   // The following is the generic content for all infowindows
   var contentString =
-    '<div id="content">' +
-      '<div>' + '<h3>' + marker.title + '</h3>' +
+    '<div id="iw-container">' +
+      '<div class="iw-title">' + marker.title +
       '</div>' +
-      '<img src="images/wundergroundLogo_4c_horz.png" alt="WU Logo" width="90">' +
+      '<div>' +
+        '<img id="infoWindowImage" src=' + marker.siteImage + '>' +
+      '</div>' +
+      '<div id="iw-moreInfo">' +
+        '<a id="iw-moreInfoText" target="_blank" href=' + marker.siteUrl + '>'+ 'MORE INFO' + '</a>' +
+      '</div>' +
+      '<img src="images/wundergroundLogo_4c_horz.png" alt="WU Logo" width="90px">' +
     '</div>';
 
   // Check to make sure the infowindow is not already opened on this marker.
@@ -409,6 +442,7 @@ function populateInfoWindow(marker) {
       infowindow.marker = marker;
       infowindow.setContent(contentString);
       infowindow.open(map, marker);
+      infoWindow.setStyle("background-color: #af9a6b");
       // Make sure the marker property is cleared if the infowindow is closed.
       infowindow.addListener('closeclick', function() {
       infowindow.marker = null;
@@ -451,12 +485,16 @@ function createMarkers() {
     // Get the position from the location array.
     var position = vm.locations()[i].location;
     var title = vm.locations()[i].title;
+    var siteUrl = vm.locations()[i].siteUrl;
+    var siteImage = vm.locations()[i].siteImage;
 
     // Create a marker per location, and put into markers array.
     // I believe this renders the markers to the map as well.
     var marker = new google.maps.Marker({
       position: position,
       title: title,
+      siteUrl: siteUrl,
+      siteImage: siteImage,
       animation: google.maps.Animation.DROP,
       icon: defaultIcon,
       id: i,
