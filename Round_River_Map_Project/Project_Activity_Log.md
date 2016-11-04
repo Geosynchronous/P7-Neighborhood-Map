@@ -1293,3 +1293,16 @@ Thursday November 3, 2016
 - Changed  buttons ... GLOBAL AND ASIA added, FIED RESEARCH AND STUDIES removed
 - need to update more study aboad sites from RR site
 - Changed
+
+Friday November 4, 2016
+
+12:36 AM
+
+**Finished Adding Round River Location dats**
+-Mostly Study Abroad Sites
+-Might Add Administrative Sites
+- Need to have map readjust to zoom on location selected via marker and/or button
+- Might recreate Field Research and Study Abroad Buttons
+-Want to Use just the Satellite View Only, and make navigation easier if possible
+- Still need to get API WEATHER DATA GOING
+
