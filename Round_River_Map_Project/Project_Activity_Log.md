@@ -1284,3 +1284,12 @@ Thursday November 3, 2016
 
 **InfowWIndow Features Added**
 - Added a good looking format with image and site link.  Used the same data for all locations, Will need to update all locations..  Still need to add weather API DATA.
+
+11:49 PM
+
+**Features: To InforWindows**
+- Updated site URLS and Images
+- Added and Remved some sites
+- Changed  buttons ... GLOBAL AND ASIA added, FIED RESEARCH AND STUDIES removed
+- need to update more study aboad sites from RR site
+- Changed
