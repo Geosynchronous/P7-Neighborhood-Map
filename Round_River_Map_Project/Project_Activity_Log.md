@@ -1280,4 +1280,7 @@ Thursday November 3, 2016
 - started reformatting content
 - ready for API data and RR links
 
+9:44 PM
 
+**InfowWIndow Features Added**
+- Added a good looking format with image and site link.  Used the same data for all locations, Will need to update all locations..  Still need to add weather API DATA.
