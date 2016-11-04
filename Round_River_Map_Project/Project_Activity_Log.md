@@ -1311,3 +1311,10 @@ Friday November 4, 2016
 **Feature: Map Resizes to Selected Loczations**
 - Needs a bit of refinement
 - Mongolia zooms in to where no data is available... need to fix
+
+1:27 AM
+
+**Feature: maxZoom Set to Limit Map Zooming**
+= takes care of Mongoia Zooing in too far
+
+
