@@ -285,12 +285,52 @@ function AppViewModel() {
       highlight: ko.observable(false)
     },
     {
-      title: 'Darhad Valley - Mongolia - Asia',
+      title: 'Study Abroad in Mongolia',
       location: {lat: 51.198708, lng:99.678212},
       continent: 'Asia',
       category: 'Global',
       siteUrl: 'http://www.roundriver.org/student-programs/programs/mongolia/',
-      siteImage: 'http://www.roundriver.org/wp-content/uploads/2016/09/10366070_10152262046173145_1347525053124893053_n.jpg',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2016/09/Mongolia_project_detail-1024x768.jpg',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
+    },
+    {
+      title: 'Study Abroad in Patagonia',
+      location: {lat: -48.0029846, lng: -76.6979215},
+      continent: 'South America',
+      category: 'Global',
+      siteUrl: 'http://www.roundriver.org/student-programs/programs/patagonia-chile/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/09/patagonia-120-1024x683.jpg',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
+    },
+    {
+      title: 'Study Abroad in Costa Rica',
+      location: {lat: 9.539003, lng:-84.6045026},
+      continent: 'Central America',
+      category: 'Global',
+      siteUrl: 'http://www.roundriver.org/student-programs/programs/costa-rica-the-osa-peninsula/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/IMG_1538-1024x1024.jpg',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
+    },
+    {
+      title: 'Study Abroad in British Columbia',
+      location: {lat: 60.6553055,lng: -135.8137736},
+      continent: 'North America',
+      category: 'Global',
+      siteUrl: 'http://www.roundriver.org/student-programs/programs/taku-river-tlingit-territory-british-columbia-canada/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/09/taku-11-1024x680.jpg',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
+    },
+    {
+      title: 'Study Abroad in Botswana',
+      location: {lat: -21.2798704, lng: 24.8201857},
+      continent: 'Africa',
+      category: 'Global',
+      siteUrl: 'http://www.roundriver.org/student-programs/programs/africa-wildlife-conservation-okavango-delta-botswana/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/09/botswana-5-1024x680.jpg',
       toggleListItem: ko.observable(true),
       highlight: ko.observable(false)
     }
