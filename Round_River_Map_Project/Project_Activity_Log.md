@@ -1306,3 +1306,8 @@ Friday November 4, 2016
 -Want to Use just the Satellite View Only, and make navigation easier if possible
 - Still need to get API WEATHER DATA GOING
 
+1:04 AM
+
+**Feature: Map Resizes to Selected Loczations**
+- Needs a bit of refinement
+- Mongolia zooms in to where no data is available... need to fix
