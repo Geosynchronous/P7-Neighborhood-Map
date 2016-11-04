@@ -392,6 +392,7 @@ function AppViewModel() {
       self.buttons()[button.id].showLocationsViews(true);  // resets when toggling different buttons
       self.hideAllLocations(button);  // Clears previous locations
       self.showFilteredLocations(button);
+      self.setNewBounds(button);
     } else {
       self.hideAllLocations(button);
       self.buttons()[button.id].showLocationsViews(false);
