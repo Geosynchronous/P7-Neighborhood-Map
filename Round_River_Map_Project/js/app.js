@@ -117,17 +117,17 @@ function AppViewModel() {
   // Only one list can display at a time
   self.buttons = ko.observableArray([
     {
-      label: 'FIELD RESEARCH',
+      label: 'GLOBAL',
       showLocationsViews: ko.observable(false),
       id: 0
     },
       {
-      label: 'FIELD STUDIES',
+      label: 'AFRICA',
       showLocationsViews: ko.observable(false),
       id: 1
     },
     {
-      label: 'AFRICA',
+      label: 'ASIA',
       showLocationsViews: ko.observable(false),
       id: 2
     },
@@ -155,141 +155,142 @@ function AppViewModel() {
   //      Categories: Field Research, Field Studies, Offices, Special Events
   self.locations = ko.observableArray([
     {
-      title: 'Kunene Region, Namibia',
+      title: 'Kunene Region of Namibia',
       location: {lat: -18.789779,lng: 13.370975},
       continent: 'Africa',
-      category: 'Field Research',
+      category: 'Global',
       siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
       siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
       toggleListItem: ko.observable(true), // used to toggle visibility of inidividual list items
       highlight: ko.observable(false) // used to change styling of list items with CSS binding
     },
     {
-      title: 'Okavango Delta, Botswana',
+      title: 'Botswana – KAZA, Okavango Delta & Central Kalahari Game Refuge',
       location: {lat: -19.2798704, lng: 22.8201857},
       continent: 'Africa',
-      category: 'Field Research',
-      siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
-      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
+      category: 'Global',
+      siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/botswana-okavango-delta/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Lions_Whatwedo-2.jpg',
       toggleListItem: ko.observable(true),
       highlight: ko.observable(false)
     },
     {
-      title: 'Chobe-Linyanti-Zambezi Wetland, Botswana',
-      location: {lat: -18.589826, lng: 24.258918},
-      continent: 'Africa',
-      category: 'Field Research',
-      siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
-      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
-      toggleListItem: ko.observable(true),
-      highlight: ko.observable(false)
-    },
-    {
-      title: 'Taku River, Tlingit First Nation, Canada',
+      title: 'Taku River Wildlife Conservation Project – British Columbia',
       location: {lat: 58.6553055,lng: -133.8137736},
       continent: 'North America',
-      category: 'Field Research',
-      siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
-      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
+      category: 'Global',
+      siteUrl: 'http://www.roundriver.org/where-we-work/north-america/taku-river-wildlife-conservation-project-british-columbia/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Taku-bke-2008-5.jpg',
       toggleListItem: ko.observable(true),
       highlight: ko.observable(false)
     },
     {
-      title: 'Idaho Wolverine Winter Recreation Project, USA',
+      title: 'Wolverine - Winter Recreation Project – Idaho, Montana and Wyoming',
       location: {lat: 45.0575711, lng: -116.1655369},
       continent: 'North America',
-      category: 'Field Research',
-      siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
-      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
+      category: 'Global',
+      siteUrl: 'http://www.roundriver.org/wolverine/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/10/wolverine-project-3.jpg',
       toggleListItem: ko.observable(true),
       highlight: ko.observable(false)
     },
     {
-      title: 'Navajo Dine Bikeyah Conservation Project, USA',
+      title: 'Colorado Plateau – Utah',
       location: {lat: 37.6299925, lng: -109.885184},
       continent: 'North America',
-      category: 'Field Research',
-      siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
-      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
+      category: 'Global',
+      siteUrl: 'http://www.roundriver.org/where-we-work/north-america/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/san-juan-01.jpg',
       toggleListItem: ko.observable(true),
       highlight: ko.observable(false)
     },
     {
-      title: 'North Coast, Yukon Territory, Canada',
+      title: 'North Coast – Yukon Territory',
       location: {lat: 68.8369357, lng: -149.9462445},
       continent: 'North America',
-      category: 'Field Research',
-      siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
-      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
+      category: 'Global',
+      siteUrl: 'http://www.roundriver.org/where-we-work/north-america/north-coast-yukon-territory/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Yukon.jpg',
       toggleListItem: ko.observable(true),
       highlight: ko.observable(false)
     },
     {
-      title: 'Great Bear Rainforest, Canada',
+      title: 'Great Bear Rainforest - British Columbia',
       location: {lat: 52.9260101, lng: -128.935775},
       continent: 'North America',
-      category: 'Field Research',
-      siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
-      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
+      category: 'Global',
+      siteUrl: 'http://www.roundriver.org/where-we-work/north-america/great-bear-rainforest/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/GBRKoeye2_Milek.jpg',
       toggleListItem: ko.observable(true),
       highlight: ko.observable(false)
     },
     {
-      title: 'North Coast Conservation Design, BC, Canada',
+      title: 'North Coast Conservation Design – British Columbia',
       location: {lat: 54.2684383, lng: -130.4447293},
       continent: 'North America',
-      category: 'Field Research',
-      siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
-      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
+      category: 'Global',
+      siteUrl: 'http://www.roundriver.org/where-we-work/north-america/north-coast-conservation-design-british-columbia/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/09/salmon.jpg',
       toggleListItem: ko.observable(true),
       highlight: ko.observable(false)
     },
     {
-      title: 'Coastal Forest and Mountains, BC, Canada',
+      title: 'Coastal Forest and Mountains – British Columbia',
       location: {lat: 55.3639087, lng: -131.830578},
       continent: 'North America',
-      cateUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
-      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
+      category: 'Global',
+      cateUrl: 'http://www.roundriver.org/where-we-work/north-america/coastal-forest-and-mountains-british-columbia/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/GBRKoeye3_Milek.jpg',
       toggleListItem: ko.observable(true),
       highlight: ko.observable(false)
     },
     {
-      title: 'Muskwa-Kechika Conservation Design, BC, Canada',
+      title: 'Muskwa Kechika Conservation Design - British Columbia',
       location: {lat: 58.9338124, lng: -130.8412957},
       continent: 'North America',
-      category: 'Field Research',
-      siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
-      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
+      category: 'Global',
+      siteUrl: 'http://www.roundriver.org/where-we-work/north-america/muskwa-kechika-conservation-design-british-columbia/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/bears-MK.jpg',
       toggleListItem: ko.observable(true),
       highlight: ko.observable(false)
     },
     {
-      title: 'Mackenzie Delta, Northwest Territory, Canada',
+      title: 'Mackenzie Delta – Northwest Territories',
       location: {lat: 66.999500, lng: -127.437408},
       continent: 'North America',
-      category: 'Field Research',
-      siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
-      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
+      category: 'Global',
+      siteUrl: 'http://www.roundriver.org/where-we-work/north-america/mackenzie-delta-northwest-territories/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/yukon_North_Slope-1.jpg',
       toggleListItem: ko.observable(true),
       highlight: ko.observable(false)
     },
     {
-      title: 'Patagonia, Chile',
+      title: 'Patagonia - Chile -South America',
       location: {lat: -43.0029846, lng: -71.6979215},
       continent: 'South America',
-      category: 'Field Research',
-      siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
-      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
+      category: 'Global',
+      siteUrl: 'http://www.roundriver.org/where-we-work/south-america/patagonia-chile/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2013/06/patagonia_header-5.jpg',
       toggleListItem: ko.observable(true),
       highlight: ko.observable(false)
     },
     {
-      title: 'Osa Peninsula, Costa Rica',
+      title: 'Osa Peninsula - Costa Rica - Central America',
       location: {lat: 8.539003, lng:-83.6045026},
       continent: 'Central America',
-      category: 'Field Research',
-      siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
-      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
+      category: 'Global',
+      siteUrl: 'http://www.roundriver.org/where-we-work/central-america/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/10/costa-rica-01.jpg',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
+    },
+    {
+      title: 'Darhad Valley - Mongolia - Asia',
+      location: {lat: 51.198708, lng:99.678212},
+      continent: 'Asia',
+      category: 'Global',
+      siteUrl: 'http://www.roundriver.org/student-programs/programs/mongolia/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2016/09/10366070_10152262046173145_1347525053124893053_n.jpg',
       toggleListItem: ko.observable(true),
       highlight: ko.observable(false)
     }
