@@ -142,10 +142,14 @@ color: #fff;
   width: 320px;
 }
 
+#iw-Image {
+  width: 90px;
+}
+
 .weather {
   display: flex;
   color: blue;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 #tempNow {
@@ -154,7 +158,7 @@ color: #fff;
 
 .listing {
   display: table-column;
-  margin: 5px;
+  margin: 10px;
 }
 
 .stats {

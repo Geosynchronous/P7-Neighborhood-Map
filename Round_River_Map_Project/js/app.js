@@ -454,14 +454,17 @@ function AppViewModel() {
 
 // Set Up Weather Data Functions
 
-var weather,
+var weatherData,
     apiPath = 'http://api.openweathermap.org/data/2.5/weather?',
     gps = 'lat=35&lon=139',
     apiKey = '&APPID=db6d60dca9b88a47a0884b8ff753b7f6',
     units = '&units=imperial',
     currentTemp,
     maxTemp,
-    minTemp;
+    minTemp,
+    humidity,
+    description,
+    weatherImage;
 
 
 function loadWeather() {
@@ -470,13 +473,15 @@ function loadWeather() {
 
 $.getJSON(weatherUrl, function(data){
 
-    weather = data;
-    currentTemp = Math.round(weather.main.temp);
-    maxTemp = Math.round(weather.main.temp_max);
-    minTemp = Math.round(weather.main.temp_min);
-    humidity = Math.round(weather.main.humidity);
+    weatherData = data;
+    currentTemp = Math.round(weatherData.main.temp);
+    maxTemp = Math.round(weatherData.main.temp_max);
+    minTemp = Math.round(weatherData.main.temp_min);
+    humidity = Math.round(weatherData.main.humidity);
+    description = weatherData.weather[0].main;
+    weatherImage = "images/weather/" + weatherData.weather[0].icon + ".png";
 
-    console.log(temp);
+    console.log(description);
 
         // $nytHeaderElem.text('New York Times Articles About ' + cityStr);
 
@@ -539,12 +544,13 @@ function populateInfoWindow(marker) {
       '</div>' +
       '<div class="weather" >' +
         '<div>' +
-          '<img src="images/openweathermap.png" alt="WU Logo" width="90px">' +
+          '<img id="iw-Image" src=' + weatherImage + '>' +
         '</div>' +
         '<div class="listing" >' +
           '<p class="stats" >' + maxTemp + 'F ' + ' High' + '</p>' +
           '<p class="stats" >' + minTemp + 'F ' + ' Low' + '</p>' +
           '<p class="stats" >' + humidity + '% ' + ' Humidity' + '</p>' +
+          '<p class="stats" >' + description + '</p>' +
         '</div>' +
         '<div class="listing" id="tempNow" >' +
           '<p class="stats" >' + currentTemp + 'F' + '</p>' +
