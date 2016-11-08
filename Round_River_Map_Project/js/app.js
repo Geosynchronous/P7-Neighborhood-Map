@@ -476,7 +476,7 @@ function populateInfoWindow(marker) {
       '<div id="iw-moreInfo">' +
         '<a id="iw-moreInfoText" target="_blank" href=' + marker.siteUrl + '>'+ 'MORE INFO' + '</a>' +
       '</div>' +
-      '<img src="images/wundergroundLogo_4c_horz.png" alt="WU Logo" width="90px">' +
+      '<img src="images/openweathermap.png" alt="WU Logo" width="90px">' +
     '</div>';
 
   // Check to make sure the infowindow is not already opened on this marker.
