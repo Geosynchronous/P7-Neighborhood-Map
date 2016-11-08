@@ -1336,5 +1336,12 @@ Mondau November 7, 2016
 - Stil have asynchrous timing issues to sort out
 - will probably try jQuery Ajax function call
 
+Tuesday November 8, 2016\
+
+2:33 AM
+
+**Weather Stats added to infowindow**
+- TEMO, MIN, MAZ, HUMIDITY
+
 
 
