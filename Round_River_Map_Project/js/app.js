@@ -456,9 +456,9 @@ function AppViewModel() {
 
 var weatherData,
     apiPath = 'http://api.openweathermap.org/data/2.5/weather?',
-    gps = 'lat=35&lon=139',
     apiKey = '&APPID=db6d60dca9b88a47a0884b8ff753b7f6',
     units = '&units=imperial',
+    gps,
     currentTemp,
     maxTemp,
     minTemp,
@@ -480,8 +480,6 @@ $.getJSON(weatherUrl, function(data){
     humidity = Math.round(weatherData.main.humidity);
     description = weatherData.weather[0].main;
     weatherImage = "images/weather/" + weatherData.weather[0].icon + ".png";
-
-    console.log(description);
 
         // $nytHeaderElem.text('New York Times Articles About ' + cityStr);
 
@@ -527,6 +525,9 @@ $.getJSON(weatherUrl, function(data){
 // TODO - markers should animate or change styling when clicked, or when the associated list item is clicked
 function populateInfoWindow(marker) {
   var infowindow = largeInfowindow;
+
+      gps = 'lat=' + marker.latitude + '&' + 'lon=' + marker.longitude;
+        console.log(marker.latitude, marker.longitude);
 
   loadWeather();
 
@@ -608,6 +609,8 @@ function createMarkers() {
     var title = vm.locations()[i].title;
     var siteUrl = vm.locations()[i].siteUrl;
     var siteImage = vm.locations()[i].siteImage;
+    var latitude = vm.locations()[i].location.lat;
+    var longitude = vm.locations()[i].location.lng;
 
     // Create a marker per location, and put into markers array.
     // I believe this renders the markers to the map as well.
@@ -616,6 +619,8 @@ function createMarkers() {
       title: title,
       siteUrl: siteUrl,
       siteImage: siteImage,
+      latitude: latitude,
+      longitude: longitude,
       animation: google.maps.Animation.DROP,
       icon: defaultIcon,
       id: i,
