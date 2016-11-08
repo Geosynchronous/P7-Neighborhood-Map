@@ -1355,4 +1355,4 @@ Tuesday November 8, 2016\
 
 **Feat: GPS Weather Location Added to InfoWindows**
 - Still have asynchrous load problem
-
+- ![Inofwindow Screenshot](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-11-08%20at%2012.42.27%20PM.png)
