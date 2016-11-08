@@ -474,6 +474,7 @@ $.getJSON(weatherUrl, function(data){
     currentTemp = Math.round(weather.main.temp);
     maxTemp = Math.round(weather.main.temp_max);
     minTemp = Math.round(weather.main.temp_min);
+    humidity = Math.round(weather.main.humidity);
 
     console.log(temp);
 
@@ -536,11 +537,19 @@ function populateInfoWindow(marker) {
       '<div id="iw-moreInfo">' +
         '<a id="iw-moreInfoText" target="_blank" href=' + marker.siteUrl + '>'+ 'MORE INFO' + '</a>' +
       '</div>' +
-      '</div id="weather" >' +
-        // '<img src="images/openweathermap.png" alt="WU Logo" width="90px">' +
-        '<p>' + 'Current ' + currentTemp + 'F' + '</p>' +
-        '<p>' + 'Max ' + maxTemp + 'F' + '</p>' +
-        '<p>' + 'Min ' + minTemp + 'F' + '</p>' +
+      '<div class="weather" >' +
+        '<div>' +
+          '<img src="images/openweathermap.png" alt="WU Logo" width="90px">' +
+        '</div>' +
+        '<div class="listing" >' +
+          '<p class="stats" >' + maxTemp + 'F ' + ' High' + '</p>' +
+          '<p class="stats" >' + minTemp + 'F ' + ' Low' + '</p>' +
+          '<p class="stats" >' + humidity + '% ' + ' Humidity' + '</p>' +
+        '</div>' +
+        '<div class="listing" id="tempNow" >' +
+          '<p class="stats" >' + currentTemp + 'F' + '</p>' +
+
+        '</div>' +
       '</div>' +
     '</div>';
 

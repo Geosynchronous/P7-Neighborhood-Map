@@ -142,3 +142,23 @@ color: #fff;
   width: 320px;
 }
 
+.weather {
+  display: flex;
+  color: blue;
+  font-size: 20px;
+}
+
+#tempNow {
+  font-size: 48px;
+}
+
+.listing {
+  display: table-column;
+  margin: 5px;
+}
+
+.stats {
+  margin: 0;
+  border: 0;
+}
+
