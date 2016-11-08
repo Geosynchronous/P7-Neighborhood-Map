@@ -1343,5 +1343,12 @@ Tuesday November 8, 2016\
 **Weather Stats added to infowindow**
 - TEMO, MIN, MAZ, HUMIDITY
 
+11:57 PM
+
+**Feat: Added More Weather Data and Icon**
+- Formatted
+- Look Decent
+- Still have asynchrouous loading problem, so first Infoworld is undefined, and next infowindow probably has data from previous window?
+- Still need to actually add gps coordinates for each infowinxow, right now a static lat/lng is used
 
 
