@@ -468,49 +468,23 @@ var weatherData,
 
 
 function loadWeather() {
-// (need to set new gps here each time)
   var weatherUrl = apiPath + gps + apiKey + units;
 
-$.getJSON(weatherUrl, function(data){
-
-    weatherData = data;
-    currentTemp = Math.round(weatherData.main.temp);
-    maxTemp = Math.round(weatherData.main.temp_max);
-    minTemp = Math.round(weatherData.main.temp_min);
-    humidity = Math.round(weatherData.main.humidity);
-    description = weatherData.weather[0].main;
-    weatherImage = "images/weather/" + weatherData.weather[0].icon + ".png";
-
-        // $nytHeaderElem.text('New York Times Articles About ' + cityStr);
-
-        // articles = data.response.docs;
-        // for (var i = 0; i < articles.length; i++) {
-        //     var article = articles[i];
-        //     $nytElem.append('<li class="article">'+
-        //         '<a href="'+article.web_url+'">'+article.headline.main+'</a>'+
-        //         '<p>' + article.snippet + '</p>'+
-        //     '</li>');
-        // };
-
-    }).error(function(e){
-        //$weatherElem.text('Weather Could Not Be Loaded');
-        console.log('Weather Could Not Be Loaded');
-    });
+  $.getJSON(weatherUrl).done(function(data){
+        weatherData = data;
+        currentTemp = Math.round(weatherData.main.temp);
+        maxTemp = Math.round(weatherData.main.temp_max);
+        minTemp = Math.round(weatherData.main.temp_min);
+        humidity = Math.round(weatherData.main.humidity);
+        description = weatherData.weather[0].main;
+        weatherImage = "images/weather/" + weatherData.weather[0].icon + ".png";
+  });
 
 }
 
-
-
-
-
-
-// function showWeather() {
-//    if (weather) {
-//       var temp = weather.main.temp;
-//       var humidity = weather.main.humidity;
-//       (need to write weather data string somehow);
-//   }
-// }
+    // }).error(function(e){
+    //     console.log('Weather Could Not Be Loaded');
+    // });
 
 
 
@@ -526,8 +500,7 @@ $.getJSON(weatherUrl, function(data){
 function populateInfoWindow(marker) {
   var infowindow = largeInfowindow;
 
-      gps = 'lat=' + marker.latitude + '&' + 'lon=' + marker.longitude;
-        console.log(marker.latitude, marker.longitude);
+  gps = 'lat=' + marker.latitude + '&' + 'lon=' + marker.longitude;
 
   loadWeather();
 
