@@ -1330,5 +1330,11 @@ Mondau November 7, 2016
 
 **Added New Weath Logo to InfoWindow**
 
+11:52 PM
+
+**Weather API Temps Added**
+- Stil have asynchrous timing issues to sort out
+- will probably try jQuery Ajax function call
+
 
 
