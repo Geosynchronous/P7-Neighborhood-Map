@@ -1353,6 +1353,18 @@ Tuesday November 8, 2016\
 
 12:40 PM
 
-**Feat: GPS Weather Location Added to InfoWindows**
+**ERROR & Feat: GPS Weather Location Added to InfoWindows**
 - Still have asynchrous load problem
 - ![Inofwindow Screenshot](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-11-08%20at%2012.42.27%20PM.png)
+
+4:34 PM
+
+**Feat: AJAX .done Added**
+- Need Help, will contact Ryan to see if he is available
+- Get this error the first time I click on a marker, and the weather data comes up undefined, subsequent marker clicks don't throw the error, though the weather data seems to be associated with the previous click, thus out of sync data erroras well...
+-This is the error I get:
+`
+undefined:1 GET file:///Users/geo/version-control/P7-Neighborhood-Map/Round_River_Map_Project/undefined net::ERR_FILE_NOT_FOUND
+`
+Not sure what it all means...
+
