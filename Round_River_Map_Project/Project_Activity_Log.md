@@ -1317,4 +1317,12 @@ Friday November 4, 2016
 **Feature: maxZoom Set to Limit Map Zooming**
 = takes care of Mongoia Zooing in too far
 
+Mondau November 7, 2016
+
+6:06 PM
+
+**Weather API**
+- Finalized on using OpenWeatherMap.org Free Subscription, not Weather Underground, due to simplicity of API
+- This is the basic URL for an API request: http://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&APPID=db6d60dca9b88a47a0884b8ff753b7f6&units=imperial
+- The only data that will change in the above string is the lat and long entries based on the related GPS location of the open Infowindow
 
