@@ -1351,4 +1351,8 @@ Tuesday November 8, 2016\
 - Still have asynchrouous loading problem, so first Infoworld is undefined, and next infowindow probably has data from previous window?
 - Still need to actually add gps coordinates for each infowinxow, right now a static lat/lng is used
 
+12:40 PM
+
+**Feat: GPS Weather Location Added to InfoWindows**
+- Still have asynchrous load problem
 
