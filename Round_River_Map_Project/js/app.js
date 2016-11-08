@@ -594,7 +594,7 @@ function initMap() {
   // define map and render it into the map div
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 40.7501481, lng: -111.8665667},
-    zoom: 2,
+    zoom: 1,
     maxZoom: 12,
     backgroundColor: '#af9a6b',
     styles: styles,
