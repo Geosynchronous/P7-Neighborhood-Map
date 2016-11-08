@@ -452,6 +452,63 @@ function AppViewModel() {
 
 
 
+// Set Up Weather Data Functions
+
+var weather,
+    apiPath = 'http://api.openweathermap.org/data/2.5/weather?',
+    gps = 'lat=35&lon=139',
+    apiKey = '&APPID=db6d60dca9b88a47a0884b8ff753b7f6',
+    units = '&units=imperial',
+    currentTemp,
+    maxTemp,
+    minTemp;
+
+
+function loadWeather() {
+// (need to set new gps here each time)
+  var weatherUrl = apiPath + gps + apiKey + units;
+
+$.getJSON(weatherUrl, function(data){
+
+    weather = data;
+    currentTemp = Math.round(weather.main.temp);
+    maxTemp = Math.round(weather.main.temp_max);
+    minTemp = Math.round(weather.main.temp_min);
+
+    console.log(temp);
+
+        // $nytHeaderElem.text('New York Times Articles About ' + cityStr);
+
+        // articles = data.response.docs;
+        // for (var i = 0; i < articles.length; i++) {
+        //     var article = articles[i];
+        //     $nytElem.append('<li class="article">'+
+        //         '<a href="'+article.web_url+'">'+article.headline.main+'</a>'+
+        //         '<p>' + article.snippet + '</p>'+
+        //     '</li>');
+        // };
+
+    }).error(function(e){
+        //$weatherElem.text('Weather Could Not Be Loaded');
+        console.log('Weather Could Not Be Loaded');
+    });
+
+}
+
+
+
+
+
+
+// function showWeather() {
+//    if (weather) {
+//       var temp = weather.main.temp;
+//       var humidity = weather.main.humidity;
+//       (need to write weather data string somehow);
+//   }
+// }
+
+
 
 
 // ALL ***GOOGLE MAP FUNCTIONS*** FOLLOW
@@ -465,6 +522,9 @@ function AppViewModel() {
 function populateInfoWindow(marker) {
   var infowindow = largeInfowindow;
 
+  loadWeather();
+
+
   // The following is the generic content for all infowindows
   var contentString =
     '<div id="iw-container">' +
@@ -476,7 +536,12 @@ function populateInfoWindow(marker) {
       '<div id="iw-moreInfo">' +
         '<a id="iw-moreInfoText" target="_blank" href=' + marker.siteUrl + '>'+ 'MORE INFO' + '</a>' +
       '</div>' +
-      '<img src="images/openweathermap.png" alt="WU Logo" width="90px">' +
+      '</div id="weather" >' +
+        // '<img src="images/openweathermap.png" alt="WU Logo" width="90px">' +
+        '<p>' + 'Current ' + currentTemp + 'F' + '</p>' +
+        '<p>' + 'Max ' + maxTemp + 'F' + '</p>' +
+        '<p>' + 'Min ' + minTemp + 'F' + '</p>' +
+      '</div>' +
     '</div>';
 
   // Check to make sure the infowindow is not already opened on this marker.
@@ -484,7 +549,6 @@ function populateInfoWindow(marker) {
       infowindow.marker = marker;
       infowindow.setContent(contentString);
       infowindow.open(map, marker);
-      infoWindow.setStyle("background-color: #af9a6b");
       // Make sure the marker property is cleared if the infowindow is closed.
       infowindow.addListener('closeclick', function() {
       infowindow.marker = null;
