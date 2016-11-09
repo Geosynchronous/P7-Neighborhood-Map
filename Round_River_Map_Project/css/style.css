@@ -138,31 +138,42 @@ color: #fff;
    text-decoration: none;
 }
 
+
 #infoWindowImage {
   width: 320px;
 }
 
 #iw-Image {
-  width: 90px;
+  width: 36px;
 }
 
 .weather {
+  background-color: #005496;
   display: flex;
-  color: blue;
-  font-size: 16px;
+  color: #fff;
+  font-size: 12px;
 }
 
 #tempNow {
-  font-size: 48px;
+  font-size: 18px;
 }
 
 .listing {
-  display: table-column;
-  margin: 10px;
+  display: inline;
+  margin: 0px;
 }
 
 .stats {
-  margin: 0;
+  margin: 8px 10px 0px 10px;
   border: 0;
+}
+
+#iw-creditLink {
+  width: 36px;
+}
+
+#credits {
+  width: 100%;
+  text-align: right;
 }
 

@@ -534,7 +534,7 @@ function loadWeather(marker) {
         description = weatherData.weather[0].main;
         weatherImage = "images/weather/" + weatherData.weather[0].icon + ".png";
 
-        // The following is the generic content for all infowindows
+        // The following is the generic DOM Node content for all infowindows
         var contentString =
           '<div id="iw-container">' +
             '<div class="iw-title">' + marker.title +
@@ -549,15 +549,16 @@ function loadWeather(marker) {
               '<div>' +
                 '<img id="iw-Image" src=' + weatherImage + '>' +
               '</div>' +
-              '<div class="listing" >' +
-                '<p class="stats" >' + maxTemp + 'F ' + ' High' + '</p>' +
-                '<p class="stats" >' + minTemp + 'F ' + ' Low' + '</p>' +
-                '<p class="stats" >' + humidity + '% ' + ' Humidity' + '</p>' +
-                '<p class="stats" >' + description + '</p>' +
-              '</div>' +
               '<div class="listing" id="tempNow" >' +
                 '<p class="stats" >' + currentTemp + 'F' + '</p>' +
-
+              '</div>' +
+              '<div class="listing" id="tempNow" >' +
+                '<p class="stats" >' + humidity + '%' + '</p>' +
+              '</div>' +
+              '<div class="listing" id="credits" >' +
+                '<a target="_blank" href="http://www.openweathermap.org" title="openweathermap.org">' +
+                  '<img id="iw-creditLink" src="images/OpenWeatherMap_logo.png">'
+                '</a>' +
               '</div>' +
             '</div>' +
           '</div>';
