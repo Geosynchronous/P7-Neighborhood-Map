@@ -556,7 +556,7 @@ function loadWeather(marker) {
                 '<p class="stats" >' + humidity + '%' + '</p>' +
               '</div>' +
               '<div class="listing" id="credits" >' +
-                '<a target="_blank" href="http://www.openweathermap.org" title="openweathermap.org">' +
+                '<a target="_blank" href="https://weather.com/weather" title="openweathermap.org">' +
                   '<img id="iw-creditLink" src="images/OpenWeatherMap_logo.png">'
                 '</a>' +
               '</div>' +
