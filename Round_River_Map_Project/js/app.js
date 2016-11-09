@@ -437,7 +437,7 @@ function AppViewModel() {
    }
 
   // This function currently not in use
-  // Availble for reddisplaying map with optimal boundaries
+  // Availble for redisplaying map with optimal boundaries
   // Selected set of locations will fit within map boundaries
   self.setNewBounds = function() {
     bounds = new google.maps.LatLngBounds();
@@ -450,10 +450,7 @@ function AppViewModel() {
   }
 }
 
-
-
 // Set Up Weather Data Functions
-
 var weatherData,
     apiPath = 'http://api.openweathermap.org/data/2.5/weather?',
     apiKey = '&APPID=db6d60dca9b88a47a0884b8ff753b7f6',
@@ -467,7 +464,8 @@ var weatherData,
     weatherImage;
 
 
-function loadWeather() {
+function loadWeather(marker) {
+  var infowindow = largeInfowindow;
   var weatherUrl = apiPath + gps + apiKey + units;
 
   $.getJSON(weatherUrl).done(function(data){
@@ -478,15 +476,48 @@ function loadWeather() {
         humidity = Math.round(weatherData.main.humidity);
         description = weatherData.weather[0].main;
         weatherImage = "images/weather/" + weatherData.weather[0].icon + ".png";
-  });
+
+        // The following is the generic content for all infowindows
+        var contentString =
+          '<div id="iw-container">' +
+            '<div class="iw-title">' + marker.title +
+            '</div>' +
+            '<div>' +
+              '<img id="infoWindowImage" src=' + marker.siteImage + '>' +
+            '</div>' +
+            '<div id="iw-moreInfo">' +
+              '<a id="iw-moreInfoText" target="_blank" href=' + marker.siteUrl + '>'+ 'MORE INFO' + '</a>' +
+            '</div>' +
+            '<div class="weather" >' +
+              '<div>' +
+                '<img id="iw-Image" src=' + weatherImage + '>' +
+              '</div>' +
+              '<div class="listing" >' +
+                '<p class="stats" >' + maxTemp + 'F ' + ' High' + '</p>' +
+                '<p class="stats" >' + minTemp + 'F ' + ' Low' + '</p>' +
+                '<p class="stats" >' + humidity + '% ' + ' Humidity' + '</p>' +
+                '<p class="stats" >' + description + '</p>' +
+              '</div>' +
+              '<div class="listing" id="tempNow" >' +
+                '<p class="stats" >' + currentTemp + 'F' + '</p>' +
+
+              '</div>' +
+            '</div>' +
+          '</div>';
+
+        // Check to make sure the infowindow is not already opened on this marker.
+        if (infowindow.marker != marker) {
+            infowindow.marker = marker;
+            infowindow.setContent(contentString);
+            infowindow.open(map, marker);
+            // Make sure the marker property is cleared if the infowindow is closed.
+            infowindow.addListener('closeclick', function() {
+            infowindow.marker = null;
+          });
+        }
+        });
 
 }
-
-    // }).error(function(e){
-    //     console.log('Weather Could Not Be Loaded');
-    // });
-
-
 
 
 // ALL ***GOOGLE MAP FUNCTIONS*** FOLLOW
@@ -498,51 +529,8 @@ function loadWeather() {
 // on that markers position.
 // TODO - markers should animate or change styling when clicked, or when the associated list item is clicked
 function populateInfoWindow(marker) {
-  var infowindow = largeInfowindow;
-
   gps = 'lat=' + marker.latitude + '&' + 'lon=' + marker.longitude;
-
-  loadWeather();
-
-
-  // The following is the generic content for all infowindows
-  var contentString =
-    '<div id="iw-container">' +
-      '<div class="iw-title">' + marker.title +
-      '</div>' +
-      '<div>' +
-        '<img id="infoWindowImage" src=' + marker.siteImage + '>' +
-      '</div>' +
-      '<div id="iw-moreInfo">' +
-        '<a id="iw-moreInfoText" target="_blank" href=' + marker.siteUrl + '>'+ 'MORE INFO' + '</a>' +
-      '</div>' +
-      '<div class="weather" >' +
-        '<div>' +
-          '<img id="iw-Image" src=' + weatherImage + '>' +
-        '</div>' +
-        '<div class="listing" >' +
-          '<p class="stats" >' + maxTemp + 'F ' + ' High' + '</p>' +
-          '<p class="stats" >' + minTemp + 'F ' + ' Low' + '</p>' +
-          '<p class="stats" >' + humidity + '% ' + ' Humidity' + '</p>' +
-          '<p class="stats" >' + description + '</p>' +
-        '</div>' +
-        '<div class="listing" id="tempNow" >' +
-          '<p class="stats" >' + currentTemp + 'F' + '</p>' +
-
-        '</div>' +
-      '</div>' +
-    '</div>';
-
-  // Check to make sure the infowindow is not already opened on this marker.
-  if (infowindow.marker != marker) {
-      infowindow.marker = marker;
-      infowindow.setContent(contentString);
-      infowindow.open(map, marker);
-      // Make sure the marker property is cleared if the infowindow is closed.
-      infowindow.addListener('closeclick', function() {
-      infowindow.marker = null;
-    });
-  }
+  loadWeather(marker);
 }
 
 function hideInfoWindow(marker) {
@@ -637,12 +625,9 @@ function createMarkers() {
       }
     }(i));
   }
-
   // After all markers are created, fit the map to these boundaries
   map.fitBounds(bounds);
 }
-
-
 
 // The Google Callback function
 // This function is executed immediately after the Google API script finishes loading,
@@ -665,9 +650,6 @@ function initMap() {
   // create all map markers
   createMarkers();
 }
-
-
-
 
 // ***APPLY BINDINGS***
 // This will create the AppViewModel object
