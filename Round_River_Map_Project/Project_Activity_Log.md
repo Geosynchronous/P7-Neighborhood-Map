@@ -1397,4 +1397,8 @@ Wednesday November 9,2016
 **Weather API Lackluster**
 - After a handful of queeries, the API data starts to have uniform temps for min, max, and now.... guess they want me to upgrade to a paid package...either that or their services are goofy... no matter... technically I have the API working as I need it for this project... however if this Neighborhood Map App is to be used I will need to replace that service with a better one... perhaps Weather Underground...
 
+12:17 PM
 
+**fix:  showLocationsViews true **
+- For GLOBAL button set true, as it is the initial condition where all
+markers are initially displayed
