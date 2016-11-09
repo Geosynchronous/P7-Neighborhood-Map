@@ -706,6 +706,7 @@ function initMap() {
   largeInfowindow = new google.maps.InfoWindow();
   // create all map markers
   createMarkers();
+  // On first Load show no locations
   vm.hideAllLocations();
 }
 
