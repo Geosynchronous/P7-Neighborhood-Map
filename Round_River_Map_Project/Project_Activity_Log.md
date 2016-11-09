@@ -1368,3 +1368,10 @@ undefined:1 GET file:///Users/geo/version-control/P7-Neighborhood-Map/Round_Rive
 `
 Not sure what it all means...
 
+7:06 PM
+
+**Refactor:  Moved Infowindow code after .done**
+- Needed to keep Infowindow loading before AJAX data arrived
+- Suggestion was made by Ryan V. to do this.... very greatful, it would have taken me a lot of time to figure it out...
+- But now that I see it the solution makes perfect sense...
+- All the infowwindows seem to be loading the correct weather data now
