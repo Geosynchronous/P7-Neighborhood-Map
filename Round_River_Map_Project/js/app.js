@@ -118,7 +118,7 @@ function AppViewModel() {
   self.buttons = ko.observableArray([
     {
       label: 'GLOBAL',
-      showLocationsViews: ko.observable(false),
+      showLocationsViews: ko.observable(true),   //set true for initial condition
       id: 0
     },
       {
@@ -706,8 +706,6 @@ function initMap() {
   largeInfowindow = new google.maps.InfoWindow();
   // create all map markers
   createMarkers();
-  // On first Load show no locations
-  vm.hideAllLocations();
 }
 
 // ***APPLY BINDINGS***
