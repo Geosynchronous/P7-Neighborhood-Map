@@ -1390,4 +1390,11 @@ Not sure what it all means...
 **Style: Container Div 100 %**
 - Better Map Layouts
 
+Wednesday November 9,2016
+
+11:39 AM
+
+**Weather API Lackluster**
+- After a handful of queeries, the API data starts to have uniform temps for min, max, and now.... guess they want me to upgrade to a paid package...either that or their services are goofy... no matter... technically I have the API working as I need it for this project... however if this Neighborhood Map App is to be used I will need to replace that service with a better one... perhaps Weather Underground...
+
 
