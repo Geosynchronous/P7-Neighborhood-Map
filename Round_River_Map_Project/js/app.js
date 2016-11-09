@@ -706,6 +706,7 @@ function initMap() {
   largeInfowindow = new google.maps.InfoWindow();
   // create all map markers
   createMarkers();
+  vm.hideAllLocations();
 }
 
 // ***APPLY BINDINGS***
