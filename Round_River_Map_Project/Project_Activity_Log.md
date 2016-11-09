@@ -1402,3 +1402,9 @@ Wednesday November 9,2016
 **fix:  showLocationsViews true **
 - For GLOBAL button set true, as it is the initial condition where all
 markers are initially displayed
+
+3:18 PM
+
+**style: Infowindow weather**
+- Removed max and min temps, and added API linked icon
+![screenshot infowindow](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-11-09%20at%203.15.36%20PM.png)
