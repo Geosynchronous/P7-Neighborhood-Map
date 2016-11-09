@@ -325,7 +325,7 @@ function AppViewModel() {
     },
     {
       title: 'Study Abroad in Patagonia',
-      location: {lat: -48.0029846, lng: -76.6979215},
+      location: {lat: -48.0029846, lng: -71.6979215},
       continent: 'South America',
       category: 'Global',
       type: 'Study Abroad',
