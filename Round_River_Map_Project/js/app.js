@@ -155,6 +155,11 @@ function AppViewModel() {
       label: 'STUDY ABROAD',
       showLocationsViews: ko.observable(false),
       id: 7
+    },
+    {
+      label: 'OUR OFFICES',
+      showLocationsViews: ko.observable(false),
+      id: 8
     }
   ]);
 
@@ -359,6 +364,28 @@ function AppViewModel() {
       type: 'Study Abroad',
       siteUrl: 'http://www.roundriver.org/student-programs/programs/africa-wildlife-conservation-okavango-delta-botswana/',
       siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/09/botswana-5-1024x680.jpg',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
+    },
+    {
+      title: 'Round River Administrative Office',
+      location: {lat: 40.748879, lng: -111.865102},
+      continent: 'North America',
+      category: 'Global',
+      type: 'Our Offices',
+      siteUrl: 'http://www.roundriver.org/contact-us/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/RR-web-logo-main.png',
+      toggleListItem: ko.observable(true),
+      highlight: ko.observable(false)
+    },
+    {
+      title: 'Round River Science Office',
+      location: {lat: 45.678863, lng: -111.035495},
+      continent: 'North America',
+      category: 'Global',
+      type: 'Our Offices',
+      siteUrl: 'http://www.roundriver.org/contact-us/',
+      siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/RR-web-logo-main.png',
       toggleListItem: ko.observable(true),
       highlight: ko.observable(false)
     }
