@@ -145,6 +145,16 @@ function AppViewModel() {
       label: 'SOUTH AMERICA',
       showLocationsViews: ko.observable(false),
       id: 5
+    },
+    {
+      label: 'FIELD RESEARCH',
+      showLocationsViews: ko.observable(false),
+      id: 6
+    },
+    {
+      label: 'STUDY ABROAD',
+      showLocationsViews: ko.observable(false),
+      id: 7
     }
   ]);
 
@@ -159,6 +169,7 @@ function AppViewModel() {
       location: {lat: -18.789779,lng: 13.370975},
       continent: 'Africa',
       category: 'Global',
+      type: 'Field Research',
       siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
       siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
       toggleListItem: ko.observable(true), // used to toggle visibility of inidividual list items
@@ -169,6 +180,7 @@ function AppViewModel() {
       location: {lat: -19.2798704, lng: 22.8201857},
       continent: 'Africa',
       category: 'Global',
+      type: 'Field Research',
       siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/botswana-okavango-delta/',
       siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Lions_Whatwedo-2.jpg',
       toggleListItem: ko.observable(true),
@@ -179,6 +191,7 @@ function AppViewModel() {
       location: {lat: 58.6553055,lng: -133.8137736},
       continent: 'North America',
       category: 'Global',
+      type: 'Field Research',
       siteUrl: 'http://www.roundriver.org/where-we-work/north-america/taku-river-wildlife-conservation-project-british-columbia/',
       siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Taku-bke-2008-5.jpg',
       toggleListItem: ko.observable(true),
@@ -189,6 +202,7 @@ function AppViewModel() {
       location: {lat: 45.0575711, lng: -116.1655369},
       continent: 'North America',
       category: 'Global',
+      type: 'Field Research',
       siteUrl: 'http://www.roundriver.org/wolverine/',
       siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/10/wolverine-project-3.jpg',
       toggleListItem: ko.observable(true),
@@ -199,6 +213,7 @@ function AppViewModel() {
       location: {lat: 37.6299925, lng: -109.885184},
       continent: 'North America',
       category: 'Global',
+      type: 'Field Research',
       siteUrl: 'http://www.roundriver.org/where-we-work/north-america/',
       siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/san-juan-01.jpg',
       toggleListItem: ko.observable(true),
@@ -209,6 +224,7 @@ function AppViewModel() {
       location: {lat: 68.8369357, lng: -149.9462445},
       continent: 'North America',
       category: 'Global',
+      type: 'Field Research',
       siteUrl: 'http://www.roundriver.org/where-we-work/north-america/north-coast-yukon-territory/',
       siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Yukon.jpg',
       toggleListItem: ko.observable(true),
@@ -219,6 +235,7 @@ function AppViewModel() {
       location: {lat: 52.9260101, lng: -128.935775},
       continent: 'North America',
       category: 'Global',
+      type: 'Field Research',
       siteUrl: 'http://www.roundriver.org/where-we-work/north-america/great-bear-rainforest/',
       siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/GBRKoeye2_Milek.jpg',
       toggleListItem: ko.observable(true),
@@ -229,6 +246,7 @@ function AppViewModel() {
       location: {lat: 54.2684383, lng: -130.4447293},
       continent: 'North America',
       category: 'Global',
+      type: 'Field Research',
       siteUrl: 'http://www.roundriver.org/where-we-work/north-america/north-coast-conservation-design-british-columbia/',
       siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/09/salmon.jpg',
       toggleListItem: ko.observable(true),
@@ -239,6 +257,7 @@ function AppViewModel() {
       location: {lat: 55.3639087, lng: -131.830578},
       continent: 'North America',
       category: 'Global',
+      type: 'Field Research',
       cateUrl: 'http://www.roundriver.org/where-we-work/north-america/coastal-forest-and-mountains-british-columbia/',
       siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/GBRKoeye3_Milek.jpg',
       toggleListItem: ko.observable(true),
@@ -249,6 +268,7 @@ function AppViewModel() {
       location: {lat: 58.9338124, lng: -130.8412957},
       continent: 'North America',
       category: 'Global',
+      type: 'Field Research',
       siteUrl: 'http://www.roundriver.org/where-we-work/north-america/muskwa-kechika-conservation-design-british-columbia/',
       siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/bears-MK.jpg',
       toggleListItem: ko.observable(true),
@@ -259,6 +279,7 @@ function AppViewModel() {
       location: {lat: 66.999500, lng: -127.437408},
       continent: 'North America',
       category: 'Global',
+      type: 'Field Research',
       siteUrl: 'http://www.roundriver.org/where-we-work/north-america/mackenzie-delta-northwest-territories/',
       siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/yukon_North_Slope-1.jpg',
       toggleListItem: ko.observable(true),
@@ -269,6 +290,7 @@ function AppViewModel() {
       location: {lat: -43.0029846, lng: -71.6979215},
       continent: 'South America',
       category: 'Global',
+      type: 'Field Research',
       siteUrl: 'http://www.roundriver.org/where-we-work/south-america/patagonia-chile/',
       siteImage: 'http://www.roundriver.org/wp-content/uploads/2013/06/patagonia_header-5.jpg',
       toggleListItem: ko.observable(true),
@@ -279,6 +301,7 @@ function AppViewModel() {
       location: {lat: 8.539003, lng:-83.6045026},
       continent: 'Central America',
       category: 'Global',
+      type: 'Field Research',
       siteUrl: 'http://www.roundriver.org/where-we-work/central-america/',
       siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/10/costa-rica-01.jpg',
       toggleListItem: ko.observable(true),
@@ -289,6 +312,7 @@ function AppViewModel() {
       location: {lat: 51.198708, lng:99.678212},
       continent: 'Asia',
       category: 'Global',
+      type: 'Study Abroad',
       siteUrl: 'http://www.roundriver.org/student-programs/programs/mongolia/',
       siteImage: 'http://www.roundriver.org/wp-content/uploads/2016/09/Mongolia_project_detail-1024x768.jpg',
       toggleListItem: ko.observable(true),
@@ -299,6 +323,7 @@ function AppViewModel() {
       location: {lat: -48.0029846, lng: -76.6979215},
       continent: 'South America',
       category: 'Global',
+      type: 'Study Abroad',
       siteUrl: 'http://www.roundriver.org/student-programs/programs/patagonia-chile/',
       siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/09/patagonia-120-1024x683.jpg',
       toggleListItem: ko.observable(true),
@@ -309,6 +334,7 @@ function AppViewModel() {
       location: {lat: 9.539003, lng:-84.6045026},
       continent: 'Central America',
       category: 'Global',
+      type: 'Study Abroad',
       siteUrl: 'http://www.roundriver.org/student-programs/programs/costa-rica-the-osa-peninsula/',
       siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/IMG_1538-1024x1024.jpg',
       toggleListItem: ko.observable(true),
@@ -319,6 +345,7 @@ function AppViewModel() {
       location: {lat: 60.6553055,lng: -135.8137736},
       continent: 'North America',
       category: 'Global',
+      type: 'Study Abroad',
       siteUrl: 'http://www.roundriver.org/student-programs/programs/taku-river-tlingit-territory-british-columbia-canada/',
       siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/09/taku-11-1024x680.jpg',
       toggleListItem: ko.observable(true),
@@ -329,6 +356,7 @@ function AppViewModel() {
       location: {lat: -21.2798704, lng: 24.8201857},
       continent: 'Africa',
       category: 'Global',
+      type: 'Study Abroad',
       siteUrl: 'http://www.roundriver.org/student-programs/programs/africa-wildlife-conservation-okavango-delta-botswana/',
       siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/09/botswana-5-1024x680.jpg',
       toggleListItem: ko.observable(true),
@@ -413,9 +441,11 @@ function AppViewModel() {
       var locCategory = self.locations()[i].category.toLowerCase();
       // The location continent
       var locContinent = self.locations()[i].continent.toLowerCase();
+            // The location type
+      var locType = self.locations()[i].type.toLowerCase();
 
       // If the location category or continent text contains the button label
-      if ((locCategory === buttonLabel) || (locContinent === buttonLabel)) {
+      if ((locCategory === buttonLabel) || (locContinent === buttonLabel) || (locType === buttonLabel)) {
         self.locations()[i].toggleListItem(true); // show list item
         self.locations()[i].marker.setVisible(true); // show map marker
       } else {
