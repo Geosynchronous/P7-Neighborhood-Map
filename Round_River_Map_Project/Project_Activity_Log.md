@@ -1375,3 +1375,9 @@ Not sure what it all means...
 - Suggestion was made by Ryan V. to do this.... very greatful, it would have taken me a lot of time to figure it out...
 - But now that I see it the solution makes perfect sense...
 - All the infowwindows seem to be loading the correct weather data now
+
+8:33 PM
+
+**Feat: More Buttons**
+- Field Research & Study Abroad^^
+
