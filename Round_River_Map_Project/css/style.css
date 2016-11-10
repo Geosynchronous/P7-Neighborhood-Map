@@ -27,7 +27,8 @@ h1 {
 }
 
 h2 {
-  margin: 0 10px 5px 0;
+  margin: 0 20px 0 0;
+  font-size: 16px;
 }
 
 a:link {color: #fff;}
@@ -42,7 +43,7 @@ a:active {color: #fff;}
   width: 25%;
   display: inline-block;
   padding: 5px;
-  margin: 10px;
+  margin: 3px 10px 0 10px;
 }
 
 button:focus {outline:0;}
@@ -57,10 +58,13 @@ button:focus {outline:0;}
 
 
 .button-list {
+  overflow: hidden;
+  white-space: nowrap;
   list-style: none;
   font-size: 14px;
   line-height: 110%;
-  padding-left: 0;
+  margin: 10px 30px 10px 20px;
+  padding: 0;
   color: #005496;
 }
 
@@ -90,34 +94,39 @@ color: #fff;
   top: 0px;
   left: 0px;
   background: #af9a6b;
-  border-radius: 14px;
   padding:  3px 10px 10px 10px;
   text-align: left;
-  width: 340px;
-  margin: 3px;
+  width: 300px;
 }
 
 #about {
+  margin: 0;
+  padding: 0;
   text-align: right;
   text-decoration: none;
 }
 
 .social {
-  margin: 10px;
+  margin: 7px;
   width: 32px;
 }
 
 #hero {
+  width: 280px;
+  margin: 5px;
   border-radius: 14px;
   border: 3px solid #005496;
-  margin-left: 7px;
+}
+
+#media_icons {
+  text-decoration: none;
 }
 
 #iw-container  .iw-title {
-   width: 300px;
+   width: 218px;
    font-size: 18px;
    font-weight: 400;
-   padding: 10px;
+   padding: 0px;
    background-color: #005496;
    color: white;
    margin-bottom: 1px;
@@ -125,9 +134,9 @@ color: #fff;
 }
 
 #iw-moreInfo {
-   width: 300px;
+   width: 218px;
    text-align: right;
-   padding: 10px;
+   padding: 0px;
    background-color: #005496;
    color: white;
    margin-bottom: 1px;
@@ -139,7 +148,7 @@ color: #fff;
 
 
 #infoWindowImage {
-  width: 320px;
+  width: 218px;
 }
 
 #iw-ImageDiv {
@@ -185,7 +194,7 @@ color: #fff;
   z-index: 500;
   position:relative;
   top: 0px;
-  left: 300px;
+  left: 272px;
   margin: 0px;
 }
 
@@ -195,7 +204,7 @@ color: #fff;
 }
 
 .closed{
-    left: -320px !important;
+    left: -286px !important;
 
 }
 .transition{
