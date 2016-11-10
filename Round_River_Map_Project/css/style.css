@@ -123,20 +123,20 @@ color: #fff;
 }
 
 #iw-container  .iw-title {
-   width: 218px;
+   width: 198px;
    font-size: 18px;
    font-weight: 400;
    padding: 0px;
    background-color: #005496;
    color: white;
-   margin-bottom: 1px;
-   border-radius: 2px 2px 0 0; /* In accordance with the rounding of the default infowindow corners. */
+   padding: 10px 10px 0 10px;
 }
 
 #iw-moreInfo {
-   width: 218px;
+  font-size: 12px;
+   width: 208px;
    text-align: right;
-   padding: 0px;
+   padding: 0 10px 5px 0;
    background-color: #005496;
    color: white;
    margin-bottom: 1px;

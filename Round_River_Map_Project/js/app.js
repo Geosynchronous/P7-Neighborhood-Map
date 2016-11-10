@@ -547,11 +547,11 @@ function loadContent(marker) {
           '<div id="iw-container">' +
             '<div class="iw-title">' + marker.title +
             '</div>' +
+            '<div id="iw-moreInfo">' +
+              '<a id="iw-moreInfoText" target="_blank" href=' + marker.siteUrl + '>'+ 'info' + '</a>' +
+            '</div>' +
             '<div>' +
               '<img id="infoWindowImage" src=' + marker.siteImage + '>' +
-            '</div>' +
-            '<div id="iw-moreInfo">' +
-              '<a id="iw-moreInfoText" target="_blank" href=' + marker.siteUrl + '>'+ 'MORE INFO' + '</a>' +
             '</div>' +
             '<div class="weather" >' +
               '<div id="iw-ImageDiv">' +
