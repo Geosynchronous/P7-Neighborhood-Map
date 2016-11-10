@@ -166,8 +166,6 @@ function AppViewModel() {
 
   // These are the marker listings that will be shown to the user.
   // Normally we'd have these in a database.
-  //      TODO - add all sites, add all properties
-  //      Categories: Field Research, Field Studies, Offices, Special Events
   self.locations = ko.observableArray([
     {
       title: 'Kunene Region of Namibia',
@@ -389,7 +387,6 @@ function AppViewModel() {
       toggleListItem: ko.observable(true),
       highlight: ko.observable(false)
     }
-
   ]);
 
 
@@ -507,6 +504,10 @@ function AppViewModel() {
   }
 }
 
+
+// ALL ***GOOGLE MAP FUNCTIONS*** FOLLOW
+// They are not directly compatible with KNOCKOUT
+
 // Set Up Weather Data Functions
 var weatherData,
     apiPath = 'http://api.openweathermap.org/data/2.5/weather?',
@@ -581,8 +582,16 @@ function loadContent(marker) {
 }
 
 
-// ALL ***GOOGLE MAP FUNCTIONS*** FOLLOW
-// They are not directly compatible with KNOCKOUT
+
+
+
+
+
+
+
+
+
+
 
 
 // This function populates the infowindow when the marker is clicked. We'll only allow
