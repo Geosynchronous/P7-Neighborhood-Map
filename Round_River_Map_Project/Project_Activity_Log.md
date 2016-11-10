@@ -1408,3 +1408,11 @@ markers are initially displayed
 **style: Infowindow weather**
 - Removed max and min temps, and added API linked icon
 ![screenshot infowindow](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-11-09%20at%203.15.36%20PM.png)
+
+Thursday November 10, 2016
+
+**Note about Notes**
+- I have decided that taking notes religiously in this manner is no longer needed.  Often there is too much redudancy between these notes and my github project commits.  I will continue to make these developer notes as needed, maintaining this basic formatting, but now on a much less frequent manner.  The contextual perspective I have attained at this point is allowing me to do far more effective **Google Searches** for the answers I need.  Searching back through the **Udacity course material still reamains clunky...** hopefully they have **implementented the much need search engine by now**... wil have to check. The other thing I have noticed is that **SlackOverflow and JS Fiddle** are providing me a lot of solutions at this point... need to learn how to use those resources better.
+
+
+- I have decided that taking notes religiously in this manner is no longer needed.  Often there is too much redudancy between these notes and my github project commits.  I will continue to make these developer notes as needed, maintaining this basic formatting, but now on a much less frequent manner.  The contextual perspective I have attained at this point is allowing me to do far more effective Google Searches for the answers I need.  Searching back through the Udacity course material still reamains clunky... hopefully they have implementented the much need search engine by now... wil have to check. The other thing I have noticed is that SlackOverflow and JS Fiddle are providing me a lot of solutions at this point... need to learn how to use those resources better.
