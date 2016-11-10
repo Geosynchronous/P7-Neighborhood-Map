@@ -575,8 +575,9 @@ function loadContent(marker) {
             infowindow.marker = null;
           });
         }
-        });
-
+        })  .fail(function() {
+              alert( "API Load Error" );
+            });
 }
 
 
