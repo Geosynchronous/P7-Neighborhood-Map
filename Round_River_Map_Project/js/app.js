@@ -704,7 +704,11 @@ function initMap() {
     backgroundColor: '#af9a6b',
     styles: styles,
     mapTypeId: 'terrain',
-    mapTypeControl: true
+    mapTypeControl: true,
+    mapTypeControlOptions: {
+      style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+      position: google.maps.ControlPosition.TOP_RIGHT
+    }
   });
   // define bounds
   bounds = new google.maps.LatLngBounds();
