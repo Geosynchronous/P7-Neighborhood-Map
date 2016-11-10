@@ -400,7 +400,7 @@ function AppViewModel() {
     // Since the marker object is stored inside the associated location object,
     // the marker can now be accessed using 'location.marker'
     populateInfoWindow(location.marker);
-  }
+  };
 
   // Mouse Over on a list title inside options-box
   //    - Highlights associated map marker icon
@@ -408,7 +408,7 @@ function AppViewModel() {
   this.listMouseOver = function(location) {
     location.marker.setIcon(highlightedIcon);
     location.highlight(true);
-  }
+  };
 
   // Mouse Out on a list title inside options-box
   //    - Default restored with associated map marker icon
@@ -416,7 +416,7 @@ function AppViewModel() {
   this.listMouseOut = function(location) {
     location.marker.setIcon(defaultIcon);
     location.highlight(false);
-  }
+  };
 
   // Toggles Visibility when specific button clicked
   //  THen Filters list and markers
@@ -449,7 +449,7 @@ function AppViewModel() {
       self.hideAllLocations(button);
       self.buttons()[button.id].showLocationsViews(false);
     }
-  }
+  };
 
   // Filtering based on specific button clicked
   // Decides which locations are needed for list items and map markers
@@ -478,7 +478,7 @@ function AppViewModel() {
       }
     }
       // map.fitBounds(bounds);
-  }
+  };
 
   self.hideAllLocations = function(button) {
 
@@ -488,7 +488,7 @@ function AppViewModel() {
         self.locations()[i].marker.setVisible(false); // hide the map marker
         largeInfowindow.close();  //close open infoWindow
       }
-   }
+   };
 
   // This function currently not in use
   // Availble for redisplaying map with optimal boundaries
@@ -501,7 +501,7 @@ function AppViewModel() {
       }
     }
     map.fitBounds(bounds);
-  }
+  };
 }
 
 
@@ -685,14 +685,14 @@ function createMarkers() {
       // basically an event listener with the return function gets created for each location
       return function() {
         vm.listMouseOver(vm.locations()[i]);
-      }
+      };
     }(i)); // pass 'i' as parameters to this event listener function
 
     // Same comment from above anonyous function applies here as well
     marker.addListener('mouseout', function(i) {
       return function() {
         vm.listMouseOut(vm.locations()[i]);
-      }
+      };
     }(i));
   }
   // After all markers are created, fit the map to these boundaries
