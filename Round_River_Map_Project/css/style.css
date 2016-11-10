@@ -33,7 +33,7 @@ h2 {
 
 a:link {color: #fff;}
 a:visited {color: #fff;}
-a:hover {color: #c80b32;}
+a:hover {color: #4CAF50;}
 a:active {color: #fff;}
 
 .button {
@@ -44,6 +44,13 @@ a:active {color: #fff;}
   display: inline-block;
   padding: 5px;
   margin: 10px 10px 0 10px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
 }
 
 button:focus {outline:0;}
@@ -52,9 +59,9 @@ button:focus {outline:0;}
     background-color: black;
 }
 
-.buttonDefault {
+/*.buttonDefault {
     background-color: green;
-}
+}*/
 
 
 .button-list {
@@ -65,7 +72,7 @@ button:focus {outline:0;}
   line-height: 110%;
   margin: 10px 30px 10px 20px;
   padding: 0;
-  color: #005496;
+  color: #000;
 }
 
 li:hover {
