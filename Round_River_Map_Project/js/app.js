@@ -520,11 +520,12 @@ var weatherData,
     description,
     weatherImage;
 
-
-function loadWeather(marker) {
+// Loads Infowindow content after marker has been clicked
+function loadContent(marker) {
   var infowindow = largeInfowindow;
   var weatherUrl = apiPath + gps + apiKey + units;
 
+  // AJAX data request from Open Weather Map API
   $.getJSON(weatherUrl).done(function(data){
         weatherData = data;
         currentTemp = Math.round(weatherData.main.temp);
@@ -535,6 +536,7 @@ function loadWeather(marker) {
         weatherImage = "images/weather/" + weatherData.weather[0].icon + ".png";
 
         // The following is the generic DOM Node content for all infowindows
+        // It naturally executes after the above AJAX data is done being retrieved
         var contentString =
           '<div id="iw-container">' +
             '<div class="iw-title">' + marker.title +
@@ -588,7 +590,7 @@ function loadWeather(marker) {
 // TODO - markers should animate or change styling when clicked, or when the associated list item is clicked
 function populateInfoWindow(marker) {
   gps = 'lat=' + marker.latitude + '&' + 'lon=' + marker.longitude;
-  loadWeather(marker);
+  loadContent(marker);
 }
 
 function hideInfoWindow(marker) {
