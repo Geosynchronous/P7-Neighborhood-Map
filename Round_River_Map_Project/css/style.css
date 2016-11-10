@@ -78,23 +78,23 @@ color: #fff;
 #map {
   top: 0px;
   height: 100%;
-  left: 365px;
+  left: 0px;
   background-color: #000 !important;
   position: absolute;
   right: 0px;
-  margin: 3px;
 }
 
 .options-box {
-  margin: 3px;
+  z-index: 100;
+  position:relative;
+  top: 0px;
+  left: 0px;
   background: #af9a6b;
-  border: 1px solid #999;
   border-radius: 14px;
-  display: block;
-  line-height: 35px;
-  padding: 10px 10px 30px 10px;
+  padding:  3px 10px 10px 10px;
   text-align: left;
   width: 340px;
+  margin: 1px;
 }
 
 #about {
@@ -180,3 +180,29 @@ color: #fff;
   text-align: right;
 }
 
+
+#slide {
+  z-index: 500;
+  position:relative;
+  top: 0px;
+  left: 300px;
+  margin: 0px;
+}
+
+#slider{
+    position:relative;
+    left: 0px;
+}
+
+.closed{
+    left: -320px !important;
+
+}
+.transition{
+
+  -webkit-transition: left 0.3s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+     -moz-transition: left 0.3s ease-out;  /* Firefox 4-15 */
+       -o-transition: left 0.3s ease-out;  /* Opera 10.50–12.00 */
+          transition: left 0.3s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+
+}

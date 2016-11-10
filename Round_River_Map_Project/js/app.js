@@ -110,6 +110,11 @@ function AppViewModel() {
   var self = this,
       lastButtonId = 0;
 
+  // TODO transform this to knockout
+  $('button').on('click', function(){
+    $('#slider').toggleClass('closed');
+  })
+
   // Need this to make toggle list binding-updates work
   // self.toggleListItem = ko.observable(false);
 
@@ -580,18 +585,6 @@ function loadContent(marker) {
               alert( "API Load Error" );
             });
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // This function populates the infowindow when the marker is clicked. We'll only allow
