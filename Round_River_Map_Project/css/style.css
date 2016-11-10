@@ -143,6 +143,10 @@ color: #fff;
   width: 320px;
 }
 
+#iw-ImageDiv {
+  margin-left: 20px;
+}
+
 #iw-Image {
   width: 36px;
 }
