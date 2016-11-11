@@ -2,12 +2,14 @@
 Udacity FEND Nanodegree Project
 Author - George Fischer
 
-https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers
-[create an anchor](#anchors-in-markdown)
 ## Contents
+
 [I. "The Round River Map App"](##I.-"The-Round-River-Map-App")
+
 [II. Getting Started](##II.-Getting-Started)
+
 [III. How to Use this App]
+
 [IV. Special Thanks]
 
 
