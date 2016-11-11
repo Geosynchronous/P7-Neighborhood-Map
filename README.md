@@ -4,7 +4,7 @@ Author - George Fischer
 
 ## Contents
 
-[I. "The Round River Map App"](##I.-"The-Round-River-Map-App")
+[The Round River Map App](##The-Round-River-Map-App)
 
 [II. Getting Started](##II.-Getting-Started)
 
