@@ -2,7 +2,7 @@
 Udacity FEND Nanodegree Project
 Author - George Fischer
 
-## "The Round River Map APP"
+## "The Round River Map App"
 ![Screenshot](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-11-10%20at%209.44.15%20PM.png)
 
 **Introduction**
@@ -17,6 +17,7 @@ Author - George Fischer
 - If Round River finds this APP useful, I may try to pursue a fudning grant from **Google** to pursue further development
 - Currently the decades of resources from Round River and the comprehensive functionality of Google Maps resources provides an enourmous about usefulness
 - This APP could be very useful in the classrooms and homes on all continents, and for all age groups
+- This Earth is a beautiful place, and if this App can help us humans find a sustainable way to live on this planet, then any effort here will be well worth it... hallelujah!!!
 
 
 
