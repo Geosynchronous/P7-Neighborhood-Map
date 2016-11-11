@@ -66,6 +66,7 @@ button:focus {outline:0;}
 
 .button-list {
   overflow: hidden;
+  font-weight: bold;
   white-space: nowrap;
   list-style: none;
   font-size: 14px;

@@ -294,7 +294,7 @@ function AppViewModel() {
       highlight: ko.observable(false)
     },
     {
-      title: 'Patagonia - Chile -South America',
+      title: 'Patagonia - Chile - South America',
       location: {lat: -43.0029846, lng: -71.6979215},
       continent: 'South America',
       category: 'Global',
