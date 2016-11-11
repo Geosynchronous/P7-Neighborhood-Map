@@ -4,48 +4,56 @@
 Neighborhood Map Project
 Udacity FEND Nanodegree
 Developer: George Fischer
+Fall 2016
 
 Prototype Google Map App
 MVVM Framework with Knockout.js
 Model-View-ViewModel (MVVM) pattern
 
-Map created for:
+Map App created for:
   Round River Conservation Studies
   http://www.roundriver.org
   Non-Profit Organization
 -->
 
+
+
+
 <!--
   THE ***VIEW***
-  HTML markup that defines the appearance of your UI
+  HTML markup that defines the appearance of your UI in the MVVM model schema
  -->
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
     <title>Round River Map</title>
   </head>
   <body>
+
+<!--
+    Container DIV that hols the Main Divs: Options Box & Google Maps
+-->
     <div class="container">
-      <div class="options-box" id="slider" class="transition" >
+
+<!--  Options Box DIV (MENUS) -->
+      <div class="options-box" id="slider" >
         <button id="slide" class="slideButton">Slide</button>
         <a target="_blank" href="http://www.roundriver.org" title="roundriver.org">
           <img alt="Round River" src="images/RR-Main-Logo.png">
         </a>
 
+        <!-- Filter Buttons  DIV-->
+        <div data-bind="foreach: buttons">
+          <button class="button" id="show-listings" data-bind="text: label, click: $parent.toggleVisibility, css: {buttonHighlight: showLocationsViews}"></button>
+        </div>
 
+        <!-- Locations List -->
+        <ul class = "button-list" data-bind="foreach: locations">
+          <li data-bind="visible: toggleListItem, text: title, click: $parent.listClick, event: { mouseover: $parent.listMouseOver, mouseout: $parent.listMouseOut }, css: {hoverEffect: highlight}"></li>
+        </ul>
 
-<!--         <div data-bind="with: buttons" > -->
-
-          <div data-bind="foreach: buttons">
-            <button class="button" id="show-listings" data-bind="text: label, click: $parent.toggleVisibility, css: {buttonHighlight: showLocationsViews}"></button>
-          </div>
-
-          <ul class = "button-list" data-bind="foreach: locations">
-            <li data-bind="visible: toggleListItem, text: title, click: $parent.listClick, event: { mouseover: $parent.listMouseOver, mouseout: $parent.listMouseOut }, css: {hoverEffect: highlight}"></li>
-          </ul>
-
+        <!-- Contact Info DIV -->
         <div class="contact">
           <div>
             <a id="about" target="_blank" href="http://www.roundriver.org/about-us" title="roundriver.org/about-us">
@@ -53,10 +61,9 @@ Map created for:
             </a>
           </div>
           <img id="hero" src="images/great-bear-01.jpg">
+
+          <!-- Social Media DIV  -->
           <div id="media_icons">
-            <!--
-            ROUND RIVER Social Media Linked Icons
-            -->
             <a target="_blank" href="http://roundriver.us3.list-manage1.com/track/click?u=8b5c8d1d4bd3f6d6e96472b97&id=3081df2487&e=26c9040171" title="Facebook">
               <img class="social" alt="Round River" src="images/social/color-facebook-48.png">
             </a>
@@ -78,12 +85,18 @@ Map created for:
           </div>
         </div>
       </div>
+
+<!--  Google Map DIV   -->
       <div id="map" id="slider" class="transition"></div>
     </div>
+
+<!-- Scripts Loaded in this order for optimal integration -->
     <script src= "js/jquery.min.js"></script>
     <script src= "js/knockout-3.4.0.js"></script>
     <script src= "js/app.js"></script>
+    <!-- Google Map is the very last thing to execute during the load -->
     <script async defer src= "https://maps.googleapis.com/maps/api/js?key=AIzaSyAaL-jhZDIeEBOjiVX31sDh6UjauQlfWk4&v=3&callback=initMap">
     </script>
+
   </body>
 </html>
