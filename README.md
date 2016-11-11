@@ -1,7 +1,9 @@
 # P7-Neighborhood-Map
 Udacity FEND Nanodegree Project
-
 Author - George Fischer
+
+![Screenshot](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-11-10%20at%209.44.15%20PM.png)
+
 
 ### Comments
 - July 1, 2016 - Started Project
