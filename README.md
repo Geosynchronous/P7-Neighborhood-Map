@@ -19,7 +19,8 @@ Author - George Fischer
 - This APP could be very useful in the classrooms and homes on all continents, and for all age groups
 - This Earth is a beautiful place, and if this App can help us humans find a sustainable way to live on this planet, then any effort here will be well worth it... hallelujah!!!
 
-
+## How to Use this App
+(coming soon)
 
 
 ## Getting Started
