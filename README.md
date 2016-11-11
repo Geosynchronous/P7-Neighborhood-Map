@@ -108,8 +108,8 @@ Author - George Fischer
   - A great resource for html, css and js formatting/functionality descriptions
   
 - **12. [Google Search](https://www.google.com/)**
-  - How could even code or even get through a single day without this
-  - It's like an extension to my intelligence
+  - How could code or get through a single day without this?
+  - It's an extension of my intelligence.
   
 - **13. Ryan Vbra**
   - A Udacity Mentor gifted with patience, excellent communication skills, robust web programming knowledge, intelligence and humor
