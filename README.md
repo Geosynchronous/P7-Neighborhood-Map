@@ -92,7 +92,7 @@ Author - George Fischer
   
 **6. Ryan Vbra**
 
-  - A Udacity Mentor gifted with patience, excellent robust web programming knowledge, intelligence and humor
+  - A Udacity Mentor gifted with patience, excellent communication skills, robust web programming knowledge, intelligence and humor
   - I greatly appreciate his assistance in helping get past the road blocks...
 
 
