@@ -69,38 +69,49 @@ Author - George Fischer
   
 ## IV. Special Thanks
 
-` **1. [Udacity](https://www.udacity.com/)**
+- **1. [Udacity](https://www.udacity.com/)**
   - Excellent Online Nanodegree Programs
   - Front End Web Developer Namodegree Program
   - Excellent Courseware Developers and Mentors
   
-**2. [Round River Conservation](http://www.roundriver.org/)**
-
+- **2. [Round River Conservation](http://www.roundriver.org/)**
   - Excellent Worldwide Conservation Field Work and Studies
   
-**3. [Google Maps APIs](https://developers.google.com/maps/)**
-
+-**3. [Google Maps APIs](https://developers.google.com/maps/)**
   - Stellar Mapping Apps
   
-**4. [Open Weather Map API](http://openweathermap.org/api)**
-
+- **4. [Open Weather Map API](http://openweathermap.org/api)**
   - Free Weather API data services
   
-**5. [Git Hub](https://github.com/)**
-
+- **5. [Git Hub](https://github.com/)**
   - Excellent Coding Repository
   
-**6. [Stack Overflow](http://stackoverflow.com/)**
-**7. [JS Fiddle](https://jsfiddle.net/)**
-**8. [Knockout](http://knockoutjs.com/)**  
-**9. [jQuery](https://jqueryui.com/)**
-**10. [W3 Schools](http://www.w3schools.com/)**
-**11. [MDN](https://developer.mozilla.org/en-US/)**
-**11. [Google Search](https://www.google.com/)**
-
-
-**12. Ryan Vbra**
-
+- **6. [Stack Overflow](http://stackoverflow.com/)**
+  - Excellent Community of shared Developer Solutions
+  
+- **7. [JS Fiddle](https://jsfiddle.net/)**
+  - Excellent Community of shared Developer Solutions
+  - Incredible Online JS/HTML/CSS Coding space to modify and test out code solutions
+  
+- **8. [Knockout](http://knockoutjs.com/)**
+  - A very cool JS library that makes UI updates very simplified
+  - Though the learning curve is a bit steep
+  
+- **9. [jQuery](https://jqueryui.com/)**
+  - Makes access to DOM elements from JS very straight forward
+  - Also great for UI updates
+  
+- **10. [W3 Schools](http://www.w3schools.com/)**
+  - A great resource for html, css and js coding tutorials
+  
+- **11. [MDN](https://developer.mozilla.org/en-US/)**
+  - A great resource for html, css and js formatting/functionality descriptions
+  
+- **12. [Google Search](https://www.google.com/)**
+  - How could even code or even get through a single day without this
+  - It's like an extension to my intelligence
+  
+- **13. Ryan Vbra**
   - A Udacity Mentor gifted with patience, excellent communication skills, robust web programming knowledge, intelligence and humor
   - I greatly appreciate his assistance in helping get past the road blocks...
 
