@@ -2,6 +2,14 @@
 Udacity FEND Nanodegree Project
 Author - George Fischer
 
+
+## Contents
+### I. "The Round River Map App"
+### II. Getting Started
+### III. How to Use this App
+### IV. Special Thanks
+
+
 ## I. "The Round River Map App"
 ![Screenshot](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-11-10%20at%209.44.15%20PM.png)
 
@@ -59,7 +67,24 @@ Author - George Fischer
 ## III. How to Use this App
 (coming soon)
   
-        
+ ## IV. Special Thanks
+
+**!. [Udacity](https://www.udacity.com/)**
+  - Excellent Online Nanodegree Programs
+  - Front End Web Developer Namodegree Program
+  - Excellent Courseware Developers and Mentors
+**2. [Round River Conservation](http://www.roundriver.org/)**
+  - Excellent Worldwide Conservation Field Work and Studies
+**3. [Google Maps APIs](https://developers.google.com/maps/)**
+  - Stellar Mapping Apps
+**4. [Open Weather Map API](http://openweathermap.org/api)**
+  - Free Weather API data services
+**5. [Git Hub](https://github.com/)**
+  - Excellent Coding Repository
+**6. Ryan Vbra**
+  - Most excellent Udacity Mentor gifted with patience and intelligence
+
+
 
 
 ### Comments
