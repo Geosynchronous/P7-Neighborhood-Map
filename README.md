@@ -5,13 +5,13 @@ Author - George Fischer
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers
 [create an anchor](#anchors-in-markdown)
 ## Contents
-[I. "The Round River Map App"](##-I.-"The-Round-River-Map-App")
+[I. "The Round River Map App"](##I.-"The-Round-River-Map-App")
 [II. Getting Started]
 [III. How to Use this App]
 [IV. Special Thanks]
 
 
-## I. "The Round River Map App"
+##I. "The Round River Map App"
 ![Screenshot](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-11-10%20at%209.44.15%20PM.png)
 
 **Introduction**
