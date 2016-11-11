@@ -77,7 +77,7 @@ Author - George Fischer
 - **2. [Round River Conservation](http://www.roundriver.org/)**
   - Excellent Worldwide Conservation Field Work and Studies
   
--**3. [Google Maps APIs](https://developers.google.com/maps/)**
+- **3. [Google Maps APIs](https://developers.google.com/maps/)**
   - Stellar Mapping Apps
   
 - **4. [Open Weather Map API](http://openweathermap.org/api)**
