@@ -2,7 +2,7 @@
 Udacity FEND Nanodegree Project
 Author - George Fischer
 
-## "The Round River Map App"
+## I. "The Round River Map App"
 ![Screenshot](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-11-10%20at%209.44.15%20PM.png)
 
 **Introduction**
@@ -20,7 +20,7 @@ Author - George Fischer
 - This Earth is a beautiful place, and if this App can help us humans find a sustainable way to live on this planet, then any effort here will be well worth it... hallelujah!!!
 
 
-## Getting Started
+## II. Getting Started
 
 **1. Go to my Github Repository for this Project**
 - Copy this URL https://github.com/Geosynchronous/P7-Neighborhood-Map
@@ -56,7 +56,7 @@ Author - George Fischer
 **6. Contact the Author with questions and feedback if you wish**
   - geosynchr0nous@mac.com
   
-## How to Use this App
+## III. How to Use this App
 (coming soon)
   
         
