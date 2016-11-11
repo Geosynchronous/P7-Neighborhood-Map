@@ -4,10 +4,10 @@ Author - George Fischer
 
 
 ## Contents
-### I. "The Round River Map App"
-### II. Getting Started
-### III. How to Use this App
-### IV. Special Thanks
+-   I. "The Round River Map App"
+-  II. Getting Started
+- III. How to Use this App
+- IV. Special Thanks
 
 
 ## I. "The Round River Map App"
@@ -70,18 +70,29 @@ Author - George Fischer
  ## IV. Special Thanks
 
 **!. [Udacity](https://www.udacity.com/)**
+
   - Excellent Online Nanodegree Programs
   - Front End Web Developer Namodegree Program
   - Excellent Courseware Developers and Mentors
+  
 **2. [Round River Conservation](http://www.roundriver.org/)**
+
   - Excellent Worldwide Conservation Field Work and Studies
+  
 **3. [Google Maps APIs](https://developers.google.com/maps/)**
+
   - Stellar Mapping Apps
+  
 **4. [Open Weather Map API](http://openweathermap.org/api)**
+
   - Free Weather API data services
+  
 **5. [Git Hub](https://github.com/)**
+
   - Excellent Coding Repository
+  
 **6. Ryan Vbra**
+
   - Most excellent Udacity Mentor gifted with patience and intelligence
 
 
