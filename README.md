@@ -67,7 +67,7 @@ Author - George Fischer
 ## III. How to Use this App
 (coming soon)
   
- ## IV. Special Thanks
+## IV. Special Thanks
 
 **1. [Udacity](https://www.udacity.com/)**
   - Excellent Online Nanodegree Programs
