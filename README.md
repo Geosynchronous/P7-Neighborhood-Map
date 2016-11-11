@@ -12,6 +12,14 @@ Author - George Fischer
 - You should see the following:
 ![Screenshot My Github Project Repository](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-11-10%20at%2011.23.00%20PM.png)
 
+**2. Download or Clone Repository**
+- Click on the green button `"Clone or Download"`
+- Select and Click on one of the following buttons to dowload to your local computer:
+  - `Open in Desktop` 
+  - `Download ZIP`
+- Or if you prefer you can use **Git** or **SVN** to clone the files with the following address:
+  - https://github.com/Geosynchronous/P7-Neighborhood-Map.git
+1[Screenshot of Choices](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-11-10%20at%2011.44.49%20PM.png)
 
 
 
