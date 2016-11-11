@@ -6,7 +6,7 @@ https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers
 [create an anchor](#anchors-in-markdown)
 ## Contents
 [I. "The Round River Map App"](##I.-"The-Round-River-Map-App")
-[II. Getting Started]
+[II. Getting Started](##II.-Getting-Started)
 [III. How to Use this App]
 [IV. Special Thanks]
 
@@ -29,7 +29,7 @@ https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers
 - This Earth is a beautiful place, and if this App can help us humans find a sustainable way to live on this planet, then any effort here will be well worth it... hallelujah!!!
 
 
-## II. Getting Started
+##II. Getting Started
 
 **1. Go to my Github Repository for this Project**
 - Copy this URL https://github.com/Geosynchronous/P7-Neighborhood-Map
