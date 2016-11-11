@@ -19,7 +19,7 @@ Author - George Fischer
   - `Download ZIP`
 - Or if you prefer you can use **Git** or **SVN** to clone the files with the following address:
   - https://github.com/Geosynchronous/P7-Neighborhood-Map.git
-1[Screenshot of Choices](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-11-10%20at%2011.44.49%20PM.png)
+![Screenshot of Choices](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-11-10%20at%2011.44.49%20PM.png)
 
 
 
