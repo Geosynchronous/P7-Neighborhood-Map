@@ -2,7 +2,24 @@
 Udacity FEND Nanodegree Project
 Author - George Fischer
 
+## "The Round River Map APP"
 ![Screenshot](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-11-10%20at%209.44.15%20PM.png)
+
+**Introduction**
+- This APP was written as a Course Project Requirement for the **Udacity Front End Web Developer Nanodegree Online Course**
+- It was also coincidentally written for the world wide **Round River Conservation** non-profit organization
+- The APP is a great way to have central access to online resources and social networking for this organization
+- A weather API was accessed to provide realtime weather stats for each Round River location on this Earth
+- The APP UI was designed to responsively work on smart phones, tablets and computer
+- The APP can be quite useful to potential/current Round River Students and Alumni glearning more about and contributing to this conservation effort
+- THe APP can also be quite useful to the Administration and Staff for making presenations to various audiences, such as educational, scientific, conservation, funding agencies and the general public
+- Round River has been using GIS Mappng for decades now, and it is a vital part of their organization, this APP has the potential of expanding into all kinds of functionalities both for education and research
+- If Round River finds this APP useful, I may try to pursue a fudning grant from **Google** to pursue further development
+- Currently the decades of resources from Round River and the comprehensive functionality of Google Maps resources provides an enourmous about usefulness
+- This APP could be very useful in the classrooms and homes on all continents, and for all age groups
+
+
+
 
 ## Getting Started
 
