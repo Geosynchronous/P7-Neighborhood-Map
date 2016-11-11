@@ -70,7 +70,6 @@ Author - George Fischer
  ## IV. Special Thanks
 
 **!. [Udacity](https://www.udacity.com/)**
-
   - Excellent Online Nanodegree Programs
   - Front End Web Developer Namodegree Program
   - Excellent Courseware Developers and Mentors
