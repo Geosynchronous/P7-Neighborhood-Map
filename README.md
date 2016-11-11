@@ -6,9 +6,11 @@ Author - George Fischer
 
 ## Getting Started
 
-**1. Download Repository Folder Files**
-- Folder and Files can be found [HERE IN MY GITHUB NEiGHBORHOOD PROJECT FOLDER](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/Round_River_Map_Project)
-- Click
+**1. Go to my Github Repository for this Project**
+- Copy this URL https://github.com/Geosynchronous/P7-Neighborhood-Map
+- Paste the URL in your web browser URL address field and press enter.
+- You should see the following:
+![Screenshot My Github Project Repository](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-11-10%20at%2011.23.00%20PM.png)
 
 
 
