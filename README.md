@@ -69,7 +69,7 @@ Author - George Fischer
   
 ## IV. Special Thanks
 
-**1. [Udacity](https://www.udacity.com/)**
+` **1. [Udacity](https://www.udacity.com/)**
   - Excellent Online Nanodegree Programs
   - Front End Web Developer Namodegree Program
   - Excellent Courseware Developers and Mentors
@@ -90,7 +90,16 @@ Author - George Fischer
 
   - Excellent Coding Repository
   
-**6. Ryan Vbra**
+**6. [Stack Overflow](http://stackoverflow.com/)**
+**7. [JS Fiddle](https://jsfiddle.net/)**
+**8. [Knockout](http://knockoutjs.com/)**  
+**9. [jQuery](https://jqueryui.com/)**
+**10. [W3 Schools](http://www.w3schools.com/)**
+**11. [MDN](https://developer.mozilla.org/en-US/)**
+**11. [Google Search](https://www.google.com/)**
+
+
+**12. Ryan Vbra**
 
   - A Udacity Mentor gifted with patience, excellent communication skills, robust web programming knowledge, intelligence and humor
   - I greatly appreciate his assistance in helping get past the road blocks...
