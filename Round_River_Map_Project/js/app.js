@@ -521,8 +521,8 @@ function AppViewModel() {
         // map.fitBounds(bounds);
     };
 
+    // Hides all List Items and Markers
     self.hideAllLocations = function(button) {
-
         // For each location in the observable self.locations() array
         for (var i = 0; i < self.locations().length; i++) {
             self.locations()[i].toggleListItem(false); // hide the list item
@@ -531,7 +531,6 @@ function AppViewModel() {
         }
     };
 
-    // This function currently not in use
     // Availble for redisplaying map with optimal boundaries
     // Selected set of locations will fit within map boundaries
     self.setNewBounds = function() {
@@ -624,15 +623,15 @@ function loadContent(marker) {
     });
 }
 
-// This function populates the infowindow when the marker is clicked. We'll only allow
+// This function populates the infowindow when the marker is clicked. Only
 // one infowindow which will open at the marker that is clicked, and populate based
 // on that markers position.
-// TODO - markers should animate or change styling when clicked, or when the associated list item is clicked
 function populateInfoWindow(marker) {
     gps = 'lat=' + marker.latitude + '&' + 'lon=' + marker.longitude;
     loadContent(marker);
 }
 
+// Closes the Open Info Window when "X" button clicked
 function hideInfoWindow(marker) {
     var infowindow = largeInfowindow;
     infowindow.marker = null;
@@ -641,7 +640,6 @@ function hideInfoWindow(marker) {
 // This function takes in an image, and then creates a new marker
 // icon of that image. The icon will be 33 px wide by 33 high, have an origin
 // of 0, 0 and be anchored at 17, 33).
-// TODO - There is a better way to do this google maps v3.11 and beyond
 function makeMarkerIcon(iconImage) {
     var markerImage = new google.maps.MarkerImage(
         iconImage,
@@ -652,9 +650,14 @@ function makeMarkerIcon(iconImage) {
     return markerImage;
 }
 
+// Creates the map markers for each geolocation
+// All hard coded data is loaded here for each marker
+// API info is loaded later when the Info Window is loaded in realtime
+// The map boundaries for markers are established here
+// The Event Listeners for the markers are invoked here
+// initMap() follows this function, and invokes it
 function createMarkers() {
-
-    // This will be our listing marker icon.
+    // Listing marker icon, the Round River Logo
     defaultIcon = makeMarkerIcon('images/RR-circle.png');
 
     // Create a highlighted marker icon
@@ -732,6 +735,7 @@ function createMarkers() {
 // The Google Callback function
 // This function is executed immediately after the Google API script finishes loading,
 // and it should be used to initialize the Google Map objects
+// Last script element is where the Google API script is invoked
 function initMap() {
     // define map and render it into the map div
     map = new google.maps.Map(document.getElementById('map'), {
@@ -754,7 +758,7 @@ function initMap() {
     bounds = new google.maps.LatLngBounds();
     // define largeInfowindow
     largeInfowindow = new google.maps.InfoWindow();
-    // create all map markers
+    // create ALL map markers on map when loaded
     createMarkers();
 }
 
