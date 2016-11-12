@@ -688,6 +688,7 @@ function createMarkers() {
             animation: google.maps.Animation.DROP,
             icon: defaultIcon,
             id: i,
+            animation: google.maps.Animation.DROP,
             map: map
         });
 
