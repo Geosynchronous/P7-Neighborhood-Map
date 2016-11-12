@@ -487,10 +487,6 @@ function AppViewModel() {
             self.showFilteredLocations(button);
             self.setNewBounds(button);
         } else {
-            // restores map to it's original size & position for current filtered locations
-            // useful for when map was moved fro some reason
-            // map.fitBounds(bounds);
-            // hides all filtered markers and list items
             self.hideAllLocations(button);
             self.buttons()[button.id].showLocationsViews(false);
         }
