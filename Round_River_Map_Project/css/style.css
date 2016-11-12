@@ -151,6 +151,8 @@ color: #fff;
   padding:  10px 10px 10px 10px;
   text-align: left;
   width: 300px;
+  border-right: 3px solid #005496;
+  border-bottom: 3px solid #005496;
 }
 
 #logo {
