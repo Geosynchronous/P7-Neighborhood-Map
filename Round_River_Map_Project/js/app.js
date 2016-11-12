@@ -614,6 +614,13 @@ function loadContent(marker) {
         // Check to make sure the infowindow is not already opened on this marker.
         if (infowindow.marker != marker) {
             infowindow.marker = marker;
+            // Try to Zoom and Center for a better Infowindow Position on Map
+            // A lot less panning and zooming in now needed by user... but...
+            // TODO - The smaller the viewing screen, the less optimal the positioning
+            // Need to calculate New Center based on InfoWindow Size and View
+            map.setZoom(5);
+            map.setCenter(marker.getPosition());
+
             infowindow.setContent(contentString);
             infowindow.open(map, marker);
             // Make sure the marker property is cleared if the infowindow is closed.
