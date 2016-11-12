@@ -345,7 +345,7 @@ function AppViewModel() {
             lat: 51.198708,
             lng: 99.678212
         },
-        continent: 'Asia',
+        continent: 'Asian Continent',
         category: 'Global Locations',
         type: 'Study Abroad',
         siteUrl: 'http://www.roundriver.org/student-programs/programs/mongolia/',
@@ -518,7 +518,6 @@ function AppViewModel() {
                 self.locations()[i].marker.setVisible(false); // hide map marker
             }
         }
-        // map.fitBounds(bounds);
     };
 
     // Hides all List Items and Markers
