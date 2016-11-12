@@ -38,10 +38,14 @@ Map App created for:
 
 <!--  Options Box DIV (MENUS) -->
       <div class="options-box" id="slider" >
-        <button id="slide" class="slideButton">Slide</button>
-        <a target="_blank" href="http://www.roundriver.org" title="roundriver.org">
-          <img alt="Round River" src="images/RR-Main-Logo.png">
-        </a>
+        <div>
+          <a target="_blank" href="http://www.roundriver.org" title="roundriver.org">
+            <img id="logo" alt="Round River" src="images/RR-Main-Logo.png">
+          </a>
+                                          <div id="slide">
+          <button class="slideButton">Slide</button>
+        </div>
+        </div>
 
         <!-- Filter Buttons  DIV-->
         <div data-bind="foreach: buttons">
