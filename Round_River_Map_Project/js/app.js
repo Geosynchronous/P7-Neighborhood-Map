@@ -629,6 +629,11 @@ function loadContent(marker) {
 function populateInfoWindow(marker) {
     gps = 'lat=' + marker.latitude + '&' + 'lon=' + marker.longitude;
     loadContent(marker);
+    // Makes selected map marker bounce for timed duration
+    marker.setAnimation(google.maps.Animation.BOUNCE);
+    setTimeout(function () {
+        marker.setAnimation(null);
+    }, 700*5); // 700 is current maps duration of one bounce (v3.13)
 }
 
 // Closes the Open Info Window when "X" button clicked
