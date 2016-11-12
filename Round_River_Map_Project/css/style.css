@@ -95,8 +95,8 @@ color: #fff;
 #slide {
   z-index: 500;
   position:relative;
-  top: -40px;
-  left: 16px;
+  top: 3px;
+  left: 1px;
   display: inline;
 }
 
@@ -109,7 +109,7 @@ color: #fff;
 }
 
 .slideButton:hover {
-  background-color: lightgrey;
+  background-color: #e6e6e6;
 }
 
 #slider{
@@ -118,7 +118,7 @@ color: #fff;
 }
 
 .closed{
-    left: -286px !important;
+    left: -316px !important;
 
 }
 
@@ -145,7 +145,7 @@ color: #fff;
 .options-box {
   z-index: 100;
   position:relative;
-  top: 0px;
+  top: -25px;
   left: 0px;
   background: #af9a6b;
   padding:  10px 10px 10px 10px;
@@ -157,6 +157,10 @@ color: #fff;
 
 #logo {
   width: 250px;
+}
+
+#logo-position {
+padding: 0 0 5px 45px;
 }
 
 #about {
