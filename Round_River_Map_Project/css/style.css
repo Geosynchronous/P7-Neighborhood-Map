@@ -145,11 +145,13 @@ color: #fff;
 .options-box {
   z-index: 100;
   position:relative;
-  top: -25px;
+  top: -29px;
   left: 0px;
   background: #af9a6b;
   padding:  10px 10px 10px 10px;
   text-align: left;
+  height: 100%;
+  overflow: scroll;
   width: 300px;
   border-right: 3px solid #005496;
   border-bottom: 3px solid #005496;
