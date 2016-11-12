@@ -96,7 +96,7 @@ color: #fff;
   z-index: 500;
   position:relative;
   top: -40px;
-  left: 46px;
+  left: 16px;
   display: inline;
 }
 
@@ -118,7 +118,7 @@ color: #fff;
 }
 
 .closed{
-    left: -316px !important;
+    left: -286px !important;
 
 }
 
