@@ -36,6 +36,10 @@ a:visited {color: #fff;}
 a:hover {color: #4CAF50;}
 a:active {color: #fff;}
 
+a {
+    text-decoration: none !important;
+}
+
 
 
 
