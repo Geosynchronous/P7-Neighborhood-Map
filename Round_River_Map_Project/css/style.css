@@ -117,12 +117,12 @@ color: #fff;
   background-color: #e6e6e6;
 }
 
-.closed {
-    /* TODO - Remove important, without deactivating the SLIDE BUTTON action*/
-    /* This is still a problem after I made the slider code more specific*/
-    /* Perhaps changing the slide to KNOCKOUT from jQuery will fix this */
-    /* SEE - http://csswizardry.com/2014/07/hacks-for-dealing-with-specificity/*/
-    left: -316px !important;
+
+/* HACK - Chain selector to itself */
+/* Increases specifity of selector */
+/* Allowed removal of "!important" designation */
+.closed.closed {
+    left: -316px;
 }
 
 
@@ -142,14 +142,7 @@ color: #fff;
 /* Or maybe just notational reasons */
 /*  - "map" is a highly used object variable */
 /*  - chaining ".map" can cause confusion with CLASS*/
-/*#map {
-  top: 0px;
-  height: 100%;
-  left: 0px;
-  background-color: #000;
-  position: absolute;
-  right: 0px;
-}*/
+
 
 .map-settings {
   top: 0px;
