@@ -57,7 +57,7 @@ a {
   width: 28%;
   display: inline-block;
   padding: 5px;
-  margin: 0px 6px 10px 6px;
+  margin: 0 6px 10px 6px;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
 }
@@ -80,8 +80,8 @@ button:focus {outline:0;}
   list-style: none;
   font-size: 16px;
   line-height: 180%;
-  margin: 0px 30px 5px 20px;
-  padding: 0px;
+  margin: 0 30px 5px 20px;
+  padding: 0;
   color: #000;
 }
 
@@ -108,7 +108,7 @@ color: #fff;
 .slideButton {
   padding: 6px;
   border-radius: 4px;
-  margin: 0px;
+  margin: 0;
   background-color: #fff;
   font-weight: bold;
 }
@@ -145,19 +145,19 @@ color: #fff;
 
 
 .map-settings {
-  top: 0px;
+  top: 0;
   height: 100%;
-  left: 0px;
+  left: 0;
   background-color: #000;
   position: absolute;
-  right: 0px;
+  right: 0;
 }
 
 .options-box {
   z-index: 100;
   position:relative;
   top: -29px;
-  left: 0px;
+  left: 0;
   background: #af9a6b;
   padding:  10px 10px 10px 10px;
   text-align: left;
@@ -173,7 +173,7 @@ color: #fff;
 }
 
 .logo-position {
-padding: 0px 0px 5px 45px;
+padding: 0 0 5px 45px;
 }
 
 .social {
@@ -183,7 +183,7 @@ padding: 0px 0px 5px 45px;
 
 .hero {
   width: 280px;
-  margin: 0px 5px;
+  margin: 0 5px;
   border-radius: 14px;
   border: 3px solid #005496;
 }
@@ -200,17 +200,17 @@ padding: 0px 0px 5px 45px;
    width: 198px;
    font-size: 18px;
    font-weight: 400;
-   padding: 0px;
+   padding: 0;
    background-color: #005496;
    color: #fff;
-   padding: 10px 10px 0px 10px;
+   padding: 10px 10px 0 10px;
 }
 
 .iw-moreInfo {
   font-size: 12px;
    width: 208px;
    text-align: right;
-   padding: 0px 10px 5px 0px;
+   padding: 0 10px 5px 0;
    background-color: #005496;
    color: #fff;
    margin-bottom: 1px;
@@ -234,7 +234,7 @@ padding: 0px 0px 5px 45px;
 
 .credits {
     position:relative;
-    right: 0px;
+    right: 0;
     padding-left: 23px;
 }
 
@@ -247,11 +247,11 @@ padding: 0px 0px 5px 45px;
 
 .listing {
   display: inline;
-  margin: 0px;
+  margin: 0;
 }
 
 .stats {
-  margin: 8px 10px 0px 10px;
-  border: 0px;
+  margin: 8px 10px 0 10px;
+  border: 0;
 }
 
