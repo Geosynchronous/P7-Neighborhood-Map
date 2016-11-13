@@ -1,3 +1,6 @@
+// Whole-script strict mode syntax
+"use strict";
+
 // Neighborhood Map Project
 // Round River Conservation Studies Map
 // Udacity FEND Nanodegree
