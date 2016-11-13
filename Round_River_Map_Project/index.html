@@ -96,7 +96,9 @@ Map App created for:
     <script src= "js/knockout-3.4.0.js"></script>
     <script src= "js/app.js"></script>
     <!-- Google Map is the very last thing to execute during the load -->
-    <script async defer src= "https://maps.googleapis.com/maps/api/js?key=AIzaSyAaL-jhZDIeEBOjiVX31sDh6UjauQlfWk4&v=3&callback=initMap" onerror="googleError()">
+    <!-- Depreciated??? onerror="googleError()" -->
+    <!-- Google seems to handle the error messages already -->
+    <script async defer src= "https://maps.googleapis.com/maps/api/js?key=AIzaSyAaL-jhZDIeEBOjiVX31sDh6UjauQlfWk4&v=3&callback=initMap">
     </script>
 
   </body>
