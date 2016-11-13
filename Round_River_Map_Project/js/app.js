@@ -790,6 +790,8 @@ function initMap() {
 // So this function seems irrelevant... maybe useful for older browsers???
 // Maybe what I have here is just fine???
 //
+// Tried Chaining this to initMap - .onerror = function() {mapError()}; with no luck, etc...
+//
 // Not an issue that keeps my code from running...
 function mapError() {
     alert("Load Error: Google Maps API");
