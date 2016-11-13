@@ -766,6 +766,7 @@ function initMap() {
             position: google.maps.ControlPosition.TOP_RIGHT
         }
     });
+
     // define bounds
     bounds = new google.maps.LatLngBounds();
     // define largeInfowindow

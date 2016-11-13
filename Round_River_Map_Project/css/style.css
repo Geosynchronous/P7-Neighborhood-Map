@@ -117,12 +117,12 @@ color: #fff;
   background-color: #e6e6e6;
 }
 
-#slider{
+#slider {
     position:relative;
     left: 0px;
 }
 
-.closed{
+.closed {
     /* TODO - Remove important, without deactivating the SLIDE BUTTON action*/
     /* SEE - http://csswizardry.com/2014/07/hacks-for-dealing-with-specificity/*/
     left: -316px !important;
@@ -139,6 +139,9 @@ color: #fff;
   position: relative;
 }
 
+/* It seems that Google Maps wants this to be an ID*/
+/* (CLASS does not seem to work) */
+/* Guess, Google wants the specificity of an ID*/
 #map {
   top: 0px;
   height: 100%;
@@ -189,7 +192,7 @@ padding: 0px 0px 5px 45px;
 
 
 
-/* Google Maps Info Windows*/
+/* Google Maps Info Windows
 
 .iw-container  .iw-title {
    width: 198px;
