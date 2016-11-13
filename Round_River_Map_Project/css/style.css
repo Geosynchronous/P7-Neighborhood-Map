@@ -123,8 +123,8 @@ color: #fff;
 }
 
 .closed{
+    /*TODO - Remove important, without deactivating the SLIDE BUTTON action*/
     left: -316px !important;
-
 }
 
 
