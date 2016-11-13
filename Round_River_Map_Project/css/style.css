@@ -142,7 +142,16 @@ color: #fff;
 /* Or maybe just notational reasons */
 /*  - "map" is a highly used object variable */
 /*  - chaining ".map" can cause confusion with CLASS*/
-#map {
+/*#map {
+  top: 0px;
+  height: 100%;
+  left: 0px;
+  background-color: #000;
+  position: absolute;
+  right: 0px;
+}*/
+
+.map-settings {
   top: 0px;
   height: 100%;
   left: 0px;
