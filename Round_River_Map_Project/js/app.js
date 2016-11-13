@@ -623,7 +623,7 @@ function loadContent(marker) {
             });
         }
     }).fail(function() {
-        alert("API Load Error");
+        alert("Load Error: Open Weather Map API");
     });
 }
 
@@ -742,11 +742,13 @@ function createMarkers() {
     map.fitBounds(bounds);
 }
 
+
 // The Google Callback function
 // This function is executed immediately after the Google API script finishes loading,
 // and it should be used to initialize the Google Map objects
 // Last script element is where the Google API script is invoked
 function initMap() {
+
     // define map and render it into the map div
     map = new google.maps.Map(document.getElementById('map'), {
         center: {
@@ -771,6 +773,18 @@ function initMap() {
     // create ALL map markers on map when loaded
     createMarkers();
 }
+
+// Callback Fallback function doesn't seem to be needed
+// Google seems to handle all of it gracefully \
+// Error messages appear in the Map DIV for the User & Tools Console fpr the developer
+// The function below is probably depreceated and so is the need to
+// append onerror="googleError()" to the end of the map script at the end of index.html
+// function googleError(){
+//      alert("Load Error: Google Maps API");
+//      console.log("Load Error: Google Maps API");
+// }
+
+
 
 
 
