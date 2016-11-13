@@ -4,7 +4,7 @@ Author - George Fischer
 
 ## Contents
 
-[The Round River Map App](##The-Round-River-Map-App)
+[Round River Map App](##Round-River-Map-App)
 
 [II. Getting Started](##II.-Getting-Started)
 
@@ -13,7 +13,7 @@ Author - George Fischer
 [IV. Special Thanks]
 
 
-##I. "The Round River Map App"
+##Round River Map App
 ![Screenshot](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-11-10%20at%209.44.15%20PM.png)
 
 **Introduction**
