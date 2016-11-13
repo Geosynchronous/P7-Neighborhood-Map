@@ -121,7 +121,7 @@ function AppViewModel() {
     // Very concise code compared to Knockout because of toggleClass fn
     // No need to force refresh
     $('button').on('click', function() {
-        $('#slider').toggleClass('closed');
+        $('div.options-box').toggleClass('closed');
     });
 
     // Need this to make toggle list binding-updates work

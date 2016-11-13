@@ -117,11 +117,6 @@ color: #fff;
   background-color: #e6e6e6;
 }
 
-#slider {
-    position:relative;
-    left: 0px;
-}
-
 .closed {
     /* TODO - Remove important, without deactivating the SLIDE BUTTON action*/
     /* SEE - http://csswizardry.com/2014/07/hacks-for-dealing-with-specificity/*/
@@ -195,7 +190,7 @@ padding: 0px 0px 5px 45px;
 
 
 
-/*Google Maps Info Windows*/
+/* Google Maps Info Windows */
 
 .iw-container  .iw-title {
    width: 198px;
