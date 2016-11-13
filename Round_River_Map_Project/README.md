@@ -2,17 +2,6 @@
 Udacity FEND Nanodegree Project
 Author - George Fischer
 
-## Contents
-
-[Round River Map App](##Round-River-Map-App)
-
-[II. Getting Started](##II.-Getting-Started)
-
-[III. How to Use this App]
-
-[IV. Special Thanks]
-
-
 ##Round River Map App
 ![Screenshot](https://github.com/Geosynchronous/P7-Neighborhood-Map/blob/master/DocImages/Screen%20Shot%202016-11-10%20at%209.44.15%20PM.png)
 
@@ -31,7 +20,7 @@ Author - George Fischer
 - This Earth is a beautiful place, and if this App can help us humans find a sustainable way to live on this planet, then any effort here will be well worth it... hallelujah!!!
 
 
-##II. Getting Started
+##Getting Started
 
 **1. Go to my Github Repository for this Project**
 - Copy this URL https://github.com/Geosynchronous/P7-Neighborhood-Map
@@ -67,10 +56,31 @@ Author - George Fischer
 **6. Contact the Author with questions and feedback if you wish**
   - geosynchr0nous@mac.com
   
-## III. How to Use this App
-(coming soon)
+##How to Use this App
+- When the map first loads, it drops markers for each of the Round River sites all around the world
+- Clicking on one of these will open an Info Window on the map over the marker'
+  - THe InfoWindow has a picture related to the location and current weather data listed
+  - clicking on the INFO button will take you too a set of information pages related to this location
+  - clicking on the weather icon in the right bottom corner will take you to an OPEN WEATHER MAP map.
+  - the "X" at the top of the screen will close the window
+  - you can also close an open infowindow by clickinb on a new locastion mzrke...omly one marker can be open at a time
+- There are 9 large buttons that allow you to filter the locations to show various groupings of Round Rivers sites, such as Africa and South America
+  - Only one of these buttons can be selected at a time.
+  - Selecting one button closes the previous button along with all the markers on the map and the corresponding list in the options box
+  - Toggling one of  the buttons will clear the locations from the list and location markers on the map, toggling again will restore the map to it's original layout with all the necessary location markers shown
+  - Also not that you can open a location by clicking on the list name in the Options Box, note how mouse over the list will highltght not only the list item, but also the corresponding marker and visa versa
+ - All of Round Rivers spcial media links are at the bottom of the options box
+ - To access Round Rivers Website just click on the TITLE at the top of the options box
+- `Slide Button` slides the Options Box off the screen to expose more of the map and it toggles in and out
+- THere are a bvariety of Google Map featuresL
+  - Satellite and Terrain Views
+  - Zooming and Panning the Map
+  - An a little person icon, that when dragged onto a road allows a 3D view of the area and question, and oftern you can move down the road to scope out an area
+ - The map has exactly the same user interface for phones, tablets and computers
+
+- 
   
-## IV. Special Thanks
+##Special Thanks
 
 - **1. [Udacity](https://www.udacity.com/)**
   - Excellent Online Nanodegree Programs
