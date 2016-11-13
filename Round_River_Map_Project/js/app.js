@@ -738,6 +738,7 @@ function createMarkers() {
             };
         }(i));
     }
+
     // After all markers are created, fit the map to these boundaries
     map.fitBounds(bounds);
 }
@@ -748,7 +749,6 @@ function createMarkers() {
 // and it should be used to initialize the Google Map objects
 // Last script element is where the Google API script is invoked
 function initMap() {
-
     // define map and render it into the map div
     map = new google.maps.Map(document.getElementById('map'), {
         center: {
@@ -774,17 +774,25 @@ function initMap() {
     createMarkers();
 }
 
-// Callback Fallback function doesn't seem to be needed
-// Google seems to handle all of it gracefully \
-// Error messages appear in the Map DIV for the User & Tools Console fpr the developer
-// The function below is probably depreceated and so is the need to
-// append onerror="googleError()" to the end of the map script at the end of index.html
-// function googleError(){
-//      alert("Load Error: Google Maps API");
-//      console.log("Load Error: Google Maps API");
-// }
-
-
+// TODO - ???
+//
+// Google Maps Error message
+// Function called when there is an error with Google Maps' API
+// I wonder if "onerror" gets reset, as this message is not invoked...
+//
+// "The Google Maps JavaScript API writes error and warning messages
+// to window.console . The following tables list the possible error codes
+// returned by the Google Maps JavaScript API, "
+//
+// Also the DIV class="gm-err-message" puts a pretty error message in the map DIV
+// Also  console.log(window.onerror); is null everywhere I check...
+//
+// So this function seems irrelevant... maybe useful for older browsers???
+// Maybe what I have here is just fine???
+function mapError() {
+    alert("Load Error: Google Maps API");
+    console.log("Load Error: Google Maps API");
+}
 
 
 
