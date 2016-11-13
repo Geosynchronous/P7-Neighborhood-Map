@@ -31,13 +31,18 @@ h2 {
   font-size: 16px;
 }
 
-a:link {color: #fff;}
-a:visited {color: #fff;}
-a:hover {color: #4CAF50;}
-a:active {color: #fff;}
+a:hover {
+  color: #4CAF50;
+}
+
+a:link,
+a:visited,
+a:active {
+  color: #fff;
+}
 
 a {
-    text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 
@@ -59,13 +64,13 @@ a {
 
 .button:hover {
     background-color: #4CAF50; /* Green */
-    color: white;
+    color: #fff;
 }
 
 button:focus {outline:0;}
 
 .buttonHighlight {
-    background-color: black;
+    background-color: #000;
 }
 
 .button-list {
@@ -75,8 +80,8 @@ button:focus {outline:0;}
   list-style: none;
   font-size: 16px;
   line-height: 180%;
-  margin: 0 30px 5px 20px;
-  padding: 0;
+  margin: 0px 30px 5px 20px;
+  padding: 0px;
   color: #000;
 }
 
@@ -103,7 +108,7 @@ color: #fff;
 .slideButton {
   padding: 6px;
   border-radius: 4px;
-  margin: 0;
+  margin: 0px;
   background-color: #fff;
   font-weight: bold;
 }
@@ -162,12 +167,12 @@ color: #fff;
 }
 
 #logo-position {
-padding: 0 0 5px 45px;
+padding: 0px 0px 5px 45px;
 }
 
 #about {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   text-align: right;
   text-decoration: none;
 }
@@ -179,7 +184,7 @@ padding: 0 0 5px 45px;
 
 #hero {
   width: 280px;
-  margin: 0 5px;
+  margin: 0px 5px;
   border-radius: 14px;
   border: 3px solid #005496;
 }
@@ -198,17 +203,17 @@ padding: 0 0 5px 45px;
    font-weight: 400;
    padding: 0px;
    background-color: #005496;
-   color: white;
-   padding: 10px 10px 0 10px;
+   color: #fff;
+   padding: 10px 10px 0px 10px;
 }
 
 #iw-moreInfo {
   font-size: 12px;
    width: 208px;
    text-align: right;
-   padding: 0 10px 5px 0;
+   padding: 0px 10px 5px 0px;
    background-color: #005496;
-   color: white;
+   color: #fff;
    margin-bottom: 1px;
 }
 
@@ -255,6 +260,6 @@ padding: 0 0 5px 45px;
 
 .stats {
   margin: 8px 10px 0px 10px;
-  border: 0;
+  border: 0px;
 }
 
