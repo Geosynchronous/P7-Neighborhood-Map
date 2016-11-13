@@ -790,7 +790,8 @@ function initMap() {
 // So this function seems irrelevant... maybe useful for older browsers???
 // Maybe what I have here is just fine???
 //
-// Tried Chaining this to initMap - .onerror = function() {mapError()}; with no luck, etc...
+// Tried Chaining this (and variants) to initMap and other functions
+//           - .onerror = function() {mapError()}; (NO LUCK)
 //
 // Not an issue that keeps my code from running...
 function mapError() {
