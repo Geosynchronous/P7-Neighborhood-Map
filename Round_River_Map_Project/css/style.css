@@ -97,7 +97,7 @@ color: #fff;
 
 /* Slide Button for Options Box */
 
-#slide {
+.slide {
   z-index: 500;
   position:relative;
   top: 3px;
@@ -162,19 +162,12 @@ color: #fff;
   border-bottom: 3px solid #005496;
 }
 
-#logo {
+.logo {
   width: 250px;
 }
 
-#logo-position {
+.logo-position {
 padding: 0px 0px 5px 45px;
-}
-
-#about {
-  margin: 0px;
-  padding: 0px;
-  text-align: right;
-  text-decoration: none;
 }
 
 .social {
@@ -182,14 +175,14 @@ padding: 0px 0px 5px 45px;
   width: 32px;
 }
 
-#hero {
+.hero {
   width: 280px;
   margin: 0px 5px;
   border-radius: 14px;
   border: 3px solid #005496;
 }
 
-#media_icons {
+.media_icons {
   text-decoration: none;
 }
 
@@ -197,7 +190,7 @@ padding: 0px 0px 5px 45px;
 
 /* Google Maps Info Windows*/
 
-#iw-container  .iw-title {
+.iw-container  .iw-title {
    width: 198px;
    font-size: 18px;
    font-weight: 400;
@@ -207,7 +200,7 @@ padding: 0px 0px 5px 45px;
    padding: 10px 10px 0px 10px;
 }
 
-#iw-moreInfo {
+.iw-moreInfo {
   font-size: 12px;
    width: 208px;
    text-align: right;
@@ -217,39 +210,32 @@ padding: 0px 0px 5px 45px;
    margin-bottom: 1px;
 }
 
-#iw-moreInfoText {
+.iw-moreInfoText {
    text-decoration: none;
 }
 
-#infoWindowImage {
+.infoWindowImage {
   width: 218px;
 }
 
-#iw-ImageDiv {
+.iw-ImageDiv {
   margin-left: 20px;
 }
 
-#iw-Image {
+.iw-Image {
   width: 36px;
 }
 
-#iw-creditLink {
-  width: 36px;
-}
-
-#credits {
-  width: 100%;
-  text-align: right;
+.credits {
+    position:relative;
+    right: 0px;
+    padding-left: 23px;
 }
 
 .weather {
   background-color: #005496;
   display: flex;
   color: #fff;
-  font-size: 12px;
-}
-
-#tempNow {
   font-size: 18px;
 }
 

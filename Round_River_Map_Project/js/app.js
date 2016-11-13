@@ -580,29 +580,29 @@ function loadContent(marker) {
         // The following is the generic DOM Node content for all infowindows
         // It naturally executes after the above AJAX data is done being retrieved
         var contentString =
-            '<div id="iw-container">' +
+            '<div class="iw-container">' +
             '<div class="iw-title">' + marker.title +
             '</div>' +
-            '<div id="iw-moreInfo">' +
-            '<a id="iw-moreInfoText" target="_blank" href=' + marker.siteUrl + '>' + 'info' + '</a>' +
+            '<div class="iw-moreInfo">' +
+            '<a class="iw-moreInfoText" target="_blank" href=' + marker.siteUrl + '>' + 'info' + '</a>' +
             '</div>' +
             '<div>' +
-            '<img id="infoWindowImage" src=' + marker.siteImage + '>' +
+            '<img class="infoWindowImage" src=' + marker.siteImage + '>' +
             '</div>' +
             '<div class="weather" >' +
-            '<div id="iw-ImageDiv">' +
-            '<img id="iw-Image" src=' + weatherImage + '>' +
+            '<div class="iw-ImageDiv">' +
+            '<img class="iw-Image" src=' + weatherImage + '>' +
             '</div>' +
-            '<div class="listing" id="tempNow" >' +
+            '<div class="listing">' +
             '<p class="stats" >' + currentTemp + 'F' + '</p>' +
             '</div>' +
-            '<div class="listing" id="tempNow" >' +
+            '<div class="listing">' +
             '<p class="stats" >' + humidity + '%' + '</p>' +
             '</div>' +
-            '<div class="listing" id="credits" >' +
+            '<div class="credits">' +
             '<a target="_blank" href="http://openweathermap.org/weathermap" title="Credit: OpenWeatherMap.org">' +
-            '<img id="iw-creditLink" src="images/OpenWeatherMap_logo.png">'
-        '</a>' +
+            '<img src="images/OpenWeatherMap_logo.png">'
+            '</a>' +
         '</div>' +
         '</div>' +
         '</div>';
