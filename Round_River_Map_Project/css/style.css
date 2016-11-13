@@ -123,7 +123,8 @@ color: #fff;
 }
 
 .closed{
-    /*TODO - Remove important, without deactivating the SLIDE BUTTON action*/
+    /* TODO - Remove important, without deactivating the SLIDE BUTTON action*/
+    /* SEE - http://csswizardry.com/2014/07/hacks-for-dealing-with-specificity/*/
     left: -316px !important;
 }
 
