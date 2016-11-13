@@ -754,7 +754,7 @@ function initMap() {
             lng: -111.8665667
         },
         zoom: 1,
-        maxZoom: 12,
+        maxZoom: 17,
         backgroundColor: '#af9a6b',
         styles: styles,
         mapTypeId: 'terrain',
