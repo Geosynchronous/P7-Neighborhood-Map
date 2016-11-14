@@ -36,12 +36,13 @@ Map App created for:
 -->
     <div class="container">
 
-      <div class="slide">
-        <button class="slideButton">Slide</button>
+       <div class="slide">
+        <button class="slideButton" data-bind="click: toggleActive">Slide</button>
       </div>
 
 <!--  Options Box DIV (MENUS) -->
-      <div class="options-box">
+
+      <div class="options-box" data-bind="css: {'closed': isActive}">
 
         <div class=logo-position>
           <a target="_blank" href="http://www.roundriver.org" title="roundriver.org">

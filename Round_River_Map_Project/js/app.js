@@ -122,12 +122,14 @@ function AppViewModel() {
     var self = this,
         lastButtonId = 0;
 
-    // The jQuery Event function that toggle slides the Options Box
-    // Very concise code compared to Knockout because of toggleClass fn
-    // No need to force refresh
-    $('button').on('click', function() {
-        $('div.options-box').toggleClass('closed');
-    });
+    // Slide Button
+    self.isActive = ko.observable(false);
+    self.toggleActive = function() {
+        //console.log("button clicked");
+        self.isActive(!self.isActive());
+        //console.log(self.isActive());
+    };
+
 
     // Need this to make toggle list binding-updates work
     // self.toggleListItem = ko.observable(false);

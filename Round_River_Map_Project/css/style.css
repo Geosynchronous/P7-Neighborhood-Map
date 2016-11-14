@@ -100,37 +100,6 @@ color: #fff;
 
 
 
-/* Slide Button for Options Box */
-
-.slide {
-  z-index: 500;
-  position:relative;
-  top: 0px;
-  left: 0px;
-  display: inline;
-}
-
-.slideButton {
-  padding: 6px;
-  border-radius: 10px;
-  margin: 0;
-  background-color: #fff;
-  font-weight: bold;
-}
-
-.slideButton:hover {
-  background-color: #e6e6e6;
-}
-
-/* HACK - Chain selector to itself */
-/* Increases specifity of selector */
-/* Allowed removal of "!important" designation */
-.closed.closed {
-    left: -310px;
-}
-
-
-
 /* Main Divs */
 
 .container {
@@ -272,5 +241,36 @@ padding: 30px 0 5px 15px;
 .stats {
   margin: 8px 10px 0 10px;
   border: 0;
+}
+
+
+
+/* Slide Button for Options Box */
+/**/
+/* Specificity - Located these styles here*/
+/* because otherwise I needed to chain .closed*/
+.slide {
+  z-index: 500;
+  position:relative;
+  top: 0px;
+  left: 0px;
+  display: inline;
+}
+
+.slideButton {
+  padding: 6px;
+  border-radius: 10px;
+  margin: 0;
+  background-color: #fff;
+  font-weight: bold;
+}
+
+.slideButton:hover {
+  background-color: #e6e6e6;
+}
+
+
+.closed {
+    left: -310px;
 }
 
