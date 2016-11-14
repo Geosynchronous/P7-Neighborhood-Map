@@ -57,7 +57,7 @@ a {
   width: 28%;
   display: inline-block;
   padding: 5px;
-  margin: 0 6px 10px 6px;
+  margin: 5px 6px 10px 6px;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
 }
@@ -100,8 +100,8 @@ color: #fff;
 .slide {
   z-index: 500;
   position:relative;
-  top: 3px;
-  left: 1px;
+  top: 5px;
+  left: 5px;
   display: inline;
 }
 
@@ -117,15 +117,12 @@ color: #fff;
   background-color: #e6e6e6;
 }
 
-
 /* HACK - Chain selector to itself */
 /* Increases specifity of selector */
 /* Allowed removal of "!important" designation */
 .closed.closed {
-    left: -316px;
+    left: -310px;
 }
-
-
 
 
 
@@ -159,7 +156,7 @@ color: #fff;
   top: -29px;
   left: 0;
   background: #af9a6b;
-  padding:  10px 10px 10px 10px;
+  padding:  0 10px 0 10px;
   text-align: left;
   height: 100%;
   overflow: scroll;
@@ -173,7 +170,7 @@ color: #fff;
 }
 
 .logo-position {
-padding: 0 0 5px 45px;
+padding: 20px 0 5px 45px;
 }
 
 .social {
