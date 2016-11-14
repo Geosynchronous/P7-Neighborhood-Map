@@ -118,10 +118,8 @@ var map,
 // ***VIEW-MODEL***
 // Defines the data and behavior of the UI
 function AppViewModel() {
-
     var self = this,
         lastButtonId = 0;
-
     // Slide Button
     self.isActive = ko.observable(false);
     self.toggleActive = function() {
@@ -129,10 +127,6 @@ function AppViewModel() {
         self.isActive(!self.isActive());
         //console.log(self.isActive());
     };
-
-
-    // Need this to make toggle list binding-updates work
-    // self.toggleListItem = ko.observable(false);
 
     // Create KO Array to filter locations for button list display
     // Only one list can display at a time
@@ -173,7 +167,6 @@ function AppViewModel() {
         showLocationsViews: ko.observable(false),
         id: 8
     }]);
-
 
     // These are the marker listings that will be shown to the user.
     // Normally we'd have these in a database.
@@ -439,8 +432,12 @@ function AppViewModel() {
         highlight: ko.observable(false)
     }]);
 
-    // IMPORTANT: Knockout will automatically populate the 'location' parameter
+
+
+    // IMPORTANT: Knockout will DYNAMICALLY populate the 'location' parameter
     // with the clicked location object for the events functions that follow:
+
+
 
     // This function will be executed when a list item is clicked.
     // It is bound to each location in the list using the Knockout Click binding
@@ -449,7 +446,6 @@ function AppViewModel() {
         // the marker can now be accessed using 'location.marker'
         populateInfoWindow(location.marker);
     };
-
     // Mouse Over on a list title inside options-box
     //    - Highlights associated map marker icon
     //    - List title also highlighted with css hover
@@ -457,7 +453,6 @@ function AppViewModel() {
         location.marker.setIcon(highlightedIcon);
         location.highlight(true);
     };
-
     // Mouse Out on a list title inside options-box
     //    - Default restored with associated map marker icon
     //    - List title also default restored with css
@@ -465,26 +460,21 @@ function AppViewModel() {
         location.marker.setIcon(defaultIcon);
         location.highlight(false);
     };
-
     // Toggles Visibility when specific button clicked
     //  THen Filters list and markers
     self.toggleVisibility = function(button) {
-
         // Toggles Show/Hide for appropriate lists and markers
         var showLocView = !button.showLocationsViews(),
             buttonChange = false;
-
         // Checks to see if a new button was clicked
         if (button.id != lastButtonId) {
             buttonChange = true;
             // This turns off the highlight on the previous button
             self.buttons()[lastButtonId].showLocationsViews(false);
         }
-
         // Store current button.id that was clicked
         // Used next time function is called (see above)
         lastButtonId = button.id;
-
         // Shows/Hides lists and markers
         //    - Shows/Hides when button toggled
         //    - Shows when different button selected
@@ -498,24 +488,19 @@ function AppViewModel() {
             self.buttons()[button.id].showLocationsViews(false);
         }
     };
-
     // Filtering based on specific button clicked
     // Decides which locations are needed for list items and map markers
     self.showFilteredLocations = function(button) {
-
         // This is the label of the button that the user clicked
         var buttonLabel = button.label.toLowerCase();
-
         // For each location in the observable self.locations() array
         for (var i = 0; i < self.locations().length; i++) {
-
             // The location category
             var locCategory = self.locations()[i].category.toLowerCase();
             // The location continent
             var locContinent = self.locations()[i].continent.toLowerCase();
             // The location type
             var locType = self.locations()[i].type.toLowerCase();
-
             // If the location category or continent text contains the button label
             if ((locCategory === buttonLabel) || (locContinent === buttonLabel) || (locType === buttonLabel)) {
                 self.locations()[i].toggleListItem(true); // show list item
@@ -526,7 +511,6 @@ function AppViewModel() {
             }
         }
     };
-
     // Hides all List Items and Markers
     self.hideAllLocations = function(button) {
         // For each location in the observable self.locations() array
@@ -536,7 +520,6 @@ function AppViewModel() {
             largeInfowindow.close(); //close open infoWindow
         }
     };
-
     // Availble for redisplaying map with optimal boundaries
     // Selected set of locations will fit within map boundaries
     self.setNewBounds = function() {
@@ -556,7 +539,7 @@ function AppViewModel() {
 // Maps not compatible with KNOCKOUT
 // Hence code seperate from VIEW MODEL
 
-// Set Up Weather Data Functions
+// Set Up Global Weather Data Functions
 var weatherData,
     apiPath = 'http://api.openweathermap.org/data/2.5/weather?',
     apiKey = '&APPID=db6d60dca9b88a47a0884b8ff753b7f6',
@@ -573,7 +556,6 @@ var weatherData,
 function loadContent(marker) {
     var infowindow = largeInfowindow;
     var weatherUrl = apiPath + gps + apiKey + units;
-
     // AJAX data request from Open Weather Map API
     $.getJSON(weatherUrl).done(function(data) {
         weatherData = data;
@@ -583,7 +565,6 @@ function loadContent(marker) {
         humidity = Math.round(weatherData.main.humidity);
         description = weatherData.weather[0].main;
         weatherImage = "images/weather/" + weatherData.weather[0].icon + ".png";
-
         // The following is the generic DOM Node content for all infowindows
         // It naturally executes after the above AJAX data is done being retrieved
         var contentString =
@@ -613,7 +594,6 @@ function loadContent(marker) {
         '</div>' +
         '</div>' +
         '</div>';
-
         // Check to make sure the infowindow is not already opened on this marker.
         if (infowindow.marker != marker) {
             infowindow.marker = marker;
@@ -621,7 +601,7 @@ function loadContent(marker) {
             // A lot less panning and zooming in now needed by user... but...
             map.setZoom(9);
             map.setCenter(marker.getPosition());
-
+            // Make Info Window
             infowindow.setContent(contentString);
             infowindow.open(map, marker);
             // Make sure the marker property is cleared if the infowindow is closed.
@@ -679,11 +659,9 @@ function createMarkers() {
     // Create a highlighted marker icon
     // Used when the user mouses over the marker
     highlightedIcon = makeMarkerIcon('images/RR-circle-highlight.png');
-
     // The following group uses the location array
     // to create an array of markers on initialize.
     for (var i = 0; i < vm.locations().length; i++) {
-
         // Get the position from the location array.
         var position = vm.locations()[i].location;
         var title = vm.locations()[i].title;
@@ -691,7 +669,6 @@ function createMarkers() {
         var siteImage = vm.locations()[i].siteImage;
         var latitude = vm.locations()[i].location.lat;
         var longitude = vm.locations()[i].location.lng;
-
         // Create a marker per location, and put into markers array.
         // I believe this renders the markers to the map as well.
         var marker = new google.maps.Marker({
@@ -707,20 +684,16 @@ function createMarkers() {
             animation: google.maps.Animation.DROP,
             map: map
         });
-
         // Store the map marker inside the location object
         // This makes it easier to hide / show / animate the marker later on
         // without looping through a separate markers array
         vm.locations()[i].marker = marker;
-
         // Extend the bounds object to include this marker's location
         bounds.extend(marker.position);
-
         // Create an onclick event to open the large infowindow at each marker.
         marker.addListener('click', function() {
             populateInfoWindow(this);
         });
-
         // All markers get the following event bindings:
         // Two event listeners - one for mouseover, one for mouseout,
         //    - to change the markersIcons back and forth, which creates a highlight effect.
@@ -728,7 +701,6 @@ function createMarkers() {
         // NOTE --- For listMouseOver/listMouseOut funtion events:
         //    - On map events are invoked below
         //    - On list events are invoked by ko event calling these funcitons (see index.html)
-
         marker.addListener('mouseover', function(i) {
             // return an anonymous function
             // this should store the current values of 'i' and map marker and list item
@@ -737,7 +709,6 @@ function createMarkers() {
                 vm.listMouseOver(vm.locations()[i]);
             };
         }(i)); // pass 'i' as parameters to this event listener function
-
         // Same comment from above anonyous function applies here as well
         marker.addListener('mouseout', function(i) {
             return function() {
@@ -745,11 +716,9 @@ function createMarkers() {
             };
         }(i));
     }
-
     // After all markers are created, fit the map to these boundaries
     map.fitBounds(bounds);
 }
-
 
 // The Google Callback function
 // This function is executed immediately after the Google API script finishes loading,
@@ -781,14 +750,12 @@ function initMap() {
     createMarkers();
 }
 
-
 // Google Maps Error message
 // Error when Google Maps API not loading at all
 //
 // NOTE: Error during load - "The Google Maps JavaScript API writes error and warning messages
 // to window.console . The following tables list the possible error codes
 // returned by the Google Maps JavaScript API, "
-
 function mapError() {
     alert("Load Error: Google Maps API");
     console.log("Load Error: Google Maps API");
