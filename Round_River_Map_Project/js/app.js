@@ -1,6 +1,8 @@
 // Whole-script strict mode syntax
 "use strict";
 
+// TODO - Split Data into seperate JS files
+
 // Neighborhood Map Project
 // Round River Conservation Studies Map
 // Udacity FEND Nanodegree
@@ -769,7 +771,6 @@ function initMap() {
             position: google.maps.ControlPosition.TOP_RIGHT
         }
     });
-
     // define bounds
     bounds = new google.maps.LatLngBounds();
     // define largeInfowindow
@@ -802,6 +803,7 @@ function mapError() {
     alert("Load Error: Google Maps API");
     console.log("Load Error: Google Maps API");
 }
+
 
 
 
