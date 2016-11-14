@@ -114,7 +114,8 @@ function createMarkers() {
     highlightedIcon = makeMarkerIcon('images/RR-circle-highlight.png');
     // The following group uses the location array
     // to create an array of markers on initialize.
-    for (var i = 0; i < vm.locations().length; i++) {
+    var len = vm.locations().length;
+    for (var i = 0; i < len; i++) {
         // Get the position from the location array.
         var position = vm.locations()[i].location;
         var title = vm.locations()[i].title;
