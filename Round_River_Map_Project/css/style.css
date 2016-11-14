@@ -50,6 +50,11 @@ a {
 
 /* Geolocation Filter Buttons */
 
+.filter-buttons {
+  margin: 20px 0 10px 0;
+
+}
+
 .button {
   background-color: #005496;
   color: #fff;
@@ -100,14 +105,14 @@ color: #fff;
 .slide {
   z-index: 500;
   position:relative;
-  top: 5px;
-  left: 5px;
+  top: 0px;
+  left: 0px;
   display: inline;
 }
 
 .slideButton {
   padding: 6px;
-  border-radius: 4px;
+  border-radius: 10px;
   margin: 0;
   background-color: #fff;
   font-weight: bold;
@@ -161,16 +166,27 @@ color: #fff;
   height: 100%;
   overflow: scroll;
   width: 300px;
-  border-right: 3px solid #005496;
-  border-bottom: 3px solid #005496;
+  border: 3px solid #005496;
+  border-radius: 60px;
 }
 
 .logo {
-  width: 250px;
+  width: 275px;
 }
 
 .logo-position {
-padding: 20px 0 5px 45px;
+padding: 30px 0 5px 15px;
+}
+
+.byline{
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+}
+
+.contact {
+  padding: 10px 0;
 }
 
 .social {
@@ -189,6 +205,12 @@ padding: 20px 0 5px 45px;
   text-decoration: none;
 }
 
+.contact-us {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  margin: 5px 0 20px 0;
+}
 
 
 /* Google Maps Info Windows */
