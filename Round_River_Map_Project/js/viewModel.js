@@ -1,3 +1,5 @@
+"use strict";
+
 // ***VIEW MODEL***
 // Defines the data and behavior of the UI
 function AppViewModel() {
@@ -10,6 +12,10 @@ function AppViewModel() {
         self.isActive(!self.isActive());
         //console.log(self.isActive());
     };
+            // Developer-to-Developer tip
+            // Just in case, when you use an observable array,
+            // their respective content may not necessarily inherit
+            // or have observable attributes/properties.
 
     // Create KO Array to filter locations for button list display
     // Only one list can display at a time
