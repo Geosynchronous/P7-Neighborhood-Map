@@ -779,26 +779,14 @@ function initMap() {
     createMarkers();
 }
 
-// TODO - ???
-//
+
 // Google Maps Error message
-// Function called when there is an error with Google Maps' API
-// I wonder if "onerror" gets reset, as this message is not invoked...
+// Error when Google Maps API not loading at all
 //
-// "The Google Maps JavaScript API writes error and warning messages
+// NOTE: Error during load - "The Google Maps JavaScript API writes error and warning messages
 // to window.console . The following tables list the possible error codes
 // returned by the Google Maps JavaScript API, "
-//
-// Also the DIV class="gm-err-message" puts a pretty error message in the map DIV
-// Also  console.log(window.onerror); is null everywhere I check...
-//
-// So this function seems irrelevant... maybe useful for older browsers???
-// Maybe what I have here is just fine???
-//
-// Tried Chaining this (and variants) to initMap and other functions
-//           - .onerror = function() {mapError()}; (NO LUCK)
-//
-// Not an issue that keeps my code from running...
+
 function mapError() {
     alert("Load Error: Google Maps API");
     console.log("Load Error: Google Maps API");
