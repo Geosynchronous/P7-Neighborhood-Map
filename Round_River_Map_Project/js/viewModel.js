@@ -19,11 +19,12 @@ function AppViewModel() {
 
     // FILTER BUTTONS for Active Display
     // (Only one button can display at a time)
+    // (See globalData.js for Model Data)
     //
     // Create a constructor for FILTER BUTTONS using a KO observable
     var Button = function (region, index){
-      this.label = region;
-      this.showLocationsViews = ko.observable(false);
+      this.label = region;                              // Button Label
+      this.showLocationsViews = ko.observable(false);   // Button Active State
       this.id = index;
     };
     // Create the KO observable Array of FILTER BUTTONS
@@ -361,7 +362,8 @@ function AppViewModel() {
         // This is the label of the button that the user clicked
         var buttonLabel = button.label.toLowerCase();
         // For each location in the observable self.locations() array
-        for (var i = 0; i < self.locations().length; i++) {
+        len = self.locations().length;
+        for (var i = 0; i < len; i++) {
             // The location category
             var locCategory = self.locations()[i].category.toLowerCase();
             // The location continent
@@ -381,7 +383,8 @@ function AppViewModel() {
     // Hides all List Items and Markers
     self.hideAllLocations = function(button) {
         // For each location in the observable self.locations() array
-        for (var i = 0; i < self.locations().length; i++) {
+        len = self.locations().length;
+        for (var i = 0; i < len; i++) {
             self.locations()[i].toggleListItem(false); // hide the list item
             self.locations()[i].marker.setVisible(false); // hide the map marker
             largeInfowindow.close(); //close open infoWindow
@@ -391,7 +394,8 @@ function AppViewModel() {
     // Selected set of locations will fit within map boundaries
     self.setNewBounds = function() {
         bounds = new google.maps.LatLngBounds();
-        for (var i = 0; i < self.locations().length; i++) {
+        len = self.locations().length;
+        for (var i = 0; i < len; i++) {
             if (self.locations()[i].toggleListItem()) {
                 bounds.extend(self.locations()[i].marker.position);
             }
