@@ -44,6 +44,7 @@ ko.applyBindings(vm);
 // - Seperate App Data into seperate files
 //      - JSON
 //      - JS
+//      - Maybe open weather map and google map data as well
 // - Set-Up GULP
 //      - minify
 //      - concat
@@ -62,4 +63,6 @@ ko.applyBindings(vm);
 
 // Knockout is mainly used together with PHP and ASP.NET back-ends. It is good to couple knockout with libraries such as RequireJS or Browserify for module loading and dependencies, and CrossroadsJS or RouterJS for routes in order to provide comparable functionality to other MVVM frameworks such as AngularJS or EmberJS. You can even get a full-fledged knockout based framework called DurandalJS. If you need to deal with multiple ViewModels in your SPA(Single-Page Application), I suggest Angular or Ember. Of course, you have to choose tools that help you to get the work done on time and in full.
 
+// BTW Maybe you want to contribute to the How Do You Style Your Neighborhood Map? thread and post some screenshots of your App and explain your design and layout decisions?
+//      - https://discussions.udacity.com/t/how-do-you-style-your-neighborhood-map/181200
 
