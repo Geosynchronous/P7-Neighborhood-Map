@@ -17,45 +17,23 @@ function AppViewModel() {
             // their respective content may not necessarily inherit
             // or have observable attributes/properties.
 
-    // Create KO Array to filter locations for button list display
-    // Only one list can display at a time
-    self.buttons = ko.observableArray([{
-        label: 'GLOBAL LOCATIONS',
-        showLocationsViews: ko.observable(true), //set true for initial condition
-        id: 0
-    }, {
-        label: 'AFRICAN CONTINENT',
-        showLocationsViews: ko.observable(false),
-        id: 1
-    }, {
-        label: 'ASIAN CONTINENT',
-        showLocationsViews: ko.observable(false),
-        id: 2
-    }, {
-        label: 'NORTH AMERICA',
-        showLocationsViews: ko.observable(false),
-        id: 3
-    }, {
-        label: 'CENTRAL AMERICA',
-        showLocationsViews: ko.observable(false),
-        id: 4
-    }, {
-        label: 'SOUTH AMERICA',
-        showLocationsViews: ko.observable(false),
-        id: 5
-    }, {
-        label: 'FIELD RESEARCH',
-        showLocationsViews: ko.observable(false),
-        id: 6
-    }, {
-        label: 'STUDY ABROAD',
-        showLocationsViews: ko.observable(false),
-        id: 7
-    }, {
-        label: 'OUR OFFICES',
-        showLocationsViews: ko.observable(false),
-        id: 8
-    }]);
+    // FILTER BUTTONS for Active Display
+    // (Only one button can display at a time)
+    //
+    // Create a constructor for FILTER BUTTONS using a KO observable
+    var Button = function (region, index){
+      this.label = region;
+      this.showLocationsViews = ko.observable(false);
+      this.id = index;
+    };
+    // Create the KO observable Array of FILTER BUTTONS
+    var len = buttonLabel.regions.length;
+    self.buttons = ko.observableArray();
+        for ( var i = 0; i < len; i++ ){
+            self.buttons.push( new Button( buttonLabel.regions[i], i));
+        }
+    // Set initial condition where first button is highlighted (selected)
+    self.buttons()[0].showLocationsViews(true);
 
     // These are the marker listings that will be shown to the user.
     // Normally we'd have these in a database.

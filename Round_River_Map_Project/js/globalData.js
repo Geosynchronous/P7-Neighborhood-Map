@@ -105,3 +105,17 @@ var map,
         }]
     }];
 
+var buttonLabel = {
+      regions: [
+        'GLOBAL LOCATIONS',
+        'AFRICAN CONTINENT',
+        'ASIAN CONTINENT',
+        'NORTH AMERICA',
+        'CENTRAL AMERICA',
+        'SOUTH AMERICA',
+        'FIELD RESEARCH',
+        'STUDY ABROAD',
+        'OUR OFFICES'
+      ]
+    };
+
