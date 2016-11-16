@@ -105,7 +105,7 @@ var map,
         }]
     }];
 
-var regions: [
+var regions = [
         'GLOBAL LOCATIONS',
         'AFRICAN CONTINENT',
         'ASIAN CONTINENT',
@@ -115,6 +115,6 @@ var regions: [
         'FIELD RESEARCH',
         'STUDY ABROAD',
         'OUR OFFICES'
-    ];
+      ]
 
 
