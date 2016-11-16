@@ -28,10 +28,10 @@ function AppViewModel() {
       this.id = index;
     };
     // Create the KO observable Array of FILTER BUTTONS
-    var len = buttonLabel.regions.length;
+    var len = regions.length;
     self.buttons = ko.observableArray();
         for ( var i = 0; i < len; i++ ){
-            self.buttons.push( new Button( buttonLabel.regions[i], i));
+            self.buttons.push( new Button(regions[i], i));
         }
     // Set initial condition where first button is highlighted (selected)
     self.buttons()[0].showLocationsViews(true);
@@ -39,339 +39,270 @@ function AppViewModel() {
     // These are the marker listings that will be shown to the user.
     // Normally we'd have these in a database.
 
-function loadJSON(callback) {
-
-    var xobj = new XMLHttpRequest();
-        xobj.overrideMimeType("application/json");
-    xobj.open('GET', 'model/locations.json', true);
-    xobj.onreadystatechange = function () {
-          if (xobj.readyState == 4 && xobj.status == "200") {
-            callback(xobj.responseText);
-          }
-    };
-    xobj.send(null);
- }
-
-function init() {
- loadJSON(function(response) {
-  // Parse JSON string into object
-    var locationsX = JSON.parse(response);
-    console.log(hi,locationsX);
-    // ko.applyBindings(new ViewModel(locations));
- });
-}
-
-
-// var Cat = function(data) {
-//     this.clickCount = ko.observable(data.clickCount);
-//     this.name = data.name;
-//     this.imgSrc = IMG_PATH + data.imgSrc;
-
-//     this.title = ko.computed(function() {
-//         var catLevel = ['Newborn', 'Infant', 'Child', 'Teen', 'Adult', 'Elderly'],
-//             max = catLevel.length - 1,
-//             i = 0;
-
-//         i = Math.floor(this.clickCount() / 10);
-
-//         if (i > max) { i = max; }
-
-//         return catLevel[i];
-
-//     }, this);
-
-//     this.nicknames = [];
-
-//     for (var name in data.nicknames) {
-//         this.nicknames.push(data.nicknames[name]);
-//     }
-// };
-
-// var ViewModel = function(cats) {
-//     var self = this;
-//     this.catList = ko.observableArray();
-
-//     cats.forEach(function(catItem) {
-//         self.catList.push(new Cat(catItem));
-//     });
-
-//     this.currentCat = ko.observable(this.catList()[0]);
-
-//     this.incrementCounter = function() {
-//         self.currentCat().clickCount(self.currentCat().clickCount() + 1);
-//     };
-//     this.setCurrentCat = function(kitten) {
-//         self.currentCat(kitten);
-//     };
-// };
-
-init();
 
 
 
-
-
-    self.locations = ko.observableArray([{
-        title: 'Kunene Region of Namibia',
-        location: {
-            lat: -18.789779,
-            lng: 13.370975
-        },
-        continent: 'African Continent',
-        category: 'Global Locations',
-        type: 'Field Research',
-        siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
-        siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
-        toggleListItem: ko.observable(true), // used to toggle visibility of inidividual list items
-        highlight: ko.observable(false) // used to change styling of list items with CSS binding
-    }, {
-        title: 'Botswana – KAZA, Okavango Delta & Central Kalahari Game Refuge',
-        location: {
-            lat: -19.2798704,
-            lng: 22.8201857
-        },
-        continent: 'African Continent',
-        category: 'Global Locations',
-        type: 'Field Research',
-        siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/botswana-okavango-delta/',
-        siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Lions_Whatwedo-2.jpg',
-        toggleListItem: ko.observable(true),
-        highlight: ko.observable(false)
-    }, {
-        title: 'Taku River Wildlife Conservation Project – British Columbia',
-        location: {
-            lat: 58.6553055,
-            lng: -133.8137736
-        },
-        continent: 'North America',
-        category: 'Global Locations',
-        type: 'Field Research',
-        siteUrl: 'http://www.roundriver.org/where-we-work/north-america/taku-river-wildlife-conservation-project-british-columbia/',
-        siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Taku-bke-2008-5.jpg',
-        toggleListItem: ko.observable(true),
-        highlight: ko.observable(false)
-    }, {
-        title: 'Wolverine - Winter Recreation Project – Idaho, Montana and Wyoming',
-        location: {
-            lat: 45.0575711,
-            lng: -116.1655369
-        },
-        continent: 'North America',
-        category: 'Global Locations',
-        type: 'Field Research',
-        siteUrl: 'http://www.roundriver.org/wolverine/',
-        siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/10/wolverine-project-3.jpg',
-        toggleListItem: ko.observable(true),
-        highlight: ko.observable(false)
-    }, {
-        title: 'Colorado Plateau – Utah',
-        location: {
-            lat: 37.6299925,
-            lng: -109.885184
-        },
-        continent: 'North America',
-        category: 'Global Locations',
-        type: 'Field Research',
-        siteUrl: 'http://www.roundriver.org/where-we-work/north-america/',
-        siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/san-juan-01.jpg',
-        toggleListItem: ko.observable(true),
-        highlight: ko.observable(false)
-    }, {
-        title: 'North Coast – Yukon Territory',
-        location: {
-            lat: 68.8369357,
-            lng: -149.9462445
-        },
-        continent: 'North America',
-        category: 'Global Locations',
-        type: 'Field Research',
-        siteUrl: 'http://www.roundriver.org/where-we-work/north-america/north-coast-yukon-territory/',
-        siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Yukon.jpg',
-        toggleListItem: ko.observable(true),
-        highlight: ko.observable(false)
-    }, {
-        title: 'Great Bear Rainforest - British Columbia',
-        location: {
-            lat: 52.9260101,
-            lng: -128.935775
-        },
-        continent: 'North America',
-        category: 'Global Locations',
-        type: 'Field Research',
-        siteUrl: 'http://www.roundriver.org/where-we-work/north-america/great-bear-rainforest/',
-        siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/GBRKoeye2_Milek.jpg',
-        toggleListItem: ko.observable(true),
-        highlight: ko.observable(false)
-    }, {
-        title: 'North Coast Conservation Design – British Columbia',
-        location: {
-            lat: 54.2684383,
-            lng: -130.4447293
-        },
-        continent: 'North America',
-        category: 'Global Locations',
-        type: 'Field Research',
-        siteUrl: 'http://www.roundriver.org/where-we-work/north-america/north-coast-conservation-design-british-columbia/',
-        siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/09/salmon.jpg',
-        toggleListItem: ko.observable(true),
-        highlight: ko.observable(false)
-    }, {
-        title: 'Coastal Forest and Mountains – British Columbia',
-        location: {
-            lat: 55.3639087,
-            lng: -131.830578
-        },
-        continent: 'North America',
-        category: 'Global Locations',
-        type: 'Field Research',
-        cateUrl: 'http://www.roundriver.org/where-we-work/north-america/coastal-forest-and-mountains-british-columbia/',
-        siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/GBRKoeye3_Milek.jpg',
-        toggleListItem: ko.observable(true),
-        highlight: ko.observable(false)
-    }, {
-        title: 'Muskwa Kechika Conservation Design - British Columbia',
-        location: {
-            lat: 58.9338124,
-            lng: -130.8412957
-        },
-        continent: 'North America',
-        category: 'Global Locations',
-        type: 'Field Research',
-        siteUrl: 'http://www.roundriver.org/where-we-work/north-america/muskwa-kechika-conservation-design-british-columbia/',
-        siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/bears-MK.jpg',
-        toggleListItem: ko.observable(true),
-        highlight: ko.observable(false)
-    }, {
-        title: 'Mackenzie Delta – Northwest Territories',
-        location: {
-            lat: 66.999500,
-            lng: -127.437408
-        },
-        continent: 'North America',
-        category: 'Global Locations',
-        type: 'Field Research',
-        siteUrl: 'http://www.roundriver.org/where-we-work/north-america/mackenzie-delta-northwest-territories/',
-        siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/yukon_North_Slope-1.jpg',
-        toggleListItem: ko.observable(true),
-        highlight: ko.observable(false)
-    }, {
-        title: 'Patagonia - Chile - South America',
-        location: {
-            lat: -43.0029846,
-            lng: -71.6979215
-        },
-        continent: 'South America',
-        category: 'Global Locations',
-        type: 'Field Research',
-        siteUrl: 'http://www.roundriver.org/where-we-work/south-america/patagonia-chile/',
-        siteImage: 'http://www.roundriver.org/wp-content/uploads/2013/06/patagonia_header-5.jpg',
-        toggleListItem: ko.observable(true),
-        highlight: ko.observable(false)
-    }, {
-        title: 'Osa Peninsula - Costa Rica - Central America',
-        location: {
-            lat: 8.539003,
-            lng: -83.6045026
-        },
-        continent: 'Central America',
-        category: 'Global Locations',
-        type: 'Field Research',
-        siteUrl: 'http://www.roundriver.org/where-we-work/central-america/',
-        siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/10/costa-rica-01.jpg',
-        toggleListItem: ko.observable(true),
-        highlight: ko.observable(false)
-    }, {
-        title: 'Study Abroad in Mongolia',
-        location: {
-            lat: 51.198708,
-            lng: 99.678212
-        },
-        continent: 'Asian Continent',
-        category: 'Global Locations',
-        type: 'Study Abroad',
-        siteUrl: 'http://www.roundriver.org/student-programs/programs/mongolia/',
-        siteImage: 'http://www.roundriver.org/wp-content/uploads/2016/09/Mongolia_project_detail-1024x768.jpg',
-        toggleListItem: ko.observable(true),
-        highlight: ko.observable(false)
-    }, {
-        title: 'Study Abroad in Patagonia',
-        location: {
-            lat: -48.0029846,
-            lng: -71.6979215
-        },
-        continent: 'South America',
-        category: 'Global Locations',
-        type: 'Study Abroad',
-        siteUrl: 'http://www.roundriver.org/student-programs/programs/patagonia-chile/',
-        siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/09/patagonia-120-1024x683.jpg',
-        toggleListItem: ko.observable(true),
-        highlight: ko.observable(false)
-    }, {
-        title: 'Study Abroad in Costa Rica',
-        location: {
-            lat: 9.539003,
-            lng: -84.6045026
-        },
-        continent: 'Central America',
-        category: 'Global Locations',
-        type: 'Study Abroad',
-        siteUrl: 'http://www.roundriver.org/student-programs/programs/costa-rica-the-osa-peninsula/',
-        siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/IMG_1538-1024x1024.jpg',
-        toggleListItem: ko.observable(true),
-        highlight: ko.observable(false)
-    }, {
-        title: 'Study Abroad in British Columbia',
-        location: {
-            lat: 60.6553055,
-            lng: -135.8137736
-        },
-        continent: 'North America',
-        category: 'Global Locations',
-        type: 'Study Abroad',
-        siteUrl: 'http://www.roundriver.org/student-programs/programs/taku-river-tlingit-territory-british-columbia-canada/',
-        siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/09/taku-11-1024x680.jpg',
-        toggleListItem: ko.observable(true),
-        highlight: ko.observable(false)
-    }, {
-        title: 'Study Abroad in Botswana',
-        location: {
-            lat: -21.2798704,
-            lng: 24.8201857
-        },
-        continent: 'Africa',
-        category: 'Global Locations',
-        type: 'Study Abroad',
-        siteUrl: 'http://www.roundriver.org/student-programs/programs/africa-wildlife-conservation-okavango-delta-botswana/',
-        siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/09/botswana-5-1024x680.jpg',
-        toggleListItem: ko.observable(true),
-        highlight: ko.observable(false)
-    }, {
-        title: 'Round River Administrative Office',
-        location: {
-            lat: 40.748879,
-            lng: -111.865102
-        },
-        continent: 'North America',
-        category: 'Global Locations',
-        type: 'Our Offices',
-        siteUrl: 'http://www.roundriver.org/contact-us/',
-        siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/RR-web-logo-main.png',
-        toggleListItem: ko.observable(true),
-        highlight: ko.observable(false)
-    }, {
-        title: 'Round River Science Office',
-        location: {
-            lat: 45.678863,
-            lng: -111.035495
-        },
-        continent: 'North America',
-        category: 'Global Locations',
-        type: 'Our Offices',
-        siteUrl: 'http://www.roundriver.org/contact-us/',
-        siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/RR-web-logo-main.png',
-        toggleListItem: ko.observable(true),
-        highlight: ko.observable(false)
-    }]);
+    // self.locations = ko.observableArray([{
+    //     title: 'Kunene Region of Namibia',
+    //     location: {
+    //         lat: -18.789779,
+    //         lng: 13.370975
+    //     },
+    //     continent: 'African Continent',
+    //     category: 'Global Locations',
+    //     type: 'Field Research',
+    //     siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/kunene-region-of-namibia/',
+    //     siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Namibia_Kunene_Zebra.jpg',
+    //     toggleListItem: ko.observable(true), // used to toggle visibility of inidividual list items
+    //     highlight: ko.observable(false) // used to change styling of list items with CSS binding
+    // }, {
+    //     title: 'Botswana – KAZA, Okavango Delta & Central Kalahari Game Refuge',
+    //     location: {
+    //         lat: -19.2798704,
+    //         lng: 22.8201857
+    //     },
+    //     continent: 'African Continent',
+    //     category: 'Global Locations',
+    //     type: 'Field Research',
+    //     siteUrl: 'http://www.roundriver.org/where-we-work/southern-africa/botswana-okavango-delta/',
+    //     siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Lions_Whatwedo-2.jpg',
+    //     toggleListItem: ko.observable(true),
+    //     highlight: ko.observable(false)
+    // }, {
+    //     title: 'Taku River Wildlife Conservation Project – British Columbia',
+    //     location: {
+    //         lat: 58.6553055,
+    //         lng: -133.8137736
+    //     },
+    //     continent: 'North America',
+    //     category: 'Global Locations',
+    //     type: 'Field Research',
+    //     siteUrl: 'http://www.roundriver.org/where-we-work/north-america/taku-river-wildlife-conservation-project-british-columbia/',
+    //     siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Taku-bke-2008-5.jpg',
+    //     toggleListItem: ko.observable(true),
+    //     highlight: ko.observable(false)
+    // }, {
+    //     title: 'Wolverine - Winter Recreation Project – Idaho, Montana and Wyoming',
+    //     location: {
+    //         lat: 45.0575711,
+    //         lng: -116.1655369
+    //     },
+    //     continent: 'North America',
+    //     category: 'Global Locations',
+    //     type: 'Field Research',
+    //     siteUrl: 'http://www.roundriver.org/wolverine/',
+    //     siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/10/wolverine-project-3.jpg',
+    //     toggleListItem: ko.observable(true),
+    //     highlight: ko.observable(false)
+    // }, {
+    //     title: 'Colorado Plateau – Utah',
+    //     location: {
+    //         lat: 37.6299925,
+    //         lng: -109.885184
+    //     },
+    //     continent: 'North America',
+    //     category: 'Global Locations',
+    //     type: 'Field Research',
+    //     siteUrl: 'http://www.roundriver.org/where-we-work/north-america/',
+    //     siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/san-juan-01.jpg',
+    //     toggleListItem: ko.observable(true),
+    //     highlight: ko.observable(false)
+    // }, {
+    //     title: 'North Coast – Yukon Territory',
+    //     location: {
+    //         lat: 68.8369357,
+    //         lng: -149.9462445
+    //     },
+    //     continent: 'North America',
+    //     category: 'Global Locations',
+    //     type: 'Field Research',
+    //     siteUrl: 'http://www.roundriver.org/where-we-work/north-america/north-coast-yukon-territory/',
+    //     siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/Yukon.jpg',
+    //     toggleListItem: ko.observable(true),
+    //     highlight: ko.observable(false)
+    // }, {
+    //     title: 'Great Bear Rainforest - British Columbia',
+    //     location: {
+    //         lat: 52.9260101,
+    //         lng: -128.935775
+    //     },
+    //     continent: 'North America',
+    //     category: 'Global Locations',
+    //     type: 'Field Research',
+    //     siteUrl: 'http://www.roundriver.org/where-we-work/north-america/great-bear-rainforest/',
+    //     siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/GBRKoeye2_Milek.jpg',
+    //     toggleListItem: ko.observable(true),
+    //     highlight: ko.observable(false)
+    // }, {
+    //     title: 'North Coast Conservation Design – British Columbia',
+    //     location: {
+    //         lat: 54.2684383,
+    //         lng: -130.4447293
+    //     },
+    //     continent: 'North America',
+    //     category: 'Global Locations',
+    //     type: 'Field Research',
+    //     siteUrl: 'http://www.roundriver.org/where-we-work/north-america/north-coast-conservation-design-british-columbia/',
+    //     siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/09/salmon.jpg',
+    //     toggleListItem: ko.observable(true),
+    //     highlight: ko.observable(false)
+    // }, {
+    //     title: 'Coastal Forest and Mountains – British Columbia',
+    //     location: {
+    //         lat: 55.3639087,
+    //         lng: -131.830578
+    //     },
+    //     continent: 'North America',
+    //     category: 'Global Locations',
+    //     type: 'Field Research',
+    //     cateUrl: 'http://www.roundriver.org/where-we-work/north-america/coastal-forest-and-mountains-british-columbia/',
+    //     siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/GBRKoeye3_Milek.jpg',
+    //     toggleListItem: ko.observable(true),
+    //     highlight: ko.observable(false)
+    // }, {
+    //     title: 'Muskwa Kechika Conservation Design - British Columbia',
+    //     location: {
+    //         lat: 58.9338124,
+    //         lng: -130.8412957
+    //     },
+    //     continent: 'North America',
+    //     category: 'Global Locations',
+    //     type: 'Field Research',
+    //     siteUrl: 'http://www.roundriver.org/where-we-work/north-america/muskwa-kechika-conservation-design-british-columbia/',
+    //     siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/bears-MK.jpg',
+    //     toggleListItem: ko.observable(true),
+    //     highlight: ko.observable(false)
+    // }, {
+    //     title: 'Mackenzie Delta – Northwest Territories',
+    //     location: {
+    //         lat: 66.999500,
+    //         lng: -127.437408
+    //     },
+    //     continent: 'North America',
+    //     category: 'Global Locations',
+    //     type: 'Field Research',
+    //     siteUrl: 'http://www.roundriver.org/where-we-work/north-america/mackenzie-delta-northwest-territories/',
+    //     siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/yukon_North_Slope-1.jpg',
+    //     toggleListItem: ko.observable(true),
+    //     highlight: ko.observable(false)
+    // }, {
+    //     title: 'Patagonia - Chile - South America',
+    //     location: {
+    //         lat: -43.0029846,
+    //         lng: -71.6979215
+    //     },
+    //     continent: 'South America',
+    //     category: 'Global Locations',
+    //     type: 'Field Research',
+    //     siteUrl: 'http://www.roundriver.org/where-we-work/south-america/patagonia-chile/',
+    //     siteImage: 'http://www.roundriver.org/wp-content/uploads/2013/06/patagonia_header-5.jpg',
+    //     toggleListItem: ko.observable(true),
+    //     highlight: ko.observable(false)
+    // }, {
+    //     title: 'Osa Peninsula - Costa Rica - Central America',
+    //     location: {
+    //         lat: 8.539003,
+    //         lng: -83.6045026
+    //     },
+    //     continent: 'Central America',
+    //     category: 'Global Locations',
+    //     type: 'Field Research',
+    //     siteUrl: 'http://www.roundriver.org/where-we-work/central-america/',
+    //     siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/10/costa-rica-01.jpg',
+    //     toggleListItem: ko.observable(true),
+    //     highlight: ko.observable(false)
+    // }, {
+    //     title: 'Study Abroad in Mongolia',
+    //     location: {
+    //         lat: 51.198708,
+    //         lng: 99.678212
+    //     },
+    //     continent: 'Asian Continent',
+    //     category: 'Global Locations',
+    //     type: 'Study Abroad',
+    //     siteUrl: 'http://www.roundriver.org/student-programs/programs/mongolia/',
+    //     siteImage: 'http://www.roundriver.org/wp-content/uploads/2016/09/Mongolia_project_detail-1024x768.jpg',
+    //     toggleListItem: ko.observable(true),
+    //     highlight: ko.observable(false)
+    // }, {
+    //     title: 'Study Abroad in Patagonia',
+    //     location: {
+    //         lat: -48.0029846,
+    //         lng: -71.6979215
+    //     },
+    //     continent: 'South America',
+    //     category: 'Global Locations',
+    //     type: 'Study Abroad',
+    //     siteUrl: 'http://www.roundriver.org/student-programs/programs/patagonia-chile/',
+    //     siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/09/patagonia-120-1024x683.jpg',
+    //     toggleListItem: ko.observable(true),
+    //     highlight: ko.observable(false)
+    // }, {
+    //     title: 'Study Abroad in Costa Rica',
+    //     location: {
+    //         lat: 9.539003,
+    //         lng: -84.6045026
+    //     },
+    //     continent: 'Central America',
+    //     category: 'Global Locations',
+    //     type: 'Study Abroad',
+    //     siteUrl: 'http://www.roundriver.org/student-programs/programs/costa-rica-the-osa-peninsula/',
+    //     siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/IMG_1538-1024x1024.jpg',
+    //     toggleListItem: ko.observable(true),
+    //     highlight: ko.observable(false)
+    // }, {
+    //     title: 'Study Abroad in British Columbia',
+    //     location: {
+    //         lat: 60.6553055,
+    //         lng: -135.8137736
+    //     },
+    //     continent: 'North America',
+    //     category: 'Global Locations',
+    //     type: 'Study Abroad',
+    //     siteUrl: 'http://www.roundriver.org/student-programs/programs/taku-river-tlingit-territory-british-columbia-canada/',
+    //     siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/09/taku-11-1024x680.jpg',
+    //     toggleListItem: ko.observable(true),
+    //     highlight: ko.observable(false)
+    // }, {
+    //     title: 'Study Abroad in Botswana',
+    //     location: {
+    //         lat: -21.2798704,
+    //         lng: 24.8201857
+    //     },
+    //     continent: 'Africa',
+    //     category: 'Global Locations',
+    //     type: 'Study Abroad',
+    //     siteUrl: 'http://www.roundriver.org/student-programs/programs/africa-wildlife-conservation-okavango-delta-botswana/',
+    //     siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/09/botswana-5-1024x680.jpg',
+    //     toggleListItem: ko.observable(true),
+    //     highlight: ko.observable(false)
+    // }, {
+    //     title: 'Round River Administrative Office',
+    //     location: {
+    //         lat: 40.748879,
+    //         lng: -111.865102
+    //     },
+    //     continent: 'North America',
+    //     category: 'Global Locations',
+    //     type: 'Our Offices',
+    //     siteUrl: 'http://www.roundriver.org/contact-us/',
+    //     siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/RR-web-logo-main.png',
+    //     toggleListItem: ko.observable(true),
+    //     highlight: ko.observable(false)
+    // }, {
+    //     title: 'Round River Science Office',
+    //     location: {
+    //         lat: 45.678863,
+    //         lng: -111.035495
+    //     },
+    //     continent: 'North America',
+    //     category: 'Global Locations',
+    //     type: 'Our Offices',
+    //     siteUrl: 'http://www.roundriver.org/contact-us/',
+    //     siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/RR-web-logo-main.png',
+    //     toggleListItem: ko.observable(true),
+    //     highlight: ko.observable(false)
+    // }]);
 
 
 
