@@ -105,8 +105,7 @@ var map,
         }]
     }];
 
-var buttonLabel = {
-      regions: [
+var regions: [
         'GLOBAL LOCATIONS',
         'AFRICAN CONTINENT',
         'ASIAN CONTINENT',
@@ -116,6 +115,6 @@ var buttonLabel = {
         'FIELD RESEARCH',
         'STUDY ABROAD',
         'OUR OFFICES'
-      ]
-    };
+    ];
+
 

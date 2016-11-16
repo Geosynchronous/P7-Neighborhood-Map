@@ -28,10 +28,10 @@ function AppViewModel() {
       this.id = index;
     };
     // Create the KO observable Array of FILTER BUTTONS
-    var len = buttonLabel.regions.length;
+    var len = regions.length;
     self.buttons = ko.observableArray();
         for ( var i = 0; i < len; i++ ){
-            self.buttons.push( new Button( buttonLabel.regions[i], i));
+            self.buttons.push( new Button(regions[i], i));
         }
     // Set initial condition where first button is highlighted (selected)
     self.buttons()[0].showLocationsViews(true);
