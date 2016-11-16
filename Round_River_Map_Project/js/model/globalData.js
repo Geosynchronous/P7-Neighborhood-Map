@@ -117,7 +117,7 @@ var regions = [
         'OUR OFFICES'
       ]
 
-var locations = ([{
+var places = [{
         title: 'Kunene Region of Namibia',
         location: {
             lat: -18.789779,
@@ -337,5 +337,5 @@ var locations = ([{
         type: 'Our Offices',
         siteUrl: 'http://www.roundriver.org/contact-us/',
         siteImage: 'http://www.roundriver.org/wp-content/uploads/2015/07/RR-web-logo-main.png'
-    }]);
+    }];
 
