@@ -112,8 +112,8 @@ li:hover {
     border-radius: 60px;
     box-shadow: 5px 5px 20px #000;
     transform: translateZ(0);
-
 }
+
 .logo {
     width: 275px;
 }
@@ -159,6 +159,7 @@ li:hover {
     color: #fff;
     padding: 10px 10px 0 10px;
 }
+
 .iw-moreInfo {
     font-size: 12px;
     width: 208px;
