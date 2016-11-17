@@ -29,8 +29,6 @@ Map App created for:
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="http://www.roundriver.org/wp-content/uploads/2015/06/RR-circle-fav.png" type="image/png">
     <title>Round River Map APP</title>
-    <!-- Google Analytics Tracking ID -->
-    UA-87636729-1
   </head>
   <body>
 
@@ -110,6 +108,16 @@ Map App created for:
     <script src= "js/vm/googleMap.js"></script>
     <script src= "js/app.js"></script>
     <script src= "https://maps.googleapis.com/maps/api/js?key=AIzaSyAaL-jhZDIeEBOjiVX31sDh6UjauQlfWk4&v=3&callback=initMap" onerror="mapError()" async defer></script>
+    <!-- Google Analytics Script -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-87636729-1', 'auto');
+      ga('send', 'pageview');
+  </script>
 
   </body>
 </html>
