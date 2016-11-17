@@ -111,10 +111,9 @@ li:hover {
     border: 1px solid #000;
     border-radius: 60px;
     box-shadow: 5px 5px 20px #000;
-    /* Improves CRP */
     will-change: transform;
     transform: translateZ(0);
-    /*transform: none;*/
+
 }
 .logo {
     width: 275px;
@@ -224,6 +223,5 @@ li:hover {
 /* because otherwise I needed to chain .closed for the button to work*/
 
 .closed {
-    /*left: -310px;*/
     transform:translateX(-310px);
 }
